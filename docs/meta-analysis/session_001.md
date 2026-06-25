@@ -47,3 +47,16 @@ The process of "framing" the research within a Git-based environment forced a hi
 **Synthesis & Next Steps:**
 * **Formalization:** The mathematical core is now fully version-controlled. The next immediate requirement is to initiate the `src/analysis/` suite to convert these theoretical equations ($S$, $g_{eff}(R)$, $H_{\mu\nu}$, and $\Phi_{shadow}$) into executable verification scripts.
 * **Priority:** Prioritize the implementation of the `g_eff(R)` gate function, as it is the master switch governing the theory's transition from GR in high-density local environments to hyperspatial coupling in low-density galactic/cosmological scales.
+## 18. Document Migration: Consolidated Appendices
+**Action:** Completed migration of all remaining appendices into the `docs/methodology/` repository.
+
+**Appendices Summary:**
+* **Cosmos Age & Size:** Validated that the nested $T^3 \times T^3$ torus model remains consistent with standard age parameters ($13.787$ Gyr) and observational horizons.
+* **Illustrations:** Established the visual roadmap for the BMI theory, including the Thick Brane interface, the Screening Gate ($g_{eff}$), and evanescent field decay.
+* **Research Methodology:** Formalized the Human-AI collaborative pipeline, establishing strict verification protocols and human intellectual oversight.
+* **Observational Lensing:** Reinterpreted candidate cosmic string signatures (CSc-1) as physical 'creases' in the manifold interface, providing a concrete testable prediction for structural topology.
+
+**Meta-Analysis Notes:**
+* **Full Integration:** All core chapters (1–8) and foundational appendices are now versioned. 
+* **Final Synthesis:** The theory is now fully defined, from high-level field equations to specific observational diagnostic footprints.
+* **Next Phase:** The project has successfully moved from the "Ingestion/Migration" phase to the "Verification/Implementation" phase.
