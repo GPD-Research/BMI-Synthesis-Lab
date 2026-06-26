@@ -11,7 +11,11 @@ REGISTRY = {
     "dPhi_dx": {"dim": 2, "desc": "Scalar potential field gradient"},
     "T_shear": {"dim": 4, "desc": "Hyperspatial shear tensor"},
     "G_R": {"dim": 0, "desc": "Curvature-Gate Function"},
+<<<<<<< HEAD
     "mu": {"dim": 0, "desc": "Coupling magnitude"}
+=======
+    "mu": {"dim": None, "desc": "Variable coupling magnitude"}
+>>>>>>> 38b6dcf5269978a80d10284615b36b410e7c5742
 }
 
 def get_dim(symbol):
