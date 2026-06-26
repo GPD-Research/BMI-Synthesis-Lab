@@ -42,3 +42,21 @@ To maintain standard IT and scientific research conventions, the repository is s
 │
 ├── notebooks/              # Jupyter Notebooks for data visualization and staging
 └── tests/                  # Unit tests verifying the mathematical validation scripts
+
+# BMI (Bridge-Matter Interaction) Synthesis Lab
+
+This repository contains the formal computational framework for the **Bridge-Matter Interaction (BMI) Theory**. BMI is a framework exploring the interplay between hyperspatial geometries and Standard Model particle masses, specifically through the lens of **Dimensional Consistency Analysis**.
+
+## Core Research Pillars
+1. **The Theoretical Object:** Investigation into how 'shadow' compactification geometries (the Bridge) modulate the masses of elementary particles.
+2. **The Rigorous Method:** A custom **Dimensional Audit Tool** that enforces $LHS = RHS$ energy-dimension consistency ($\hbar = c = 1$) for all theoretical derivations.
+3. **The Breakthrough:** Automated detection of dimensional discrepancies, such as the derivation of the inverse shadow volume ($V^{-1}_{shadow}$) required to reconcile neutrino mass expressions.
+4. **The Synthesis:** A reproducible, code-driven approach to theoretical physics that bridges the gap between abstract geometry and physical mass-energy values.
+
+## Lab Tools
+- `audit_tool.py`: Verifies the dimensional integrity of BMI equations.
+- `docs/registry.py`: The centralized registry of physical constants and field dimensions.
+- `docs/theory_log.py`: Machine-readable history of theoretical synthesis and derivations.
+
+---
+*Maintained by: Gregory Phillip Dearth*
