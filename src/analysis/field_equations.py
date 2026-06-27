@@ -7,29 +7,35 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from data import constants
 
 class FieldTensor:
-    def __init__(self):
-        self.c = constants.C
-        self.g = constants.G
-        self.rc = constants.RC
-        self.n = constants.N_POWER
-        
-    def get_excitation_tensor(self, field_value):
-        # We start with the identity matrix scaled by RC
-        tensor = np.eye(4) * self.rc
-        
-        # Apply the field excitation logic
-        # Using a much larger field_value for testing, or checking the math
-        excitation_factor = (field_value ** self.n) / (self.c**2)
-        
-        # Apply the perturbation to the temporal component (H_00)
-        tensor[0, 0] += excitation_factor
-        
-        return tensor
+    def __init__(self, position=None):
+        # The position (t, x, y, z) is the "state" of our observer
+        self._position = np.array(position) if position is not None else np.zeros(4)
+        self.base_metric = np.eye(4)
 
-if __name__ == "__main__":
-    ft = FieldTensor()
-    test_tensor = ft.get_excitation_tensor(field_value=1.0e9) # Increased value for visible test
-    print("Excitation Tensor (H_mu_nu) sample:")
-    print(test_tensor)
-    print(f"\nValue at H[0,0]: {test_tensor[0,0]}")
-    print(f"Excitation Delta: {test_tensor[0,0] - ft.rc}")
+    @property
+    def position(self):
+        return self._position
+
+    @position.setter
+    def position(self, value):
+        self._position = np.array(value)
+
+    @property
+    def excitation(self):
+        """
+        Calculates the excitation based on the current position state.
+        By accessing .excitation, the math is triggered dynamically.
+        """
+        t, x, y, z = self._position
+        # Example: Using a scalar field function dependent on spatial displacement
+        r = np.sqrt(x**2 + y**2 + z**2)
+        # Placeholder for your physical field excitation logic
+        return 12.1265 * np.exp(-r)
+
+    @property
+    def tensor(self):
+        """The total tensor, combining the metric and the dynamic excitation."""
+        mat = self.base_metric.copy()
+        mat[0, 0] += self.excitation
+        return mat
+        
