@@ -1,0 +1,12 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+
+# System files
+.DS_Store
+.vscode/
+
+# Local environment/data
+.venv/
+venv/

@@ -1,0 +1,10 @@
+# Scientific Computing
+numpy
+scipy
+pandas
+
+# Documentation & Rendering
+# Ensure you have pandoc and texlive installed on your system
+# These are python interfaces
+pyyaml
+markdown
