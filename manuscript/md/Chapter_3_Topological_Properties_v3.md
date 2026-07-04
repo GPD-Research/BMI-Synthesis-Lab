@@ -23,7 +23,7 @@ When an integer harmonic mode phase-locks, the nested tori exhibit a localized "
 
 $$Q = \oint_{T^3} \mathbf{P}_{\text{geom}} \cdot d\mathbf{A} = \pm e$$
 
-The polarity is determined by the local orientation of the node relative to the total Metric Equilibrium ($\Delta$). When the phase-locking of the nested system aligns with the macroscopic manifold gradient, the resulting spatial tension manifests as a positive charge ($+e$). An inverted locking manifests as negative charge ($-e$). Neutral particles represent configurations where inner and outer membrane rotations cancel each other's spatial tension, leaving a net zero flux.
+The polarity is determined by the local orientation of the node relative to the total Metric Equilibrium ($\Xi$). When the phase-locking of the nested system aligns with the macroscopic manifold gradient, the resulting spatial tension manifests as a positive charge ($+e$). An inverted locking manifests as negative charge ($-e$). Neutral particles represent configurations where inner and outer membrane rotations cancel each other's spatial tension, leaving a net zero flux.
 
 ## 3.4 Gauge Invariance and Force Emergence
 By deriving spin and charge from pure topology, the "forces" of nature are recontextualized. Coulomb interactions are no longer viewed as the exchange of virtual particles, but as the natural relaxation or tightening of the manifold space between two localized geometric distortions. 

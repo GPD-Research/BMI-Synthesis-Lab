@@ -1,7 +1,7 @@
 # Chapter 9: The Hyperspatial Resolution of the Mott Problem: Topological Pinning and Trajectory Localization
 
 ## 9.1 Introduction and Ontological Framework
-The Mott Problem (1929) exposes a fundamental paradox: why does a spherically symmetric, expanding wave function—typically associated with quantum probability—localize into a singular, razor-sharp linear track when it traverses an interactive medium (like a bubble chamber)? Standard Quantum Field Theory treats this "collapse" as a non-local, discontinuous update of a state vector $|\psiangle$, offering no dynamic physical mechanism for the localization process.
+The Mott Problem (1929) exposes a fundamental paradox: why does a spherically symmetric, expanding wave function—typically associated with quantum probability—localize into a singular, razor-sharp linear track when it traverses an interactive medium (like a bubble chamber)? Standard Quantum Field Theory treats this "collapse" as a non-local, discontinuous update of a state vector $|\psi\rangle$, offering no dynamic physical mechanism for the localization process.
 
 The Bimodal Manifold Interaction (BMI) framework resolves this by demonstrating that the transition from a diffuse spherical wavefront to a linear geodesic is a causal, localized phase transition driven by hyper-dimensional symmetry breaking. We treat the electron not as a probabilistic cloud, but as a quantized topological defect pinned within the **Thick Brane Interface ($\Sigma$)**.
 
@@ -35,8 +35,7 @@ $$\phi_{\text{bound}}(\vec{x}) = \mathcal{C} \, e^{-\lambda |\vec{x} - \vec{x}_1
 The global probability wave collapses into a definitive spatial coordinate through a localized, causal minimization of the interface action. The electron is "pinned" to the target atom as a singular, compactified crease in the manifold.
 
 ## 9.5 The Geodesic Wake and Sequential Localization
-The "track" observed in bubble chambers is the structural history of this pinned state. Once the field is topologically pinned at $x_1^\mu$, the **Hyperspatial Shear Tensor $S_{\mu
-u}$** locks the orientation of the crease relative to the compactified manifold. 
+The "track" observed in bubble chambers is the structural history of this pinned state. Once the field is topologically pinned at $x_1^\mu$, the **Hyperspatial Shear Tensor $S_{\mu\nu}$** locks the orientation of the crease relative to the compactified manifold. 
 
 The crease acts as a hyper-dimensional soliton. Because the extra-dimensional phase and directional shear are locked, the localized "wave crest" cannot re-expand spherically. It propagates along a 4D geodesic, sequentially cutting through the curvature fields of subsequent atoms. Each encounter triggers a new $g_{\text{eff}} \to 1$ transition, inducing sequential pinning events that leave behind the characteristic linear trail of ionized macro-structures.
 

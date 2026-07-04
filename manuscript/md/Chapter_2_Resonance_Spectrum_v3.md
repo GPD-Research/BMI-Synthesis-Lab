@@ -8,18 +8,18 @@ Rather than treating leptogenesis and hadronization as independent phenomena gov
 ## 2.2 Quantization of the Spectral Line
 The mathematical mapping of the spectrum requires identifying the precise integer harmonic indices ($n$) where the bimodal tension reaches a stable, phase-locked state. When a localized wave packet achieves a stable geometric configuration on the nested tori ($T^3$), it manifests as a particle. 
 
-Crucially, the mass of these states is not constant; it is subject to the **Thermodynamic Scaling** discovered in our macroscopic analysis. The effective rest mass $M_n$ at any cosmological epoch is a function of the harmonic mode, the base frequency, and the local metric equilibrium ($\Delta$):
+Crucially, the mass of these states is not constant; it is subject to the **Thermodynamic Scaling** discovered in our macroscopic analysis. The effective rest mass $M_n$ at any cosmological epoch is a function of the harmonic mode, the base frequency, and the local metric equilibrium ($\Xi$):
 
-$$M_n(t) = n \cdot \omega_0 \cdot \left(1 + \Delta\psi(n)\right) \cdot f(\Delta(t))$$
+$$M_n(t) = n \cdot \omega_0 \cdot \left(1 + \Delta\psi(n)\right) \cdot f(\Xi(t))$$
 
-Where $f(\Delta(t))$ represents the coupling of the particle's localized geometry to the total Metric Equilibrium ($\Delta = \tau + V_{gap}$) of the universe at time $t$. This links the mass of the particle directly to the evolution of the manifold coalescence.
+Where $f(\Xi(t))$ represents the coupling of the particle's localized geometry to the total Metric Equilibrium ($\Xi = \tau + V_{gap}$) of the universe at time $t$. This links the mass of the particle directly to the evolution of the manifold coalescence.
 
 ## 2.3 The Core Particle Harmonic Catalog
 Through numerical analysis within the BMI Lab repository, the primary stable spectrum is resolved into a linear distribution mapping to discrete harmonic thresholds:
 
 1. **The Leptonic Foundation (The Electron Mode):**
    The electron represents the primary stable manifestation threshold where the nested torus system locks against the background vacuum dissipation. 
-   * *Geometric Index:* $n = n_{	ext{base}}$
+   * *Geometric Index:* $n = n_{\text{base}}$
    * *Characteristics:* Purely phase-locked minimal winding, representing the baseline interaction between $\sigma_A$ and $\sigma_B$.
 
 2. **The Muon Resonance:**

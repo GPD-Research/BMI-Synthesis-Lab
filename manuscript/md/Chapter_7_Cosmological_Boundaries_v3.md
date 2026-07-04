@@ -5,32 +5,25 @@ The foundational split in modern physics lies between the discrete mechanics of 
 
 The background bimodal field possesses an elastic modulus; when a harmonic mode phase-locks into a nested torus ($T^3$) configuration, it introduces a localized, non-zero topological tension. This tension does not terminate at the boundary of the particle; it decays as a long-range strain field throughout the active medium, fundamentally linking the quantum node to the macroscopic geometry of the collision.
 
-## 7.2 The Gravitational Field as a Global Metric Equilibrium ($\Delta$)
-In the BMI model, gravitational acceleration is recontextualized as a global drift effect governed by the **Metric Equilibrium ($\Delta$)** of the colliding branes. Gravity is not the result of an independent "graviton," but the natural minimization of the total potential energy between the two interacting manifolds.
+## 7.2 The Gravitational Field as a Global Metric Equilibrium ($\Xi$)
+In the BMI model, gravitational acceleration is recontextualized as a global drift effect governed by the **Metric Equilibrium ($\Xi$)** of the colliding branes. Gravity is not the result of an independent "graviton," but the natural minimization of the total potential energy between the two interacting manifolds.
 
-The local metric tensor $g_{\mu
-u}$ is an emergent statistical average of the combined Bridge Stress and Inter-brane Potential. We derive the local curvature as a function of the global equilibrium state $\Delta(t)$:
+The local metric tensor $g_{\mu\nu}$ is an emergent statistical average of the combined Bridge Stress and Inter-brane Potential. We derive the local curvature as a function of the global equilibrium state $\Xi(t)$:
 
-$$g_{\mu
-u}(t) = \eta_{\mu
-u} + \mathbf{\Xi}_{\mu
-u}\left(\tau(t) + V_{gap}(t)ight)$$
+$$g_{\mu\nu}(t) = \eta_{\mu\nu} + \mathbf{\Xi}_{\mu\nu}\left(\tau(t) + V_{gap}(t)\right)$$
 
 Where:
-* $\eta_{\mu
-u}$ is the flat Minkowskian baseline metric of the fully relaxed manifold.
-* $\mathbf{\Xi}_{\mu
-u}$ is the global strain tensor representing the elastic deformation induced by the interacting branes.
+* $\eta_{\mu\nu}$ is the flat Minkowskian baseline metric of the fully relaxed manifold.
+* $\mathbf{\Xi}_{\mu\nu}$ is the global strain tensor representing the elastic deformation induced by the interacting branes.
 
 When macroscopic masses occupy the same region, their long-range strain fields overlap. Matter drifts along the path that minimizes this collective material tension. Matter moves toward matter because the bimodal medium experiences an optimization of its elastic deformation energy, providing a purely mechanical foundation for the Equivalence Principle.
 
 ## 7.3 Higher-Dimensional Toroidal Boundaries ($T^n$)
 While subatomic matter stabilizes within three-dimensional projections ($T^3$), a complete description requires analyzing the embedding space of the bimodal manifold. To maintain global topological continuity, the background field transitions through higher-dimensional boundaries ($T^n$).
 
-As energy density varies across cosmic limits—such as early inflationary phases—the active medium shifts winding vectors into these higher spatial constraints. The mapping of a wave packet into these higher dimensions is governed by the boundary constraint matrix $\mathbf{B}_{	ext{compact}}$:
+As energy density varies across cosmic limits—such as early inflationary phases—the active medium shifts winding vectors into these higher spatial constraints. The mapping of a wave packet into these higher dimensions is governed by the boundary constraint matrix $\mathbf{B}_{\text{compact}}$:
 
-$$\oint_{T^n} \mathbf{\Xi}_{\mu
-u} \cdot d\mathbf{V}_n \longrightarrow \mathbf{B}_{	ext{compact}}(n)$$
+$$\oint_{T^n} \mathbf{\Xi}_{\mu\nu} \cdot d\mathbf{V}_n \longrightarrow \mathbf{B}_{\text{compact}}(n)$$
 
 These higher dimensions are not abstract; they represent the geometric degrees of freedom that govern the upper frequency limits of our resonance spectrum, ensuring that infinite divergence paradoxes (common in quantum gravity) are structurally avoided.
 

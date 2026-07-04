@@ -40,5 +40,3 @@ BMI Theory unifies the Standard Model by grounding gauge symmetry in the physica
 * **U(1):** Lateral translation (Massless/Photon).
 * **SU(2):** Perpendicular torsion (Massive/Weak Force).
 * **SU(3):** Trifold junction tension (Strong Force).
-
-This model grounds physics entirely in the bimodal manifold, removing the need for internal abstract spaces and confirming that the forces of nature are simply different modes of the universe's geometric relaxation.
