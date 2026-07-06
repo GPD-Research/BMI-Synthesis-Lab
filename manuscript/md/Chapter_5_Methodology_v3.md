@@ -17,7 +17,7 @@ To maintain theoretical integrity, the project utilizes a distinct three-tier au
 3. **The Execution and Empirical Simulation Tier (Layer 3):**
    Approved equations are immediately translated into deterministic source code (Python). These scripts execute automated lab environments, such as the "Cradle Test" (simulating CMB thermal amplitude scaling). The model is only verified if the code outputs match experimental physical constants within strict error tolerances:
 
-$$\delta = \left| rac{M_{	ext{experimental}} - M_{	ext{derived}}}{	ext{SD}_{	ext{experimental}}} ight| \le \epsilon$$
+$$ \delta = \left| \frac{M_{\text{experimental}} - M_{\text{derived}}}{\text{SD}_{\text{experimental}}} \right| \le \epsilon $$
 
 ## 5.3 Error-Handling: Overcoming State Drift
 A core objective of this meta-analysis is tracking system friction. During the development of the BMI framework, we identified the phenomenon of **"State Drift"**—where an AI model’s interpretation of theoretical terminology subtly shifts over long-context conversations, leading to internal contradictions (e.g., conflicting definitions of manifold expansion).

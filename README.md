@@ -81,3 +81,8 @@ The project utilized a "Resilient Inefficient Workflow" (see Appendix D) to over
 - `Appendix_D_Meta_Analysis.docx`: Human-AI collaborative post-mortem.
 - `Appendix_E_EFT_Limit.docx`: Kaluza-Klein expansion.
 - `Appendix_F_Macro_Geometry.docx`: Gauss-Codazzi projections.
+
+### Session Update: July 5, 2026
+- Finalized derivation and formatting for Chapter 14: "The Architecture of Expansion."
+- Integrated cosmological signatures section (Shadow Potential, Axis of Evil, Gravitational Wave anomalies).
+- Verified local PDF rendering pipeline and MD documentation consistency.

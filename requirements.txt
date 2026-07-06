@@ -8,3 +8,5 @@ pandas
 # These are python interfaces
 pyyaml
 markdown
+
+when asking for an md document, request it as a "Plain-Text Markdown Code Block."
