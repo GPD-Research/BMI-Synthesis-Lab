@@ -109,3 +109,16 @@ The project utilized a "Resilient Inefficient Workflow" (see Appendix D) to over
 
 * Transition to the **Simulation Suite** to model topological decay rates and validate the stability of the predicted "Harmonic Overtones."
 
+## Tooling & Methodology: The Theoretical Physics IDE
+
+As part of the ongoing development and meta-analysis of the **BMI Theoretical Model**, this repository includes a custom-built desktop application designed specifically to accelerate theoretical research: the **Theoretical Research IDE**.
+
+### About the IDE
+Built as a lightweight, high-performance desktop environment using **Tauri and Rust**, the IDE serves as an integrated laboratory for mathematical modeling, simulation scripting, and real-time AI collaboration. Key architectural features include:
+* **Multi-Pane Analytical & Speculative Stacks:** Dedicated UI slots for managing multi-manifold computational logic alongside creative horizons.
+* **Chromostereopsis Visual Mode:** An optimized OLED-focused optical theme utilizing deep sapphire fluid layers and high-frequency laser-red typography to leverage human depth perception during long coding sessions.
+* **Integrated Wordpad Scratchpad:** A built-in, lightweight text workspace allowing instant LaTeX snippet drafting, rapid ideation, and direct local document export without breaking context.
+* **Multi-Model AI Integration:** Seamless switching between local (Ollama) and cloud-hosted LLM endpoints (Gemini, OpenAI) for real-time theoretical stress-testing.
+
+This software stands as a concrete artifact of an iterative human-AI collaboration framework, demonstrating how specialized domain expertise can direct an AI collaborator to co-create production-ready research tools from scratch.
+
