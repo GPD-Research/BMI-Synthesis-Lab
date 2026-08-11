@@ -1,0 +1,68 @@
+{
+  "label": "FAR_GW190521_trial_53",
+  "merger_gps": 1242421975.0,
+  "is_noise": true,
+  "config": {
+    "label": "FAR_GW190521_trial_53",
+    "merger_gps": 1242421975.0,
+    "duration": 32.0,
+    "sample_rate": 16384,
+    "m1": null,
+    "m2": null,
+    "distance_mpc": null,
+    "chirp_mass": null,
+    "snr": null,
+    "detectors": [
+      "H1",
+      "L1",
+      "V1"
+    ],
+    "bandpass_low": 50.0,
+    "bandpass_high": 600.0,
+    "impulse_half_window": 0.15,
+    "ringdown_k_window": [
+      0.001,
+      0.025
+    ],
+    "ringdown_fft_window": [
+      0.001,
+      0.15
+    ],
+    "is_noise_segment": true
+  },
+  "detectors": {
+    "H1": {
+      "impulse_duration_s": 0.294921875,
+      "detector": "H1",
+      "K": null,
+      "K_note": "template ~0 in window; GR ringdown fully decayed",
+      "peak_freq_hz": 536.960262187628,
+      "bmi_zone_snr": 1.5475776528666323,
+      "split_candidate_hz": 521.960262187628,
+      "split_rel_power": 0.02154375820757153,
+      "residual_energy": 31791.480445441724
+    },
+    "L1": {
+      "impulse_duration_s": 0.23828125,
+      "detector": "L1",
+      "K": null,
+      "K_note": "template ~0 in window; GR ringdown fully decayed",
+      "peak_freq_hz": 510.11224907824663,
+      "bmi_zone_snr": 2.7572167297409167,
+      "split_candidate_hz": 495.11224907824663,
+      "split_rel_power": 8.242425273841885e-05,
+      "residual_energy": 220.82925706382133
+    },
+    "V1": {
+      "impulse_duration_s": 0.275390625,
+      "detector": "V1",
+      "K": null,
+      "K_note": "template ~0 in window; GR ringdown fully decayed",
+      "peak_freq_hz": 530.2482589102826,
+      "bmi_zone_snr": 1.3478735941350555,
+      "split_candidate_hz": 515.2482589102826,
+      "split_rel_power": 0.2666904601736498,
+      "residual_energy": 41553.945417527684
+    }
+  }
+}
