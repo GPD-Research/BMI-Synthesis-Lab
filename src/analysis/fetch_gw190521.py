@@ -23,10 +23,11 @@ def fetch_validated_data(det):
         raise
 
 if __name__ == "__main__":
-    print("Fetching and validating GW190521 data...")
-    os.makedirs("data", exist_ok=True)  # Ensure the data directory exists
+    print("Fetching and validating GW190521 data (H1, L1, V1 @ 4096 Hz)...")
+    print("GWTC-2 params: m1=95.3, m2=69.0 Msun | d=3920 Mpc | SNR=14.38")
+    os.makedirs("data", exist_ok=True)
 
-    for det in ["H1", "L1"]:
+    for det in ["H1", "L1", "V1"]:
         strain = fetch_validated_data(det)
         print(f"-> {det} successfully pulled. Length: {len(strain)} samples at {strain.sample_rate} Hz")
 
