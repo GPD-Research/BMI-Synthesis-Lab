@@ -27,6 +27,6 @@ Appendix_H_HigherDImensional_Projection_Mechanics.md: 2. **Sanity Check Rule for
 Chapter_6_Advanced_Forces_v3.md: In standard Quantum Field Theory, interactions are mediated by virtual gauge bosons across an arbitrary background. The Bimodal Manifold Interaction (BMI) framework eliminates these arbitrary fields by deriving interactions as localized geometric variations in **Manifold Impedance**.
 
 ## Source Context
-- Theory directory: /home/gregory-dearth/bmi_project/manuscript/md
-- Master axiom file: /home/gregory-dearth/bmi_project/manuscript/md/master_axiom.md
-- Files scanned: 27
+- Theory directory: /home/gregory-dearth/projects/bmi_project/manuscript/md
+- Master axiom file: /home/gregory-dearth/projects/bmi_project/manuscript/md/master_axiom.md
+- Files scanned: 29

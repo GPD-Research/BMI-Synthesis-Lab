@@ -132,6 +132,7 @@ bmi_project
 │       ├── Glossary_BMI.pdf
 │       ├── Master_BMI_Manuscript.pdf
 │       └── Theoretical_Formalism_BMI.pdf
+├── master_axiom.md
 ├── Master_BMI_Manuscript.md
 ├── pdf_builder_config.json
 ├── project_awareness.md
@@ -155,6 +156,7 @@ bmi_project
 │   │   │   ├── bridge_tensor_calibration.cpython-314.pyc
 │   │   │   ├── chirp_dynamics.cpython-314.pyc
 │   │   │   ├── dark_energy_calc.cpython-314.pyc
+│   │   │   ├── fetch_gw190521.py
 │   │   │   ├── fetch_gw250114.cpython-314.pyc
 │   │   │   ├── field_equations.cpython-314.pyc
 │   │   │   ├── interbrane_potential.cpython-314.pyc
@@ -164,6 +166,7 @@ bmi_project
 │   │   ├── Chapter_12_BMI_vs_GR_Overlay.png
 │   │   ├── chirp_dynamics.py
 │   │   ├── compare_snapshots.py
+│   │   ├── fetch_gw190521.py
 │   │   ├── fetch_gw250114.py
 │   │   ├── generate_comparison_overlay.py
 │   │   ├── interbrane_potential.py
