@@ -30,6 +30,60 @@ def bandpass(ts, low_hz=50.0, high_hz=500.0):
     return TimeSeries(filtered, delta_t=ts.delta_t, epoch=ts.start_time)
 
 
+def subtract_nr_template(ts):
+    """
+    Generate an IMRPhenomPv2 template for GW190521 (median GWTC-2 params),
+    bandpass it, cross-correlation align it to the data, amplitude-scale it,
+    subtract it, and return (residual_ts, template_array).
+    IMRPhenomPv2 is used as the analytic NR proxy (NRSur7dq4 requires large
+    surrogate data files not available in this environment).
+    """
+    from pycbc.waveform import get_td_waveform
+
+    hp, _ = get_td_waveform(
+        approximant='IMRPhenomPv2',
+        mass1=85.4,
+        mass2=65.6,
+        spin1z=0.69,
+        spin2z=0.0,
+        delta_t=ts.delta_t,
+        f_lower=20.0,
+        distance=5300.0,   # Mpc — median GWTC-2 luminosity distance
+        inclination=0.0,
+    )
+
+    # Bandpass template to same band as data
+    hp_bp = bandpass(hp)
+    tmpl  = hp_bp.numpy()
+    strain = ts.numpy()
+
+    # Pad or trim template to match data length
+    if len(tmpl) < len(strain):
+        tmpl = np.pad(tmpl, (len(strain) - len(tmpl), 0))
+    else:
+        tmpl = tmpl[-len(strain):]
+
+    # Find best time alignment via cross-correlation
+    corr = np.correlate(strain, tmpl, mode='full')
+    lag  = int(np.argmax(np.abs(corr))) - (len(strain) - 1)
+    if lag > 0:
+        tmpl = np.concatenate([np.zeros(lag), tmpl[:-lag]])
+    elif lag < 0:
+        tmpl = np.concatenate([tmpl[-lag:], np.zeros(-lag)])
+
+    # Amplitude-scale template to match data peak in ±0.05s merger window
+    t_abs = np.array(ts.sample_times)
+    t_rel = t_abs - MERGER_GPS
+    peak_mask = (t_rel >= -0.05) & (t_rel <= 0.05)
+    data_peak = np.max(np.abs(strain[peak_mask])) if peak_mask.any() else 1.0
+    tmpl_peak = np.max(np.abs(tmpl[peak_mask]))    if peak_mask.any() else 1.0
+    if tmpl_peak > 0:
+        tmpl *= (data_peak / tmpl_peak)
+
+    residual = strain - tmpl
+    return TimeSeries(residual, delta_t=ts.delta_t, epoch=ts.start_time), tmpl
+
+
 def load_hdf5_strain(path):
     """Load saved HDF5 strain file and return a PyCBC TimeSeries."""
     with h5py.File(path, 'r') as f:
@@ -177,7 +231,31 @@ def run(h5_dir='data'):
         print(f'  Bandpass applied: 50–500 Hz')
 
         analyze_impulse_chirp(ts, det, OUTPUT_DIR)
-        analyze_ringdown(ts, det, OUTPUT_DIR)
+
+        print(f'  Subtracting IMRPhenomPv2 NR template...')
+        residual_ts, tmpl_arr = subtract_nr_template(ts)
+
+        # Save data vs template vs residual comparison plot
+        t_abs = np.array(ts.sample_times)
+        t_rel = t_abs - MERGER_GPS
+        win   = (t_rel >= -0.15) & (t_rel <= 0.30)
+        fig, axes = plt.subplots(3, 1, figsize=(11, 9), sharex=True)
+        axes[0].plot(t_rel[win], ts.numpy()[win],       color='steelblue',  lw=1.2, label='Bandpassed Data')
+        axes[1].plot(t_rel[win], tmpl_arr[win],         color='darkorange',  lw=1.2, label='NR Template (IMRPhenomPv2)')
+        axes[2].plot(t_rel[win], residual_ts.numpy()[win], color='crimson', lw=1.2, label='Residual (Data − Template)')
+        for ax in axes:
+            ax.axvline(0, color='k', linestyle='--', alpha=0.4)
+            ax.legend(loc='upper right', fontsize=8)
+            ax.grid(True, linestyle='--', alpha=0.4)
+        axes[2].set_xlabel('Time to Merger (s)')
+        axes[0].set_title(f'GW190521 {det}: Data / NR Template / Residual')
+        fig.tight_layout()
+        cmp_path = os.path.join(OUTPUT_DIR, f'GW190521_{det}_template_subtraction.png')
+        fig.savefig(cmp_path, dpi=150, bbox_inches='tight')
+        plt.close(fig)
+        print(f'  [{det}] Template subtraction plot saved: {cmp_path}')
+
+        analyze_ringdown(residual_ts, det, OUTPUT_DIR)
         print()
 
     print('Pipeline complete. Plots saved to:', os.path.abspath(OUTPUT_DIR))
