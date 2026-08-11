@@ -141,26 +141,44 @@ def analyze_impulse_chirp(ts, det, out_dir):
               f'(BMI prediction: ~0.10 s)')
 
 
-def analyze_ringdown(ts, det, out_dir):
+def analyze_ringdown(ts, det, out_dir, tmpl_arr=None):
     """
-    Isolate the 150 ms post-merger ringdown window, run FFT, and check
-    for the 15 Hz sub-harmonic split and K=0.13 energy coupling.
+    Isolate the post-merger ringdown, run FFT, and check for the
+    15 Hz sub-harmonic split and K=0.13 energy coupling.
+    tmpl_arr: aligned template array (same length as ts) used for correct K ratio.
+    Two windows are used:
+      - K window [0.001–0.025s]: captures actual ringdown decay (τ~3-5ms for 150 M_sun)
+      - FFT window [0.001–0.150s]: provides 7 Hz bin resolution needed for 15 Hz split
     """
     from resonance_filter import run_fourier_analysis, scan_for_kk_modes
 
-    fs      = int(1.0 / ts.delta_t)
     t_abs   = np.array(ts.sample_times)
     t_rel   = t_abs - MERGER_GPS
 
-    # Ringdown window: +0.01s to +0.16s after merger (150 ms)
-    mask = (t_rel >= 0.01) & (t_rel <= 0.16)
-    if mask.sum() < 10:
-        print(f'  [{det}] WARNING: insufficient ringdown samples — skipping.')
+    # --- K coupling: short window to catch actual ringdown decay ---
+    k_mask = (t_rel >= 0.001) & (t_rel <= 0.025)
+    if tmpl_arr is not None and k_mask.sum() >= 4:
+        e_residual = np.sum(ts.numpy()[k_mask] ** 2)
+        e_template = np.sum(tmpl_arr[k_mask] ** 2)
+        if e_template > 0:
+            k_measured = e_residual / e_template
+            print(f'  [{det}] Coupling K = residual/template energy [1-25ms] = '
+                  f'{k_measured:.6f} (BMI baseline K = {BMI_COUPLING_K})')
+        else:
+            # Template has fully decayed — residual energy is pure non-GR signal
+            print(f'  [{det}] GR template energy ~0 by 1ms post-merger; '
+                  f'residual energy in [1-25ms] = {e_residual:.4e} '
+                  f'(non-GR excess, BMI coupling candidate)')
+
+    # --- Frequency split: wider 150ms window for adequate resolution ---
+    fft_mask = (t_rel >= 0.001) & (t_rel <= 0.150)
+    if fft_mask.sum() < 10:
+        print(f'  [{det}] WARNING: insufficient ringdown samples — skipping FFT.')
         return
 
-    rd_strain = ts.numpy()[mask]
+    rd_strain = ts.numpy()[fft_mask]
     rd_ts = TimeSeries(rd_strain, delta_t=ts.delta_t,
-                       epoch=t_abs[mask][0])
+                       epoch=t_abs[fft_mask][0])
 
     # FFT via resonance_filter
     freqs, power = run_fourier_analysis(rd_ts)
@@ -181,14 +199,6 @@ def analyze_ringdown(ts, det, out_dir):
         print(f'  [{det}] 15 Hz split candidate at '
               f'{peak_freq - BMI_FREQ_SPLIT_HZ:.1f} Hz | '
               f'relative power: {split_ratio:.4f}')
-
-    # K=0.13 coupling: compare energy in ringdown vs. total burst window
-    total_mask = (t_rel >= -0.05) & (t_rel <= 0.16)
-    e_total    = np.sum(ts.numpy()[total_mask] ** 2)
-    e_ringdown = np.sum(rd_strain ** 2)
-    k_measured = e_ringdown / e_total if e_total > 0 else 0.0
-    print(f'  [{det}] Measured coupling K = {k_measured:.4f} '
-          f'(BMI baseline K = {BMI_COUPLING_K})')
 
     # Plot ringdown spectrum
     fig, ax = plt.subplots(figsize=(10, 5))
@@ -227,8 +237,8 @@ def run(h5_dir='data'):
         print(f'  Loaded {len(ts)} samples @ {1.0/ts.delta_t:.0f} Hz, '
               f'epoch={float(ts.start_time):.1f}')
 
-        ts = bandpass(ts)
-        print(f'  Bandpass applied: 50–500 Hz')
+        ts = bandpass(ts, high_hz=600.0)
+        print(f'  Bandpass applied: 50–600 Hz')
 
         analyze_impulse_chirp(ts, det, OUTPUT_DIR)
 
@@ -255,7 +265,7 @@ def run(h5_dir='data'):
         plt.close(fig)
         print(f'  [{det}] Template subtraction plot saved: {cmp_path}')
 
-        analyze_ringdown(residual_ts, det, OUTPUT_DIR)
+        analyze_ringdown(residual_ts, det, OUTPUT_DIR, tmpl_arr=tmpl_arr)
         print()
 
     print('Pipeline complete. Plots saved to:', os.path.abspath(OUTPUT_DIR))
