@@ -10,7 +10,7 @@ import matplotlib
 matplotlib.use('Agg')  # non-interactive backend for codespace/server environments
 import matplotlib.pyplot as plt
 import h5py
-from scipy.signal import stft
+from scipy.signal import stft, butter, sosfiltfilt
 from pycbc.types import TimeSeries
 
 # GW190521 merger GPS time (GWTC-2)
@@ -20,6 +20,14 @@ BMI_FREQ_SPLIT_HZ = 15.00
 BMI_COUPLING_K    = 0.13
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'assets', 'images')
+
+
+def bandpass(ts, low_hz=50.0, high_hz=500.0):
+    """Bandpass filter strain to isolate the GW signal band."""
+    fs  = int(1.0 / ts.delta_t)
+    sos = butter(8, [low_hz, high_hz], btype='bandpass', fs=fs, output='sos')
+    filtered = sosfiltfilt(sos, ts.numpy())
+    return TimeSeries(filtered, delta_t=ts.delta_t, epoch=ts.start_time)
 
 
 def load_hdf5_strain(path):
@@ -164,6 +172,9 @@ def run(h5_dir='data'):
         ts = load_hdf5_strain(h5_path)
         print(f'  Loaded {len(ts)} samples @ {1.0/ts.delta_t:.0f} Hz, '
               f'epoch={float(ts.start_time):.1f}')
+
+        ts = bandpass(ts)
+        print(f'  Bandpass applied: 50–500 Hz')
 
         analyze_impulse_chirp(ts, det, OUTPUT_DIR)
         analyze_ringdown(ts, det, OUTPUT_DIR)
