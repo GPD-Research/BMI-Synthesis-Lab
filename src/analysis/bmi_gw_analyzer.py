@@ -189,58 +189,86 @@ def fetch_strain(cfg: EventConfig, det: str) -> TimeSeries:
 
 
 def _fetch_noise_segment(cfg: EventConfig, det: str) -> TimeSeries:
-    """Fetch an arbitrary GPS segment directly from GWOSC HDF5 files."""
+    """
+    Fetch a clean 32s noise segment from GWOSC HDF5.
+    Uses the DQ mask to skip data gaps, scanning ±1 hour around the target GPS
+    to find the nearest science-mode window.
+    """
     from gwosc.locate import get_urls
     import urllib.request
 
-    t_centre = int(cfg.merger_gps)
-    half     = int(cfg.duration / 2)
-    t_start  = t_centre - half
-    t_end    = t_centre + half
+    t_centre  = int(cfg.merger_gps)
+    half      = int(cfg.duration / 2)
 
-    urls = get_urls(det, t_start, t_end, sample_rate=cfg.sample_rate)
+    # Gather candidate files within ±1 hour of target (search in expanding bands)
+    urls = []
+    for radius in [300, 1800, 7200]:
+        try:
+            urls = get_urls(det, t_centre - radius, t_centre + radius,
+                            sample_rate=cfg.sample_rate)
+            if urls:
+                break
+        except Exception:
+            continue
     if not urls:
         raise RuntimeError(
-            f'No GWOSC data for {det} at GPS {t_centre} '
-            f'(sample_rate={cfg.sample_rate}). '
+            f'No GWOSC data for {det} near GPS {t_centre}. '
             f'The detector may not have been observing at this time.'
         )
 
-    # Download the first covering file to a temp cache
-    url  = urls[0]
-    fname = url.split('/')[-1]
-    cache = os.path.join(DATA_DIR, 'gwosc_cache', fname)
-    os.makedirs(os.path.dirname(cache), exist_ok=True)
+    for url in urls:
+        fname = url.split('/')[-1]
+        cache = os.path.join(DATA_DIR, 'gwosc_cache', fname)
+        os.makedirs(os.path.dirname(cache), exist_ok=True)
+        if not os.path.exists(cache):
+            print(f'  [{det}] Downloading {fname} …')
+            urllib.request.urlretrieve(url, cache)
 
-    if not os.path.exists(cache):
-        print(f'  [{det}] Downloading {fname} …')
-        urllib.request.urlretrieve(url, cache)
-        print(f'  [{det}] Saved to {cache}')
+        with h5py.File(cache, 'r') as f:
+            try:
+                file_sr    = int(round(1.0 / float(
+                    f['strain']['Strain'].attrs['Xspacing'])))
+            except Exception:
+                file_sr = cfg.sample_rate
 
-    # Read the 32-second slice centred on our GPS from the 4096-second file
-    with h5py.File(cache, 'r') as f:
-        # GWOSC HDF5 layout: /strain/Strain
-        strain_ds = f['strain']['Strain']
-        file_sr   = int(f['strain']['Strain'].attrs.get(
-                        'Xspacing', 1.0) ** -1 if 'Xspacing' in
-                        f['strain']['Strain'].attrs else cfg.sample_rate)
-        # Fall back: read attributes from the meta group
-        try:
-            file_sr = int(round(1.0 / float(
-                f['strain']['Strain'].attrs['Xspacing'])))
-        except Exception:
-            file_sr = cfg.sample_rate
+            file_start = int(f['meta']['GPSstart'][()])
+            file_dur   = int(f['meta']['Duration'][()])
+            file_end   = file_start + file_dur
+            strain_ds  = f['strain']['Strain']
+            n_per_s    = file_sr   # samples per second
+            win_n      = cfg.duration * n_per_s  # samples needed
 
-        file_start = float(f['meta']['GPSstart'][()])
-        idx_start  = int((t_start - file_start) * file_sr)
-        idx_end    = int((t_end   - file_start) * file_sr)
-        idx_start  = max(0, idx_start)
-        idx_end    = min(len(strain_ds), idx_end)
-        arr = strain_ds[idx_start:idx_end]
+            # DQmask: 1 entry per second, bit 0 = DATA available
+            dq = f['quality']['simple']['DQmask'][:]  # shape (file_dur,)
 
-    return TimeSeries(arr.astype(np.float64),
-                      delta_t=1.0/file_sr,
-                      epoch=file_start + idx_start / file_sr)
+            # Build list of candidate start offsets near our target GPS
+            # Prefer offsets closest to our target, search in expanding rings
+            target_offset = t_centre - file_start - half
+            candidates = sorted(
+                range(0, file_dur - int(cfg.duration)),
+                key=lambda s: abs(s - target_offset)
+            )
+
+            for s_off in candidates:
+                e_off = s_off + int(cfg.duration)
+                # Check DQ: all seconds must have bit 0 set
+                if not np.all(dq[s_off:e_off] & 1):
+                    continue
+                # Load and verify no NaN in strain
+                idx_s = s_off * n_per_s
+                idx_e = e_off * n_per_s
+                arr   = strain_ds[idx_s:idx_e].astype(np.float64)
+                if np.any(np.isnan(arr)) or np.any(np.isinf(arr)):
+                    continue
+                epoch = file_start + s_off
+                print(f'  [{det}] Clean window found at GPS {epoch} '
+                      f'({abs(epoch+half - t_centre)}s from target)')
+                return TimeSeries(arr, delta_t=1.0/file_sr, epoch=float(epoch))
+
+    raise RuntimeError(
+        f'Could not find a clean {cfg.duration}s science-mode window for {det} '
+        f'near GPS {t_centre} in available GWOSC files.'
+    )
 
 
 def _save_hdf5(ts: TimeSeries, path: str, sample_rate: int):
@@ -299,25 +327,27 @@ def _bandpass(ts: TimeSeries, low: float, high: float) -> TimeSeries:
 
 # ── Q-scan ─────────────────────────────────────────────────────────────────────
 
-def make_qscan(ts: TimeSeries, cfg: EventConfig, det: str, out_dir: str):
+def make_qscan(ts: TimeSeries, cfg: EventConfig, det: str, out_dir: str,
+               ref_gps: Optional[float] = None):
     try:
         from gwpy.timeseries import TimeSeries as GWpyTS
         from astropy import units as u
+        rgps = ref_gps if ref_gps is not None else cfg.merger_gps
         gts = GWpyTS(
             ts.numpy(), t0=float(ts.start_time),
             dt=ts.delta_t, unit=u.dimensionless_unscaled,
             name=f'{cfg.label} {det}'
         )
-        t0, t1 = cfg.merger_gps - 2, cfg.merger_gps + 2
+        t0, t1 = rgps - 2, rgps + 2
         qgram = gts.crop(t0, t1).q_transform(
             frange=(cfg.bandpass_low, cfg.bandpass_high),
             qrange=(4, 64),
-            outseg=(cfg.merger_gps - 0.5, cfg.merger_gps + 0.5),
+            outseg=(rgps - 0.5, rgps + 0.5),
         )
         fig = qgram.plot(figsize=(10, 4))
         ax  = fig.gca()
-        ax.set_epoch(cfg.merger_gps)
-        ax.set_xlim(cfg.merger_gps - 0.5, cfg.merger_gps + 0.5)
+        ax.set_epoch(rgps)
+        ax.set_xlim(rgps - 0.5, rgps + 0.5)
         ax.set_yscale('log')
         ax.set_xlabel('Time relative to GPS merger (s)')
         ax.set_ylabel('Frequency (Hz)')
@@ -334,10 +364,10 @@ def make_qscan(ts: TimeSeries, cfg: EventConfig, det: str, out_dir: str):
 # ── Impulse analysis ───────────────────────────────────────────────────────────
 
 def analyze_impulse(ts: TimeSeries, cfg: EventConfig, det: str,
-                    out_dir: str) -> Optional[float]:
+                    out_dir: str, ref_gps: Optional[float] = None) -> Optional[float]:
     fs    = int(1.0 / ts.delta_t)
     t_abs = np.array(ts.sample_times)
-    t_rel = t_abs - cfg.merger_gps
+    t_rel = t_abs - (ref_gps if ref_gps is not None else cfg.merger_gps)
 
     nperseg = min(256, len(ts) // 8)
     f, t_s, Zxx = scipy_stft(ts.numpy(), fs=fs, nperseg=nperseg,
@@ -380,7 +410,8 @@ def analyze_impulse(ts: TimeSeries, cfg: EventConfig, det: str,
 # ── Template subtraction ───────────────────────────────────────────────────────
 
 def subtract_template(ts: TimeSeries, cfg: EventConfig,
-                      det: str, out_dir: str) -> Tuple[TimeSeries, np.ndarray]:
+                      det: str, out_dir: str,
+                      ref_gps: Optional[float] = None) -> Tuple[TimeSeries, np.ndarray]:
     """
     Generate best-fit IMRPhenomPv2 template from catalog params (if available),
     align by cross-correlation, amplitude-scale, subtract.
@@ -389,7 +420,7 @@ def subtract_template(ts: TimeSeries, cfg: EventConfig,
     """
     strain = ts.numpy()
     t_abs  = np.array(ts.sample_times)
-    t_rel  = t_abs - cfg.merger_gps
+    t_rel  = t_abs - (ref_gps if ref_gps is not None else cfg.merger_gps)
 
     if cfg.is_noise_segment or cfg.m1 is None:
         print(f'  [{det}] No template available — residual = raw data')
@@ -456,7 +487,8 @@ def subtract_template(ts: TimeSeries, cfg: EventConfig,
 
 def analyze_ringdown(residual_ts: TimeSeries, tmpl_arr: np.ndarray,
                      cfg: EventConfig, det: str,
-                     out_dir: str) -> dict:
+                     out_dir: str,
+                     ref_gps: Optional[float] = None) -> dict:
     """
     Returns dict with: peak_freq, bmi_zone_snr, split_hz, split_rel_power, K.
     Uses two windows: short for K, longer for FFT frequency resolution.
@@ -465,7 +497,7 @@ def analyze_ringdown(residual_ts: TimeSeries, tmpl_arr: np.ndarray,
 
     fs     = int(1.0 / residual_ts.delta_t)
     t_abs  = np.array(residual_ts.sample_times)
-    t_rel  = t_abs - cfg.merger_gps
+    t_rel  = t_abs - (ref_gps if ref_gps is not None else cfg.merger_gps)
     data   = residual_ts.numpy()
 
     results = {
@@ -591,10 +623,16 @@ def run(cfg: EventConfig):
             ts = condition_strain(ts_raw, cfg)
             print(f'  Whitened + bandpassed')
 
-            qscan_path   = make_qscan(ts, cfg, det, out_dir)
-            impulse_dur  = analyze_impulse(ts, cfg, det, out_dir)
-            residual_ts, tmpl_arr = subtract_template(ts, cfg, det, out_dir)
-            rd_results   = analyze_ringdown(residual_ts, tmpl_arr, cfg, det, out_dir)
+            # In noise mode, use the fetched data centre as the analysis reference
+            ref_gps = None
+            if cfg.is_noise_segment:
+                ref_gps = float(ts_raw.start_time) + cfg.duration / 2.0
+                print(f'  Noise ref GPS: {ref_gps:.1f}')
+
+            qscan_path   = make_qscan(ts, cfg, det, out_dir, ref_gps=ref_gps)
+            impulse_dur  = analyze_impulse(ts, cfg, det, out_dir, ref_gps=ref_gps)
+            residual_ts, tmpl_arr = subtract_template(ts, cfg, det, out_dir, ref_gps=ref_gps)
+            rd_results   = analyze_ringdown(residual_ts, tmpl_arr, cfg, det, out_dir, ref_gps=ref_gps)
 
             all_results['detectors'][det] = {
                 'impulse_duration_s': impulse_dur,
