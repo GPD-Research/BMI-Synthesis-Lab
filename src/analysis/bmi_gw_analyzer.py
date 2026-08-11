@@ -189,28 +189,58 @@ def fetch_strain(cfg: EventConfig, det: str) -> TimeSeries:
 
 
 def _fetch_noise_segment(cfg: EventConfig, det: str) -> TimeSeries:
-    """Fetch an arbitrary GPS segment via GWOSC REST (no catalog required)."""
-    try:
-        from gwosc.datasets import event_gps
-    except ImportError:
-        pass
-    from pycbc.frame import query_and_read_frame
-    # Use GWOSC public data service
-    channel = f'{det}:GWOSC-16KHZ_R1_STRAIN' if cfg.sample_rate == 16384 \
-              else f'{det}:GWOSC-4KHZ_R1_STRAIN'
-    try:
-        ts = query_and_read_frame(
-            'losc', channel,
-            cfg.merger_gps - cfg.duration / 2,
-            cfg.merger_gps + cfg.duration / 2,
-        )
-        return ts
-    except Exception as e:
+    """Fetch an arbitrary GPS segment directly from GWOSC HDF5 files."""
+    from gwosc.locate import get_urls
+    import urllib.request
+
+    t_centre = int(cfg.merger_gps)
+    half     = int(cfg.duration / 2)
+    t_start  = t_centre - half
+    t_end    = t_centre + half
+
+    urls = get_urls(det, t_start, t_end, sample_rate=cfg.sample_rate)
+    if not urls:
         raise RuntimeError(
-            f'Could not fetch noise segment for {det} via GWOSC frame: {e}\n'
-            f'Tip: use --event with a real catalog event name, or ensure GWOSC '
-            f'frame access is configured.'
+            f'No GWOSC data for {det} at GPS {t_centre} '
+            f'(sample_rate={cfg.sample_rate}). '
+            f'The detector may not have been observing at this time.'
         )
+
+    # Download the first covering file to a temp cache
+    url  = urls[0]
+    fname = url.split('/')[-1]
+    cache = os.path.join(DATA_DIR, 'gwosc_cache', fname)
+    os.makedirs(os.path.dirname(cache), exist_ok=True)
+
+    if not os.path.exists(cache):
+        print(f'  [{det}] Downloading {fname} …')
+        urllib.request.urlretrieve(url, cache)
+        print(f'  [{det}] Saved to {cache}')
+
+    # Read the 32-second slice centred on our GPS from the 4096-second file
+    with h5py.File(cache, 'r') as f:
+        # GWOSC HDF5 layout: /strain/Strain
+        strain_ds = f['strain']['Strain']
+        file_sr   = int(f['strain']['Strain'].attrs.get(
+                        'Xspacing', 1.0) ** -1 if 'Xspacing' in
+                        f['strain']['Strain'].attrs else cfg.sample_rate)
+        # Fall back: read attributes from the meta group
+        try:
+            file_sr = int(round(1.0 / float(
+                f['strain']['Strain'].attrs['Xspacing'])))
+        except Exception:
+            file_sr = cfg.sample_rate
+
+        file_start = float(f['meta']['GPSstart'][()])
+        idx_start  = int((t_start - file_start) * file_sr)
+        idx_end    = int((t_end   - file_start) * file_sr)
+        idx_start  = max(0, idx_start)
+        idx_end    = min(len(strain_ds), idx_end)
+        arr = strain_ds[idx_start:idx_end]
+
+    return TimeSeries(arr.astype(np.float64),
+                      delta_t=1.0/file_sr,
+                      epoch=file_start + idx_start / file_sr)
 
 
 def _save_hdf5(ts: TimeSeries, path: str, sample_rate: int):
