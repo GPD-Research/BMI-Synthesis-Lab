@@ -1,0 +1,44 @@
+{
+  "per_detector": {
+    "L1": {
+      "event_bmi_snr": 16.473667285954882,
+      "event_split_power": 0.8081779417894148,
+      "null_snr_mean": 3.4810951726150696,
+      "null_snr_std": 3.534829194590211,
+      "null_split_mean": 0.12378632823739641,
+      "null_split_std": 0.16659658368031738,
+      "n_trials": 10,
+      "gaussian_sigma_snr": 3.675586965623109,
+      "gaussian_sigma_split": 4.108077119188105,
+      "empirical_sigma_snr": 1.6448536269514729,
+      "empirical_sigma_split": 1.6448536269514729
+    },
+    "V1": {
+      "event_bmi_snr": 9.59359565380218,
+      "event_split_power": 0.2835402132246406,
+      "null_snr_mean": 9.075097933815515,
+      "null_snr_std": 7.686459216950507,
+      "null_split_mean": 0.1242161302969946,
+      "null_split_std": 0.19386319075443412,
+      "n_trials": 10,
+      "gaussian_sigma_snr": 0.06745599050903059,
+      "gaussian_sigma_split": 0.8218377212694354,
+      "empirical_sigma_snr": 0.0,
+      "empirical_sigma_split": 0.8416212335729142
+    }
+  },
+  "event": "GW190521",
+  "n_trials": 10,
+  "trial_gps": [
+    1242399767,
+    1242356567,
+    1242529367,
+    1242313367,
+    1242572567,
+    1242615767,
+    1242658967,
+    1242702167,
+    1242140567,
+    1242745367
+  ]
+}
