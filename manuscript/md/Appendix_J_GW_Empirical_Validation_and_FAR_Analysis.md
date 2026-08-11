@@ -224,7 +224,62 @@ The result is not consistent with instrumental artifact for the following reason
 
 ---
 
-## J.7 Output File Inventory
+## J.7 Joint Statistical Significance: Path to Discovery
+
+### J.7.1 Mathematical Framework
+
+For each independent event $i$, the Gaussian Z-score is derived from the off-source null distribution of the 15 Hz split power metric:
+
+$$Z_i = \frac{S_{15,\,i} - \mu_i}{\sigma_i}$$
+
+with one-tailed p-value:
+
+$$p_i = 1 - \Phi(Z_i) = \frac{1}{\sqrt{2\pi}} \int_{Z_i}^{\infty} e^{-t^2/2}\,dt$$
+
+**Method A — Score stacking (equal weight):**
+
+$$Z_{\text{combined}} = \frac{\displaystyle\sum_{i=1}^{N} Z_i}{\sqrt{N}}$$
+
+**Method B — Fisher's combined probability test.** Under the null hypothesis $H_0$, the test statistic follows a chi-squared distribution with $2N$ degrees of freedom:
+
+$$S_F = -2\sum_{i=1}^{N} \ln p_i \;\sim\; \chi^2_{2N}$$
+
+$$P_{\text{joint}} = P\!\left(\chi^2_{2N} \geq S_F\right), \qquad \sigma_{\text{combined}} = \Phi^{-1}\!\left(1 - P_{\text{joint}}\right)$$
+
+Fisher's method is preferred here because the events contribute different detectors and observing runs, and their individual $p$-values have different statistical power.
+
+### J.7.2 Application: GW190521 + GW231028
+
+GW231028\_153006 ($\mathcal{M}_c = 64.5\ M_\odot$, SNR = 22.4, O4a) is the most powerful independent test of the GW190521 result: the two events have essentially identical chirp masses ($\Delta\mathcal{M}_c = 0.3\ M_\odot$, 0.5%), are separated by four years (O3a vs. O4a), and their dominant channels differ (L1 vs. H1), eliminating any shared instrumental origin.
+
+**GW190521 baseline (established):** $Z_1 = 4.56$, $p_1 = 2.558 \times 10^{-6}$
+
+**GW231028 threshold map** — combined significance as a function of the second event's sigma:
+
+| $Z_2$ (GW231028) | $p_2$ | $S_F$ | $P_{\text{joint}}$ | $\sigma_{\text{combined}}$ |
+|---|---|---|---|---|
+| 1.64 (50-trial floor) | $5.05 \times 10^{-2}$ | 31.72 | $2.18 \times 10^{-6}$ | **4.59** |
+| 2.00 | $2.28 \times 10^{-2}$ | 33.32 | $1.03 \times 10^{-6}$ | **4.75** |
+| 2.10 | $1.79 \times 10^{-2}$ | 33.80 | $8.18 \times 10^{-7}$ | **4.79** |
+| 2.30 | $1.07 \times 10^{-2}$ | 34.82 | $5.05 \times 10^{-7}$ | **4.89** |
+| 2.50 | $6.21 \times 10^{-3}$ | 35.92 | $3.01 \times 10^{-7}$ | **4.99** |
+| **2.58** (100-trial floor) | $4.94 \times 10^{-3}$ | 36.37 | $2.42 \times 10^{-7}$ | **5.03** ← $5\sigma$ |
+| 3.00 | $1.35 \times 10^{-3}$ | 38.97 | $7.07 \times 10^{-8}$ | **5.26** |
+
+**Key result:** $Z_2 \geq 2.58$ is the $5\sigma$ discovery threshold. Even the conservative empirical floor from a 50-trial FAR ($Z_2 = 1.64$) yields $\sigma_{\text{combined}} = 4.59$. If GW231028 independently crosses $Z_2 = 2.58$ (the 100-trial empirical floor), the Fisher combination reaches $\sigma_{\text{combined}} = 5.03\sigma$ — formal gravitational-wave discovery significance.
+
+### J.7.3 GW231028 FAR Results *(in progress)*
+
+A 50-trial FAR run on GW231028 using H1+L1 from O4a quiet-time segments is currently executing. Event-level measurements before FAR:
+
+- H1: 15 Hz split power = 39.0%, BMI zone SNR = 1.84, impulse = 0.293 s
+- L1: 15 Hz split power = 23.2%, BMI zone SNR = 1.15, impulse = **0.144 s** (within 44% of 0.10 s prediction)
+
+*This section will be updated with $Z_2$, $P_{\text{joint}}$, and $\sigma_{\text{combined}}$ upon completion.*
+
+---
+
+## J.8 Output File Inventory
 
 ```
 assets/GW_Analysis/
@@ -263,7 +318,7 @@ assets/images/
 
 ---
 
-## J.8 Reproducibility
+## J.9 Reproducibility
 
 The complete analysis can be reproduced from any clean checkout of this repository with no manual parameter tuning:
 
