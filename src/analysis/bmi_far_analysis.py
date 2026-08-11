@@ -43,43 +43,57 @@ OUT_ROOT  = os.path.join(REPO_ROOT, 'assets', 'GW_Analysis')
 
 def find_quiet_segments(event_gps: float, detectors: list,
                         sample_rate: int, n_trials: int,
-                        max_search_days: int = 30) -> list:
+                        max_search_days: int = 60) -> list:
     """
-    Scan backwards (and forwards) from event_gps in 12-hour steps.
-    Return up to n_trials GPS times where all requested detectors have
-    GWOSC data available.  Skips the 2-hour window around the event itself.
+    Scan for quiet GPS targets where the requested detectors have GWOSC data.
+    Uses 512s steps so multiple targets map to the same 4096s GWOSC file
+    (avoiding redundant downloads) while staying statistically independent
+    (windows are 32s, so 512s spacing gives zero overlap).
+    Prefers targets where ALL detectors are available; falls back to any
+    target where AT LEAST 2 of the requested detectors are available.
+    Skips the ±2-hour window around the event itself.
     """
     from gwosc.locate import get_urls
 
-    candidates = []
-    step = 12 * 3600   # 12-hour steps
-    max_offset = max_search_days * 86400
+    step      = 512          # 512s ≈ 8.5 min — packs ~7 trials per 4096s file
+    max_off   = max_search_days * 86400
+    skip_zone = 7200         # ±2 h around event
 
-    # Search in both directions, favouring earlier times
-    offsets = []
-    for mult in range(1, max_offset // step + 1):
-        offsets.append(-mult * step)   # before event
-        if mult * step > 7200:         # skip ±2 h around event
-            offsets.append( mult * step)
+    # Generate offsets, nearest-first, skipping the ±2h zone
+    offsets = sorted(
+        [s for s in range(-max_off, max_off + 1, step)
+         if abs(s) > skip_zone],
+        key=abs
+    )
+
+    candidates = []   # (gps, det_list)
+    seen_gps   = set()
 
     for offset in offsets:
         if len(candidates) >= n_trials:
             break
         t = int(event_gps + offset)
-        ok = True
+        if t in seen_gps:
+            continue
+
+        avail = []
         for det in detectors:
             try:
                 urls = get_urls(det, t - 16, t + 16, sample_rate=sample_rate)
-                if not urls:
-                    ok = False
-                    break
+                if urls:
+                    avail.append(det)
             except Exception:
-                ok = False
-                break
-        if ok:
-            candidates.append(t)
-            print(f'  Found quiet segment at GPS {t} '
-                  f'({offset/86400:+.2f} days from event)')
+                pass
+
+        # Accept if all detectors available (preferred) or at least 2
+        if len(avail) == len(detectors):
+            candidates.append((t, avail))
+            seen_gps.add(t)
+            print(f'  [3-det] GPS {t} ({offset/86400:+.2f}d): {avail}')
+        elif len(avail) >= 2:
+            candidates.append((t, avail))
+            seen_gps.add(t)
+            print(f'  [2-det] GPS {t} ({offset/86400:+.2f}d): {avail}')
 
     return candidates[:n_trials]
 
@@ -281,10 +295,13 @@ def run_far(event_name: str, detectors: list, n_trials: int,
         return
 
     print(f'\nFound {len(quiet_gps_list)} segments. Running trials...\n')
+    n_3det = sum(1 for _, d in quiet_gps_list if len(d) == 3)
+    n_2det = sum(1 for _, d in quiet_gps_list if len(d) == 2)
+    print(f'  3-detector: {n_3det}  |  2-detector: {n_2det}\n')
 
     # ── 4. Run each trial ──
     trial_summaries = []
-    for i, t_gps in enumerate(quiet_gps_list):
+    for i, (t_gps, trial_dets) in enumerate(quiet_gps_list):
         label = f'FAR_{event_name}_trial_{i+1:02d}'
         trial_out = os.path.join(far_dir, f'trial_{i+1:02d}')
         os.makedirs(trial_out, exist_ok=True)
@@ -296,7 +313,7 @@ def run_far(event_name: str, detectors: list, n_trials: int,
             print(f'Trial {i+1:02d} (GPS {t_gps}): loaded from cache')
         else:
             print(f'\n--- Trial {i+1:02d} / {len(quiet_gps_list)} '
-                  f'(GPS {t_gps}) ---')
+                  f'(GPS {t_gps}, {trial_dets}) ---')
             try:
                 # Temporarily redirect bmi output dir to our trial subdir
                 orig_out = bmi.OUT_ROOT
@@ -305,7 +322,7 @@ def run_far(event_name: str, detectors: list, n_trials: int,
                     event_label=event_name,
                     trial_gps=t_gps,
                     trial_label=label,
-                    detectors=detectors,
+                    detectors=trial_dets,
                     sample_rate=event_cfg.sample_rate,
                     bandpass_low=event_cfg.bandpass_low,
                     bandpass_high=event_cfg.bandpass_high,
@@ -330,7 +347,9 @@ def run_far(event_name: str, detectors: list, n_trials: int,
     far_report = compute_far_stats(event_summary, trial_summaries, detectors)
     far_report['event']       = event_name
     far_report['n_trials']    = len(trial_summaries)
-    far_report['trial_gps']   = quiet_gps_list
+    far_report['trial_gps']   = [t for t, _ in quiet_gps_list]
+    far_report['n_3det']      = n_3det
+    far_report['n_2det']      = n_2det
 
     # ── 6. Plot distributions ──
     plot_far_distributions(event_summary, trial_summaries, detectors,
