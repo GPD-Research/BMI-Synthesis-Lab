@@ -97,15 +97,40 @@ def resolve_event(args) -> EventConfig:
 
 def _from_catalog(event_name: str, override_sr: Optional[int],
                   override_dets: Optional[List[str]]) -> EventConfig:
-    from pycbc.catalog import Merger
-    m = Merger(event_name)
-
-    m1   = float(m.mass1)
-    m2   = float(m.mass2)
-    mchirp = float(m.mchirp)
-    dist = float(m.distance)
-    snr  = float(m.snr)
-    gps  = float(m.time)
+    """Try PyCBC catalog first; fall back to GWOSC API for recent events."""
+    try:
+        from pycbc.catalog import Merger
+        m = Merger(event_name)
+        m1     = float(m.mass1)
+        m2     = float(m.mass2)
+        mchirp = float(m.mchirp)
+        dist   = float(m.distance)
+        snr    = float(m.snr)
+        gps    = float(m.time)
+    except Exception:
+        # Fallback: search the full GWOSC catalog for a partial name match
+        import urllib.request, json as _json
+        cat_url = 'https://gwosc.org/eventapi/json/GWTC/'
+        with urllib.request.urlopen(cat_url, timeout=15) as r:
+            catalog = _json.loads(r.read())
+        match = next(
+            (k for k in catalog['events'] if event_name.upper() in k.upper()),
+            None
+        )
+        if match is None:
+            raise ValueError(
+                f'Event {event_name} not found in PyCBC catalog or GWOSC. '
+                f'Check spelling or try the full event ID (e.g. GW250114_082203).'
+            )
+        ev     = catalog['events'][match]
+        m1     = float(ev['mass_1_source'])
+        m2     = float(ev['mass_2_source'])
+        dist   = float(ev['luminosity_distance'])
+        snr    = float(ev['network_matched_filter_snr'])
+        gps    = float(ev['GPS'])
+        mchirp = (m1 * m2) ** 0.6 / (m1 + m2) ** 0.2
+        print(f'  [catalog] GWOSC match: {match} | m1={m1} m2={m2} '
+              f'd={dist} Mpc SNR={snr} GPS={gps}')
 
     # Auto-tune analysis windows from chirp mass:
     # Heavy (>50 Msun): short burst, fine ringdown window
@@ -143,22 +168,44 @@ def _from_catalog(event_name: str, override_sr: Optional[int],
     if override_dets:
         cfg.detectors = override_dets
     else:
-        cfg.detectors = _probe_detectors(event_name, sr)
+        cfg.detectors = _probe_detectors(event_name, sr, gps=gps)
 
     return cfg
 
 
-def _probe_detectors(event_name: str, sample_rate: int) -> List[str]:
+def _probe_detectors(event_name: str, sample_rate: int,
+                     gps: Optional[float] = None) -> List[str]:
     """Try each detector; keep those that return valid data."""
-    from pycbc.catalog import Merger
-    m = Merger(event_name)
+    # Try PyCBC catalog first
+    try:
+        from pycbc.catalog import Merger
+        m = Merger(event_name)
+        available = []
+        for det in ALL_DETECTORS:
+            try:
+                ts = m.strain(det, sample_rate=sample_rate)
+                if ts is not None and len(ts) > 0:
+                    available.append(det)
+                    print(f'  Detector {det}: available ({len(ts)} samples)')
+            except Exception:
+                pass
+        if available:
+            return available
+    except Exception:
+        pass
+
+    # Fallback: use GWOSC locate to check file availability near event GPS
+    if gps is None:
+        return []
+    from gwosc.locate import get_urls
     available = []
     for det in ALL_DETECTORS:
         try:
-            ts = m.strain(det, sample_rate=sample_rate)
-            if ts is not None and len(ts) > 0:
+            urls = get_urls(det, int(gps) - 16, int(gps) + 16,
+                            sample_rate=sample_rate)
+            if urls:
                 available.append(det)
-                print(f'  Detector {det}: available ({len(ts)} samples)')
+                print(f'  Detector {det}: available (GWOSC locate)')
         except Exception:
             pass
     return available
@@ -178,8 +225,16 @@ def fetch_strain(cfg: EventConfig, det: str) -> TimeSeries:
     if cfg.is_noise_segment:
         ts = _fetch_noise_segment(cfg, det)
     else:
-        from pycbc.catalog import Merger
-        ts = Merger(cfg.label).strain(det, sample_rate=cfg.sample_rate)
+        ts = None
+        # Try PyCBC catalog first
+        try:
+            from pycbc.catalog import Merger
+            ts = Merger(cfg.label).strain(det, sample_rate=cfg.sample_rate)
+        except Exception:
+            pass
+        # Fallback: treat like a noise segment but centred on the merger GPS
+        if ts is None:
+            ts = _fetch_noise_segment(cfg, det)
         if ts is None:
             raise RuntimeError(f'No data for {det}')
 
