@@ -8,9 +8,9 @@ def run_fourier_analysis(ringdown_ts):
     """
     print("🔮 Initializing Fourier Analysis on post-merger spacetime...")
     
-    # Extract the raw numpy array values and sampling rate
-    sample_rate = ringdown_ts.sample_rate.value
-    strain_values = ringdown_ts.value
+    # Extract the raw numpy array values and sampling rate (PyCBC TimeSeries)
+    sample_rate = int(1.0 / ringdown_ts.delta_t)
+    strain_values = ringdown_ts.numpy()
     
     # 1. Apply a Hanning window to smoothly taper the edges of our 150ms slice
     window = signal.windows.hann(len(strain_values))
