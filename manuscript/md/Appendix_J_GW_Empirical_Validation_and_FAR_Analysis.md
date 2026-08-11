@@ -396,24 +396,63 @@ All six mathematical claims were verified deterministically:
 - Score stacking: $Z = (4.56 + 3.49)/\sqrt{2} = 5.692\sigma$ — independently confirms $>5\sigma$
 - KK compactification: $L_{\text{node}} = \hbar/(\Delta f \cdot M_{\text{Pl}}) = 3.23 \times 10^{-28}\ \text{m}$
 
-**PyCBC cross-validation (`src/analysis/bmi_pycbc_validation.py`) — PIPELINE-DEPENDENT:**
+**Un-modelled excess power burst search (`src/analysis/bmi_excess_power_burst.py`) — BURST CONFIRMED, SPLIT NOT DETECTED:**
 
-The same post-merger residual was processed through two whitening variants (highpass 30 Hz + off-source Welch, and highpass + full-window Welch) using PyCBC's `get_td_waveform` for template generation and FFT-based cross-correlation alignment. Results:
+A multi-resolution excess power search was executed on the raw whitened strain with no GR template of any kind. Results:
 
-| Method | GW190521 L1 split | GW231028 H1 split |
-|--------|------------------|--------------------|
-| Our custom pipeline | **80.8%** | **38.97%** |
-| Highpass + off-source Welch (alt.) | 11.4% | 8.4% |
-| Highpass + full-window Welch (alt.) | 13.0% | 9.8% |
+| Event | Det | Burst time | Dominant freq | Peak SNR | 15 Hz split ratio |
+|-------|-----|-----------|--------------|---------|------------------|
+| GW190521 | L1 | +5.1 ms | 400.8 Hz | 1202 | 0.014 (not detected) |
+| GW231028 | H1 | +14.8 ms | 400.8 Hz | 413 | 0.039 (not detected) |
 
-**Finding:** The measured 15 Hz split power is sensitive to the template alignment strategy. The two independent variants agree with each other (11–13% and 8–10%) but diverge from our custom pipeline. Both independent methods used global FFT cross-correlation alignment across the full 32s window, which may align the template to a noise-dominated region rather than the merger peak, suppressing the post-merger residual signal.
+Both events show genuine excess post-merger energy well above the noise floor at the correct time for a ringdown, detected without any template. The burst timing is consistent with BMI's predicted winding-mode impulse. However, the 15 Hz frequency split is **not detected** in the raw whitened strain (split ratio 1–4%, below the 10% threshold), meaning the split requires template subtraction to be visible.
 
-**Implication:** The 5.557$\sigma$ Fisher result is **internally valid** — the FAR null distribution was constructed with the *identical* pipeline as the event analysis, making the sigma estimate a consistent measure of the event's departure from that pipeline's noise floor. The result is not yet confirmed as *pipeline-independent*. The un-modelled cWB burst search (Requirement 2, not yet executed) would resolve this by making no template assumptions at all. The PyCBC validation highlights that GPS-constrained template alignment (using the known merger GPS rather than global correlation) is likely needed for a fair comparison.
+This places the 15 Hz split signature in one of two categories:
+1. A genuine sub-dominant post-merger feature revealed by subtracting the dominant GR signal, or  
+2. A systematic artifact introduced by the template subtraction process
 
-The three pre-publication requirements from J.9.3 remain:
-1. ✅ SymPy formal verification — complete
-2. ⚠️ PyCBC matched-filter with GPS-constrained alignment — partially executed, shows pipeline sensitivity; requires GPS-constrained alignment to be definitive  
-3. ❌ Coherent WaveBurst un-modelled burst search — not yet executed
+The distinction between these two interpretations is exactly what a genuine cWB run resolves — cWB uses wavelet coherence across detectors at multiple Q-values and would identify a persistent inter-detector coherent feature at a specific frequency offset that is independent of template assumptions.
+
+**Complete validation status:**
+| Check | Status | Finding |
+|-------|--------|---------|
+| SymPy formal math | ✅ Passed | All 6 formulas verified |
+| Hardware injections | ✅ Clean | No injections at either event window |
+| 15 Hz absolute line | ✅ Not a noise line | Δf is a relative offset, not absolute |
+| FAR internal consistency | ✅ 5.557σ | Event above all null trials (same pipeline) |
+| PyCBC alt. whitening | ⚠️ Pipeline-sensitive | Different alignment → 8–13% vs 80–39% |
+| Excess power burst | ⚠️ Split not detected | Burst timing confirmed; split needs template |
+| Coherent WaveBurst | ❌ Not yet executed | Requires IGWN cluster or Docker + ROOT |
+
+### J.9.4 Realistic cWB Execution Plan
+
+Coherent WaveBurst cannot run natively in GitHub Codespaces due to its ROOT/C++ build requirements (~4 GB). The three viable paths are:
+
+**Path A — IGWN Cluster (production-grade, weeks):**
+Apply for access at [computing.ligo.org](https://computing.ligo.org). With LIGO credentials, submit the GW190521 and GW231028 GPS times to the cWB offline burst pipeline via:
+```bash
+# On an IGWN cluster node:
+cwb_inet2G config/user_parameters.C  # with GW190521/GW231028 GPS
+```
+This is the gold-standard test. The LVK cWB team can confirm or deny the inter-detector coherence of the 15 Hz feature.
+
+**Path B — Docker container (days, local machine):**
+```bash
+# Pull the IGWN computing container (includes ROOT + cWB)
+docker pull igwn/base:el8-testing
+docker run -it -v $(pwd)/data:/data igwn/base:el8-testing
+# Inside container: git clone https://gitlab.com/cWB/cWB && cmake build
+```
+This requires Docker on the local laptop (not Codespaces) and ~6 GB disk.
+
+**Path C — BayesWave (pip-installable proxy, days):**
+BayesWave is LVK's wavelet-based parameter estimation tool with a Python interface:
+```bash
+pip install bayeswave  # if available
+# Runs a Bayesian wavelet reconstruction on the post-merger residual
+# — provides a template-free spectral reconstruction
+```
+BayesWave would give a spectral posterior for the post-merger signal, directly testing whether the 15 Hz split is present in the Bayesian wavelet decomposition.
 
 ---
 
