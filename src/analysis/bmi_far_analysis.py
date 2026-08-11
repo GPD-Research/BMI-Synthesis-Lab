@@ -24,6 +24,7 @@ Output
 import argparse
 import json
 import os
+import shutil
 import sys
 import numpy as np
 import matplotlib
@@ -35,8 +36,23 @@ from scipy.stats import norm
 sys.path.insert(0, os.path.dirname(__file__))
 import bmi_gw_analyzer as bmi
 
-REPO_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
-OUT_ROOT  = os.path.join(REPO_ROOT, 'assets', 'GW_Analysis')
+REPO_ROOT  = os.path.join(os.path.dirname(__file__), '..', '..')
+OUT_ROOT   = os.path.join(REPO_ROOT, 'assets', 'GW_Analysis')
+CACHE_DIR  = os.path.join(REPO_ROOT, 'data', 'gwosc_cache')
+FREE_FLOOR = 3 * 1024 ** 3   # 3 GB — purge cache when free space drops below this
+
+
+def _maybe_purge_cache():
+    """Delete bulk GWOSC HDF5 files if free disk space is below FREE_FLOOR."""
+    stat = shutil.disk_usage(REPO_ROOT)
+    if stat.free < FREE_FLOOR and os.path.isdir(CACHE_DIR):
+        cache_size = sum(
+            os.path.getsize(os.path.join(CACHE_DIR, f))
+            for f in os.listdir(CACHE_DIR)
+        )
+        shutil.rmtree(CACHE_DIR)
+        print(f'  [disk] Cache purged ({cache_size/1024**3:.1f} GB freed). '
+              f'Free: {(stat.free + cache_size)/1024**3:.1f} GB')
 
 
 # ── Segment discovery ──────────────────────────────────────────────────────────
@@ -339,6 +355,7 @@ def run_far(event_name: str, detectors: list, n_trials: int,
                 summary = {'error': str(e), 'detectors': {}}
 
         trial_summaries.append(summary)
+        _maybe_purge_cache()
 
     # ── 5. Compute FAR statistics ──
     print(f'\n{"="*60}')
