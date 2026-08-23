@@ -10,4 +10,5 @@ __pycache__/
 # Local environment/data
 .venv/
 venv/
+data/
 DAILY_BRIEFING.txt
