@@ -1,4 +1,4 @@
-# v2 status — after milestone 3
+# v2 status — after milestone 3b
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -47,7 +47,7 @@ $$
 
 - $M_{Pl}^2(\phi)$: done.
 - $K(\phi)$ (radion kinetic factor): 5D result known, 6D **[verify]**.
-- $V_{\text{eff}}(\phi) = \Omega^4\delta\sigma_2 + 2\pi\ell_z\int_0^\phi dy\, e^{-5y/\ell} V(\Phi(y))$: needs the
+- $V_{\text{eff}}(\phi) = \Omega^4\delta\sigma_2 + \pi\ell_z\int_0^\phi dy\, e^{-5y/\ell} V(\Phi(y))$: needs the
   bulk profile $\Phi(y)$, which needs the coupled $\Phi$–metric background to be solved
   (the pure-AdS$_6$ background above assumes $V(\Phi)$ is a small perturbation — to be checked).
 - $E_{\mu\nu}$: homogeneous part is $\mathcal C/a^4$; $\mathcal C$ needs the impact state.
@@ -70,6 +70,15 @@ must either produce $n_2/n_1$ and a stalled $\phi(t)$ from the action, or the mi
 choice for $\Sigma_2$ dies and the fallback (higher-dimensional $\Sigma_2$, +1 parameter) is
 taken.
 
+## 5b. Field content from geometry (`02b_localization.md`)
+
+Forced by the AdS$_6$ background plus the SM's own consistency: gravity/radion/scalars on
+$\Sigma_1$; $z \in S^1/\mathbb Z_2$ (chirality); SM gauge fields and charged fermions on
+$\Sigma_1$ (a bulk gauge field would charge the mirror sector); only gauge singlets may be
+bulk fields; $z$-excitations are heavy and ours, $y$-excitations are light by $\Omega$ and
+theirs. **Not forced:** the bulk mass $c$ of a bulk fermion — one dial per species, not
+admitted; the only clean option is a universal $c$ (would be parameter #8).
+
 ## 6. Kill criteria (`01_action.md` §5)
 
 | # | criterion | status |
@@ -89,6 +98,6 @@ $w(z)$ and the DM mass drift, and any preferred direction in the low-$\ell$ CMB.
 
 ## 8. Repo state
 
-- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory), stacked, all CI green.
-- CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities).
+- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization), stacked.
+- CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin).
 - Next: milestone 4 — solve $\Phi(y)$, $V_{\text{eff}}$, then $a(t), \phi(t)$; compute $w_0, w_a$, $\Delta N_{\text{eff}}$, DM mass drift.

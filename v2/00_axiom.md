@@ -52,9 +52,10 @@ not chosen species by species to fit the spectrum. A per-field choice is a free 
 (one discrete slot per species) and is the retracted R4 in new clothes.
 
 **What is already known to constrain it.**
-- LHC bounds on KK excitations of gauge bosons and quarks put $1/\ell_z \gtrsim 5$–$10$ TeV
-  if any of them are bulk fields; the bleed is realistically limited to gravity, $\Phi$, the
-  radion, and gauge singlets (right-handed neutrinos).
+- Worked out in `02b_localization.md`: SM gauge fields cannot be bulk fields (a bulk gauge
+  zero mode couples universally, so mirror matter would be charged), charged SM fermions
+  follow them, and 4D chirality forces $z \in S^1/\mathbb Z_2$. The bleed is limited to
+  gravity, $\Phi$, the radion, and gauge singlets (right-handed neutrinos).
 - A bulk right-handed neutrino on this background gives: Dirac neutrinos (no neutrinoless double-beta decay), a mass
   hierarchy fixed by the $y$-profile overlap with $\Sigma_1$ (a *ratio* prediction, e.g.
   $\Delta m^2_{31}/\Delta m^2_{21}$, with no per-species parameter), and a tower of sterile
@@ -62,7 +63,9 @@ not chosen species by species to fit the spectrum. A per-field choice is a free 
 - The one number the geometry already fixes is the mass scale on $\Sigma_2$,
   $\Omega = e^{-\phi/\ell}$ (`02_effective_4d.md` §5). Any shadowed field inherits it.
 
-Scheduled after milestone 4 (background). Until then the SM on $\Sigma_1$ stays borrowed.
+Localization equations: milestone 3b, `02b_localization.md`. Verdict there: spin and the
+SM's own consistency fix everything except one bulk-mass dial per bulk fermion; the SM on
+$\Sigma_1$ stays borrowed.
 
 ## What is not in v2
 

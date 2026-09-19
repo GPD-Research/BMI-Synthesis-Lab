@@ -22,3 +22,4 @@ jobs:
       - run: python3 tests/check_ledger.py
       - run: pip install "sympy>=1.12,<2"
       - run: python3 tests/check_background.py
+      - run: python3 tests/check_zero_modes.py

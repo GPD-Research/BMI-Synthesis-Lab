@@ -12,7 +12,10 @@ must be re-derived in milestone 3 before they are used.
 **Bulk.** $\mathcal M_6$ with coordinates $X^A = (x^\mu, y, z)$, $\mu = 0..3$, metric $G_{AB}$,
 signature $(-,+,+,+,+,+)$. Bulk Planck mass $M_6$.
 
-**Extra dimensions [choice].** $z$ is compact, $z \sim z + 2\pi \ell_z$. $y$ is an interval
+**Extra dimensions [choice].** $z$ is compact, $z \sim z + 2\pi \ell_z$, with a
+$\mathbb Z_2$ identification $z \sim -z$ (orbifold $S^1/\mathbb Z_2$): the orbifold is not a
+choice but forced by the existence of chiral 4D fermions on a brane whose worldvolume
+includes the circle (`02b_localization.md` §4.1). $y$ is an interval
 $0 \le y \le \phi$ bounded by the two branes. Alternatives rejected: (a) both $y, z$
 non-compact with codimension-2 branes — conical deficit angles make the junction problem
 ill-posed for brane matter (Cline, Descheneau, Giovannini & Vinet 2003); (b) both compact —
@@ -23,9 +26,9 @@ then there is no interval to merge across.
 $1/\ell_z$ the $z$ dependence is frozen and each brane is an effective 3-brane; the bulk is
 an effective 5D space with
 $$
-M_5^3 \equiv 2\pi \ell_z\, M_6^4 .
+M_5^3 \equiv \pi \ell_z\, M_6^4
 $$
-Only $M_5$ is observable until $z$-KK modes are probed. $M_6$ and $\ell_z$ therefore enter
+(the orbifold halves the circle volume). Only $M_5$ is observable until $z$-KK modes are probed. $M_6$ and $\ell_z$ therefore enter
 the ledger as the single number $M_5$. $\ell_z$ is the circle radius *at $\Sigma_1$*; in the
 warped background of §3 the proper radius at $y$ is $\ell_z e^{-y/\ell}$.
 

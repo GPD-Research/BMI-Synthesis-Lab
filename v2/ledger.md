@@ -19,7 +19,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 
 | # | symbol | meaning | fixed by | status |
 |---|---|---|---|---|
-| 1 | `M_5` | effective 5D Planck mass, $M_5^3 = 2\pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
+| 1 | `M_5` | effective 5D Planck mass, $M_5^3 = \pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
 | 2 | `\ell` | bulk warp length; fixes $\Lambda_6$ and the RS-tuned $\sigma_1$ | $G_N$ with #1, #3 (the CC tuning is stated in `01_action.md` §3, not hidden) | open |
 | 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 5$ (`02_effective_4d.md` §4) | bounded |
 | 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | candidate for $\Omega_{DM}/\Omega_b$ | open |
@@ -32,8 +32,9 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 | symbol | meaning | must be computed in | bound now |
 |---|---|---|---|
 | `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$ from the projected Weyl tensor | milestone 5 (impact) | $\Delta N_{\text{eff}} \lesssim 0.3$ |
+| `c_\nu` | universal bulk mass of bulk gauge singlets (`02b_localization.md` §6); only admitted as *one* number for all species | taken only if a neutrino-sector milestone is opened | none yet |
 
-If milestone 5 cannot compute it, it becomes parameter #8 and the budget line above is
+If milestone 5 cannot compute `\mathcal C`, it becomes parameter #8 and the budget line above is
 raised, with a note here saying why.
 
 ## Borrowed (not counted, not derived)

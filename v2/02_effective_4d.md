@@ -28,7 +28,7 @@ not yet re-derived.
    corrected relation changes the $\dot G/G$ estimate by a factor $\tfrac32$ and the exponent
    $2\to3$; the conclusion (LLR easily satisfied) is unchanged. §4 has been corrected.
 3. **$\ell_z$ is the circle radius at $\Sigma_1$.** The proper radius at $y$ is
-   $\ell_z e^{-y/\ell}$, so $M_5^3 \equiv 2\pi\ell_z M_6^4$ is the UV-brane value. This matters
+   $\ell_z e^{-y/\ell}$, so $M_5^3 \equiv \pi\ell_z M_6^4$ (orbifold volume, `02b_localization.md` §4.1) is the UV-brane value. This matters
    for the mirror sector (§5).
 
 None of these changes the parameter count. They are recorded here rather than silently
@@ -72,7 +72,7 @@ Einstein–Hilbert term over $0 \le y \le \phi$ and the circle. $\sqrt{-G} = e^{
 and $R_6 \supset e^{2y/\ell}R_4$, so
 $$
 \frac{M_6^4}{2}\int d^6X\sqrt{-G}\,R_6 \;\supset\;
-\frac{M_6^4}{2}\,(2\pi\ell_z)\int_0^{\phi}dy\,e^{-3y/\ell}\int d^4x\sqrt{-g}\,R_4
+\frac{M_6^4}{2}\,(\pi\ell_z)\int_0^{\phi}dy\,e^{-3y/\ell}\int d^4x\sqrt{-g}\,R_4
 = \frac{M_{\text{Pl}}^2(\phi)}{2}\int d^4x\sqrt{-g}\,R_4 ,
 $$
 $$
@@ -116,7 +116,7 @@ Reducing on the circle at energies below $1/\ell_z$ (zero mode only) gives the 4
 $$
 \boxed{\;G_{\mu\nu} = 8\pi G_N(\phi)\,T_{\mu\nu} + \frac{8\pi G_N}{\sigma_1^{(5)}}\,\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}[\phi]\;}
 $$
-with $\sigma_1^{(5)} = 2\pi\ell_z\sigma_1 = 8M_5^3/\ell$ the tension per unit 4-volume,
+with $\sigma_1^{(5)} = \pi\ell_z\sigma_1 = 8M_5^3/\ell$ the tension per unit 4-volume,
 $\hat\pi_{\mu\nu}$ the 4D quadratic tensor, and $\Theta_{\mu\nu}[\phi]$ the radion stress
 (derivative terms in $\phi$ plus $V_{\text{eff}}(\phi)\,g_{\mu\nu}$, §4). This is the equation
 v1's Chapter 7 was reaching for: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ is its weak-field
@@ -186,10 +186,10 @@ $\phi_0/\ell \gtrsim 5$ is mandatory.
 
 **Effective potential.** The two contributions:
 $$
-V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2^{(5)} \;+\; 2\pi\ell_z\int_0^\phi dy\;e^{-5y/\ell}\,V(\Phi(y))
+V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2^{(5)} \;+\; \pi\ell_z\int_0^\phi dy\;e^{-5y/\ell}\,V(\Phi(y))
 \quad\textbf{[verify: requires } \Phi(y)\textbf{]}
 $$
-with $\delta\sigma_2^{(5)} = 2\pi\ell_z\,\delta\sigma_2$. The $\Omega^4$ scaling of the detuning
+with $\delta\sigma_2^{(5)} = \pi\ell_z\,\delta\sigma_2$. The $\Omega^4$ scaling of the detuning
 term is the standard warped-down IR-brane tension (the same redshift that makes
 the RS hierarchy). The measure of the bulk-potential term is $e^{-5y/\ell}$ (six-dimensional
 $\sqrt{-G}$), correcting the $e^{-4y/\ell}$ written in `01_action.md` §4, which was the 5D value.

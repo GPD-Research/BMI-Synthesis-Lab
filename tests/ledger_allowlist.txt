@@ -132,3 +132,17 @@ m_p
 m_eff
 n_1
 n_2
+
+# localization (02b_localization.md): mode labels, KK masses, Bessel zeros, relation symbols
+f
+m_4
+m_1
+m_k
+x_1
+x_k
+\epsilon
+\eta_ab
+\nu_R
+Z_2
+\Rightarrow
+\simeq
