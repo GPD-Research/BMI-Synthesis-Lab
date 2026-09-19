@@ -28,6 +28,21 @@ $$
 Only $M_5$ is observable until $z$-KK modes are probed. $M_6$ and $\ell_z$ therefore enter
 the ledger as the single number $M_5$.
 
+**Correspondence with the original picture.** The v1 genesis was two manifolds sharing two
+compactified spatial dimensions: ours is 3 space + 2 shared + time (6D), the other has at least
+3 space + the same 2 shared + time, possibly more. In the language above the shared pair is
+the bulk $(y, z)$, and each manifold is a brane extended in its own three space dimensions.
+Two things follow. (i) If both manifolds filled the shared pair completely they would already
+coincide and there would be nothing to merge; so one shared direction ($z$) is wrapped by both
+and the other ($y$) is the one along which they are displaced. This is not an extra
+assumption, it is what "separated and merging" means in a 2D shared space, and it is the only
+arrangement whose junction problem is well-posed (see the codimension-2 remark above; a 3+3+1
+split would make the shared space 3D and the problem worse). (ii) Any additional internal
+dimensions of $\Sigma_2$ are invisible from $\Sigma_1$ except through how sector-2 matter
+dilutes and gravitates. v2 takes the minimal 3+1 worldvolume for $\Sigma_2$ **[choice]**; a
+higher-dimensional $\Sigma_2$ is the fallback and costs one parameter (an effective equation of
+state for its matter as seen from 4D).
+
 **Fork 1 [choice].** The bulk is warped with $\Sigma_1$ at the ultraviolet (large-warp-factor)
 end. Reason: in this configuration $G_N$ on $\Sigma_1$ depends on the brane separation only
 through $e^{-2\phi/\ell}$ (§4), so an ongoing merger does not violate lunar-laser-ranging bounds
