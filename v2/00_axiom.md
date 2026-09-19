@@ -6,7 +6,7 @@ $\Sigma_2$ couples to matter on $\Sigma_1$ only through bulk gravity and at most
 scalar field $\Phi$.
 
 That is the whole axiom. Everything in `v2/` must be derived from it and from the action
-in `01_action_skeleton.md`, or it does not belong in `v2/`.
+in `01_action.md`, or it does not belong in `v2/`.
 
 ## What the axiom commits to
 
