@@ -1,0 +1,57 @@
+# Symbols permitted in v2/ math that are NOT parameters.
+# Coordinates, indices, fields, derived/observable quantities, borrowed constants.
+# Never add a new constant here; it belongs in v2/ledger.md.
+
+# coordinates and indices
+t
+x
+y
+z
+r
+a
+\mu
+\nu
+A
+B
+i
+j
+n
+m
+
+# borrowed constants (counted as "borrowed" in ledger.md)
+G_N
+G
+\hbar
+c
+M_Pl
+H_0
+\Lambda_6
+
+# geometry / fields
+\Sigma_1
+\Sigma_2
+\Phi
+\phi
+\ell
+V
+E_\mu\nu
+G_\mu\nu
+T_\mu\nu
+\pi_\mu\nu
+K_\mu\nu
+g_\mu\nu
+R
+
+# derived / observable quantities (outputs, not inputs)
+T_1
+T_2
+w
+w_0
+w_a
+\Delta
+N_eff
+\Omega_DM
+\Omega_b
+n_s
+f_NL
+\sigma

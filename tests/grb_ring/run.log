@@ -1,0 +1,37 @@
+OBSERVED (tangent-plane degrees)
+  circle     k=3  RSS=120.698  RMS=3.662 deg  BIC=  29.96  params=[ 1.963  3.033 18.792]
+  golden     k=4  RSS= 67.591  RMS=2.740 deg  BIC=  26.94  params=[-8.66  -2.889 35.724  5.835]
+  logspiral  k=5  RSS= 20.553  RMS=1.511 deg  BIC=  18.42  params=[-6.255 -0.698 32.08   5.377 -0.192]
+  ellipse    k=5  RSS= 48.290  RMS=2.316 deg  BIC=  26.11  params=[-0.433  2.234 25.228 14.65  -0.22 ]
+  dBIC vs circle (negative = beats circle): {'golden': np.float64(-3.02), 'logspiral': np.float64(-11.54), 'ellipse': np.float64(-3.85)}
+
+NULL: 1000 sets of 9 uniform points in l=[96,155] b=[-48,-8]
+  ...50
+  ...100
+  ...150
+  ...200
+  ...250
+  ...300
+  ...350
+  ...400
+  ...450
+  ...500
+  ...550
+  ...600
+  ...650
+  ...700
+  ...750
+  ...800
+  ...850
+  ...900
+  ...950
+  ...1000
+  golden     obs dBIC= -3.02   null: median= -3.45  P(null dBIC <= obs)=0.552   P(null beats circle at all)=0.786
+  logspiral  obs dBIC=-11.54   null: median= -4.60  P(null dBIC <= obs)=0.069   P(null beats circle at all)=0.956
+  ellipse    obs dBIC= -3.85   null: median= -2.69  P(null dBIC <= obs)=0.417   P(null beats circle at all)=0.716
+
+How special is the observed fit quality itself? P(null RMS <= obs RMS):
+  circle     obs RMS=3.662  P=0.1070
+  golden     obs RMS=2.740  P=0.0970
+  logspiral  obs RMS=1.511  P=0.0280
+  ellipse    obs RMS=2.316  P=0.1200
