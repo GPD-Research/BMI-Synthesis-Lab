@@ -4,7 +4,10 @@ Every quantity that v2 needs from outside the action is listed here. `tests/chec
 fails CI if a symbol declared as a parameter appears in `v2/*.md` without a row in the table
 below, or if the number of rows exceeds the budget.
 
-**Budget: 8 parameters, 0 free functions.** (ΛCDM: 6. SM: 19.)
+**Budget: 7 parameters, 0 free functions.** (ΛCDM: 6. SM: 19.)
+
+Discrete choice (not a parameter): matter on $\Sigma_2$ is a copy of the Standard Model
+(mirror sector). Its equation of state is then fixed by its own thermal history, not fitted.
 
 Ledger balance = (un-fitted numerical predictions confirmed) − (parameters). Update the
 balance line whenever a row or a prediction changes.
@@ -22,7 +25,6 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
 | 7 | `T_2/T_1` | sector temperature ratio at reheating | **target: derived from impact kinematics, not fit** | open |
-| 8 | `w_2` | equation of state of sector-2 matter (or `0` if mirror SM) | sector-2 content choice | open |
 
 ## Borrowed (not counted, not derived)
 
@@ -42,4 +44,4 @@ quantities, never for a new constant.
 
 ## Balance
 
-**0 − 8 = −8.** Milestones 3–6 must move this to ≥ 0 or the branch is closed.
+**0 − 7 = −7.** Milestones 3–6 must move this to ≥ 0 or the branch is closed.

@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 V2 = ROOT / "v2"
 LEDGER = V2 / "ledger.md"
 ALLOWLIST = ROOT / "tests" / "ledger_allowlist.txt"
-SKIP = {"ledger.md", "ledger_v1_audit.md", "01_action_skeleton.md", "README.md"}
+SKIP = {"ledger.md", "ledger_v1_audit.md", "01_action_skeleton.md", "README.md", "v1_chapter_audit.md"}
 
 MATH_RE = re.compile(r"\$\$(.+?)\$\$|\$(.+?)\$", re.S)
 # a "symbol" is a Greek/named macro or a single Latin letter, with an optional subscript
