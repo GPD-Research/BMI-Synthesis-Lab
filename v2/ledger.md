@@ -22,7 +22,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 |---|---|---|---|---|
 | 1 | `M_5` | effective 5D Planck mass, $M_5^3 = \pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
 | 2 | `\ell` | bulk warp length; fixes $\Lambda_6$ and the RS-tuned $\sigma_1$ | $G_N$ with #1, #3 (the CC tuning is stated in `01_action.md` §3, not hidden) | open |
-| 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 3.4$ (`03_background.md` §1); equals the image of the post-impact kinetic ratio $r_b$, which must lie within 1.5% of the overshoot value (`04_impact.md` §1, coincidence recorded) | bounded |
+| 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 3.4$ (`03_background.md` §1); equals the image of the post-impact kinetic ratio $r_b$ in the moduli approximation (`04_impact.md` §1); in the exact two-brane solution $r_b$ does not exist and $\Omega_0^3 = (\epsilon - f)/(1+\epsilon)$ from the collision data, with Cassini requiring $\epsilon - f \lesssim 3\times10^{-5}$ (`04c_approach.md` §2, §4; coincidence sharpened) | bounded |
 | 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | $\lvert\delta\sigma_2\rvert < 0.15\,\rho_0/\Omega_0$ (DM-mass drift); sign not fixed by the impact (`04_impact.md` §5) | bounded, sign open |
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
@@ -32,11 +32,15 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 
 | symbol | meaning | must be computed in | bound now |
 |---|---|---|---|
-| `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$ | **resolved, milestone 5**: driven to the fixed point $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ by bulk-graviton emission (`04_impact.md` §4); $\Delta N_{\text{eff}} \lesssim 0.03$. Not a parameter. | satisfied ×10 |
+| `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$; the Schwarzschild–AdS bulk mass | **re-opened, milestone 5c**: emission drives it to $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ (`04_impact.md` §4), but the exact two-brane solution requires $\epsilon \ge f$ — the collision must already deposit at least as much bulk mass as $\Sigma_2$ energy (`04c_approach.md` §3) — so it is collision data, not an emission output; $\Delta N_{\text{eff}}$ from $\rho_E$ is at least that of the mirror sector | bounded below by $f$, above by $N_{\text{eff}}$ |
 | `c_\nu` | universal bulk mass of bulk gauge singlets (`02b_localization.md` §6); only admitted as *one* number for all species | taken only if a neutrino-sector milestone is opened | none yet |
+| `\eta_2` or `P_relic` | pre-loaded net baryon number (mirror SM) or cold-relic abundance on $\Sigma_2$ — the one number that makes mirror-side dark matter viable (`04b_initial_conditions.md` §4); would be #8, with #3 and #7 re-labelled as post-impact initial data `r_b`, `f_2` | taken only if a dark-matter exit is chosen; not taken | $\eta_2/\eta_1 \approx 2\text{–}20\times10^3$ or `P_relic` $\approx 200\,m_p\eta_1$ |
 | (fork, not a symbol) | a feature in $V(\Phi)$ — bump or negative minimum — that would end acceleration via the dark-energy scalar (`03_background.md` §3.4); one shape choice + 1 scale | taken only if milestone 7 kills the pure exponential against DESI chains | — |
+| (fork, not a symbol) | **circle stabilizer**: the radius $\ell_z$ is a flat direction of the action and couples to SM gauge couplings; unstabilized it is a gravitational-strength dilaton and makes $\alpha$ drift (`04c_approach.md` §6). Menu: flux through $z$, Casimir energy, second bulk scalar — each ≥ +1 parameter | **must be taken** before any result using constant $\ell_z$ is trusted; kill if no stabilizer gives $m_{\ell_z} > 10^{-3}$ eV and $\lvert\dot\alpha/\alpha\rvert < 10^{-17}\,\mathrm{yr}^{-1}$ | none yet |
+| (fork, not a symbol) | **unified sector at coincidence** (`00_axiom.md`, pre-action layer): at $\Omega = 1$ the branes coincide and one gauge group $G_U \supset$ SM × mirror lives on the merged brane, splitting into the two sectors as they separate. Would give cross-sector annihilation during overlap, and a vacuum-level (not action-level) $\mathbb Z_2$ breaking that could produce $T_2 \ne T_1$, $\eta_2 \ne \eta_1$. Price: one discrete choice ($G_U$ and its breaking pattern) + the overlap duration. Kill: must reproduce SU(3)×SU(2)×U(1) with the observed chiral content on $\Sigma_1$ and keep $\Sigma_2$ dark today; must give $\Delta N_{\text{eff}} < 0.3$ and $\eta_1 = 6\times10^{-10}$ without a hidden efficiency function; must not reintroduce a bulk gauge field (`02b_localization.md`) | taken only if the 5b families all die in milestone 6, or if a computable $G_U$ is exhibited; not taken | — |
 
-Milestone 5 computed `\mathcal C`; the budget stays at 7.
+Milestone 5 computed `\mathcal C`; milestone 5c re-opened it as collision data and found the
+circle modulus unstabilized. The budget stays at 7, with the circle-stabilizer fork owed.
 
 ## Borrowed (not counted, not derived)
 
@@ -61,6 +65,9 @@ $\phi_0/\ell \gtrsim 3.4$ (Cassini); $|\dot G/G| \lesssim 3\times10^{-16}\,\math
 Forced consequence, tested and failed (`04_impact.md` §3): mirror-sector masses are $\Omega m$
 with $\Omega \lesssim 0.032$, so $\Omega_{DM}/\Omega_b = 5.3$ needs $\eta_2/\eta_1 \gtrsim 1600$;
 the action has no mechanism — mirror SM is not the dark matter.
+Initial-condition scan (`04b_initial_conditions.md`): the action's null configuration is dead; every
+viable configuration with mirror-side dark matter needs one pre-loaded datum (`\eta_2` or `P_relic`)
+tuned against `r_b`, `f_2`; configurations without mirror DM pass and say nothing.
 
 ## Balance
 

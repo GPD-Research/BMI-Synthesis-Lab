@@ -1,4 +1,4 @@
-# v2 status — after milestone 5
+# v2 status — after milestone 5c
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -21,8 +21,10 @@ missing is its *effective 4D form* (§4).
 ## 2. Parameter budget (7, `ledger.md`)
 
 $M_5,\ \ell,\ \phi_0,\ \sigma_2,\ V_0,\ c,\ T_2/T_1$. Balance $0 - 7 = -7$: no un-fitted
-number has been predicted yet. The dark-radiation constant $\mathcal C$ is *computed*
-(milestone 5), not a parameter; $\phi_0$ is the image of the post-impact kinetic ratio $r_b$;
+number has been predicted yet. The dark-radiation constant $\mathcal C$ is collision data
+bounded below by the $\Sigma_2$ energy (milestone 5c), not a parameter; $\phi_0$ is fixed by
+the collision data $(\epsilon, f)$ (`04c_approach.md`), with `r_b` of milestone 5 as its
+moduli-approximation shadow;
 $T_2/T_1$ is not derivable from the action (its $\mathbb Z_2$-symmetric null value 1 is
 excluded) and stays a parameter, bounded $< 0.45$.
 
@@ -86,6 +88,17 @@ mass, not the equation of state. Exits with their prices are tabulated in `04_im
 the two honest ones are (c) a collision-driven asymmetry (a mechanism the action lacks;
 proposed milestone 5b) or (e) BMI is silent on dark matter. **Decision pending.**
 
+**Milestone 5b (initial-condition scan, `04b_initial_conditions.md`).** The action is
+$\mathbb Z_2$-symmetric at the impact, so the two manifolds' pre-collision content passes through
+as initial data (`r_b`, `f_2`, `\eta_1`, `\eta_2` or `P_relic`); those were scanned and scored
+against Cassini, BBN/CMB $N_{\text{eff}}$ and $\Omega_{DM}/\Omega_b$. The action's null
+configuration is dead. Viable families: (i) mirror SM pre-loaded with
+$\eta_2 \approx (2\text{–}20)\times10^3\,\eta_1$ and $< 4\%$ of the impact energy — the
+"pre-loaded manifold" picture, viable but tuned to a thin band and delivering dissipative 30 MeV
+mirror-atom DM (milestone 6 risk); (ii) a cold non-thermal relic on $\Sigma_2$ — viable, generic;
+(iii) no mirror DM (empty $\Sigma_2$ or RS2 overshoot) — viable, silent. Every mirror-DM survivor
+costs one number the action does not produce (+1 parameter if taken). None adopted.
+
 ## 5c. The impact (`04_impact.md`)
 
 | quantity | result |
@@ -96,6 +109,19 @@ proposed milestone 5b) or (e) BMI is silent on dark matter. **Decision pending.*
 | $n_2/n_1$ | needs $\eta_2/\eta_1 \gtrsim 1600$: mirror-DM branch closed |
 | sign $\delta\sigma_2$ | not fixed ($\lvert V_{\text{rad}}\rvert \lesssim 10^{-36}$ of the impact energy); if attractive at its bound, earliest second impact $\gtrsim 200$ Gyr |
 | $(n_s, r)$ | not produced: bulk scalar gives $r = 8c^2 \ge 0.28$; radion is not ekpyrotic; $n_s$, `A_s` stay borrowed |
+
+## 5d. The approach to $\Omega = 1$ without the moduli approximation (`04c_approach.md`)
+
+| result | status |
+|---|---|
+| bulk between the branes is static Schwarzschild–AdS (Birkhoff); each brane's motion fixed by its own content; no independent radion | derived |
+| $\Omega_\infty^3 = (\epsilon - f)/(1+\epsilon)$, $f$ = $\Sigma_2$/$\Sigma_1$ radiation, $\epsilon$ = dark radiation/$\Sigma_1$ radiation, both at coincidence | derived, checked to 5% (`tests/approach.py`) |
+| `r_b` does not exist as a datum: the three of 5b collapse to two | derived |
+| $\epsilon \ge f$ or $\Sigma_2$ has no trajectory: dark radiation $\ge$ mirror energy, $N_{\text{eff}}$ budget doubled; $\mathcal C$ re-opened as collision data | derived |
+| Cassini: $\epsilon - f \lesssim 3\times10^{-5}$ — the 1.5% coincidence becomes 0.1–0.3% of $f$; generic collision gives no $\Sigma_2$ or $\Omega_0 \sim 0.1$–1 | derived; "no mirror DM" is now the generic family |
+| $\rho \gtrsim \sigma_1$ at coincidence: branes cross, Fork 1 lost; scope is $h \lesssim 1$ | numerical |
+| **circle radius $\ell_z$ is an unstabilized modulus** coupled to $\alpha$; the fixed circle of `01_action.md` is not a solution; stabilizer fork owed (≥ +1) | gap; kill risk |
+| pre-action layer (independent universes, arrows of time, crystallization) recorded in `00_axiom.md` as hypothesis; unified-sector fork pre-registered in `ledger.md` | not derived, not used |
 
 ## 5b. Field content from geometry (`02b_localization.md`)
 
@@ -130,4 +156,6 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 
 - PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact).
 - CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers), `tests/impact.py` (freeze-out, $N_{\text{eff}}$, $\mathcal C$, turnaround, inflation numbers).
-- Next: a decision on the dark-matter exit (`04_impact.md` §3), then milestone 6 or 7.
+- `tests/scan_initial_conditions.py`: post-impact initial-data scan and viability map.
+- `tests/approach.py`: exact two-brane trajectories in Schwarzschild–AdS, closed-form $\Omega_\infty$, Cassini window in $\epsilon$.
+- Next: the circle-stabilizer fork (owed) and a dark-matter family, then milestone 6 or 7.
