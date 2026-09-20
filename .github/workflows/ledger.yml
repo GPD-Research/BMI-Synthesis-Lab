@@ -28,3 +28,4 @@ jobs:
       - run: python3 tests/background_frw.py
       - run: python3 tests/impact.py
       - run: python3 tests/scan_initial_conditions.py
+      - run: python3 tests/approach.py

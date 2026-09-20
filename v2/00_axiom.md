@@ -67,6 +67,49 @@ Localization equations: milestone 3b, `02b_localization.md`. Verdict there: spin
 SM's own consistency fix everything except one bulk-mass dial per bulk fermion; the SM on
 $\Sigma_1$ stays borrowed.
 
+## Pre-action layer (hypothesis, not used by any derivation)
+
+The picture behind the axiom, recorded so that it is not confused with what v2 derives:
+
+1. Two universes, each with its own manifold, field content and thermodynamic arrow of time,
+   exist independently and come into contact.
+2. The contact is not a point: the 4D singularity at $\Omega = 1$ is where the *effective*
+   variables fail ($M_{Pl}^2 \propto 1-\Omega^3 \to 0$, `04_impact.md` §0), not where the
+   universe is small. In the full bulk the branes coincide and separate.
+3. At coincidence a single high-energy state forms; the fields that exist afterwards
+   ("crystallize") and the assignment of dimensions to shared $(y,z)$ vs. brane-only are
+   *outputs* of that state. One arrow of time results because one causal structure results.
+4. Plasma, BBN and recombination happen in the crystallized state; that is why GR, QFT, the SM
+   and ΛCDM hold there.
+
+**Where v2 starts.** Item 4. `01_action.md` is the action *of the crystallized state*: one
+bulk, one time, fixed field content, two branes. Everything in `02_*`–`04c_*` is downstream of
+coincidence and takes the state at coincidence as data ($f$, $\epsilon$, $h$ in `04c_approach.md`;
+`\eta_1`, `\eta_2`, `P_relic` in `04b_initial_conditions.md`).
+
+**What is not derived and is not claimed.** Items 1–3. Classical GR has no equation for two
+disconnected spacetimes with separate time orientations becoming one (topology change); the
+action has no order parameter whose freezing selects SU(3)×SU(2)×U(1), no rule for which
+dimensions merge, and no matching rule through $\Omega = 1$. These are the places where a
+"theory of everything" would be asserted; v2 asserts nothing there. They can enter only as
+pre-registered forks with a price (ledger.md, "unified sector at coincidence").
+
+**Consequences that are already testable, and their status.**
+- "The collision is not over; constants are still settling." The action contains exactly two
+  settling quantities: the separation $\phi$ (mirror masses, $G_N$ via $1-\Omega^3$) and the
+  circle radius $\ell_z$ (gauge couplings). Both are bounded to $\lesssim 10^{-5}$ fractional
+  change since recombination / $z\sim3$ (`03_background.md` §3.1, `04c_approach.md` §6). The
+  dust *is* still settling in v2, at that rate and no faster.
+- "Inertia preserved after contact." The post-impact motion of the branes is fixed by the
+  collision data, not free (`04c_approach.md` §2); its observable is $\Omega_0$.
+- "Dark matter as a drag between the universes." The only inter-brane drag in the action is
+  the radion coupling, bounded to $<5\times10^{-6}$ of today's density (`03_background.md` §4):
+  it cannot be 27% of the budget. Dark matter, if on $\Sigma_2$, is a relic, not a drag.
+- "The total number of dimensions is an integer predictable from our side." Not derivable in
+  v2: $D = 6$ is chosen; bleed from extra dimensions is visible only as KK towers and is
+  counted, not predicted. A finite menu of $D$ with a stated compactification each is the only
+  admissible form of this claim.
+
 ## What is not in v2
 
 Harmonic mass formulas, winding-number particle assignments, the strain tensor `\Xi_{\mu\nu}`,
