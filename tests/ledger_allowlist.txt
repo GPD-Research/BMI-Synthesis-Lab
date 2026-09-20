@@ -166,3 +166,24 @@ H_0
 \Omega_k
 \Omega_tot
 \rho_tot
+
+# milestone 5 (04_impact.md): impact bookkeeping, LSR emission constants, borrowed eta_B
+r_b
+r_c
+\chi_0
+\rho_0
+\rho_1
+\rho_\chi
+\rho_rad
+\rho_RH
+T_RH
+T_t
+\lambda
+\alpha
+\zeta
+\kappa_5
+\epsilon_W
+\eta_1
+\eta_2
+\eta_i
+\eta_B

@@ -26,3 +26,4 @@ jobs:
       - run: python3 tests/check_radion.py
       - run: pip install numpy scipy
       - run: python3 tests/background_frw.py
+      - run: python3 tests/impact.py

@@ -229,8 +229,16 @@ $\Phi$-independent tensions.
    branch.
 4. If impact kinematics give $T_2/T_1 \gtrsim 0.5$ (milestone 5), the mirror sector violates
    BBN/$N_{\text{eff}}$ and §2.2 is dead.
+   *Status: fired, in a stronger form* (`04_impact.md` §2–3). The kinematics give no number
+   (the action is $\mathbb Z_2$-symmetric at the collision; its null value $T_2/T_1 = 1$ gives
+   $\Delta N_{\text{eff}} \approx 6$), and for every $T_2/T_1 < 0.45$ the warped mirror
+   baryons fall short of $\Omega_{DM}/\Omega_b = 5.3$ by a factor $\gtrsim 1600$ in baryon
+   asymmetry. §2.2 as the dark matter is dead; exits are tabulated there.
 5. Detection of primordial tensor modes with $r > 0.01$ kills the collision origin
    (inherited from ekpyrotic models; Khoury, Ovrut, Steinhardt & Turok 2001).
+   *Status: re-labelled* (`04_impact.md` §6). This action has no ekpyrotic potential and
+   produces no primordial spectrum; it neither predicts $r$ nor is killed by it. `A_s`, $n_s$
+   are borrowed.
 
 ## 7. What this action does not contain
 

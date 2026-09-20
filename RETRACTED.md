@@ -136,6 +136,36 @@ collision or for black-hole cosmology.
 
 ---
 
+## v2 negative results (forced misses of the v2 action, per `v2/README.md` rule 4)
+
+### N1. Dark energy as the inter-brane potential (DEAD, milestone 4)
+
+**Claimed in:** v1 Ch 7.4; carried into `v2/01_action.md` as a candidate.
+
+**Why:** the CMB bound on mirror-DM mass drift forces the radion energy fraction today below
+5×10⁻⁶ (`v2/03_background.md` §3.1, §4). Dark energy must be the bulk scalar.
+
+### N2. Mirror Standard Model on Σ₂ as the dark matter (DEAD, milestone 5)
+
+**Claimed in:** `v2/01_action.md` §2.2 (discrete choice), `v2/00_axiom.md` (the "dark-matter
+fraction is a consequence of the impact kinematics").
+
+**Why:** Σ₂ is the IR brane, so every mirror mass is Ωm with Ω₀ < 0.032 (Cassini). With
+T₂/T₁ < 0.45 (CMB N_eff) the mirror sector's contribution is Ω_DM/Ω_b ≈ 0.10 Ω₀ η₂/η₁, so
+the observed 5.3 needs a mirror baryon asymmetry η₂/η₁ ≳ 1600 that nothing in the action
+produces (`v2/04_impact.md` §3). The action is also Z₂-symmetric at the collision, so it
+gives no T₂/T₁ at all (null value 1 is excluded by ΔN_eff ≈ 6). The mirror sector may still
+exist as a light subdominant component; it is not the dark matter. Exits and their prices
+are listed in `v2/04_impact.md` §3 — none is adopted here.
+
+### N3. A primordial spectrum from the fixed action (NOT PRODUCED, milestone 5)
+
+**Why:** the only inflaton candidate, the bulk scalar with V ∝ e^{-cΦ}, gives power-law
+inflation with r = 8c² ≥ 0.28 at n_s = 0.965 and no exit; the radion is not ekpyrotic
+(`v2/04_impact.md` §6). A_s and n_s stay borrowed; kill criterion 5 is re-labelled.
+
+---
+
 ## Kept from v1 (generic, correct, re-derived in v2)
 
 - Appendix F: Gauss–Codazzi reduction to G_μν = 8πG_N T_μν (standard braneworld result;

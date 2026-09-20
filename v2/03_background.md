@@ -213,7 +213,8 @@ $a^{-4}$ (an early-universe effect, bounded by BBN, irrelevant to the fate).
 What is fixed by §3.1 either way: today $f_{\text{rad}} < 5\times10^{-6}$, so the third row is a
 far-future statement — the merger is presently negligible, and the acceleration is
 permanent *on any observable timescale*. The turnaround time in row 3 is computable once
-$\lvert\delta\sigma_2\rvert$ has a lower bound; it is not computable now, and near
+$\lvert\delta\sigma_2\rvert$ has a lower bound; with the *upper* bound of §3.1 the earliest
+possible turnaround is $\gtrsim 200$ Gyr (`04_impact.md` §5), and near
 $\Omega\to1$ the moduli approximation of §1 fails and the full junction problem must be
 solved (also $M_{Pl}^2\propto 1-\Omega^3\to0$ there). The sign of $\delta\sigma_2$ is a
 kinematic question for the impact (milestone 5): branes that separated against an attraction

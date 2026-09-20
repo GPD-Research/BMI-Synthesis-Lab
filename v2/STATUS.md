@@ -1,4 +1,4 @@
-# v2 status — after milestone 4
+# v2 status — after milestone 5
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -21,8 +21,10 @@ missing is its *effective 4D form* (§4).
 ## 2. Parameter budget (7, `ledger.md`)
 
 $M_5,\ \ell,\ \phi_0,\ \sigma_2,\ V_0,\ c,\ T_2/T_1$. Balance $0 - 7 = -7$: no un-fitted
-number has been predicted yet. One integration constant ($\mathcal C$, dark radiation) is
-pending; it becomes #8 if milestone 5 cannot compute it.
+number has been predicted yet. The dark-radiation constant $\mathcal C$ is *computed*
+(milestone 5), not a parameter; $\phi_0$ is the image of the post-impact kinetic ratio $r_b$;
+$T_2/T_1$ is not derivable from the action (its $\mathbb Z_2$-symmetric null value 1 is
+excluded) and stays a parameter, bounded $< 0.45$.
 
 ## 3. Derived so far (`02_effective_4d.md`)
 
@@ -51,8 +53,9 @@ $$
 
 with $M_{Pl}^2(\phi) = \tfrac13 M_5^3\ell(1-\Omega^3)$, $K = 12M_{Pl}^2\Omega^3/\ell^2$,
 $V_* = \pi\ell_z\ell V_0/5$, $\Omega = e^{-\phi/\ell}$. Two scalars, not one: the radion $\phi$
-(merger) and the bulk scalar $\Phi_4$ (dark energy). Still outside it: $E_{\mu\nu} = \mathcal C/a^4$
-(milestone 5) and the order-$\ell^2 R^2$ corrections.
+(merger) and the bulk scalar $\Phi_4$ (dark energy). Outside it: $E_{\mu\nu} = \mathcal C/a^4$
+with $\mathcal C$ now fixed to $\rho_E/\rho_{\text{rad}} \lesssim 5\times10^{-3}$
+(`04_impact.md` §4) and the order-$\ell^2 R^2$ corrections.
 
 **Background result.** The CMB bound on mirror-DM mass drift forces the radion's energy
 fraction today to $f_{\text{rad}} < 5\times10^{-6}$: the merger is a spectator, dark energy is
@@ -72,10 +75,27 @@ $\Omega\, m$ with $\Omega = e^{-\phi/\ell} \lesssim 0.032$:
   milestone 4 shows the action *can* satisfy this (radion spectator, §4) but it does not
   *predict* it: $|\delta\sigma_2|$ small enough is a condition on parameter #4.
 
-This is not generic mirror-matter phenomenology; it is what BMI + Fork 1 forces. Milestone 5
-must produce $n_2/n_1 \gtrsim 165$ with $T_2/T_1 \lesssim 0.45$ from the impact, or the
-mirror-SM choice for $\Sigma_2$ dies and the fallback (higher-dimensional $\Sigma_2$, +1
-parameter) is taken.
+This is not generic mirror-matter phenomenology; it is what BMI + Fork 1 forces. **Milestone 5
+result: it fails.** With $T_2/T_1 < 0.45$ (CMB $N_{\text{eff}}$; the warped mirror $e^\pm$ stay
+relativistic through BBN) and separate entropy histories,
+$\Omega_{DM}/\Omega_b \approx 0.10\,\Omega_0\,\eta_2/\eta_1$, so the observed 5.3 needs a
+mirror baryon asymmetry $\eta_2/\eta_1 \gtrsim 1600$ that nothing in the action produces
+(`04_impact.md` §3). The mirror SM is not the dark matter. The pre-registered fallback
+(higher-dimensional $\Sigma_2$) does not fix it — the missing factor is $\Omega_0$ in the
+mass, not the equation of state. Exits with their prices are tabulated in `04_impact.md` §3;
+the two honest ones are (c) a collision-driven asymmetry (a mechanism the action lacks;
+proposed milestone 5b) or (e) BMI is silent on dark matter. **Decision pending.**
+
+## 5c. The impact (`04_impact.md`)
+
+| quantity | result |
+|---|---|
+| $\mathcal C$ | computed: fixed point $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ (Langlois–Sorbo–Rodríguez-Martínez), $\Delta N_{\text{eff}} \lesssim 0.03$; $\propto (T_{RH}/T_t)^2$ below $T_t \approx 6$ TeV ($\ell = 10\,\mu$m) |
+| $\phi_0$ | $\Omega_0 = [1 - \tfrac{3}{2\sqrt2}\mathrm{asinh}\sqrt{r_b}]^{2/3}$; Cassini needs $r_b$ within 1.5% of the overshoot value $r_c = 1.186$ (coincidence problem); overshoot $\Rightarrow$ RS2, no mirror sector, also allowed by data |
+| $T_2/T_1$ | not derivable ($\mathbb Z_2$-symmetric collision); null $x=1$ gives $\Delta N_{\text{eff}} \approx 6$, excluded; $x < 0.45$; possible floor $x \gtrsim 0.1$–0.26 from graviton transfer to $\Sigma_2$ [verify] |
+| $n_2/n_1$ | needs $\eta_2/\eta_1 \gtrsim 1600$: mirror-DM branch closed |
+| sign $\delta\sigma_2$ | not fixed ($\lvert V_{\text{rad}}\rvert \lesssim 10^{-36}$ of the impact energy); if attractive at its bound, earliest second impact $\gtrsim 200$ Gyr |
+| $(n_s, r)$ | not produced: bulk scalar gives $r = 8c^2 \ge 0.28$; radion is not ekpyrotic; $n_s$, `A_s` stay borrowed |
 
 ## 5b. Field content from geometry (`02b_localization.md`)
 
@@ -93,19 +113,21 @@ admitted; the only clean option is a universal $c$ (would be parameter #8).
 | 1 | GR + ΛCDM in frozen limit | **passed** (milestone 3) |
 | 2 | $\dot G/G$ vs LLR | **passed** (milestone 4): $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ |
 | 3 | $w(z)$ vs DESI | **open**: thawing curve, $w>-1$; Planck constant-$w$ needs $c\lesssim0.5$; DESI DR2 central value (phantom) unreachable — chain-level test in milestone 7 |
-| 4 | $\Delta N_{\text{eff}}$, $T_2/T_1$ vs BBN/Planck | milestone 5 |
-| 5 | $\Omega_{DM}/\Omega_b$, $\sigma/m$ | milestone 6, now with §5 above as the hard part |
+| 4 | $\Delta N_{\text{eff}}$, $T_2/T_1$ vs BBN/Planck | **fired** (milestone 5): not because the impact gives $T_2/T_1 > 0.5$ (it gives no number) but because no $T_2/T_1 < 0.45$ yields $\Omega_{DM}/\Omega_b = 5.3$ with $\eta_2 = \eta_1$; mirror SM as DM dead |
+| 5 | $r > 0.01$ kills the collision origin | **re-labelled** (milestone 5): the action produces no primordial spectrum, so it neither predicts nor is killed by $r$ |
+| 6 | $\Omega_{DM}/\Omega_b$, $\sigma/m$ | milestone 6 — only if an exit from §5 is chosen |
 
 ## 7. Generic vs BMI-specific (honest split)
 
 Everything in §3 is standard two-brane Randall–Sundrum physics in one more dimension plus
 standard exponential quintessence; it earns BMI nothing except consistency. BMI-specific
 content so far: the slope of dark energy is the bulk-potential parameter $c$ with no geometric
-factor; the radion bound comes from *DM mass drift*; $n_2/n_1 \gtrsim 165$ inverted density
-ratio. Not yet computed: $T_2/T_1$, $n_2/n_1$, $\mathcal C$ from the impact; the low-$\ell$ CMB axis.
+factor; the radion bound comes from *DM mass drift*; the warped mirror thresholds and the
+$\Omega_0$ factor that kill mirror DM; the finite radion range and the overshoot/RS2
+alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the collision.
 
 ## 8. Repo state
 
-- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background), stacked.
-- CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers).
-- Next: milestone 5 — the impact: $T_2/T_1$, $n_2/n_1$, $\mathcal C$, $\delta\sigma_2$ sign, $(n_s, r)$.
+- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact).
+- CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers), `tests/impact.py` (freeze-out, $N_{\text{eff}}$, $\mathcal C$, turnaround, inflation numbers).
+- Next: a decision on the dark-matter exit (`04_impact.md` §3), then milestone 6 or 7.
