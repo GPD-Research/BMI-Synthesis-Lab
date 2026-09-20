@@ -180,6 +180,53 @@ must respect. Note the mirror sector needs $n_2/n_1 \gtrsim 165$ with $T_2 < 0.4
 more baryons, fewer photons. That is the number milestone 5 must produce or the mirror-SM
 choice is dead.
 
+### 3.4 Fate of the cosmos: what the action allows, pre-registered
+
+The founding picture had acceleration as a passing phase — dissipation of the collision
+energy eventually forcing a maximum size or a turnaround. Write down what the fixed action
+can and cannot do about that, before any data enters.
+
+**The constraint.** On a flat brane $3M_{Pl}^2H^2 = \rho_{\text{tot}}$. Every component with
+non-negative energy — matter, radiation, the bulk scalar with $V_0>0$, $\mathcal C>0$ dark
+radiation, energy flowing in from $\Sigma_2$ or the bulk — keeps $H^2>0$: expansion can slow
+but cannot stop or reverse. "Dissipation" (energy leaving $\Sigma_1$; $\nabla^\mu T_{\mu\nu}
+\ne 0$ is allowed on a brane) lowers $\rho$ and makes the universe coast, not turn around.
+Extra energy injected by the impact raises $H$; $\Omega_{\text{tot}}=1$ is an identity, not a
+ceiling. A static maximum-size state is unstable (Einstein static) in any scalar–tensor
+theory. Reversal therefore needs a component with *negative* energy, or positive spatial
+curvature (Planck: $\Omega_k = 0.001\pm0.002$; with any residual $V>0$ it does not recollapse).
+
+**Where negative energy can come from inside the budget.** Exactly one place: the radion
+potential $V_{\text{rad}} = \delta\sigma_2\,\Omega^4$, whose sign is parameter #4. This *is* the
+"resistance to merging" of the founding picture, now with a definite form: for
+$\delta\sigma_2<0$ it is negative and grows in magnitude as the branes approach ($\Omega\to1$),
+i.e. the branes attract — the ekpyrotic/cyclic mechanism (Steinhardt & Turok 2002). Nothing
+else in the action can go negative: $V(\Phi)$ has $V_0>0$ fixed, and $\mathcal C<0$ dilutes as
+$a^{-4}$ (an early-universe effect, bounded by BBN, irrelevant to the fate).
+
+| $\delta\sigma_2$ | radion force | late-time behaviour | fate |
+|---|---|---|---|
+| $>0$ | repulsive, $\phi\to\infty$ | quintessence dominates; $w\to -1+c^2/3$ | eternal expansion, accelerating iff $c<\sqrt2$ (data: $c\lesssim0.5$, so accelerating) |
+| $=0$ | none ($\phi$ frozen) | as above | eternal accelerating expansion |
+| $<0$ | attractive, $\phi\to0$ | $\lvert\delta\sigma_2\rvert\Omega^4$ eventually overtakes $V_*e^{-c\Phi_4/M_{Pl}}$; $\rho_{\text{tot}}\to0$ then $<0$ | turnaround, then brane collision (a second impact) |
+
+What is fixed by §3.1 either way: today $f_{\text{rad}} < 5\times10^{-6}$, so the third row is a
+far-future statement — the merger is presently negligible, and the acceleration is
+permanent *on any observable timescale*. The turnaround time in row 3 is computable once
+$\lvert\delta\sigma_2\rvert$ has a lower bound; it is not computable now, and near
+$\Omega\to1$ the moduli approximation of §1 fails and the full junction problem must be
+solved (also $M_{Pl}^2\propto 1-\Omega^3\to0$ there). The sign of $\delta\sigma_2$ is a
+kinematic question for the impact (milestone 5): branes that separated against an attraction
+vs. branes pushed apart. Not adopted: any feature in $V(\Phi)$ (bump, negative minimum) that
+would end acceleration through the dark-energy scalar — that is a new shape choice and +1
+parameter, logged as a fork in `ledger.md`, to be taken only if milestone 7 kills the pure
+exponential.
+
+**Retracted-lineage note.** v1's "bridge impedance" was one scalar resistance. Here the
+merger involves two mechanisms of different sign and scaling — the attractive/repulsive
+tension detuning $\delta\sigma_2\Omega^4$ and the warp-induced radion stiffness
+$K(\phi)\propto\Omega^3$ — neither of which is an impedance; R6 stays retracted.
+
 ## 4. Negative results recorded
 
 | claim | status | reason |

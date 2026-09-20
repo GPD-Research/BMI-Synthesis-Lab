@@ -163,3 +163,6 @@ m_DM
 t_0
 H
 H_0
+\Omega_k
+\Omega_tot
+\rho_tot

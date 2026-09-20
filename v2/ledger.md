@@ -33,6 +33,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 |---|---|---|---|
 | `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$ from the projected Weyl tensor | milestone 5 (impact) | $\Delta N_{\text{eff}} \lesssim 0.3$ |
 | `c_\nu` | universal bulk mass of bulk gauge singlets (`02b_localization.md` §6); only admitted as *one* number for all species | taken only if a neutrino-sector milestone is opened | none yet |
+| (fork, not a symbol) | a feature in $V(\Phi)$ — bump or negative minimum — that would end acceleration via the dark-energy scalar (`03_background.md` §3.4); one shape choice + 1 scale | taken only if milestone 7 kills the pure exponential against DESI chains | — |
 
 If milestone 5 cannot compute `\mathcal C`, it becomes parameter #8 and the budget line above is
 raised, with a note here saying why.
