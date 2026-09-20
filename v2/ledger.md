@@ -21,7 +21,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 |---|---|---|---|---|
 | 1 | `M_5` | effective 5D Planck mass, $M_5^3 = \pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
 | 2 | `\ell` | bulk warp length; fixes $\Lambda_6$ and the RS-tuned $\sigma_1$ | $G_N$ with #1, #3 (the CC tuning is stated in `01_action.md` §3, not hidden) | open |
-| 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 5$ (`02_effective_4d.md` §4) | bounded |
+| 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 3.4$ (`03_background.md` §1) | bounded |
 | 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | candidate for $\Omega_{DM}/\Omega_b$ | open |
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
@@ -54,10 +54,10 @@ quantities, never for a new constant.
 | — | — | — | — | none yet |
 
 Constraints derived so far (not predictions; they use data to bound the ledger):
-$\phi_0/\ell \gtrsim 5$ (Cassini); $|\dot G/G| \sim 10^{-16}\,\mathrm{yr}^{-1}$ for $\dot\phi \sim H_0\ell$
+$\phi_0/\ell \gtrsim 3.4$ (Cassini); $|\dot G/G| \lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ forced by the DM-mass drift bound (`03_background.md` §3.1)
 (passes LLR); $\rho^2$ Friedmann corrections only above $T \sim 15$ TeV (table-top $\ell$ bound).
-Forced consequence awaiting test: mirror-sector masses are $\Omega m$ with $\Omega \lesssim 7\times10^{-3}$,
-requiring $n_2/n_1 \gtrsim 750$ for $\Omega_{DM}/\Omega_b = 5.3$ (`02_effective_4d.md` §5).
+Forced consequence awaiting test: mirror-sector masses are $\Omega m$ with $\Omega \lesssim 0.032$,
+requiring $n_2/n_1 \gtrsim 165$ for $\Omega_{DM}/\Omega_b = 5.3$ (`02_effective_4d.md` §5).
 
 ## Balance
 

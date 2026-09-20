@@ -146,3 +146,20 @@ x_k
 Z_2
 \Rightarrow
 \simeq
+
+# background (03_background.md): radion/quintessence bookkeeping, cosmological inputs (Planck), no new parameters
+S_rad
+V_rad
+\chi
+\Phi_4
+\Phi_4,i
+f_rad
+\omega_C
+\Omega_0
+\Omega_DE
+\Omega_m
+\Omega_r
+m_DM
+t_0
+H
+H_0
