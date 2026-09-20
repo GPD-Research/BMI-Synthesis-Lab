@@ -6,7 +6,7 @@ $\Sigma_2$ couples to matter on $\Sigma_1$ only through bulk gravity and at most
 scalar field $\Phi$.
 
 That is the whole axiom. Everything in `v2/` must be derived from it and from the action
-in `01_action_skeleton.md`, or it does not belong in `v2/`.
+in `01_action.md`, or it does not belong in `v2/`.
 
 ## What the axiom commits to
 
@@ -33,6 +33,36 @@ in `01_action_skeleton.md`, or it does not belong in `v2/`.
 
 A single un-fitted hit moves the parameter ledger positive. A single forced miss kills the
 branch; record it in `RETRACTED.md` and stop.
+
+## Deferred hypothesis: field content from geometry (not yet in the action)
+
+The genesis idea behind the SM sector — kept here as a hypothesis, not a v2 commitment —
+is that particle species differ by *where they live*: some fields are confined to the
+3+1 worldvolume of $\Sigma_1$, some extend into the shared $(y,z)$ pair (a KK tower along
+$z$, a profile along $y$), and some are sourced on $\Sigma_2$ and reach us only through the
+shared pair ("shadowed"). In braneworld language these are brane-localized fields, bulk
+fields, and bulk fields with overlap on both branes. The mechanism is standard (bulk
+right-handed neutrinos: Arkani-Hamed–Dimopoulos–Dvali–March-Russell 1998, Dienes–Dudas–Gherghetta 1998;
+split fermions: Arkani-Hamed–Schmaltz 2000).
+
+**Admission rule.** This enters `01_action.md` only if the assignment of each field to
+{brane, bulk, shadowed} is *forced* by the equations — an anomaly-cancellation, stability,
+or zero-mode-existence argument on the AdS$_6$ background of `02_effective_4d.md` §1 — and
+not chosen species by species to fit the spectrum. A per-field choice is a free function
+(one discrete slot per species) and is the retracted R4 in new clothes.
+
+**What is already known to constrain it.**
+- LHC bounds on KK excitations of gauge bosons and quarks put $1/\ell_z \gtrsim 5$–$10$ TeV
+  if any of them are bulk fields; the bleed is realistically limited to gravity, $\Phi$, the
+  radion, and gauge singlets (right-handed neutrinos).
+- A bulk right-handed neutrino on this background gives: Dirac neutrinos (no neutrinoless double-beta decay), a mass
+  hierarchy fixed by the $y$-profile overlap with $\Sigma_1$ (a *ratio* prediction, e.g.
+  $\Delta m^2_{31}/\Delta m^2_{21}$, with no per-species parameter), and a tower of sterile
+  states at $n/\ell_z$. These are the tests; a fitted absolute scale is not.
+- The one number the geometry already fixes is the mass scale on $\Sigma_2$,
+  $\Omega = e^{-\phi/\ell}$ (`02_effective_4d.md` §5). Any shadowed field inherits it.
+
+Scheduled after milestone 4 (background). Until then the SM on $\Sigma_1$ stays borrowed.
 
 ## What is not in v2
 

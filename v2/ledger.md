@@ -6,8 +6,9 @@ below, or if the number of rows exceeds the budget.
 
 **Budget: 7 parameters, 0 free functions.** (ΛCDM: 6. SM: 19.)
 
-Discrete choice (not a parameter): matter on $\Sigma_2$ is a copy of the Standard Model
-(mirror sector). Its equation of state is then fixed by its own thermal history, not fitted.
+Discrete choices (not parameters), all recorded with alternatives in `01_action.md`: Fork 1
+(we are the UV brane); one compact bulk direction; exponential bulk potential; mirror Standard
+Model on $\Sigma_2$; $\Phi$-independent tensions.
 
 Ledger balance = (un-fitted numerical predictions confirmed) − (parameters). Update the
 balance line whenever a row or a prediction changes.
@@ -18,13 +19,22 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 
 | # | symbol | meaning | fixed by | status |
 |---|---|---|---|---|
-| 1 | `M_6` | 6D Planck mass | $G_N$ and warp factor at $\Sigma_1$ | open |
-| 2 | `\phi_0` | present brane separation | tied to #1 via $M_{Pl}^2 \sim M_6^4 \ell (1-e^{-2\phi_0/\ell})$ | open |
-| 3 | `\sigma_1` | tension of $\Sigma_1$ | RS-type tuning against $\Lambda_6$ (the CC problem, stated not hidden) | open |
-| 4 | `\sigma_2` | tension of $\Sigma_2$ | candidate for $\Omega_{DM}/\Omega_b$ | open |
+| 1 | `M_5` | effective 5D Planck mass, $M_5^3 = 2\pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
+| 2 | `\ell` | bulk warp length; fixes $\Lambda_6$ and the RS-tuned $\sigma_1$ | $G_N$ with #1, #3 (the CC tuning is stated in `01_action.md` §3, not hidden) | open |
+| 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 5$ (`02_effective_4d.md` §4) | bounded |
+| 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | candidate for $\Omega_{DM}/\Omega_b$ | open |
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
 | 7 | `T_2/T_1` | sector temperature ratio at reheating | **target: derived from impact kinematics, not fit** | open |
+
+## Pending integration constants (not parameters yet)
+
+| symbol | meaning | must be computed in | bound now |
+|---|---|---|---|
+| `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$ from the projected Weyl tensor | milestone 5 (impact) | $\Delta N_{\text{eff}} \lesssim 0.3$ |
+
+If milestone 5 cannot compute it, it becomes parameter #8 and the budget line above is
+raised, with a note here saying why.
 
 ## Borrowed (not counted, not derived)
 
@@ -42,6 +52,13 @@ quantities, never for a new constant.
 |---|---|---|---|---|
 | — | — | — | — | none yet |
 
+Constraints derived so far (not predictions; they use data to bound the ledger):
+$\phi_0/\ell \gtrsim 5$ (Cassini); $|\dot G/G| \sim 10^{-16}\,\mathrm{yr}^{-1}$ for $\dot\phi \sim H_0\ell$
+(passes LLR); $\rho^2$ Friedmann corrections only above $T \sim 15$ TeV (table-top $\ell$ bound).
+Forced consequence awaiting test: mirror-sector masses are $\Omega m$ with $\Omega \lesssim 7\times10^{-3}$,
+requiring $n_2/n_1 \gtrsim 750$ for $\Omega_{DM}/\Omega_b = 5.3$ (`02_effective_4d.md` §5).
+
 ## Balance
 
-**0 − 7 = −7.** Milestones 3–6 must move this to ≥ 0 or the branch is closed.
+**0 − 7 = −7.** Milestone 3 passed kill criterion 1 (GR + ΛCDM recovered) without changing
+the balance; milestones 4–6 must move it to ≥ 0 or the branch is closed.

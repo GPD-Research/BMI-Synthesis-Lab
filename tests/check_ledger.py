@@ -20,12 +20,14 @@ ROOT = Path(__file__).resolve().parents[1]
 V2 = ROOT / "v2"
 LEDGER = V2 / "ledger.md"
 ALLOWLIST = ROOT / "tests" / "ledger_allowlist.txt"
-SKIP = {"ledger.md", "ledger_v1_audit.md", "01_action_skeleton.md", "README.md", "v1_chapter_audit.md"}
+SKIP = {"ledger.md", "ledger_v1_audit.md", "01_action_skeleton_superseded.md", "README.md", "v1_chapter_audit.md"}
 
 MATH_RE = re.compile(r"\$\$(.+?)\$\$|\$(.+?)\$", re.S)
 # a "symbol" is a Greek/named macro or a single Latin letter, with an optional subscript
 TOKEN_RE = re.compile(r"(\\[A-Za-z]+|[A-Za-z])(?:_(\{[^{}]*\}|[A-Za-z0-9]))?")
 LATEX_CONTROL = {
+    r"\tfrac", r"\bigl", r"\bigr", r"\Bigl", r"\Bigr", r"\cosh", r"\sinh", r"\tanh",
+    r"\le", r"\ge", r"\ne", r"\supset", r"\subset", r"\in", r"\textbf", r"\mathbb",
     r"\frac", r"\sqrt", r"\int", r"\sum", r"\partial", r"\nabla", r"\left", r"\right",
     r"\cdot", r"\times", r"\approx", r"\sim", r"\lesssim", r"\gtrsim", r"\ll", r"\gg",
     r"\leq", r"\geq", r"\neq", r"\to", r"\rightarrow", r"\propto", r"\infty", r"\pm",
@@ -67,7 +69,7 @@ def scan_v2(known: set[str]) -> dict[str, list[str]]:
             body = m.group(1) or m.group(2)
             # \mathrm{...} is reserved for units and is ignored; \text{...} is kept so that
             # subscripts like N_{\text{eff}} survive as N_eff
-            body = re.sub(r"\\mathrm\{[^{}]*\}", " ", body)
+            body = re.sub(r"\\(?:mathrm|textbf)\{[^{}]*\}", " ", body)
             body = re.sub(r"\\(?:text|mathcal|mathbf)(\{[^{}]*\})", r"\1", body)
             body = re.sub(r"\{\{([^{}]*)\}\}", r"{\1}", body)
             for t in TOKEN_RE.finditer(body):
