@@ -28,7 +28,7 @@ not yet re-derived.
    corrected relation changes the $\dot G/G$ estimate by a factor $\tfrac32$ and the exponent
    $2\to3$; the conclusion (LLR easily satisfied) is unchanged. §4 has been corrected.
 3. **$\ell_z$ is the circle radius at $\Sigma_1$.** The proper radius at $y$ is
-   $\ell_z e^{-y/\ell}$, so $M_5^3 \equiv 2\pi\ell_z M_6^4$ is the UV-brane value. This matters
+   $\ell_z e^{-y/\ell}$, so $M_5^3 \equiv \pi\ell_z M_6^4$ (orbifold volume, `02b_localization.md` §4.1) is the UV-brane value. This matters
    for the mirror sector (§5).
 
 None of these changes the parameter count. They are recorded here rather than silently
@@ -72,7 +72,7 @@ Einstein–Hilbert term over $0 \le y \le \phi$ and the circle. $\sqrt{-G} = e^{
 and $R_6 \supset e^{2y/\ell}R_4$, so
 $$
 \frac{M_6^4}{2}\int d^6X\sqrt{-G}\,R_6 \;\supset\;
-\frac{M_6^4}{2}\,(2\pi\ell_z)\int_0^{\phi}dy\,e^{-3y/\ell}\int d^4x\sqrt{-g}\,R_4
+\frac{M_6^4}{2}\,(\pi\ell_z)\int_0^{\phi}dy\,e^{-3y/\ell}\int d^4x\sqrt{-g}\,R_4
 = \frac{M_{\text{Pl}}^2(\phi)}{2}\int d^4x\sqrt{-g}\,R_4 ,
 $$
 $$
@@ -116,7 +116,7 @@ Reducing on the circle at energies below $1/\ell_z$ (zero mode only) gives the 4
 $$
 \boxed{\;G_{\mu\nu} = 8\pi G_N(\phi)\,T_{\mu\nu} + \frac{8\pi G_N}{\sigma_1^{(5)}}\,\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}[\phi]\;}
 $$
-with $\sigma_1^{(5)} = 2\pi\ell_z\sigma_1 = 8M_5^3/\ell$ the tension per unit 4-volume,
+with $\sigma_1^{(5)} = \pi\ell_z\sigma_1 = 8M_5^3/\ell$ the tension per unit 4-volume,
 $\hat\pi_{\mu\nu}$ the 4D quadratic tensor, and $\Theta_{\mu\nu}[\phi]$ the radion stress
 (derivative terms in $\phi$ plus $V_{\text{eff}}(\phi)\,g_{\mu\nu}$, §4). This is the equation
 v1's Chapter 7 was reaching for: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ is its weak-field
@@ -163,33 +163,34 @@ this is not a choice, it is where $\Sigma_2$ sits in the warped bulk.
 
 **Brans–Dicke parameter.** For the 5D two-brane system observers on the positive-tension brane
 see $\omega = \tfrac32\,(e^{2\phi/\ell} - 1)$ (Garriga & Tanaka 2000; Charmousis, Gregory &
-Rubakov 2000) **[verify]**. The $D=6$ analogue is obtained by the same computation with the
-$e^{-3y/\ell}$ measure; the expected result is $\omega = \tfrac32(e^{3\phi/\ell}-1)$
-**[verify: not yet derived; the exponent follows from §2, the prefactor does not]**. Either
-way $\omega \to \infty$ as $\phi/\ell \to \infty$, which is GR.
+Rubakov 2000). The $D=6$ value is derived in `03_background.md` §1 (moduli approximation,
+`tests/check_radion.py`): $\omega = \tfrac43(e^{3\phi/\ell}-1)$ — the guess $\tfrac32$
+originally written here was wrong. Either way $\omega \to \infty$ as $\phi/\ell \to \infty$,
+which is GR.
 
 **GR test in the solar system.** Cassini requires $\omega > 4\times10^4$ (Bertotti, Iess &
-Tortora 2003). With the 5D formula: $e^{2\phi_0/\ell} > 2.7\times10^4$, i.e.
+Tortora 2003). With the 6D formula:
 $$
-\boxed{\;\phi_0/\ell \;\gtrsim\; 5.1\;}
+\boxed{\;\phi_0/\ell \;\gtrsim\; 3.4,\qquad \Omega_0 \lesssim 0.032\;}
 $$
-(with the 6D exponent, $\gtrsim 3.4$; take $5$ as the working requirement until the factor is
-derived). This is the first *number* v2 produces from data: the present brane separation is at
-least about five warp lengths. It is a constraint, not a prediction — it uses Cassini — but it
-is un-fitted in the sense that no ledger entry was adjusted to reach it.
+(the earlier working value $5$ used the 5D prefactor and exponent). This is the first *number*
+v2 produces from data: the present brane separation is at least about three and a half warp
+lengths. It is a constraint, not a prediction — it uses Cassini — but it is un-fitted in the
+sense that no ledger entry was adjusted to reach it.
 
 If $V_{\text{eff}}$ gives the radion a mass $m_\phi \gg 1/\mathrm{AU}$, the Cassini bound is
 evaded regardless of $\omega$ (Yukawa-suppressed). The exponential potential has no minimum, so
 this cannot be assumed; milestone 4 must check whether $m_{\text{eff}}^2 = \partial_\phi^2 V_{\text{eff}}$ on
 the cosmological solution is large or small compared to $H_0^2$. If small, §4 applies and
-$\phi_0/\ell \gtrsim 5$ is mandatory.
+$\phi_0/\ell \gtrsim 3.4$ is mandatory. (`03_background.md` §1: the exponential potential
+gives the radion no mass; the bound applies.)
 
 **Effective potential.** The two contributions:
 $$
-V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2^{(5)} \;+\; 2\pi\ell_z\int_0^\phi dy\;e^{-5y/\ell}\,V(\Phi(y))
+V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2^{(5)} \;+\; \pi\ell_z\int_0^\phi dy\;e^{-5y/\ell}\,V(\Phi(y))
 \quad\textbf{[verify: requires } \Phi(y)\textbf{]}
 $$
-with $\delta\sigma_2^{(5)} = 2\pi\ell_z\,\delta\sigma_2$. The $\Omega^4$ scaling of the detuning
+with $\delta\sigma_2^{(5)} = \pi\ell_z\,\delta\sigma_2$. The $\Omega^4$ scaling of the detuning
 term is the standard warped-down IR-brane tension (the same redshift that makes
 the RS hierarchy). The measure of the bulk-potential term is $e^{-5y/\ell}$ (six-dimensional
 $\sqrt{-G}$), correcting the $e^{-4y/\ell}$ written in `01_action.md` §4, which was the 5D value.
@@ -208,12 +209,12 @@ means: same dimensionless couplings, all masses multiplied by $\Omega(\phi)$:
 $$
 m_e^{(2)} = \Omega\,m_e,\qquad m_p^{(2)} = \Omega\,m_p,\qquad \Lambda_{\text{QCD}}^{(2)} = \Omega\,\Lambda_{\text{QCD}} .
 $$
-With $\phi_0/\ell \gtrsim 5$ (§4), $\Omega \lesssim 7\times10^{-3}$: mirror protons lighter than
-about $6\,\mathrm{MeV}$, mirror electrons below $4\,\mathrm{keV}$, mirror atoms with
-Bohr radii $\gtrsim 150\times$ ours. Three things follow, none of them chosen:
+With $\phi_0/\ell \gtrsim 3.4$ (§4), $\Omega \lesssim 0.032$: mirror protons lighter than
+about $30\,\mathrm{MeV}$, mirror electrons below $16\,\mathrm{keV}$, mirror atoms with
+Bohr radii $\gtrsim 30\times$ ours. Three things follow, none of them chosen:
 
 1. **Dark matter is light and dissipative.** $\Omega_{DM}/\Omega_b = (n_2/n_1)(\Omega\,m_p/m_p)$
-   requires $n_2/n_1 \approx 5.3/\Omega \gtrsim 750$ — the mirror sector needs far *more*
+   requires $n_2/n_1 \approx 5.3/\Omega \gtrsim 165$ — the mirror sector needs far *more*
    baryons than ours, not a colder copy. This inverts the standard mirror-matter picture and
    is either a striking prediction for milestone 5 (impact asymmetry must produce it) or the
    death of §2.2. It is the first place where BMI differs from generic mirror-matter models.
@@ -224,7 +225,8 @@ Bohr radii $\gtrsim 150\times$ ours. Three things follow, none of them chosen:
    $|\Delta\Omega/\Omega| \lesssim$ a few percent since recombination, i.e.
    $|\Delta\phi| \lesssim 0.03\,\ell$ over the last Hubble time. Combined with §2 this
    strongly limits how fast the merger can be *now* — a forced, quantitative statement that
-   milestone 4 must confront. (Variable-mass DM has a literature: Anderson & Carroll 1997;
+   milestone 4 confronts: `03_background.md` §3.1 — the bound forces the radion to be a
+   spectator. (Variable-mass DM has a literature: Anderson & Carroll 1997;
    this is that mechanism with $\Omega(\phi)$ as the coupling.)
 3. **Mirror KK scale.** The circle radius at $\Sigma_2$ is $\Omega\ell_z$, so mirror-sector
    $z$-modes sit at $1/(\Omega\ell_z) \gg 1/\ell_z$; no light mirror KK states.
@@ -236,7 +238,7 @@ enough to see, slow enough for CDM — is the theory's first real test.
 
 ## 6. Recovery of GR and ΛCDM
 
-Take $\dot\phi \to 0$ at $\phi = \phi_0$ with $\phi_0/\ell \gtrsim 5$, $V_0 \to 0$,
+Take $\dot\phi \to 0$ at $\phi = \phi_0$ with $\phi_0/\ell \gtrsim 3.4$, $V_0 \to 0$,
 $\delta\sigma_2 \to 0$, and $\mathcal C \to 0$. Then:
 
 - $\Theta_{\mu\nu} \to 0$, $E_{\mu\nu} \to 0$, $\hat\pi_{\mu\nu}/\sigma_1^{(5)} \to 0$ at
@@ -269,8 +271,8 @@ level. Each is computable from the seven ledger entries. Milestone 4 computes th
 | $M_{\text{Pl}}^2(\phi)$, Fork-1 $G$-stability | yes (RS-I) | — |
 | $\rho^2$ Friedmann term at $T \gtrsim 10$ TeV | yes | — |
 | dark radiation $\mathcal C/a^4$ | yes | value of $\mathcal C$ from impact (m5) |
-| scalar–tensor radion, $\phi_0/\ell \gtrsim 5$ | yes (GT 2000) | — |
-| warped mirror sector: $m^{(2)} = \Omega\, m$ | RS mechanism | applied to a *full* mirror SM as DM: $n_2/n_1 \gtrsim 750$ and time-varying DM mass are BMI's |
+| scalar–tensor radion, $\phi_0/\ell \gtrsim 3.4$ | yes (GT 2000) | 6D prefactor $\tfrac43$ |
+| warped mirror sector: $m^{(2)} = \Omega\, m$ | RS mechanism | applied to a *full* mirror SM as DM: $n_2/n_1 \gtrsim 165$ and time-varying DM mass are BMI's |
 | $w(z)$ from exponential $V$ | ekpyrotic/quintessence | with $V_{\text{eff}}$ fixed by the ledger, not fitted |
 
 Nothing in the first five rows is evidence for BMI. The sixth row is the first place the axiom
@@ -278,7 +280,7 @@ says something a generic model does not, and it is falsifiable.
 
 ## 8. Open items carried to milestone 4
 
-1. Derive the 6D Brans–Dicke $\omega(\phi)$ (replace the **[verify]** in §4).
+1. ~~Derive the 6D Brans–Dicke $\omega(\phi)$~~ done, `03_background.md` §1.
 2. Solve $\Phi(y)$ on the AdS background for the exponential $V$; obtain $V_{\text{eff}}(\phi)$.
 3. Cosmological solution: $w(z)$, $\dot\phi(t)$, $m_{\text{eff}}$ of the radion.
 4. Confront §5.2: DM-mass variation since recombination vs $\dot\phi$ needed for observable $w(z)$.
