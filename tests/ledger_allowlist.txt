@@ -191,3 +191,20 @@ f_2
 P_relic
 x_max
 n_gamma
+
+# milestone 5c (04c_approach.md): Schwarzschild-AdS bulk, brane trajectories, collision data
+A_1
+A_2
+H_1
+H_2
+H_i
+R_1
+R_2
+R_i
+\rho_2
+\tau
+\kappa
+g_4
+h
+\Leftrightarrow
+\vec
