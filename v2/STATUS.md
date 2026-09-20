@@ -1,4 +1,4 @@
-# v2 status — after milestone 5
+# v2 status — after milestone 5b
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -86,6 +86,17 @@ mass, not the equation of state. Exits with their prices are tabulated in `04_im
 the two honest ones are (c) a collision-driven asymmetry (a mechanism the action lacks;
 proposed milestone 5b) or (e) BMI is silent on dark matter. **Decision pending.**
 
+**Milestone 5b (initial-condition scan, `04b_initial_conditions.md`).** The action is
+$\mathbb Z_2$-symmetric at the impact, so the two manifolds' pre-collision content passes through
+as initial data (`r_b`, `f_2`, `\eta_1`, `\eta_2` or `P_relic`); those were scanned and scored
+against Cassini, BBN/CMB $N_{\text{eff}}$ and $\Omega_{DM}/\Omega_b$. The action's null
+configuration is dead. Viable families: (i) mirror SM pre-loaded with
+$\eta_2 \approx (2\text{–}20)\times10^3\,\eta_1$ and $< 4\%$ of the impact energy — the
+"pre-loaded manifold" picture, viable but tuned to a thin band and delivering dissipative 30 MeV
+mirror-atom DM (milestone 6 risk); (ii) a cold non-thermal relic on $\Sigma_2$ — viable, generic;
+(iii) no mirror DM (empty $\Sigma_2$ or RS2 overshoot) — viable, silent. Every mirror-DM survivor
+costs one number the action does not produce (+1 parameter if taken). None adopted.
+
 ## 5c. The impact (`04_impact.md`)
 
 | quantity | result |
@@ -130,4 +141,5 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 
 - PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact).
 - CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers), `tests/impact.py` (freeze-out, $N_{\text{eff}}$, $\mathcal C$, turnaround, inflation numbers).
-- Next: a decision on the dark-matter exit (`04_impact.md` §3), then milestone 6 or 7.
+- `tests/scan_initial_conditions.py`: post-impact initial-data scan and viability map.
+- Next: choose among families (i)–(iii) of `04b_initial_conditions.md` §4, then milestone 6 or 7.

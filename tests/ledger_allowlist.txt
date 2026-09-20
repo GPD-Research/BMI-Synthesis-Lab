@@ -187,3 +187,7 @@ T_t
 \eta_2
 \eta_i
 \eta_B
+f_2
+P_relic
+x_max
+n_gamma

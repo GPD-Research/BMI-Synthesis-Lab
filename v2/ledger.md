@@ -34,6 +34,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 |---|---|---|---|
 | `\mathcal C` | dark-radiation constant, $\rho_E = \mathcal C/a^4$ | **resolved, milestone 5**: driven to the fixed point $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ by bulk-graviton emission (`04_impact.md` §4); $\Delta N_{\text{eff}} \lesssim 0.03$. Not a parameter. | satisfied ×10 |
 | `c_\nu` | universal bulk mass of bulk gauge singlets (`02b_localization.md` §6); only admitted as *one* number for all species | taken only if a neutrino-sector milestone is opened | none yet |
+| `\eta_2` or `P_relic` | pre-loaded net baryon number (mirror SM) or cold-relic abundance on $\Sigma_2$ — the one number that makes mirror-side dark matter viable (`04b_initial_conditions.md` §4); would be #8, with #3 and #7 re-labelled as post-impact initial data `r_b`, `f_2` | taken only if a dark-matter exit is chosen; not taken | $\eta_2/\eta_1 \approx 2\text{–}20\times10^3$ or `P_relic` $\approx 200\,m_p\eta_1$ |
 | (fork, not a symbol) | a feature in $V(\Phi)$ — bump or negative minimum — that would end acceleration via the dark-energy scalar (`03_background.md` §3.4); one shape choice + 1 scale | taken only if milestone 7 kills the pure exponential against DESI chains | — |
 
 Milestone 5 computed `\mathcal C`; the budget stays at 7.
@@ -61,6 +62,9 @@ $\phi_0/\ell \gtrsim 3.4$ (Cassini); $|\dot G/G| \lesssim 3\times10^{-16}\,\math
 Forced consequence, tested and failed (`04_impact.md` §3): mirror-sector masses are $\Omega m$
 with $\Omega \lesssim 0.032$, so $\Omega_{DM}/\Omega_b = 5.3$ needs $\eta_2/\eta_1 \gtrsim 1600$;
 the action has no mechanism — mirror SM is not the dark matter.
+Initial-condition scan (`04b_initial_conditions.md`): the action's null configuration is dead; every
+viable configuration with mirror-side dark matter needs one pre-loaded datum (`\eta_2` or `P_relic`)
+tuned against `r_b`, `f_2`; configurations without mirror DM pass and say nothing.
 
 ## Balance
 

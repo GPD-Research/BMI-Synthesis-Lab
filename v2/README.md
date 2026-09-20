@@ -19,6 +19,7 @@ has not decreased.
 | 3b | Localization | `02b_localization.md`: zero-mode equation per spin on the AdS$_6$ background; what field content the geometry forces | no per-species choice admitted; SM chirality and darkness of $\Sigma_2$ respected | done (`tests/check_zero_modes.py`; forced: $z \in S^1/\mathbb Z_2$, gauge fields on $\Sigma_1$, only singlets in the bulk, $z$-tower heavy/ours vs $y$-tower light/theirs; not forced: bulk-fermion mass $c$) |
 | 4 | Background | `03_background.md`: 6D Brans–Dicke $\omega$, $K(\phi)$, bulk-scalar zero mode, closed effective 4D Lagrangian; FRW $w(z)$; DM-mass drift vs CMB | vs DESI $w_0, w_a$; Planck $N_{\text{eff}}$; $|\Delta\Omega/\Omega| \lesssim$ few % since recombination | done (`tests/check_radion.py`, `tests/background_frw.py`); kill 2 passed, kill 3 open (thawing $w>-1$ vs DESI phantom hint); DE = inter-brane potential dead |
 | 5 | Impact | `04_impact.md`: $T_2/T_1$, $n_2/n_1$, $\mathcal C$, sign of $\delta\sigma_2$, $(n_s, r)$ | BBN/CMB $N_{\text{eff}}$; $\Omega_{DM}/\Omega_b$; $r<0.036$ | done (`tests/impact.py`); $\mathcal C$ computed ($\Delta N_{\text{eff}} \lesssim 0.03$), $\phi_0 \leftrightarrow r_b$ with a 1.5% coincidence; $T_2/T_1$ not derivable, $<0.45$; **mirror SM as dark matter dead** (needs $\eta_2/\eta_1 \gtrsim 1600$) — exit decision pending; no primordial spectrum, kill 5 re-labelled |
+| 5b | Initial conditions | `04b_initial_conditions.md`: scan of post-impact initial data (`r_b`, `f_2`, `\eta_1`, `\eta_2`/`P_relic`, $\Sigma_2$ content) | Cassini; BBN/CMB $N_{\text{eff}}$; $\Omega_{DM}/\Omega_b$ | done (`tests/scan_initial_conditions.py`); null configuration dead; viable: pre-loaded asymmetric mirror SM (thin band, dissipative DM), cold relic on $\Sigma_2$, or no mirror DM — each mirror-DM survivor costs +1 datum; none adopted |
 | 6 | Dark sector | `05_dark_sector.md`: $\Omega_{DM}/\Omega_b$, $\sigma/m$, structure formation offset | Bullet Cluster; halo shapes; isolated DM-free dwarfs | blocked on the exit chosen in `04_impact.md` §3 |
 | 7 | Predictions | `06_predictions.md`: preferred-axis low-$\ell$ CMB covariance; $d_L^{GW}/d_L^{EM}$; joint $(\dot G/G, w_a)$ | pre-registered, dated, before comparison | |
 | 8 | Unlike | `07_unlike.md`: reciprocal comparison with SM, GR, ΛCDM, MOND, string theory | every cell cites a v2 equation or says "not derived" | |
@@ -43,4 +44,5 @@ python3 tests/check_radion.py
 pip install numpy scipy
 python3 tests/background_frw.py
 python3 tests/impact.py
+python3 tests/scan_initial_conditions.py
 ```
