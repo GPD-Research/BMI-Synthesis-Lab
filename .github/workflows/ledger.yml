@@ -20,3 +20,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 tests/check_ledger.py
+      - run: pip install "sympy>=1.12,<2"
+      - run: python3 tests/check_background.py

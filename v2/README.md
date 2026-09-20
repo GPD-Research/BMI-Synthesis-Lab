@@ -15,8 +15,8 @@ has not decreased.
 |---|---|---|---|---|
 | 1 | Freeze v1, open v2 | `RETRACTED.md`, `v2/`, `ledger.md`, `tests/check_ledger.py`, CI | ledger check passes on `v2/` | done |
 | 2 | Action | `01_action.md`: signs, factors, Fork 1 warped geometry, one $V(\Phi)$ form, GHY terms | ledger ≤ 7 rows, 0 free functions | done |
-| 3 | 4D effective theory | `02_effective_4d.md`: Israel junction → $G_{\mu\nu}$ with $\pi_{\mu\nu}$, $E_{\mu\nu}$, radion terms; $G_N(\phi)$, $V_{\text{eff}}(\phi)$ | GR + ΛCDM recovered for frozen $\phi$; $\dot G/G$ within LLR bound | |
-| 4 | Background | `03_background.md`: $a(t), \phi(t)$; $w(z)$; $\Delta N_{\text{eff}}$ | vs DESI $w_0, w_a$; Planck $N_{\text{eff}}$ | |
+| 3 | 4D effective theory | `02_effective_4d.md`: Israel junction → $G_{\mu\nu}$ with $\pi_{\mu\nu}$, $E_{\mu\nu}$, radion terms; $G_N(\phi)$, $V_{\text{eff}}(\phi)$ | GR + ΛCDM recovered for frozen $\phi$; $\dot G/G$ within LLR bound | done (background factors checked by `tests/check_background.py`; metric of `01_action.md` §3 corrected; forced consequence: warped mirror sector, §5) |
+| 4 | Background | `03_background.md`: $\Phi(y)$ profile, $V_{\text{eff}}(\phi)$, 6D Brans–Dicke $\omega$; $a(t), \phi(t)$; $w(z)$; $\Delta N_{\text{eff}}$; DM-mass drift vs CMB | vs DESI $w_0, w_a$; Planck $N_{\text{eff}}$; $|\Delta\Omega/\Omega| \lesssim$ few % since recombination | |
 | 5 | Impact | `04_impact.md`: $T_2/T_1$, $n_s$, $r$, $f_{NL}$ | BBN $T_2/T_1$; Planck $n_s$; $r<0.03$ | |
 | 6 | Dark sector | `05_dark_sector.md`: $\Omega_{DM}/\Omega_b$, $\sigma/m$, structure formation offset | Bullet Cluster; halo shapes; isolated DM-free dwarfs | |
 | 7 | Predictions | `06_predictions.md`: preferred-axis low-$\ell$ CMB covariance; $d_L^{GW}/d_L^{EM}$; joint $(\dot G/G, w_a)$ | pre-registered, dated, before comparison | |

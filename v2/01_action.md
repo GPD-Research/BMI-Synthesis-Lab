@@ -26,7 +26,8 @@ $$
 M_5^3 \equiv 2\pi \ell_z\, M_6^4 .
 $$
 Only $M_5$ is observable until $z$-KK modes are probed. $M_6$ and $\ell_z$ therefore enter
-the ledger as the single number $M_5$.
+the ledger as the single number $M_5$. $\ell_z$ is the circle radius *at $\Sigma_1$*; in the
+warped background of §3 the proper radius at $y$ is $\ell_z e^{-y/\ell}$.
 
 **Correspondence with the original picture.** The v1 genesis was two manifolds sharing two
 compactified spatial dimensions: ours is 3 space + 2 shared + time (6D), the other has at least
@@ -45,7 +46,7 @@ state for its matter as seen from 4D).
 
 **Fork 1 [choice].** The bulk is warped with $\Sigma_1$ at the ultraviolet (large-warp-factor)
 end. Reason: in this configuration $G_N$ on $\Sigma_1$ depends on the brane separation only
-through $e^{-2\phi/\ell}$ (§4), so an ongoing merger does not violate lunar-laser-ranging bounds
+through $e^{-3\phi/\ell}$ (§4), so an ongoing merger does not violate lunar-laser-ranging bounds
 on $\dot G/G$ without tuning. Alternative rejected: flat bulk, where $G_N^{-1} \propto \phi$
 and the merger timescale must exceed $\sim 500\,H_0^{-1}$ (`01_action_skeleton_superseded.md` §4.1).
 
@@ -124,7 +125,7 @@ Berezhiani (2004) and Foot (2014).
 
 With $\Phi$ constant and no brane matter, the bulk equations admit the RS solution
 $$
-ds^2 = e^{-2y/\ell}\, \eta_{\mu\nu} dx^\mu dx^\nu + dy^2 + dz^2,
+ds^2 = e^{-2y/\ell}\left( \eta_{\mu\nu} dx^\mu dx^\nu + dz^2 \right) + dy^2,
 \qquad
 \ell^{-2} = -\frac{\Lambda_6}{10\, M_6^4}
 $$
@@ -135,7 +136,10 @@ $$
 These are the $D=6$ cases of the general codimension-1 RS relations
 $\Lambda_D = -\tfrac12 (D-1)(D-2)\,M_D^{D-2}/\ell^2$ and $\sigma = 2(D-2)\,M_D^{D-2}/\ell$, which
 reduce to the familiar $\Lambda_5 = -6M_5^3/\ell^2$, $\sigma = 6M_5^3/\ell$ at $D=5$.
-The warp factor is $z$-independent, so wrapping the circle does not alter them.
+All five brane directions, including the circle, are warped: the metric with $dz^2$ unwarped
+that an earlier draft of this file wrote is *not* a vacuum solution (`02_effective_4d.md` §0;
+`tests/check_background.py`). Both branes wrap the circle, whose proper radius shrinks toward
+$\Sigma_2$.
 
 This tuning is the cosmological-constant problem in braneworld form. It is stated, not solved:
 v2 assumes it exactly for $\sigma_1$ and treats the *detuning* of $\sigma_2$,
@@ -155,18 +159,19 @@ functions of $(M_6, \ell)$.
 These are standard two-brane results, quoted so the ledger can be closed now. Milestone 3
 re-derives each with the factors of §3.
 
-**Newton's constant on $\Sigma_1$** (Randall & Sundrum 1999a, two-brane case):
+**Newton's constant on $\Sigma_1$** (derived in `02_effective_4d.md` §2; the two-brane RS
+result with the $D=6$ measure):
 $$
-M_{\text{Pl}}^2 = M_5^3\,\ell\,\bigl(1 - e^{-2\phi/\ell}\bigr).
+M_{\text{Pl}}^2 = \frac{M_5^3\,\ell}{3}\,\bigl(1 - e^{-3\phi/\ell}\bigr).
 $$
-For $\phi \gg \ell$ this is $\phi$-independent up to $e^{-2\phi/\ell}$, so
+For $\phi \gg \ell$ this is $\phi$-independent up to $e^{-3\phi/\ell}$, so
 $$
-\frac{\dot G}{G} = -\frac{2\,\dot\phi}{\ell}\,\frac{e^{-2\phi/\ell}}{1-e^{-2\phi/\ell}}
-\;\approx\; -\frac{2\dot\phi}{\ell}\, e^{-2\phi/\ell}.
+\frac{\dot G}{G} = -\frac{3\,\dot\phi}{\ell}\,\frac{e^{-3\phi/\ell}}{1-e^{-3\phi/\ell}}
+\;\approx\; -\frac{3\dot\phi}{\ell}\, e^{-3\phi/\ell}.
 $$
 Lunar laser ranging, $|\dot G/G| \lesssim 1.5\times10^{-13}\,\mathrm{yr}^{-1}$
 (Hofmann & Müller 2018; treat as approximate), is satisfied for any $\dot\phi \lesssim H_0\,\ell$
-once $\phi/\ell \gtrsim 4$. Fork 1 makes the LLR test easy to pass; the price is that the
+once $\phi/\ell \gtrsim 3$. Fork 1 makes the LLR test easy to pass; the price is that the
 observable merger dynamics live entirely in the dark sector.
 
 **Warp factor of $\Sigma_2$ as seen from $\Sigma_1$:** $\Omega \equiv e^{-\phi/\ell}$.
@@ -180,13 +185,13 @@ gravitating mass of the mirror sector grows as $\Omega(t)^4$.
 in the 4D Jordan frame with $g_{\mu\nu}$ the metric on $\Sigma_1$:
 $$
 S_{\text{eff}} \supset \int d^4x \sqrt{-g}\;
-M_5^3\,\ell \left[ \frac{1-\Omega^2}{2}\,R_4 \;-\; 3\,(\partial\Omega)^2 \right]
+\frac{M_5^3\,\ell}{3} \left[ \frac{1-\Omega^3}{2}\,R_4 \;-\; 3\,(\partial\Omega)^2 \right]
 \;-\; \int d^4x \sqrt{-g}\; V_{\text{eff}}(\phi)
 \quad \textbf{[verify factor 3]}
 $$
 with
 $$
-V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2 \;+\; \int_0^{\phi} dy\; e^{-4y/\ell}\, V(\Phi(y))
+V_{\text{eff}}(\phi) = \Omega^4\,\delta\sigma_2 \;+\; \int_0^{\phi} dy\; e^{-5y/\ell}\, V(\Phi(y))
 \quad \textbf{[verify; requires the } \Phi(y) \textbf{ profile]}.
 $$
 $V_{\text{eff}}$ is not a free function: it is fixed by $(\delta\sigma_2, V_0, c, \ell)$ once the
@@ -212,6 +217,7 @@ $\Phi$-independent tensions.
 
 1. If milestone 3 cannot recover $G_{\mu\nu} = 8\pi G_N T_{\mu\nu}$ with $\Lambda_4 = 0$ in the
    limit $\delta\sigma_2 \to 0$, $V_0 \to 0$, $\dot\phi \to 0$, the action is wrong.
+   *Status: passed* (`02_effective_4d.md` §6), with the metric correction of its §0.
 2. If the late-time attractor of $V_{\text{eff}}$ gives $w_0, w_a$ outside the DESI + Planck
    allowed region for every $c$ (milestone 4), the exponential potential is dead; move to
    menu item (a) or (b) of §2.1 **once**, and record the failure in `RETRACTED.md`.
