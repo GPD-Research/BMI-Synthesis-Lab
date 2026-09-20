@@ -1,8 +1,17 @@
 # Brane-Manifold Interface (BMI) Theory — Research Repository
 
-**Status: Active empirical validation | Latest result: 5.557σ Fisher combined significance**
+**Status: v1 frozen — v2 rebuild in progress.** See [`RETRACTED.md`](RETRACTED.md) and [`v2/README.md`](v2/README.md).
+
+> **Notice.** The 15 Hz ringdown split and the 5.557σ result described below have been
+> **retracted**: follow-up testing showed the split is an artifact of the analysed spectrum
+> limits and the template-subtraction step (see `RETRACTED.md` R1 and Appendix J.9.3). The
+> material below, the manuscript chapters under `manuscript/`, and the analysis scripts
+> under `src/` are preserved unchanged as the v1 historical record. The theory is being
+> rebuilt from a single axiom with a fixed parameter budget under `v2/`.
 
 ---
+
+## v1 record (historical, superseded)
 
 ## 🔬 Session Summary — 2026-08-11
 
