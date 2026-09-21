@@ -211,8 +211,9 @@ bulk scalar profile is solved. This is the object that replaces v1's `\tau(t) + 
 | 5 | $V_0$ | — | dark-energy density today |
 | 6 | $c$ | — | $w_0, w_a$ and $\dot\phi$ |
 | 7 | $T_2/T_1$ | — | target: derived from impact kinematics (milestone 5) |
+| 8 | $\delta_1$ | — | added milestone 5d: detuning of $\sigma_1$ that stabilizes $\ell_z$ (`04d_circle.md`); the "RS-tuned" $\sigma_1$ of #2 is tuned only up to this |
 
-**7 numbers, 0 free functions.** One relation ($M_{\text{Pl}}$) among #1–#3 leaves 6 free.
+**8 numbers, 0 free functions** (7 at the time of writing; #8 was forced when $\ell_z$ turned out to be a flat direction). One relation ($M_{\text{Pl}}$) among #1–#3 leaves 6 free.
 Discrete choices, not counted: Fork 1; compact $z$; exponential $V$; mirror SM on $\Sigma_2$;
 $\Phi$-independent tensions.
 
