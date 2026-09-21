@@ -208,3 +208,10 @@ g_4
 h
 \Leftrightarrow
 \vec
+C_z
+T_R
+T_e
+T_o
+V_z
+\alpha_Y
+\rho_r

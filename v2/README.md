@@ -21,6 +21,7 @@ has not decreased.
 | 5 | Impact | `04_impact.md`: $T_2/T_1$, $n_2/n_1$, $\mathcal C$, sign of $\delta\sigma_2$, $(n_s, r)$ | BBN/CMB $N_{\text{eff}}$; $\Omega_{DM}/\Omega_b$; $r<0.036$ | done (`tests/impact.py`); $\mathcal C$ computed ($\Delta N_{\text{eff}} \lesssim 0.03$), $\phi_0 \leftrightarrow r_b$ with a 1.5% coincidence; $T_2/T_1$ not derivable, $<0.45$; **mirror SM as dark matter dead** (needs $\eta_2/\eta_1 \gtrsim 1600$) — exit decision pending; no primordial spectrum, kill 5 re-labelled |
 | 5b | Initial conditions | `04b_initial_conditions.md`: scan of post-impact initial data (`r_b`, `f_2`, `\eta_1`, `\eta_2`/`P_relic`, $\Sigma_2$ content) | Cassini; BBN/CMB $N_{\text{eff}}$; $\Omega_{DM}/\Omega_b$ | done (`tests/scan_initial_conditions.py`); null configuration dead; viable: pre-loaded asymmetric mirror SM (thin band, dissipative DM), cold relic on $\Sigma_2$, or no mirror DM — each mirror-DM survivor costs +1 datum; none adopted |
 | 5c | Approach to $\Omega=1$ | `04c_approach.md`: exact two-brane solution in Schwarzschild–AdS (no moduli approximation); $\Omega_\infty$ from collision data | Cassini; $N_{\text{eff}}$; existence of $\Sigma_2$ | done (`tests/approach.py`); $\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)$, `r_b` not a datum; $\epsilon \ge f$ ($N_{\text{eff}}$ doubled, $\mathcal C$ re-opened); Cassini coincidence sharpened to $10^{-3}$; **circle modulus $\ell_z$ unstabilized** — stabilizer fork owed; pre-action layer + unified-sector fork recorded |
+| 5d | Circle | `04d_circle.md`: stabilizer menu for $\ell_z$ (action's own terms, Casimir + detuning, flux, Goldberger–Wise); $V(\ell_z)$, modulus mass, $\alpha$ drift, moduli abundance | Eöt-Wash; atomic clocks/quasars; LHC KK bound; $\Omega_{DM}$ | done (`tests/circle.py`); action's own terms dead; **Casimir + $\delta_1$ taken (#8)**; $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$; **P1**: fifth force with range 2–66 μm, pre-registered; $\alpha$ constant; $T_R < \ell_z^{-1}$ required; oscillating circle = fourth DM family (not adopted) |
 | 6 | Dark sector | `05_dark_sector.md`: $\Omega_{DM}/\Omega_b$, $\sigma/m$, structure formation offset | Bullet Cluster; halo shapes; isolated DM-free dwarfs | blocked on the exit chosen in `04_impact.md` §3 |
 | 7 | Predictions | `06_predictions.md`: preferred-axis low-$\ell$ CMB covariance; $d_L^{GW}/d_L^{EM}$; joint $(\dot G/G, w_a)$ | pre-registered, dated, before comparison | |
 | 8 | Unlike | `07_unlike.md`: reciprocal comparison with SM, GR, ΛCDM, MOND, string theory | every cell cites a v2 equation or says "not derived" | |
@@ -47,4 +48,5 @@ python3 tests/background_frw.py
 python3 tests/impact.py
 python3 tests/scan_initial_conditions.py
 python3 tests/approach.py
+python3 tests/circle.py
 ```

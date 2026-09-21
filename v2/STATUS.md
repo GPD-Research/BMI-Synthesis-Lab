@@ -1,4 +1,4 @@
-# v2 status — after milestone 5c
+# v2 status — after milestone 5d
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -123,6 +123,17 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 | **circle radius $\ell_z$ is an unstabilized modulus** coupled to $\alpha$; the fixed circle of `01_action.md` is not a solution; stabilizer fork owed (≥ +1) | gap; kill risk |
 | pre-action layer (independent universes, arrows of time, crystallization) recorded in `00_axiom.md` as hypothesis; unified-sector fork pre-registered in `ledger.md` | not derived, not used |
 
+## 5e. The circle (`04d_circle.md`)
+
+| result | status |
+|---|---|
+| SM Casimir energy on the wrapped brane is repulsive (62 more fermionic than bosonic degrees of freedom); the action's own terms give a minimum at $\ell_z^{-1} \approx 7$ meV that tracks dark energy — dead | derived (O(1) coefficient [verify]) |
+| stabilizer taken: Casimir + negative detuning $\delta_1$ of $\sigma_1$ (**parameter #8**); flux and Goldberger–Wise not taken (more content, same physics) | derived |
+| $m_\chi = 10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash and $\lvert\delta_1\rvert < \sigma_1$ give $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$ | derived, two-sided |
+| **P1, pre-registered**: composition-dependent gravitational-strength Yukawa force with range 2–66 μm | falsifiable; open |
+| $\alpha$ does not drift (minimum independent of $\phi$, $\Phi$): clock/quasar bounds passed | derived |
+| moduli problem: overclosure by $10^{12}$ unless $T_R < \ell_z^{-1}$ (reheating bound, few TeV); with $1/(\ell_z T_R) \approx 13.6$ the oscillating circle is CDM (fourth DM family, BMI-specific, +1 datum tuned to 0.4%) | derived; family not adopted |
+
 ## 5b. Field content from geometry (`02b_localization.md`)
 
 Forced by the AdS$_6$ background plus the SM's own consistency: gravity/radion/scalars on
@@ -154,8 +165,9 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 
 ## 8. Repo state
 
-- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact).
+- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact) → PR #7 (scan) → PR #8 (approach) → PR #9 (circle).
 - CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers), `tests/impact.py` (freeze-out, $N_{\text{eff}}$, $\mathcal C$, turnaround, inflation numbers).
 - `tests/scan_initial_conditions.py`: post-impact initial-data scan and viability map.
 - `tests/approach.py`: exact two-brane trajectories in Schwarzschild–AdS, closed-form $\Omega_\infty$, Cassini window in $\epsilon$.
-- Next: the circle-stabilizer fork (owed) and a dark-matter family, then milestone 6 or 7.
+- `tests/circle.py`: Casimir sign, option-0 exclusion, option-A window, modulus mass, moduli abundance, P1 range.
+- Next: a dark-matter family (now four: pre-loaded mirror SM, cold relic on $\Sigma_2$, none, oscillating circle), then milestone 6 or 7.
