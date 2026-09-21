@@ -8,6 +8,10 @@ v2 is rebuilt from a single axiom (`00_axiom.md`) and a single action
 
 ## Milestones
 
+**Budget frozen at 9 (2026-09-21, after milestone 7).** No milestone below 7 is reopened for new
+parameters and none above it opens until P1 or P2 (`06_predictions.md`) is tested. See
+`ledger.md` banner and `STATUS.md`.
+
 Each milestone is one PR. A milestone merges only when its tests pass and the ledger balance
 has not decreased.
 

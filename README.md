@@ -1,6 +1,6 @@
 # Brane-Manifold Interface (BMI) Theory — Research Repository
 
-**Status: v1 frozen — v2 rebuild in progress.** See [`RETRACTED.md`](RETRACTED.md) and [`v2/README.md`](v2/README.md).
+**Status: v1 frozen — v2 rebuilt through milestone 7; parameter budget frozen at 9 pending two registered tests (P1 fifth force at 3–12 µm, P2 thawing dark energy vs DESI DR2).** See [`RETRACTED.md`](RETRACTED.md) and [`v2/README.md`](v2/README.md).
 
 > **Notice.** The 15 Hz ringdown split and the 5.557σ result described below have been
 > **retracted**: follow-up testing showed the split is an artifact of the analysed spectrum
