@@ -8,6 +8,12 @@ below, or if the number of rows exceeds the budget.
 (circle stabilizer, `04d_circle.md` §3) and from 8 in milestone 6 (dark-matter misalignment,
 `05_dark_sector.md` §2); every raise is logged here.
 
+**FROZEN at 9 (2026-09-21, after milestone 7).** No row #10 is admitted under any circumstance:
+a result that needs a tenth number is a forced miss and goes to `RETRACTED.md`. No new derivation
+milestone opens until P1 or P2 below is tested — an inverse-square-law measurement at
+$3$–$12\,\mu$m, or the chain-level DESI DR2 comparison. Permitted meanwhile: closing `[verify]`
+items, corrections that do not add symbols, and confronting P1/P2 with new data.
+
 Discrete choices (not parameters), all recorded with alternatives in `01_action.md`: Fork 1
 (we are the UV brane); one compact bulk direction; exponential bulk potential; mirror Standard
 Model on $\Sigma_2$ (**as the dark matter: dead**, `04_impact.md` §3 — it still exists as a
@@ -88,4 +94,5 @@ P1 to a strength and range (a segment in the $(\alpha,\lambda)$ plane, half of `
 already removed by Eöt-Wash 2020), registered P2, and found that the Cassini–$N_{\text{eff}}$,
 $\dot G/G$–$w$, and GW-distance relations leak or are null. **Neither prediction is confirmed: the
 balance did not move.** By the rule above the branch closes; the proposal in `06` §5 is to freeze
-the budget at 9 and wait for the two tests rather than derive further.
+the budget at 9 and wait for the two tests rather than derive further. **Decision taken
+2026-09-21: frozen at 9** (banner above). The branch is not closed; it is suspended pending P1/P2.

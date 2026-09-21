@@ -1,4 +1,11 @@
-# v2 status — after milestone 7
+# v2 status — after milestone 7: budget FROZEN at 9
+
+**Decision 2026-09-21.** The parameter budget is frozen at 9 (`ledger.md`). No tenth number,
+no new derivation milestone, until one of the two registered predictions is tested: P1 (a
+fifth force of strength $\alpha_Y \approx 270$ at range $2.8$–$12\,\mu$m) or P2 (thawing dark
+energy, $w_a = -1.5(1+w_0)$, $w>-1$) against the DESI DR2 chains. The branch is suspended, not
+closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill goes to
+`RETRACTED.md`.
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -18,10 +25,10 @@ functions. Nothing in milestone 3 changed this action; milestone 3 changed the *
 (background metric, §3 below). A "revised Lagrangian" is therefore not needed — what is still
 missing is its *effective 4D form* (§4).
 
-## 2. Parameter budget (7, `ledger.md`)
+## 2. Parameter budget (9, frozen; `ledger.md`)
 
-$M_5,\ \ell,\ \phi_0,\ \sigma_2,\ V_0,\ c,\ T_2/T_1$. Balance $0 - 7 = -7$: no un-fitted
-number has been predicted yet. The dark-radiation constant $\mathcal C$ is collision data
+$M_5,\ \ell,\ \phi_0,\ \sigma_2,\ V_0,\ c,\ T_2/T_1,\ \delta_1,\ \delta_z$. Balance $0 - 9 = -9$: no
+un-fitted number has been confirmed yet (two are registered, §6b). The dark-radiation constant $\mathcal C$ is collision data
 bounded below by the $\Sigma_2$ energy (milestone 5c), not a parameter; $\phi_0$ is fixed by
 the collision data $(\epsilon, f)$ (`04c_approach.md`), with `r_b` of milestone 5 as its
 moduli-approximation shadow;
@@ -195,4 +202,5 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 - `tests/circle.py`: Casimir sign, option-0 exclusion, option-A window, modulus mass, moduli abundance, P1 range.
 - `tests/dark_sector.py`: thermal-shift overclosure, $T_R < T_o$, $\delta_z(T_R)$, $h$ bound, Jeans length, isocurvature, oscillation signatures.
 - `tests/predictions.py`: canonical $\chi$, $\alpha_Y(\ell_z)$, $(\alpha_Y,\lambda)$ segment vs inverse-square-law limits; thawing $(w_0,w_a)(c)$ vs DESI DR2 proxy.
-- Milestone 7 done; balance still −9. Decision owed: close the branch per the ledger rule, or freeze the budget at 9 and wait for the two tests (`06_predictions.md` §5).
+- PR #11 (predictions) merged; PR #12 records the freeze.
+- Milestone 7 done; balance −9; **budget frozen at 9**. Next action is a test, not a derivation: P1 (ISL at $3$–$12\,\mu$m) or P2 (DESI DR2 chains).
