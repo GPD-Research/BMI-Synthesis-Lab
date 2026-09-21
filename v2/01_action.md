@@ -213,7 +213,9 @@ bulk scalar profile is solved. This is the object that replaces v1's `\tau(t) + 
 | 7 | $T_2/T_1$ | — | target: derived from impact kinematics (milestone 5) |
 | 8 | $\delta_1$ | — | added milestone 5d: detuning of $\sigma_1$ that stabilizes $\ell_z$ (`04d_circle.md`); the "RS-tuned" $\sigma_1$ of #2 is tuned only up to this |
 
-**8 numbers, 0 free functions** (7 at the time of writing; #8 was forced when $\ell_z$ turned out to be a flat direction). One relation ($M_{\text{Pl}}$) among #1–#3 leaves 6 free.
+| 9 | $\delta_z$ | — | added milestone 6: offset of $\ell_z$ left by the impact; sets $\Omega_{DM}$ (`05_dark_sector.md`) |
+
+**9 numbers, 0 free functions** (7 at the time of writing; #8 was forced when $\ell_z$ turned out to be a flat direction, #9 when its oscillation was taken as the dark matter). One relation ($M_{\text{Pl}}$) among #1–#3 leaves 6 free.
 Discrete choices, not counted: Fork 1; compact $z$; exponential $V$; mirror SM on $\Sigma_2$;
 $\Phi$-independent tensions.
 

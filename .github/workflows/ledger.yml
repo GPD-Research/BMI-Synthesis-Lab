@@ -30,3 +30,4 @@ jobs:
       - run: python3 tests/scan_initial_conditions.py
       - run: python3 tests/approach.py
       - run: python3 tests/circle.py
+      - run: python3 tests/dark_sector.py

@@ -1,4 +1,4 @@
-# v2 status — after milestone 5d
+# v2 status — after milestone 6
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -132,7 +132,19 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 | $m_\chi = 10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash and $\lvert\delta_1\rvert < \sigma_1$ give $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$ | derived, two-sided |
 | **P1, pre-registered**: composition-dependent gravitational-strength Yukawa force with range 2–66 μm | falsifiable; open |
 | $\alpha$ does not drift (minimum independent of $\phi$, $\Phi$): clock/quasar bounds passed | derived |
-| moduli problem: overclosure by $10^{12}$ unless $T_R < \ell_z^{-1}$ (reheating bound, few TeV); with $1/(\ell_z T_R) \approx 13.6$ the oscillating circle is CDM (fourth DM family, BMI-specific, +1 datum tuned to 0.4%) | derived; family not adopted |
+| moduli problem: overclosure unless $T_R < T_o$; the oscillating circle is a fourth DM family, BMI-specific | derived; adopted in milestone 6 |
+
+## 6. The dark sector (`05_dark_sector.md`)
+
+| result | status |
+|---|---|
+| thermal misalignment gives all or nothing: $T_R > T_o \approx 2.7$ TeV overcloses; $T_R < T_o$ excites nothing (adiabatic). The 5d "$T_R$ tuned to 0.4%" is retracted | derived |
+| $T_R < T_o$ ⇔ $h < 0.07$ at the impact; $T_o < T_t$, so the standard FRW background holds from reheating | derived |
+| mechanism: the impact leaves the circle offset by $\delta_z$ (**parameter #9**); $\Omega_\chi \propto \delta_z^2 (T_o/T_R)^3$; $\delta_z \approx 3\times10^{-6}(T_R/T_o)^{3/2}$; 10% in $\delta_z$ → 3% in $\Omega_{DM}$ | derived; fitted |
+| structure: Jeans length $4\times10^{-6}$ pc — CDM everywhere; Bullet/halos/dwarfs pass trivially | derived |
+| isocurvature: $\delta_z$ uniform to $5\times10^{-6}$ (Planck $\beta_{\text{iso}}$); same homogeneity debt as the missing inflation | derived |
+| signatures: $\alpha$, $G$ oscillate at 2.5 THz, amplitude $10^{-31}$; no direct/indirect detection; the only handle is P1 | derived |
+| K1–K4 pre-registered: P1 emptied; $T_R >$ few TeV; any DM self-interaction/particle detection; $\beta_{\text{iso}}$ detection | — |
 
 ## 5b. Field content from geometry (`02b_localization.md`)
 
@@ -165,9 +177,10 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 
 ## 8. Repo state
 
-- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact) → PR #7 (scan) → PR #8 (approach) → PR #9 (circle).
+- PR #1 (freeze v1, retractions, ledger CI) → PR #2 (action) → PR #3 (effective theory) → PR #4 (localization) → PR #5 (background, merged) → PR #6 (impact) → PR #7 (scan) → PR #8 (approach) → PR #9 (circle) → PR #10 (dark sector).
 - CI: `tests/check_ledger.py` (undeclared symbols fail the build), `tests/check_background.py` (sympy, background identities), `tests/check_zero_modes.py` (zero-mode profiles per spin), `tests/check_radion.py` (moduli action, quintessence slope), `tests/background_frw.py` (FRW numbers), `tests/impact.py` (freeze-out, $N_{\text{eff}}$, $\mathcal C$, turnaround, inflation numbers).
 - `tests/scan_initial_conditions.py`: post-impact initial-data scan and viability map.
 - `tests/approach.py`: exact two-brane trajectories in Schwarzschild–AdS, closed-form $\Omega_\infty$, Cassini window in $\epsilon$.
 - `tests/circle.py`: Casimir sign, option-0 exclusion, option-A window, modulus mass, moduli abundance, P1 range.
-- Next: a dark-matter family (now four: pre-loaded mirror SM, cold relic on $\Sigma_2$, none, oscillating circle), then milestone 6 or 7.
+- `tests/dark_sector.py`: thermal-shift overclosure, $T_R < T_o$, $\delta_z(T_R)$, $h$ bound, Jeans length, isocurvature, oscillation signatures.
+- Next: milestone 7 (predictions) — the balance is −9 and must move.

@@ -22,7 +22,7 @@ has not decreased.
 | 5b | Initial conditions | `04b_initial_conditions.md`: scan of post-impact initial data (`r_b`, `f_2`, `\eta_1`, `\eta_2`/`P_relic`, $\Sigma_2$ content) | Cassini; BBN/CMB $N_{\text{eff}}$; $\Omega_{DM}/\Omega_b$ | done (`tests/scan_initial_conditions.py`); null configuration dead; viable: pre-loaded asymmetric mirror SM (thin band, dissipative DM), cold relic on $\Sigma_2$, or no mirror DM — each mirror-DM survivor costs +1 datum; none adopted |
 | 5c | Approach to $\Omega=1$ | `04c_approach.md`: exact two-brane solution in Schwarzschild–AdS (no moduli approximation); $\Omega_\infty$ from collision data | Cassini; $N_{\text{eff}}$; existence of $\Sigma_2$ | done (`tests/approach.py`); $\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)$, `r_b` not a datum; $\epsilon \ge f$ ($N_{\text{eff}}$ doubled, $\mathcal C$ re-opened); Cassini coincidence sharpened to $10^{-3}$; **circle modulus $\ell_z$ unstabilized** — stabilizer fork owed; pre-action layer + unified-sector fork recorded |
 | 5d | Circle | `04d_circle.md`: stabilizer menu for $\ell_z$ (action's own terms, Casimir + detuning, flux, Goldberger–Wise); $V(\ell_z)$, modulus mass, $\alpha$ drift, moduli abundance | Eöt-Wash; atomic clocks/quasars; LHC KK bound; $\Omega_{DM}$ | done (`tests/circle.py`); action's own terms dead; **Casimir + $\delta_1$ taken (#8)**; $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$; **P1**: fifth force with range 2–66 μm, pre-registered; $\alpha$ constant; $T_R < \ell_z^{-1}$ required; oscillating circle = fourth DM family (not adopted) |
-| 6 | Dark sector | `05_dark_sector.md`: $\Omega_{DM}/\Omega_b$, $\sigma/m$, structure formation offset | Bullet Cluster; halo shapes; isolated DM-free dwarfs | blocked on the exit chosen in `04_impact.md` §3 |
+| 6 | Dark sector | `05_dark_sector.md`: oscillating-circle DM — thermal vs collision misalignment, $T_R$ bound, $\delta_z$, Jeans scale, isocurvature, signatures | $\Omega_{DM}$; Planck $\beta_{\text{iso}}$; Bullet Cluster/halos/dwarfs; clocks | done (`tests/dark_sector.py`); family chosen: the oscillating circle; **$\delta_z$ taken (#9)**; $T_R < T_o \approx 2.7$ TeV ($h < 0.07$); CDM phenomenology; 5d's "$T_R$ to 0.4%" retracted; K1–K4 pre-registered |
 | 7 | Predictions | `06_predictions.md`: preferred-axis low-$\ell$ CMB covariance; $d_L^{GW}/d_L^{EM}$; joint $(\dot G/G, w_a)$ | pre-registered, dated, before comparison | |
 | 8 | Unlike | `07_unlike.md`: reciprocal comparison with SM, GR, ΛCDM, MOND, string theory | every cell cites a v2 equation or says "not derived" | |
 
@@ -49,4 +49,5 @@ python3 tests/impact.py
 python3 tests/scan_initial_conditions.py
 python3 tests/approach.py
 python3 tests/circle.py
+python3 tests/dark_sector.py
 ```
