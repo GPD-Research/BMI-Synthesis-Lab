@@ -218,3 +218,19 @@ V_z
 F_T
 \beta_{iso}
 \rho_m
+
+# milestone 7 (06_predictions.md): KK reduction bookkeeping, borrowed QCD/SM quantities, Yukawa test masses
+R_5
+g_5
+g_s
+m_J
+m_N
+m_t
+m_2
+M_Z
+b_0
+y_4
+\alpha_s
+\beta
+\mu_KK
+\rho_DE

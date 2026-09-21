@@ -1,4 +1,4 @@
-# v2 status — after milestone 6
+# v2 status — after milestone 7
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
@@ -130,9 +130,20 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 | SM Casimir energy on the wrapped brane is repulsive (62 more fermionic than bosonic degrees of freedom); the action's own terms give a minimum at $\ell_z^{-1} \approx 7$ meV that tracks dark energy — dead | derived (O(1) coefficient [verify]) |
 | stabilizer taken: Casimir + negative detuning $\delta_1$ of $\sigma_1$ (**parameter #8**); flux and Goldberger–Wise not taken (more content, same physics) | derived |
 | $m_\chi = 10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash and $\lvert\delta_1\rvert < \sigma_1$ give $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$ | derived, two-sided |
-| **P1, pre-registered**: composition-dependent gravitational-strength Yukawa force with range 2–66 μm | falsifiable; open |
+| **P1, pre-registered**: Yukawa force from the modulus; 5d's "gravitational strength, 2–66 μm, composition-dependent" is superseded by milestone 7's computed $\alpha_Y \approx 270$, $2.8$–$12\,\mu$m, composition-independent (§6b) | falsifiable; open |
 | $\alpha$ does not drift (minimum independent of $\phi$, $\Phi$): clock/quasar bounds passed | derived |
 | moduli problem: overclosure unless $T_R < T_o$; the oscillating circle is a fourth DM family, BMI-specific | derived; adopted in milestone 6 |
+
+## 6b. Predictions (`06_predictions.md`)
+
+| result | status |
+|---|---|
+| canonical circle modulus $\chi = \sqrt{3/2}\,M_{Pl}\ln\ell_z$ from the 5D Einstein–Hilbert term; 5d/6 numbers carry an implicit $\sqrt{2/3}$ in $m_\chi$ | derived |
+| $d\ln m_N/d\ln\ell_z \approx -14$, dominated by QCD running ($1/g_s^2 \propto \ell_z$); $\alpha_Y = 2\beta^2 \approx 2.6\times10^2$, composition-independent to $10^{-3}$ | derived (cutoff/thresholds [verify]) |
+| **P1 computed**: a segment in the $(\alpha,\lambda)$ plane — $\alpha_Y = 270$–300, $2.8 < \lambda/\mu\mathrm m < 12$ ($14 < \ell_z^{-1}/\mathrm{TeV} < 29$); Eöt-Wash 2020 removed $\lambda > 12\,\mu$m; current limits $2$–$10^3\times$ above the segment | open; detection on/off the segment confirms/kills |
+| **P2 registered**: $w_a = -1.5(1+w_0)$, $w > -1$; DESI DR2 proxy: $\Delta\chi^2 = 6.5$–12.7 (ΛCDM 9–20) | open; outside $2\sigma$, not killed |
+| Cassini–$N_{\text{eff}}$ leaks ($\epsilon + f$ only observable); $\dot G/G$–$w$ different fields; GW/EM distance ratio $1 \pm 10^{-5}$; low-$\ell$ axis not computable without a primordial spectrum | not predictions |
+| balance $0 - 9$ unchanged | branch-closure decision owed |
 
 ## 6. The dark sector (`05_dark_sector.md`)
 
@@ -161,7 +172,7 @@ admitted; the only clean option is a universal $c$ (would be parameter #8).
 |---|---|---|
 | 1 | GR + ΛCDM in frozen limit | **passed** (milestone 3) |
 | 2 | $\dot G/G$ vs LLR | **passed** (milestone 4): $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ |
-| 3 | $w(z)$ vs DESI | **open**: thawing curve, $w>-1$; Planck constant-$w$ needs $c\lesssim0.5$; DESI DR2 central value (phantom) unreachable — chain-level test in milestone 7 |
+| 3 | $w(z)$ vs DESI | **open, not passed**: thawing curve (P2) sits at $\Delta\chi^2 = 6.5$–12.7 from the DESI DR2 + CMB + SNe best fits in a Gaussian proxy (ΛCDM: 9–20); outside $2\sigma$ for every SNe sample; chain-level test still owed (`06_predictions.md` §4b) |
 | 4 | $\Delta N_{\text{eff}}$, $T_2/T_1$ vs BBN/Planck | **fired** (milestone 5): not because the impact gives $T_2/T_1 > 0.5$ (it gives no number) but because no $T_2/T_1 < 0.45$ yields $\Omega_{DM}/\Omega_b = 5.3$ with $\eta_2 = \eta_1$; mirror SM as DM dead |
 | 5 | $r > 0.01$ kills the collision origin | **re-labelled** (milestone 5): the action produces no primordial spectrum, so it neither predicts nor is killed by $r$ |
 | 6 | $\Omega_{DM}/\Omega_b$, $\sigma/m$ | milestone 6 — only if an exit from §5 is chosen |
@@ -183,4 +194,5 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 - `tests/approach.py`: exact two-brane trajectories in Schwarzschild–AdS, closed-form $\Omega_\infty$, Cassini window in $\epsilon$.
 - `tests/circle.py`: Casimir sign, option-0 exclusion, option-A window, modulus mass, moduli abundance, P1 range.
 - `tests/dark_sector.py`: thermal-shift overclosure, $T_R < T_o$, $\delta_z(T_R)$, $h$ bound, Jeans length, isocurvature, oscillation signatures.
-- Next: milestone 7 (predictions) — the balance is −9 and must move.
+- `tests/predictions.py`: canonical $\chi$, $\alpha_Y(\ell_z)$, $(\alpha_Y,\lambda)$ segment vs inverse-square-law limits; thawing $(w_0,w_a)(c)$ vs DESI DR2 proxy.
+- Milestone 7 done; balance still −9. Decision owed: close the branch per the ledger rule, or freeze the budget at 9 and wait for the two tests (`06_predictions.md` §5).
