@@ -23,7 +23,7 @@ has not decreased.
 | 5c | Approach to $\Omega=1$ | `04c_approach.md`: exact two-brane solution in Schwarzschild–AdS (no moduli approximation); $\Omega_\infty$ from collision data | Cassini; $N_{\text{eff}}$; existence of $\Sigma_2$ | done (`tests/approach.py`); $\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)$, `r_b` not a datum; $\epsilon \ge f$ ($N_{\text{eff}}$ doubled, $\mathcal C$ re-opened); Cassini coincidence sharpened to $10^{-3}$; **circle modulus $\ell_z$ unstabilized** — stabilizer fork owed; pre-action layer + unified-sector fork recorded |
 | 5d | Circle | `04d_circle.md`: stabilizer menu for $\ell_z$ (action's own terms, Casimir + detuning, flux, Goldberger–Wise); $V(\ell_z)$, modulus mass, $\alpha$ drift, moduli abundance | Eöt-Wash; atomic clocks/quasars; LHC KK bound; $\Omega_{DM}$ | done (`tests/circle.py`); action's own terms dead; **Casimir + $\delta_1$ taken (#8)**; $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$; **P1**: fifth force with range 2–66 μm, pre-registered; $\alpha$ constant; $T_R < \ell_z^{-1}$ required; oscillating circle = fourth DM family (not adopted) |
 | 6 | Dark sector | `05_dark_sector.md`: oscillating-circle DM — thermal vs collision misalignment, $T_R$ bound, $\delta_z$, Jeans scale, isocurvature, signatures | $\Omega_{DM}$; Planck $\beta_{\text{iso}}$; Bullet Cluster/halos/dwarfs; clocks | done (`tests/dark_sector.py`); family chosen: the oscillating circle; **$\delta_z$ taken (#9)**; $T_R < T_o \approx 2.7$ TeV ($h < 0.07$); CDM phenomenology; 5d's "$T_R$ to 0.4%" retracted; K1–K4 pre-registered |
-| 7 | Predictions | `06_predictions.md`: preferred-axis low-$\ell$ CMB covariance; $d_L^{GW}/d_L^{EM}$; joint $(\dot G/G, w_a)$ | pre-registered, dated, before comparison | |
+| 7 | Predictions | `06_predictions.md`: canonical $\chi$ normalisation; $(\alpha_Y, \lambda)$ from $\ell_z$; $(w_0,w_a)(c)$ vs DESI DR2; closure test of Cassini–$N_{\text{eff}}$, $\dot G/G$–$w$, GW distance, low-$\ell$ axis | pre-registered, dated, before comparison | done (`tests/predictions.py`); **P1 computed**: $\alpha_Y \approx 270$ (QCD running, not $O(1)$), $2.8$–$12\,\mu$m, $14 < \ell_z^{-1}/\mathrm{TeV} < 29$ — half of 5d's range removed by Eöt-Wash 2020; **P2 registered**: $w_a = -1.5(1+w_0)$, outside DESI $2\sigma$ in a Gaussian proxy but not killed; the other three relations leak or are null; balance still $0-9$, branch-closure decision owed |
 | 8 | Unlike | `07_unlike.md`: reciprocal comparison with SM, GR, ΛCDM, MOND, string theory | every cell cites a v2 equation or says "not derived" | |
 
 ## Rules
@@ -50,4 +50,5 @@ python3 tests/scan_initial_conditions.py
 python3 tests/approach.py
 python3 tests/circle.py
 python3 tests/dark_sector.py
+python3 tests/predictions.py
 ```
