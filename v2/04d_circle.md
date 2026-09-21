@@ -14,7 +14,7 @@ die. This file works through the finite menu declared in `ledger.md`. Numbers: `
 | **prediction (pre-registered, dated 2026-09-20)**: a gravitational-strength Yukawa force, range $2$–$66\ \mu$m, composition-dependent (couples to $\alpha$) | falsifiable by next-generation Eöt-Wash / Casimir-force experiments |
 | $\alpha$ drift at the minimum: zero (the minimum depends on neither $\phi$ nor $\Phi$) | derived; clock bounds satisfied |
 | cosmological moduli problem: an O(1) early displacement overcloses by $10^{12}$; the modulus does not decay ($\tau \sim 10^{38}$ yr) | derived; kill risk unless $T_R \lesssim \ell_z^{-1}/14$ |
-| if instead the displacement is $\lvert\Delta\ell_z/\ell_z\rvert \approx 10^{-6}$, the oscillating circle **is** cold dark matter (fourth family, BMI-specific) | conditional; costs $T_R$ to 0.4% |
+| if instead the displacement is $\lvert\Delta\ell_z/\ell_z\rvert \sim 10^{-6}$, the oscillating circle **is** cold dark matter (fourth family, BMI-specific) | conditional; taken in `05_dark_sector.md`, where the "$T_R$ to 0.4%" of §4 is corrected |
 | option B (flux, new 1-form) reproduces A with two numbers; option C (Goldberger–Wise) needs new codimension-2 branes | not taken |
 
 ## 0. Why this is forced now
@@ -129,24 +129,27 @@ until $T_e$, and it never decays (rate $m_\chi^3/M_{Pl}^2$, lifetime $10^{38}$ y
   is $\sim 6\times10^{11}$. **Overclosure.** So the action requires
   $T_R < \ell_z^{-1}$: a *reheating bound* of a few TeV, below the KK scale, stronger
   than the $h\lesssim1$ bound of `04c_approach.md` §5.
-- With $T_R < \ell_z^{-1}$ the shift is Boltzmann-suppressed, $\sim e^{-1/(\ell_z T_R)}$.
-  The displacement that gives $\Omega_\chi = \Omega_{DM}$ is
-  $\lvert\Delta\chi\rvert/M_{Pl} = \lvert\Delta\ell_z/\ell_z\rvert \approx 1.2\times10^{-6}$,
-  i.e. $1/(\ell_z T_R) \approx 13.6$: $T_R \approx 730$ GeV for $\ell_z^{-1} = 10$ TeV.
+- With $T_R < \ell_z^{-1}$ the shift is Boltzmann-suppressed. **Corrected in `05_dark_sector.md` §1:**
+  the shift is a *moving minimum*, and once $H < m_\chi$ (i.e. $T < T_o \approx 0.27\,\ell_z^{-1}$)
+  the field follows it adiabatically and nothing is excited; if instead $T_R > T_o$ the shift
+  at $T_o$ is O(0.4) and overcloses. The bound is therefore $T_R < T_o$, and the thermal shift
+  cannot be tuned to give $\Omega_{DM}$. The earlier text here ("$T_R \approx 730$ GeV tuned to
+  0.4%") was wrong and is retracted; the working mechanism is the collision's own offset
+  $\delta_z$ of the circle (`05_dark_sector.md` §2).
 
 So there is a **fourth dark-matter family**, and it is the first one that is BMI-specific in
 mechanism: the dark matter is the still-oscillating width of the shared circle — a coherent
 scalar of mass $10^{-2}$ eV, cold from $T\sim$ TeV, collisionless, with no particle-physics
-content. Its price is the same as the others': one number, $T_R$, and because
-$\Omega_\chi \propto e^{-2/(\ell_zT_R)}$ it must be set to 0.4% to get $\Omega_{DM}$ to
-10%. Its signatures: none in direct detection ($\alpha$ oscillates at 16 THz with amplitude
-$10^{-28}$); a Jeans scale far below galactic; structure formation identical to CDM. It is
+content. Its price is one number, the offset $\delta_z \sim 10^{-6}$ left by the impact. Its
+signatures: none in direct detection ($\alpha$ oscillates at 2.5 THz with amplitude
+$10^{-31}$); a Jeans scale far below galactic; structure formation identical to CDM. It is
 falsified with option A itself if the fifth-force window is emptied, and independently if a
-primordial gravitational-wave or reheating signal shows $T_R \gg$ TeV.
+primordial gravitational-wave or reheating signal shows $T_R \gtrsim$ few TeV.
 
 This is the honest form of the founding intuition "dark matter is an inherited, still-settling
 quantity": it can be, in this action, if and only if the circle is stabilized as in §3, the
-collision reheated below the KK scale, and one number is tuned to a part in 250.
+collision reheated below $T_o$, and the collision left the circle offset by a part in $10^6$.
+Taken as milestone 6.
 
 ## 5. Options B and C
 

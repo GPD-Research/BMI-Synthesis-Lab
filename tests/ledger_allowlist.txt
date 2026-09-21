@@ -215,3 +215,6 @@ T_o
 V_z
 \alpha_Y
 \rho_r
+F_T
+\beta_{iso}
+\rho_m
