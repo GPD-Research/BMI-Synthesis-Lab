@@ -5,7 +5,7 @@ The BMI framework renders the singularity obsolete. By modeling the early univer
 
 ## 11.2 Multi-Scale Temporal Analysis of Cosmic Crystallization
 ### 11.2.1 Deep Time Equilibrium (T=0 to T=10,000 Gyr)
-The cosmos exhibits profound structural stability, stabilizing around a normalized field intensity of ± 0.25.
+The cosmos exhibits profound structural stability, stabilizing around a normalized field intensity of $\pm$ 0.25.
 
 ### 11.2.2 The Sub-Second Boot Sequence (T < 1 Year)
 The universe underwent a "boot sequence" with a Crystallization Threshold occurring at approximately 10^-12 seconds, aligning with Electroweak Symmetry Breaking.

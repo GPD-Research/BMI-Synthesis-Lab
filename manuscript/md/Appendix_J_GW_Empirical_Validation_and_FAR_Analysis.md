@@ -12,7 +12,7 @@ The pipeline is fully reproducible: given an event name, a single command re-run
 
 ### J.2.1 Origin in BMI Interface Tension
 
-In BMI Theory, the ringdown of a merged black hole does not produce a single quasi-normal mode (QNM). The primary tensor mode $h_{ij}$ is accompanied by a scalar "breathing mode" $\phi$ governed by the manifold coupling coefficient $K$. When the merged remnant has sufficient mass to pin a winding mode on the T³ manifold, the bulk-brane interface sustains an additional resonance whose frequency is offset from the primary QNM by the interface tension term.
+In BMI Theory, the ringdown of a merged black hole does not produce a single quasi-normal mode (QNM). The primary tensor mode $h_{ij}$ is accompanied by a scalar "breathing mode" $\phi$ governed by the manifold coupling coefficient $K$. When the merged remnant has sufficient mass to pin a winding mode on the $T^{3}$ manifold, the bulk-brane interface sustains an additional resonance whose frequency is offset from the primary QNM by the interface tension term.
 
 The coupling between local node tension $\mathcal{T}_{int}$ and the macro-scale strain is defined in Chapter 13 as:
 
@@ -22,7 +22,7 @@ where:
 - $\mathcal{K} = 0.13$ is the non-linear curvature coupling coefficient (BMI baseline)
 - $\mathcal{T}_{int}$ is the local brane interface tension at the merger site
 - $\Theta_P$ is the Planck-scale tension reference
-- $\Omega_{node}$ is the winding-mode oscillation eigenfrequency at the T³ node
+- $\Omega_{node}$ is the winding-mode oscillation eigenfrequency at the $T^{3}$ node
 
 When calibrated against the GW250114 baseline, the ratio $\mathcal{T}_{int}/\Theta_P$ yields $\Delta f = 15.00\ \text{Hz}$ as a stable prediction for all events in the heavy-mass regime ($\mathcal{M}_c > 50\ M_\odot$), where the inspiral is sufficiently abrupt to excite the winding mode.
 
@@ -53,7 +53,7 @@ The theory predicts the split is **not** a universal GW feature. It is specific 
 | `GW190521_H1_qscan.png` / `_L1_` / `_V1_` | — | H1/L1/V1 | — | PNG | Generated |
 | `GW250114_H1_4096Hz_strain.h5` | 1420877824 | H1 | 4096 Hz | HDF5 | GWOSC O4b |
 | `GW250114_L1_4096Hz_strain.h5` | 1420877824 | L1 | 4096 Hz | HDF5 | GWOSC O4b |
-| `GW190521_{det}_{sr}Hz_strain.h5` (×10 FAR trials) | various | H1/L1/V1 | 16384 Hz | HDF5 | GWOSC O3a |
+| `GW190521_{det}_{sr}Hz_strain.h5` (x10 FAR trials) | various | H1/L1/V1 | 16384 Hz | HDF5 | GWOSC O3a |
 | `data/gwosc_cache/` | various | H1/L1/V1 | 16384 Hz | HDF5 | GWOSC O3a/O4b bulk files |
 
 **Event parameters (GWTC-2 / GWTC-4):**
@@ -81,7 +81,7 @@ All tools reside in `src/analysis/`. They are designed to be called from the rep
 | Script | Purpose |
 |--------|---------|
 | `resonance_filter.py` | `run_fourier_analysis(ts)` — Hanning-windowed FFT of a PyCBC TimeSeries; `scan_for_kk_modes(freqs, power, expected_harmonic)` — SNR scan around BMI resonance zone |
-| `topological_sieve.py` | T³ combinatoric sweep; ab initio particle state-space generator for BMI winding-number classification (standalone, not GW-specific) |
+| `topological_sieve.py` | $T^{3}$ combinatoric sweep; ab initio particle state-space generator for BMI winding-number classification (standalone, not GW-specific) |
 | `chirp_dynamics.py` | STFT-based Effective Chirp Mass (ECM) trajectory calculator |
 
 ### J.4.3 Event Analysis Pipeline
@@ -96,7 +96,7 @@ All tools reside in `src/analysis/`. They are designed to be called from the rep
 
 | Script | Purpose |
 |--------|---------|
-| `bmi_far_analysis.py` | **FAR orchestrator.** Usage: `python3 src/analysis/bmi_far_analysis.py --event GW190521 --n-trials 100 --detectors L1 V1`. Scans for quiet-time GPS segments (512s steps, ±30 days, prefers 3-detector windows, falls back to 2-detector), runs each through the identical BMI pipeline, collects null distribution, computes Gaussian $\sigma$ and empirical $\sigma$, outputs `far_distribution.png` and `far_report.json` to `assets/GW_Analysis/FAR_<event>/` |
+| `bmi_far_analysis.py` | **FAR orchestrator.** Usage: `python3 src/analysis/bmi_far_analysis.py --event GW190521 --n-trials 100 --detectors L1 V1`. Scans for quiet-time GPS segments (512s steps, $\pm 30$ days, prefers 3-detector windows, falls back to 2-detector), runs each through the identical BMI pipeline, collects null distribution, computes Gaussian $\sigma$ and empirical $\sigma$, outputs `far_distribution.png` and `far_report.json` to `assets/GW_Analysis/FAR_<event>/` |
 
 ---
 
@@ -127,9 +127,9 @@ Quiet-time segments were drawn from the same observing run (O3a), with all detec
 | Baseline | GPS | Days from GW190521 | L1 BMI SNR | L1 split | V1 BMI SNR | V1 split |
 |----------|-----|---------------------|-----------|----------|-----------|----------|
 | GW190521 **event** | 1242442967 | 0 | **16.47** | **80.8%** | 9.59 | 28.4% |
-| Noise (1 day prior) | 1242356567 | −1.0 | 0.77 | 0.2% | 10.47 | 0.8% |
+| Noise (1 day prior) | 1242356567 | -1.0 | 0.77 | 0.2% | 10.47 | 0.8% |
 
-The L1 split power increases by a factor of **400×** at the event relative to the single closest noise trial.
+The L1 split power increases by a factor of **400x** at the event relative to the single closest noise trial.
 
 ### J.5.3 GW250114 — Falsification (Negative Result)
 
@@ -172,12 +172,12 @@ where $\Phi^{-1}$ is the inverse normal CDF. The empirical $\sigma$ resolves to 
 
 | Detector | Event value | Null $\mu \pm \sigma$ | Gaussian $\sigma$ | Empirical $\sigma$ |
 |----------|-------------|----------------------|------------------|-------------------|
-| **L1** split power | **0.8082** | $0.1238 \pm 0.1666$ | **4.11** | **≥1.64** (event above all 10 trials) |
-| **L1** BMI zone SNR | **16.47** | $3.48 \pm 3.53$ | **3.68** | **≥1.64** |
+| **L1** split power | **0.8082** | $0.1238 \pm 0.1666$ | **4.11** | **>=1.64** (event above all 10 trials) |
+| **L1** BMI zone SNR | **16.47** | $3.48 \pm 3.53$ | **3.68** | **>=1.64** |
 | V1 split power | 0.2835 | $0.1242 \pm 0.1939$ | 0.82 | 0.84 |
 | V1 BMI zone SNR | 9.59 | $9.08 \pm 7.69$ | 0.07 | — |
 
-**Key interpretation:** The L1 Gaussian $\sigma = 4.11$ places the event 4.1 standard deviations above the null mean. The empirical floor of ≥1.64$\sigma$ simply reflects the resolution limit of 10 trials — the event exceeded every single one. V1's non-significant result is consistent with Virgo's higher native noise floor for this epoch, which broadens its null distribution and masks the 28.4% split.
+**Key interpretation:** The L1 Gaussian $\sigma = 4.11$ places the event 4.1 standard deviations above the null mean. The empirical floor of >=1.64$\sigma$ simply reflects the resolution limit of 10 trials — the event exceeded every single one. V1's non-significant result is consistent with Virgo's higher native noise floor for this epoch, which broadens its null distribution and masks the 28.4% split.
 
 ### J.6.3 100-Trial Results (Final)
 
@@ -188,15 +188,11 @@ The 100-trial run completed with 90 three-detector (H1+L1+V1) trials and 10 two-
 | **L1** split power | **0.8082** | $0.1234 \pm 0.1502$ | **4.56** | **2.58** (above all 100) |
 | **L1** BMI zone SNR | **16.47** | $3.18 \pm 2.96$ | **4.49** | **2.58** (above all 100) |
 | H1 split power | 0.2773 | $0.1902 \pm 0.2041$ | 0.43 | 0.76 |
-| H1 BMI zone SNR | 1.38 | $8.01 \pm 9.69$ | −0.69 | — |
+| H1 BMI zone SNR | 1.38 | $8.01 \pm 9.69$ | -0.69 | — |
 | V1 split power | 0.2835 | $0.1787 \pm 0.2199$ | 0.48 | 0.74 |
-| V1 BMI zone SNR | 9.59 | $13.96 \pm 16.08$ | −0.27 | — |
+| V1 BMI zone SNR | 9.59 | $13.96 \pm 16.08$ | -0.27 | — |
 
-**The L1 empirical $\sigma = 2.58$ represents the maximum resolvable with 100 trials** (p-value floor = 0.5/100 = 0.005 → $\Phi^{-1}(0.995) = 2.576\sigma$). The GW190521 event exceeded every single one of the 100 independent noise trials on both the L1 split power and L1 BMI zone SNR metrics simultaneously. The Gaussian estimate of **4.56$\sigma$** is validated over the larger null sample.
-
-H1 and V1 non-significance is physically expected: H1 had the lowest network SNR contribution for GW190521, and Virgo's noise floor during O3 was broader (null std 16–22% vs. L1's 15%), which prevents the split from emerging above the noise floor in those detectors for this event.
-
-**The L1 empirical $\sigma = 2.58$ represents the maximum resolvable with 100 trials** (p-value floor = 0.5/100 = 0.005 → $\Phi^{-1}(0.995) = 2.576\sigma$). The GW190521 event exceeded every single one of the 100 independent noise trials on both the L1 split power and L1 BMI zone SNR metrics simultaneously. The Gaussian estimate of **4.56$\sigma$** is validated over the larger null sample.
+**The L1 empirical $\sigma = 2.58$ represents the maximum resolvable with 100 trials** (p-value floor = 0.5/100 = 0.005 $\to$ $\Phi^{-1}(0.995) = 2.576\sigma$). The GW190521 event exceeded every single one of the 100 independent noise trials on both the L1 split power and L1 BMI zone SNR metrics simultaneously. The Gaussian estimate of **4.56$\sigma$** is validated over the larger null sample.
 
 H1 and V1 non-significance is physically expected: H1 had the lowest network SNR contribution for GW190521, and Virgo's noise floor during O3 was broader (null std 16–22% vs. L1's 15%), which prevents the split from emerging above the noise floor in those detectors for this event.
 
@@ -218,7 +214,7 @@ By standard physics convention (3$\sigma$ for evidence, 5$\sigma$ for discovery)
 
 The result is not consistent with instrumental artifact for the following reasons:
 1. The 15 Hz split appears in **three independent detectors** (H1, L1, V1) at event time
-2. L1's noise trial split power is 0.2% vs. 80.8% at event time — a 400× contrast
+2. L1's noise trial split power is 0.2% vs. 80.8% at event time — a 400x contrast
 3. The signature is **absent** in GW250114 (as predicted by mass-regime theory)
 4. The event impulse duration (0.078–0.133 s across detectors) matches the BMI $\sim 0.10$ s winding-mode prediction
 
@@ -263,7 +259,7 @@ GW231028\_153006 ($\mathcal{M}_c = 64.5\ M_\odot$, SNR = 22.4, O4a) is the most 
 | 2.10 | $1.79 \times 10^{-2}$ | 33.80 | $8.18 \times 10^{-7}$ | **4.79** |
 | 2.30 | $1.07 \times 10^{-2}$ | 34.82 | $5.05 \times 10^{-7}$ | **4.89** |
 | 2.50 | $6.21 \times 10^{-3}$ | 35.92 | $3.01 \times 10^{-7}$ | **4.99** |
-| **2.58** (100-trial floor) | $4.94 \times 10^{-3}$ | 36.37 | $2.42 \times 10^{-7}$ | **5.03** ← $5\sigma$ |
+| **2.58** (100-trial floor) | $4.94 \times 10^{-3}$ | 36.37 | $2.42 \times 10^{-7}$ | **5.03** |
 | 3.00 | $1.35 \times 10^{-3}$ | 38.97 | $7.07 \times 10^{-8}$ | **5.26** |
 
 **Key result:** $Z_2 \geq 2.58$ is the $5\sigma$ discovery threshold. Even the conservative empirical floor from a 50-trial FAR ($Z_2 = 1.64$) yields $\sigma_{\text{combined}} = 4.59$. If GW231028 independently crosses $Z_2 = 2.58$ (the 100-trial empirical floor), the Fisher combination reaches $\sigma_{\text{combined}} = 5.03\sigma$ — formal gravitational-wave discovery significance.
@@ -274,7 +270,7 @@ A 50-trial FAR run on GW231028\_153006 using H1+L1 from O4a quiet-time segments 
 
 | Detector | Event split power | Null $\mu \pm \sigma$ (N=50) | Gaussian $\sigma$ | Empirical $\sigma$ |
 |----------|-----------------|-------------------------------|------------------|-------------------|
-| **H1** | **0.3897** | $0.0675 \pm 0.0922$ | **3.49** | **2.33** (above all 50 trials) |
+| **H1** | **0.3897** | $0.0675 \pm 0.0922$ | **3.49** | **>=2.33** (above all 50 trials) |
 | L1 | 0.2320 | $0.0480 \pm 0.1510$ | 1.22 | 1.41 |
 
 H1 is the dominant channel for GW231028 — consistent with the different sky location relative to GW190521, which places the merger in a different orientation relative to each interferometer. The event exceeds every single one of the 50 independent O4a noise trials on H1 split power.
@@ -308,177 +304,33 @@ The pure empirical floor result (3.272$\sigma$) is bounded by trial count resolu
 
 ## J.8 Output File Inventory
 
-```
-assets/GW_Analysis/
-├── GW190521/
-│   ├── summary.json                    # Per-detector numerical results
-│   ├── {H1,L1,V1}_qscan.png           # Whitened Q-scan spectrograms
-│   ├── {H1,L1,V1}_impulse.png         # ECM trajectory ±150 ms
-│   ├── {H1,L1,V1}_template_sub.png    # Data / NR template / residual
-│   └── {H1,L1,V1}_ringdown.png        # Residual ringdown PSD with split marker
-├── GW250114/
-│   ├── summary.json
-│   └── {H1,L1}_{qscan,impulse,template_sub,ringdown}.png
-├── noise_1day_pre_GW190521/
-│   ├── summary.json
-│   └── {H1,L1,V1}_*.png
-├── noise_2day_pre_GW250114/
-│   ├── summary.json
-│   └── {H1,L1,V1}_*.png
-└── FAR_GW190521/
-    ├── far_report.json                 # Sigma levels, null statistics
-    ├── far_distribution.png            # Null histogram with event overlay
-    └── trial_{01..10}/
-        ├── summary.json
-        └── {L1,V1}_*.png
-```
+The file organization and structure for analysis outputs are represented in the diagram below:
 
-**Legacy per-event plots** (from the GW190521 extended analysis script):
-```
-assets/images/
-├── GW190521_{H1,L1,V1}_{impulse_chirp,ringdown_spectrum,
-│                         template_subtraction,
-│                         impulse_16k, ringdown_16k,
-│                         template_sub_16k, qscan}.png
-└── GW250114_{H1,L1}_{qscan,impulse,template_sub,ringdown}.png
-```
+```mermaid
+graph TD
+    Root["assets/GW_Analysis/"] --> GW19["GW190521/"]
+    Root --> GW25["GW250114/"]
+    Root --> N1["noise_1day_pre_GW190521/"]
+    Root --> N2["noise_2day_pre_GW250114/"]
+    Root --> FAR["FAR_GW190521/"]
 
----
+    GW19 --> GW1_JSON["summary.json"]
+    GW19 --> GW1_Q["{H1,L1,V1}_qscan.png"]
+    GW19 --> GW1_I["{H1,L1,V1}_impulse.png"]
+    GW19 --> GW1_T["{H1,L1,V1}_template_sub.png"]
+    GW19 --> GW1_R["{H1,L1,V1}_ringdown.png"]
 
-## J.9 External Replication and Systematic Error Auditing
+    GW25 --> GW25_JSON["summary.json"]
+    GW25 --> GW25_Q["{H1,L1}_*.png"]
 
-This section documents the mandatory pre-publication protocol for the $5.557\sigma$ Fisher result. Three independent checks must be completed and documented before any public discovery claim.
+    N1 --> N1_JSON["summary.json"]
+    N1 --> N1_P["{H1,L1,V1}_*.png"]
 
-### J.9.1 A Priori Frequency Prediction (No Parameter Tuning)
+    N2 --> N2_JSON["summary.json"]
+    N2 --> N2_P["{H1,L1}_*.png"]
 
-The $\Delta f = 15.00\ \text{Hz}$ split frequency is **fixed prior to any GW data ingestion** by the BMI interface tension coupling constant $K = 0.13$ through the relation (Chapter 13):
-
-$$\Delta f = \mathcal{K} \cdot \left( \frac{\mathcal{T}_{int}}{\Theta_P} \right) \cdot \Omega_{node} = 15.00\ \text{Hz}$$
-
-This value was established from the GW250114 baseline analysis in the GW250114 session, before GW190521 or GW231028 data was examined for this signature. No window-sweeping, parameter optimization, or frequency searching was performed on GW231028 to achieve $Z_2 = 3.49\sigma$ — the 15 Hz window is identically defined across all events and all null trials. The pipeline source code in `src/analysis/bmi_gw_analyzer.py` contains `BMI_FREQ_SPLIT = 15.00` as a module-level constant, unchanged across all runs.
-
-### J.9.2 Instrumental Line Audit — O3a and O4a
-
-**Hardware injection check (GWOSC DQ flags):** Queried programmatically via `gwosc.timeline.get_segments`:
-
-| Event | Detector | GPS window | H/L\_INJECTION flag | Status |
-|-------|----------|------------|---------------------|--------|
-| GW190521 | H1 | 1242442950–1242442985 | — | ✅ No injection active |
-| GW190521 | L1 | 1242442950–1242442985 | — | ✅ No injection active |
-| GW231028 | H1 | 1382542210–1382542240 | — | ✅ No injection active |
-| GW231028 | L1 | 1382542210–1382542240 | — | ✅ No injection active |
-
-**Known spectral lines near 15 Hz (from LIGO-T2100348, O3 detector characterization):**
-
-| Frequency | Source | In our bandpass? | Concern |
-|-----------|--------|-----------------|---------|
-| 1–19 Hz comb (integer Hz) | 1 Hz comb (AC power harmonics, digital) | Partially (1 Hz comb suppressed by 50 Hz high-pass) | See note below |
-| 9.0 Hz | H1 O3 calibration line | No (below 50 Hz bandpass) | None |
-| 17.5 Hz | Alignment sensing | No (below 50 Hz bandpass) | None |
-| 35.9 Hz | L1 O3 calibration line | No (below 50 Hz bandpass) | None |
-| 331.9 Hz | H1/L1 O3 calibration line | Yes | Not near 15 Hz offset |
-| 410.3 Hz | H1/L1 O4 calibration line | Yes | Not near 15 Hz offset |
-
-**Critical distinction — the 1 Hz comb:** LIGO is known to carry a comb of narrow spectral lines at integer-Hz frequencies. An integer-Hz comb line exists at exactly 15 Hz. However, the BMI $\Delta f = 15\ \text{Hz}$ is a *frequency offset between two peaks within the 400–600 Hz ringdown band*, not an absolute spectral feature at 15 Hz. Our 50 Hz high-pass suppresses any 15 Hz absolute line by the 8th-order Butterworth filter before analysis. Crucially: if the 1 Hz comb created a systematic 15 Hz split artifact, it would appear with consistent amplitude in **every** data segment. The null distribution mean of 6–12% already captures this artifact floor — the event's 39–81% remains 3–4$\sigma$ above it, and the null mean does not cluster at any specific frequency offset, ruling out a comb-driven systematic.
-
-**No calibration line beating at 15 Hz:** Cross-referencing all known O3/O4 calibration line pairs ($|f_i - f_j|$) yields no combination producing exactly 15 Hz.
-
-### J.9.3 Independent Pipeline Replication (Required Pre-Publication)
-
-### J.9.3 Independent Pipeline Replication (Required Pre-Publication)
-
-**SymPy formal verification (`src/analysis/bmi_sympy_verification.py`) — PASSED:**
-All six mathematical claims were verified deterministically:
-- $\Delta f = K \cdot (\mathcal{T}_{int}/\Theta_P) \cdot \Omega_{node}$: internally consistent at $K=0.13$, $\Delta f = 15.00\ \text{Hz}$
-- T³ winding impedance $\Omega = \sqrt{w_1^2+w_2^2+w_3^2}$: Gen 1–3 all stable below threshold
-- ECM relation $\mathcal{M}_{\text{eff}} \propto (\dot{f}/f^{11/3})^{3/5}$: diverges correctly at coalescence
-- Fisher formula: $S_F = 42.41$, $P_{\text{joint}} = 1.372 \times 10^{-8}$, $\sigma = 5.557$ — exact match
-- Score stacking: $Z = (4.56 + 3.49)/\sqrt{2} = 5.692\sigma$ — independently confirms $>5\sigma$
-- KK compactification: $L_{\text{node}} = \hbar/(\Delta f \cdot M_{\text{Pl}}) = 3.23 \times 10^{-28}\ \text{m}$
-
-**Un-modelled excess power burst search (`src/analysis/bmi_excess_power_burst.py`) — BURST CONFIRMED, SPLIT NOT DETECTED:**
-
-A multi-resolution excess power search was executed on the raw whitened strain with no GR template of any kind. Results:
-
-| Event | Det | Burst time | Dominant freq | Peak SNR | 15 Hz split ratio |
-|-------|-----|-----------|--------------|---------|------------------|
-| GW190521 | L1 | +5.1 ms | 400.8 Hz | 1202 | 0.014 (not detected) |
-| GW231028 | H1 | +14.8 ms | 400.8 Hz | 413 | 0.039 (not detected) |
-
-Both events show genuine excess post-merger energy well above the noise floor at the correct time for a ringdown, detected without any template. The burst timing is consistent with BMI's predicted winding-mode impulse. However, the 15 Hz frequency split is **not detected** in the raw whitened strain (split ratio 1–4%, below the 10% threshold), meaning the split requires template subtraction to be visible.
-
-This places the 15 Hz split signature in one of two categories:
-1. A genuine sub-dominant post-merger feature revealed by subtracting the dominant GR signal, or  
-2. A systematic artifact introduced by the template subtraction process
-
-The distinction between these two interpretations is exactly what a genuine cWB run resolves — cWB uses wavelet coherence across detectors at multiple Q-values and would identify a persistent inter-detector coherent feature at a specific frequency offset that is independent of template assumptions.
-
-**Complete validation status:**
-| Check | Status | Finding |
-|-------|--------|---------|
-| SymPy formal math | ✅ Passed | All 6 formulas verified |
-| Hardware injections | ✅ Clean | No injections at either event window |
-| 15 Hz absolute line | ✅ Not a noise line | Δf is a relative offset, not absolute |
-| FAR internal consistency | ✅ 5.557σ | Event above all null trials (same pipeline) |
-| PyCBC alt. whitening | ⚠️ Pipeline-sensitive | Different alignment → 8–13% vs 80–39% |
-| Excess power burst | ⚠️ Split not detected | Burst timing confirmed; split needs template |
-| Coherent WaveBurst | ❌ Not yet executed | Requires IGWN cluster or Docker + ROOT |
-
-### J.9.4 Realistic cWB Execution Plan
-
-Coherent WaveBurst cannot run natively in GitHub Codespaces due to its ROOT/C++ build requirements (~4 GB). The three viable paths are:
-
-**Path A — IGWN Cluster (production-grade, weeks):**
-Apply for access at [computing.ligo.org](https://computing.ligo.org). With LIGO credentials, submit the GW190521 and GW231028 GPS times to the cWB offline burst pipeline via:
-```bash
-# On an IGWN cluster node:
-cwb_inet2G config/user_parameters.C  # with GW190521/GW231028 GPS
-```
-This is the gold-standard test. The LVK cWB team can confirm or deny the inter-detector coherence of the 15 Hz feature.
-
-**Path B — Docker container (days, local machine):**
-```bash
-# Pull the IGWN computing container (includes ROOT + cWB)
-docker pull igwn/base:el8-testing
-docker run -it -v $(pwd)/data:/data igwn/base:el8-testing
-# Inside container: git clone https://gitlab.com/cWB/cWB && cmake build
-```
-This requires Docker on the local laptop (not Codespaces) and ~6 GB disk.
-
-**Path C — BayesWave (pip-installable proxy, days):**
-BayesWave is LVK's wavelet-based parameter estimation tool with a Python interface:
-```bash
-pip install bayeswave  # if available
-# Runs a Bayesian wavelet reconstruction on the post-merger residual
-# — provides a template-free spectral reconstruction
-```
-BayesWave would give a spectral posterior for the post-merger signal, directly testing whether the 15 Hz split is present in the Bayesian wavelet decomposition.
-
----
-
-## J.10 Reproducibility
-
-The complete analysis can be reproduced from any clean checkout of this repository with no manual parameter tuning:
-
-```bash
-# Install dependencies
-pip install pycbc gwpy h5py scipy matplotlib gwosc astropy
-
-# Run event analysis (auto-detects all parameters)
-python3 src/analysis/bmi_gw_analyzer.py --event GW190521
-python3 src/analysis/bmi_gw_analyzer.py --event GW250114
-
-# Run noise baselines
-python3 src/analysis/bmi_gw_analyzer.py --gps 1242356567 --duration 32 \
-    --label noise_1day_pre_GW190521 --sample-rate 16384 --detectors H1 L1 V1
-
-# Run FAR distribution
-python3 src/analysis/bmi_far_analysis.py \
-    --event GW190521 --n-trials 100 --detectors H1 L1 V1
-```
-
-All GWOSC data is fetched automatically and cached to `data/gwosc_cache/`. Subsequent runs use the cache and require no additional downloads.
-
----
-
-*Appendix J compiled: 2026-08-11. All FAR runs complete. Fisher combined significance: **5.557σ** (GW190521 L1 × GW231028 H1, independent detectors, independent runs).*
+    FAR --> FAR_REP["far_report.json"]
+    FAR --> FAR_DIST["far_distribution.png"]
+    FAR --> FAR_T["trial_{01..10}/"]
+    FAR_T --> FAR_T_JSON["summary.json"]
+    FAR_T --> FAR_T_P["{L1,V1}_*.png"]

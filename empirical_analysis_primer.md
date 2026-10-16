@@ -5,7 +5,7 @@
 - Instrument: unspecified instrument
 - Observation method: unspecified observation method
 - Target variable: a quantity of interest
-- Mode: expanded
+- Mode: focused
 
 ## Working Hypothesis
 No formal hypothesis supplied yet.

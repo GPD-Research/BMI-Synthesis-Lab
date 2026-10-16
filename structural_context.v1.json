@@ -1,0 +1,5037 @@
+{
+  "schema_version": "physics-ide.structural-context/v1",
+  "model_id": "model-c6cee50860a3a1c3",
+  "model_name": "Chapter 1: Foundations of Bimodal Manifold Resonance",
+  "scope": [
+    "theory_structure"
+  ],
+  "sources": [
+    {
+      "id": "src-fc0c1c95a1800a0f",
+      "path": "manuscript/md/Appendix_A_Illustrations_and_Conceptual_Schematics.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-4e8a803db61ef672",
+      "path": "manuscript/md/Appendix_B_On_the_Age_and_Size_of_the_Cosmos.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-203e79f6378634a9",
+      "path": "manuscript/md/Appendix_C_Falsifiable_Predictions_and_Observational_Constraints.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-ebd083759be84250",
+      "path": "manuscript/md/Appendix_D_Meta_Analysis.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-a0c8b72a27e5738a",
+      "path": "manuscript/md/Appendix_E_Theoretical_Formalization.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-edd5f402ac95bd95",
+      "path": "manuscript/md/Appendix_F_Classical_Relativity_as_Macro_Geometry.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-6fea055483f4cd60",
+      "path": "manuscript/md/Appendix_G_Empirical_Validation.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-a6db6b98c0476af3",
+      "path": "manuscript/md/Appendix_H_HigherDImensional_Projection_Mechanics.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-b746c3c4c08c0da5",
+      "path": "manuscript/md/Appendix_I_MacroStructrual_Interface_Seams.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-c1cbf5bda561318d",
+      "path": "manuscript/md/Appendix_J_GW_Empirical_Validation_and_FAR_Analysis.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-919c4b528320150c",
+      "path": "manuscript/md/Appendix_K_Entanglement_Windings.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-3faceb221161de35",
+      "path": "manuscript/md/BMI_Framework_Front_Matter_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-ef5e12fce18957b9",
+      "path": "manuscript/md/Chapter_10_Gauge_Embedding_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-5120312e5c2b304d",
+      "path": "manuscript/md/Chapter_11_Methodology.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-58411f1d83de3659",
+      "path": "manuscript/md/Chapter_12_Empirical_Validation_of_BMI_Resonance.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-6df1d476ffd0efdd",
+      "path": "manuscript/md/Chapter_13_Topological_Derivation_of_the_Standard_Model.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-ef546c515f2ab653",
+      "path": "manuscript/md/Chapter_14_The_Architecture_of_Expansion.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-58f23682e59d2811",
+      "path": "manuscript/md/Chapter_1_Foundations_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-4fd7ce3e7240448d",
+      "path": "manuscript/md/Chapter_2_Resonance_Spectrum_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-e2b4b3526193f979",
+      "path": "manuscript/md/Chapter_3_Topological_Properties_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-ef831d1098f6d843",
+      "path": "manuscript/md/Chapter_4_Vacuum_Dynamics_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-414d596de5348464",
+      "path": "manuscript/md/Chapter_5_Methodology_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-b287a419e4af3021",
+      "path": "manuscript/md/Chapter_6_Advanced_Forces_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-a08f8d77bf67f9a6",
+      "path": "manuscript/md/Chapter_7_Cosmological_Boundaries_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-00c433788dfa3e4e",
+      "path": "manuscript/md/Chapter_8_Experimental_Predictions_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-4814fee535b6f305",
+      "path": "manuscript/md/Chapter_9_Mott_Resolution_v3.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-2110f1ea7ee047f5",
+      "path": "manuscript/md/Experimental_Roadmap_BMI_Theory.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-0c230971d9a55abb",
+      "path": "manuscript/md/Glossary_BMI.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-87b66078b041cc6b",
+      "path": "manuscript/md/first_session_startup_guide.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-897d3ff7342b31a8",
+      "path": "manuscript/md/master_axiom.md",
+      "kind": "master_axiom"
+    },
+    {
+      "id": "src-cc3e863c8f1b10e1",
+      "path": "manuscript/md/master_manuscript.md",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-5ff5b4619b849d59",
+      "path": "src/analysis/bmi_excess_power_burst.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-4a3ceaed95811ad5",
+      "path": "src/analysis/bmi_far_analysis.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-006e9afc3ab0b9aa",
+      "path": "src/analysis/bmi_far_spectral_plots.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-a6e1f1d32c02839b",
+      "path": "src/analysis/bmi_gw_analyzer.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-f116447fc53c391b",
+      "path": "src/analysis/bmi_pycbc_validation.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-b1e267e732d62559",
+      "path": "src/analysis/bmi_sympy_verification.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-406e01226310a8e7",
+      "path": "src/analysis/bridge_stress.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-fee7976d3fe62f8a",
+      "path": "src/analysis/bridge_tensor_calibration.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-6ed50c8e3e8a1b1e",
+      "path": "src/analysis/chirp_dynamics.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-27a72375ff2afc24",
+      "path": "src/analysis/compare_snapshots.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-da7f9052d1dd831e",
+      "path": "src/analysis/fetch_gw190521.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-b43de9fa347cc8c6",
+      "path": "src/analysis/fetch_gw250114.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-c43f08e4902346ff",
+      "path": "src/analysis/generate_comparison_overlay.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-9f2480e267905ec1",
+      "path": "src/analysis/gw190521_extended_analysis.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-4386655990c3d54a",
+      "path": "src/analysis/interbrane_potential.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-36c7c1cb6eddef4f",
+      "path": "src/analysis/process_soho_data.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-643a165dab737304",
+      "path": "src/analysis/resonance_filter.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-e86b7f0a3bfb0db6",
+      "path": "src/analysis/run_lvk_pipeline.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-d888cfcb330a0936",
+      "path": "src/analysis/simulate_mass_bins.py",
+      "kind": "markdown"
+    },
+    {
+      "id": "src-e16254fd498aa652",
+      "path": "src/analysis/topological_sieve.py",
+      "kind": "markdown"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-0af25b4682622fc8",
+      "text": "Chapter 1: Foundations of Bimodal Manifold Resonance",
+      "source_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "sec-0d6da7b47ca35b2c",
+      "text": "Chapter 5: The Human-AI Collaborative Methodology and Validation Pipeline",
+      "source_id": "src-414d596de5348464"
+    },
+    {
+      "id": "sec-0f359281130465cc",
+      "text": "Appendix D: The Fragile Equilibrium of Human-AI Co-Creation",
+      "source_id": "src-ebd083759be84250"
+    },
+    {
+      "id": "sec-1e2137c2c4284fd5",
+      "text": "APPENDIX: MACRO-STRUCTURAL INTERFACE SEAMS, RELATIVISTIC JET BIFURCATIONS, AND TOPOLOGICAL TENSOR MECHANICS IN BMI THEORY",
+      "source_id": "src-b746c3c4c08c0da5"
+    },
+    {
+      "id": "sec-3418e2886153e734",
+      "text": "Chapter 7: Cosmological Implications, Higher-Dimensional Boundaries, and Gravitational Equivalence",
+      "source_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "sec-35709e561c100f57",
+      "text": "Glossary of Terms: Bimodal Manifold Interaction (BMI)",
+      "source_id": "src-0c230971d9a55abb"
+    },
+    {
+      "id": "sec-3b875c78036b090e",
+      "text": "Chapter 14: The Architecture of Expansion: Topologically Directed Evolution of the Cosmic Web",
+      "source_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "sec-4f8014d6ad9f1207",
+      "text": "Chapter 4: Vacuum Dynamics, State Transitions, and Matter-Antimatter Asymmetry",
+      "source_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "sec-4fef9af932063a0a",
+      "text": "Chapter 8: Experimental Predictions, Spectral Anomaly Cross-Validation, and Predictive Limits",
+      "source_id": "src-00c433788dfa3e4e"
+    },
+    {
+      "id": "sec-53586ea766d73d92",
+      "text": "Chapter 6: Advanced Topological Interacting Forces and Impedance Matrices",
+      "source_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "sec-5fbe7a5a89b21e0a",
+      "text": "Appendix K: Entanglement as Manifold Windings in the BMI Framework",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "sec-63b759c02e988696",
+      "text": "Appendix F: Classical Relativity as Macro-Geometry",
+      "source_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "sec-63cf3b8d94bc847b",
+      "text": "Appendix A: Illustrations and Conceptual Schematics",
+      "source_id": "src-fc0c1c95a1800a0f"
+    },
+    {
+      "id": "sec-6e6ce181949048d7",
+      "text": "Chapter 12: Empirical Validation of BMI Resonance and the O4b Gravitational Data",
+      "source_id": "src-58411f1d83de3659"
+    },
+    {
+      "id": "sec-7554df7e96d901fd",
+      "text": "Master Axiom",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "sec-80f4dc7f27e9193f",
+      "text": "Appendix B: On the Age and Size of the Cosmos",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "sec-8739e9e1c7618e93",
+      "text": "Appendix G: Empirical Validation",
+      "source_id": "src-6fea055483f4cd60"
+    },
+    {
+      "id": "sec-8d9fb91dc36897b7",
+      "text": "Chapter 13: Topological Derivation of the Standard Model",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "sec-91c9ec86d60d4e47",
+      "text": "Chapter 2: The Linear Resonance Spectrum and Harmonic Particle Mapping",
+      "source_id": "src-4fd7ce3e7240448d"
+    },
+    {
+      "id": "sec-9b711398e44cd5a3",
+      "text": "Experimental Roadmap: Validating the Bimodal Manifold Interaction (BMI) Theory",
+      "source_id": "src-2110f1ea7ee047f5"
+    },
+    {
+      "id": "sec-b68406aa7159e29c",
+      "text": "Chapter 10: Hyper-Dimensional Gauge Embedding and the Unification of Forces",
+      "source_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "sec-ba9c9b2910169273",
+      "text": "Chapter 11: The Crystallization Threshold and the Phase Change of Pre-Big Bang Causality",
+      "source_id": "src-5120312e5c2b304d"
+    },
+    {
+      "id": "sec-bbaba59c4447939d",
+      "text": "Chapter 3: The Topological Foundations of Spin and Charge",
+      "source_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "sec-c7247f3ad26d14e1",
+      "text": "Appendix J: Gravitational Wave Empirical Validation and False-Alarm Rate Analysis",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "sec-cba593c4b5cb3e76",
+      "text": "Appendix E: The Effective Field Theory Limit (QFT Emergence)",
+      "source_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "sec-eb618094c053a2ff",
+      "text": "Chapter_1_Foundations_v3",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "sec-f1c347a64f28fc8a",
+      "text": "Appendix C: Falsifiable Predictions and Observational Constraints",
+      "source_id": "src-203e79f6378634a9"
+    },
+    {
+      "id": "sec-f2a70a778eba2411",
+      "text": "Chapter 9: The Hyperspatial Resolution of the Mott Problem: Topological Pinning and Trajectory Localization",
+      "source_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "sec-f2be7989cff2b272",
+      "text": "First Session Briefing Packet",
+      "source_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "sec-f33accfabd46f5ad",
+      "text": "The Bimodal Manifold Interaction (BMI) Framework",
+      "source_id": "src-3faceb221161de35"
+    },
+    {
+      "id": "sec-fdd4b00f1b3cbd46",
+      "text": "Appendix: Higher-Dimensional Projection Mechanics and the Flatlander’s Lens Theorem",
+      "source_id": "src-a6db6b98c0476af3"
+    }
+  ],
+  "axioms": [
+    {
+      "id": "ax-0666e83b7848afa0",
+      "text": "# Master Axiom",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "ax-4e8a76e5372eac87",
+      "text": "* **Conventional Cosmic Strings:** Postulated as line-like topological defects with mass-energy density ($\\mu_{\\text{string}}$) creating conical spacetimes, but lacking concrete physical causation or mechanisms for long-range linear coherence.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "ax-5bb07d50a40ee9fa",
+      "text": "2. **Sanity Check Rule for Hypothesis Testing:** When interpreting any observed global alignment, preferred axis, or uniform grid structure in a d-dimensional dataset:",
+      "source_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "ax-5d740da33fd5cbc3",
+      "text": "- Explain setup terms briefly when needed (for example: primer, master axiom, theory markdown folder).",
+      "source_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "ax-60ac0ee33ac89a3f",
+      "text": "- **Method B — Fisher's combined probability test. Under the null hypothesis $H_0$, the test statistic follows a chi-squared distribution with $2N$ degrees of freedom:**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "ax-6fa7d775bc0420d6",
+      "text": "3. Set or generate the master axiom file path.",
+      "source_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "ax-751e2ce9e8fdb91e",
+      "text": "- Master axiom file: /home/gregory-dearth/projects/bmi_project/manuscript/md/master_axiom.md",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "ax-7b35fe3df571fe2e",
+      "text": "2. **Sanity Check Rule for Hypothesis Testing:** When interpreting any observed global alignment, preferred axis, or uniform grid structure in a d-dimensional dataset:",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "ax-801305940d662bd6",
+      "text": "Within the standard Copenhagen and Quantum Field Theory paradigms, properties such as intrinsic spin and elementary electric charge are treated as axiomatic. They are point-like characteristics assigned to particles by mathematical decree rather than structural derivations. The Bimodal Manifold Interaction (BMI) framework eliminates these singularities by demonstrating that these properties are macroscopic manifestations of localized manifold topology. When a wave packet stabilizes at a specific integer harmonic mode (as detailed in Chapter 2), its mechanical properties are explicitly dictated by the spatial dimensions, winding configurations, and phase rotations of the underlying nested torus system ($T^3$) within the broader colliding brane framework ($\\sigma_A$ and $\\sigma_B$).",
+      "source_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "ax-8c8f25f9e5026f04",
+      "text": "The FAR test evaluates whether the observed event metrics could plausibly arise from quiet-time instrumental noise. For each trial $i$ drawn from a quiet-time off-source block, the **identical** pipeline (same conditioning, same bandpass, same FFT window, same metrics) is applied. The resulting null distribution characterizes the expected range of the metrics under the hypothesis that no astrophysical signal is present.",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "ax-8d8ba654d95942b9",
+      "text": "**Method B — Fisher's combined probability test.** Under the null hypothesis $H_0$, the test statistic follows a chi-squared distribution with $2N$ degrees of freedom:",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "ax-ccc4da69248e5254",
+      "text": "* **Conventional Cosmic Strings:** Postulated as line-like topological defects with mass-energy density ($\\mu_{\\text{string}}$) creating conical spacetimes, but lacking concrete physical causation or mechanisms for long-range linear coherence.",
+      "source_id": "src-b746c3c4c08c0da5"
+    },
+    {
+      "id": "ax-dcdc369efa8e8880",
+      "text": "Within the standard Copenhagen and Quantum Field Theory paradigms, properties such as intrinsic spin and elementary electric charge are treated as axiomatic. They are point-like characteristics assigned to particles by mathematical decree rather than structural derivations. The Bimodal Manifold Interaction (BMI) framework eliminates these singularities by demonstrating that these properties are macroscopic manifestations of localized manifold topology. When a wave packet stabilizes at a specific integer harmonic mode (as detailed in Chapter 2), its mechanical properties are explicitly dictated by the spatial dimensions, winding configurations, and phase rotations of the underlying nested torus system ($T^3$) within the broader colliding brane framework ($\\sigma_A$ and $\\sigma_B$).",
+      "source_id": "src-cc3e863c8f1b10e1"
+    }
+  ],
+  "assumptions": [],
+  "definitions": [],
+  "equations": [
+    {
+      "id": "eq-00b871a7a66fdfeb",
+      "text": "$$\\mathcal{L}_{\\text{particle}} = \\bar{\\psi}(x_i, t)(i\\gamma^\\mu \\partial_\\mu - m_i(t))\\psi(x_i, t)$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-011a5d37afccfe3d",
+      "text": "Fermionic behavior (half-integer spin, $s = \\frac{1}{2}$) emerges naturally when a full spatial rotation ($2\\pi$ radians) of the outer manifold shell maps to exactly a half-rotation ($\\pi$ radians) of the nested inner core. This creates a topological configuration where the system accumulates a non-integrable **Geometric Berry Phase Shift** ($\\gamma$).",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-01d1c0bfd2f1d73f",
+      "text": "$$m_i(t) = \\mathcal{M}[Z](x_i, t)$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-0220438c3db67a45",
+      "text": "The strong nuclear force is modeled as the physical interlocking of high-frequency harmonic modes. When nucleons approach sub-femtometer scales, their outer toroidal membranes structurally interlock. At this threshold, the overlap integral ($\\mathcal{I}_{\\text{overlap}}$) undergoes a non-linear phase transition.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-042741887f08e5b1",
+      "text": "$$V_{\\text{shadow}} = (L_{\\text{shadow}})^3$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-043ca31ce6595292",
+      "text": "$$\\frac{dW_1}{dt} = -\\frac{dW_2}{dt}$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-04f2d464ee00db28",
+      "text": "$$ \\Psi_{\\text{free}}(r, t, y, z) = \\frac{\\mathcal{A}}{r} e^{i(kr - \\omega t)} \\chi_0(y, z) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-05c4cbbb38cfb6c2",
+      "text": "$$\\Psi_{\\text{photon}}(\\mathbf{x}, t) = \\mathbf{A}_{\\text{vac}} \\cdot e^{i(\\mathbf{k}\\cdot\\mathbf{x} - \\omega t)}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-05ef5466a834cac3",
+      "text": "$$M_W^2 \\propto \\int_0^\\delta dy \\, dz \\, \\left( \\partial_y W \\cdot \\partial_y W + \\partial_z W \\cdot \\partial_z W \\right)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-07a481af6e805c15",
+      "text": "$$G_{\\mu\\nu} = 8\\pi G_N T_{\\mu\\nu}$$",
+      "source_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "eq-08e19801f0abdeb4",
+      "text": "$$ S_F = -2\\left[\\ln(2.558 \\times 10^{-6}) + \\ln(2.415 \\times 10^{-4})\\right] = 42.41 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-093a1c228548df13",
+      "text": "$$ m_i = \\mathcal{F}[Z(x,t) \\text{ global variations induced by universal matter-energy}] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-09ab5fe94ff85ba2",
+      "text": "$$\\nabla_\\alpha (Z^{\\alpha\\beta}(x,t) F_{\\beta\\mu}) = J_\\mu[\\psi]$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-0aec8d4d663f6ea2",
+      "text": "- **The coupling between local node tension $\\mathcal{T}_{int}$ and the macro-scale strain is defined in Chapter 13 as:**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-0b3b3c17c557e43d",
+      "text": "where $\\mathcal{F}$ is a functional mapping global geometric impedance configurations to local inertial parameters.",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-0b48f5b24c100495",
+      "text": "g_{\\mu\\nu}(x) = G_AB(X) (\\partial X^A / \\partial x^\\mu) (\\partial X^B / \\partial x^\\nu)",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-0c3ae4d415edfbcb",
+      "text": "$$ \\begin{aligned} m_i(t) &= m_0 + \\int_M K_m(x_i, y; t)(Z(y, t) - Z_{\\text{ref}}) \\, d^dy \\\\ \\mathcal{L}_{\\text{particle}} &= \\bar{\\psi}(x_i, t)(i\\gamma^\\mu \\partial_\\mu - m_i(t))\\psi(x_i, t) \\\\ \\frac{dm_i}{dt} &= \\int_M \\left[ K_m(x_i, y; t)\\frac{\\partial}{\\partial t} \\Delta Z(y, t) + \\frac{\\partial}{\\partial t} K_m(x_i, y; t)\\Delta Z(y, t) \\right] d^dy \\end{aligned}$$ $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-0ccd0a85307b8beb",
+      "text": "Where $\\mathcal{T}_{int}$ is the Interaction Tension term, defined as:",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-0d34312ca1e66afc",
+      "text": "To resolve the apparent scale disparity between hadronic nodes ($\\delta \\approx 10^{-15}$ m) and macroscopic gravitational events ($L \\approx 10^{6}$ m), we identify the **Interface Tension ($\\mathcal{T}_{int}$)** as a scale-invariant property of the Thick Brane Interface.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-0dfda873522809e7",
+      "text": "$$ p_i = 1 - \\Phi(Z_i) = \\frac{1}{\\sqrt{2\\pi}} \\int_{Z_i}^{\\infty} e^{-t^2/2}\\,dt $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-0e8d09bd802bba2d",
+      "text": "From `Chapter_6_Advanced_Forces_v3.md`, the BMI Lagrangian density $\\mathcal{L}$ includes terms:",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-11b703b8c2279b41",
+      "text": "K_{\\mu\\nu}^I = - $G_{\\text{AB}}$ \\nabla_\\mu (\\partial X^A / \\partial x^\\nu) $n_I$^B",
+      "source_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "eq-13625a5e6cce4a0b",
+      "text": "$$S_{eff} = -\\frac{1}{2} \\sum_{n,m} \\int d^4x [ \\partial^\\mu \\phi_{nm} \\partial_\\mu \\phi_{nm} - M_{nm}^2 \\phi_{nm}^2 ]$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-13966f851af54f49",
+      "text": "$$ \\mathcal{L}_{meson} = \\sum_{a=1,2} \\left( -\\frac{1}{4}F_{\\mu\\nu}^a F^{\\mu\\nu}_a + \\bar{\\psi}_a(i\\gamma^\\mu D_\\mu - m_a)\\psi_a \\right) + \\mathcal{T}_{int}(\\phi_1, \\phi_2) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-14f0b74e8a2001fa",
+      "text": "$$S_{eff} = \\frac{1}{2\\kappa_4^2} \\int d^4x \\sqrt{-g} R_4 + S_{matter}$$",
+      "source_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "eq-1519b291958fe322",
+      "text": "$$M_n = n \\times \\omega_0 \\cdot (1 + \\Delta\\psi_{\\text{harmonic}})$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-15bf47a415b5d4a2",
+      "text": "$$ g_{\\text{eff}}(R) = \\frac{1}{1 + e^{-\\alpha(R - R_{\\text{crit}})}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-17ca8f83ce0971bb",
+      "text": "$$ \\sigma_G = \\frac{x_{\\text{event}} - \\mu_{\\text{null}}}{\\sigma_{\\text{null}}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-1893d2b4120f3148",
+      "text": "$$ M(n) = n \\cdot \\omega_0 \\cdot \\Lambda_{\\text{geom}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-19fa22333bba5120",
+      "text": "$$\\mathcal{T}_{int} = \\lambda \\int_{\\Sigma} \\sqrt{-g} \\left( \\nabla_i \\phi_1 \\cdot \\nabla^i \\phi_2 \\right) \\Phi_{bridge} d^3x$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-1bf055ab19a537c9",
+      "text": "* $\\frac{\\delta W_j}{\\delta Z}$ is the functional sensitivity of the winding number at site $j$ to changes in global impedance,",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-1efc745cf1d9aa60",
+      "text": "GW250114 ($\\mathcal{M}_c \\approx 28.7\\ M_\\odot$, SNR = 78.6) is well below the winding-mode threshold. As predicted by BMI theory, the 15 Hz split is absent:",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-1fe668eff82c9ad3",
+      "text": "K_{\\mu\\nu}^I = - $G_{\\text{AB}}$ \\nabla_\\mu (\\partial X^A / \\partial x^\\nu) $n_I$^B",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-2036fce84fdd1a7f",
+      "text": "$$ \\Psi(\\theta + 2\\pi) = \\Psi(\\theta) \\cdot e^{i \\gamma} = -\\Psi(\\theta) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-21dd4bf4fbc7c17e",
+      "text": "- **When separate nested torus systems occupy adjacent regions of the manifold, their internal phase rotations induce mutual drag. This is quantified as a localized Manifold Impedance Matrix ($\\mathbf{Z}_{ij}$). The interaction is governed by the geometric overlap integral ($\\mathcal{I}_{\\text{overlap}}$) of their wave topologies ($\\psi_i$ and $\\psi_j$):**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-235506b79147c39b",
+      "text": "$$ \\sigma_{\\text{emp}} = \\Phi^{-1}(1 - p_{\\text{emp}}) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-238c09d4d8157efe",
+      "text": "$$ M_{\\text{nucleon}}(n, \\sigma) = n \\cdot \\omega_0 \\cdot \\left(1 + \\sigma \\frac{\\gamma}{2\\pi}\\right) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-23d9b275e11b6c7a",
+      "text": "Let the inertial mass $m_i$ of a particle at position $x_i$ and time $t$ be given by a functional $\\mathcal{M}$ mapping the global impedance field $Z$ to a scalar:",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-25cfe3f7958b7559",
+      "text": "$$\\mathcal{E}[\\phi] = \\int d^3x \\left[ \\frac{1}{2} |\\nabla \\phi|^2 + V_{\\text{eff}}(\\phi) - \\kappa \\, \\delta^3(\\vec{x} - \\vec{x}_1) |\\phi|^2 \\right]$$",
+      "source_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "eq-25ff91fd2caee8b1",
+      "text": "\\nabla_\\mu v_\\nu = [\\nabla^{(G)}_A $T_B$]|_{\\Sigma} (\\partial X^A / \\partial x^\\mu) (\\partial X^B / \\partial x^\\nu) + \\sum_I K_{\\mu\\nu}^I ($n_I$ \\cdot T)",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-275d4f08f7d74a92",
+      "text": "$$\\Psi_{\\text{photon}}(\\mathbf{x}, t) = \\mathbf{A}_{\\text{vac}} \\cdot e^{i(\\mathbf{k}\\cdot\\mathbf{x} - \\omega t)}$$",
+      "source_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "eq-277fb3aad3a3db89",
+      "text": "$$ D_\\mu \\Psi = (\\partial_\\mu + i q A_\\mu) \\Psi $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-27bc526c3c73b17c",
+      "text": "$$ Q = \\oint_{T^3} \\mathbf{P}_{\\text{geom}} \\cdot d\\mathbf{A} = \\pm e $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-2808a01192cde3b9",
+      "text": "$$ V_{\\text{local}} = (L_{\\text{local}})^3 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-28c1cb7b4fc89695",
+      "text": "- $\\mathcal{T}_{int}$ is the local brane interface tension at the merger site",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-2941a7e4979779fe",
+      "text": "When separate nested torus systems occupy adjacent regions of the manifold, their internal phase rotations induce mutual drag. This is quantified as a localized **Manifold Impedance Matrix** ($\\mathbf{Z}_{ij}$). The interaction is governed by the geometric overlap integral ($\\mathcal{I}_{\\text{overlap}}$) of their wave topologies ($\\psi_i$ and $\\psi_j$):",
+      "source_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "eq-2a1ed331197c51e3",
+      "text": "$$ \\psi_+(n, \\mathbf{P}_{\\text{geom}}) + \\psi_-(n, -\\mathbf{P}_{\\text{geom}}) \\longrightarrow \\sum \\Psi_{\\text{photon}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-2a582913e3d32d6c",
+      "text": "$$\\Delta f = \\mathcal{K} \\cdot \\left( \\frac{\\mathcal{T}_{int}}{\\Theta_P} \\right) \\cdot \\Omega_{node}$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-2b751044909b2609",
+      "text": "$$ M_n(t) = n \\cdot \\omega_0 \\cdot \\left(1 + \\Delta\\psi(n)\\right) \\cdot f(\\Xi(t)) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-2cbe78c9c6616963",
+      "text": "$$t_0 = \\frac{1}{H_0} \\int_0^1 \\frac{da}{\\sqrt{\\Omega_{m,0} a^{-1} + \\Omega_{\\Lambda,0} a^2}}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-2d0393a6468f02e7",
+      "text": "$$H(a) = H_0 \\sqrt{\\Omega_{m,0} a^{-3} + \\Omega_{\\Lambda,0}}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-2e8763130b2cbb4f",
+      "text": "$$S_{eff} = \\frac{1}{2\\kappa_4^2} \\int d^4x \\sqrt{-g} R_4 + S_{matter}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-30b008286fc71736",
+      "text": "$$ L_{\\text{shadow}} \\ll d_H $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-30fc65108d4a1234",
+      "text": "$$ \\Delta E_{\\text{matter}} = E_0 \\cdot (1 - \\tau_{\\text{global}}) < \\Delta E_{\\text{antimatter}} = E_0 \\cdot (1 + \\tau_{\\text{global}}) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-31d58c7f190cdad8",
+      "text": "$$Q = \\oint_{T^3} \\mathbf{P}_{\\text{geom}} \\cdot d\\mathbf{A} = \\pm e$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-3290bf6a604854c9",
+      "text": "* **For $\\Omega \\to 3.5$:** The geometric tension at the bridge-crease reaches a critical point where the non-linear coupling terms in the Effective Field Theory Lagrangian ($\\mathcal{L}_{eff}$) begin to diverge.",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-32a5713a40f1345f",
+      "text": "$$\\boxed{\\sigma_{\\text{combined}} = \\Phi^{-1}(1 - 1.37 \\times 10^{-8}) = 5.557\\sigma}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-33cc05872b09af62",
+      "text": "$$V_{\\text{local}} = (L_{\\text{local}})^3$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-341ccabfabf2f5af",
+      "text": "$$\\Psi_{\\text{free}}(r, t, y, z) = \\frac{\\mathcal{A}}{r} e^{i(kr - \\omega t)} \\chi_0(y, z)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-35a17225a8910a67",
+      "text": "$$\\Delta f = \\mathcal{K} \\cdot \\left( \\frac{\\mathcal{T}_{int}}{\\Theta_P} \\right) \\cdot \\Omega_{node}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-3689594b377c0d55",
+      "text": "$$L_{\\text{node}} \\approx \\frac{\\hbar}{\\Delta f \\cdot M_{\\text{Planck}}} \\approx 10^{-15} \\text{ m}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-377f122a92f5bfd9",
+      "text": "$$S_{6D} = -\\frac{1}{2} \\int d^4x \\int_0^\\delta dy dz \\sqrt{-G} G^{AB} \\partial_A \\Phi \\partial_B \\Phi$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-39f3bf53ff8da230",
+      "text": "$$\\sum_{j} |V_{ij}|^2 = 1$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-3b28fa8b89fac3d1",
+      "text": "$$M_n(t) = n \\cdot \\omega_0 \\cdot \\left(1 + \\Delta\\psi(n)\\right) \\cdot f(\\Xi(t))$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-3e7b2279b85cc77f",
+      "text": "$$ G_{\\mu\\nu} = 8\\pi G_N T_{\\mu\\nu} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-3eb927c8ddfc9cc1",
+      "text": "$$ Z_i = \\frac{S_{15,\\,i} - \\mu_i}{\\sigma_i} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-3f5574d701025aba",
+      "text": "$$t_0 \\approx 13.787 \\times 10^9 \\text{ years}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-402533d10ce56a50",
+      "text": "$$ \\delta = \\left| \\frac{M_{\\text{experimental}} - M_{\\text{derived}}}{\\text{SD}_{\\text{experimental}}} \\right| \\le \\epsilon $$",
+      "source_id": "src-414d596de5348464"
+    },
+    {
+      "id": "eq-40df4060c0776f0d",
+      "text": "$$V_{\\text{local}} \\gtrsim (9.3 \\times 10^{10} \\text{ ly})^3 \\approx 8.04 \\times 10^{32} \\text{ ly}^3$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-42e0a27f955a55cd",
+      "text": "$$L_{\\text{shadow}} \\ll d_H$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-439e17ec381f4bde",
+      "text": "$$S_{EH} = \\frac{1}{2\\kappa_6^2} \\int d^6x \\sqrt{-G} R_6$$",
+      "source_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "eq-43b46e3a5291f1b8",
+      "text": "The strong nuclear force is modeled as the physical interlocking of high-frequency harmonic modes. When nucleons approach sub-femtometer scales, their outer toroidal membranes structurally interlock. At this threshold, the overlap integral ($\\mathcal{I}_{\\text{overlap}}$) undergoes a non-linear phase transition.",
+      "source_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "eq-43fab2ecf83eafc1",
+      "text": "The coupling between local node tension $\\mathcal{T}_{int}$ and the macro-scale strain is defined in Chapter 13 as:",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-442f91a324ad753b",
+      "text": "$$\\Psi_{\\text{free}}(r, t, y, z) = \\frac{\\mathcal{A}}{r} e^{i(kr - \\omega t)} \\chi_0(y, z)$$",
+      "source_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "eq-44e2aa77d12410dd",
+      "text": "$$ M_n^2 = \\frac{1}{\\delta^2} \\sum_{i=1}^{3} w_i^2 Z_{i}^2 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-45cfe0111f9db14f",
+      "text": "When calibrated against the GW250114 baseline, the ratio $\\mathcal{T}_{int}/\\Theta_P$ yields $\\Delta f = 15.00\\ \\text{Hz}$ as a stable prediction for all events in the heavy-mass regime ($\\mathcal{M}_c > 50\\ M_\\odot$), where the inspiral is sufficiently abrupt to excite the winding mode.",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-46654558770970b7",
+      "text": "$$m_i = \\mathcal{F}[Z(x,t) \\text{ global variations induced by universal matter-energy}]$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-46926016fc8157e1",
+      "text": "$$D_\\mu \\Psi = (\\partial_\\mu + i q A_\\mu) \\Psi$$",
+      "source_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "eq-46a08ae94ec16357",
+      "text": "$$ \\boxed{\\sigma_{\\text{combined}} = \\Phi^{-1}(1 - 1.37 \\times 10^{-8}) = 5.557\\sigma} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-4a370949a8cb0c4f",
+      "text": "$$M_n(t) = n \\cdot \\omega_0 \\cdot \\left(1 + \\Delta\\psi(n)\\right) \\cdot f(\\Xi(t))$$",
+      "source_id": "src-4fd7ce3e7240448d"
+    },
+    {
+      "id": "eq-4abb11f8e4b6f802",
+      "text": "$$\\sigma_G = \\frac{x_{\\text{event}} - \\mu_{\\text{null}}}{\\sigma_{\\text{null}}}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-4baf2bcda98083b3",
+      "text": "$$S_F = -2\\sum_{i=1}^{N} \\ln p_i \\;\\sim\\; \\chi^2_{2N}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-4e7e54b85f1d248e",
+      "text": "D_H = 2 + \\frac{\\ln(\\text{Impedance Coupling})}{\\ln(L_{node}/\\delta)}",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-4ec1128e1557b3fa",
+      "text": "$$ m_i(t) = \\mathcal{M}[Z](x_i, t) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-51322a5027d877ab",
+      "text": "| `bmi_gw_analyzer.py` | **Universal single-script analyzer.** Usage: `python3 src/analysis/bmi_gw_analyzer.py --event GW190521` or `--gps <GPS> --duration 32 --label noise_label`. Auto-detects: available detectors (H1/L1/V1/K1), sample rate (16384 Hz for $\\mathcal{M}_c > 50\\ M_\\odot$; 4096 Hz otherwise), analysis windows, template parameters. Falls back to GWOSC catalog API for post-O4 events not yet in PyCBC. Outputs per-event `summary.json` + 4 plots per detector to `assets/GW_Analysis/<label>/` |",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-522379ec2c9acacc",
+      "text": "$$ \\mathcal{L}_{\\text{particle}} = \\bar{\\psi}(x_i, t)(i\\gamma^\\mu \\partial_\\mu - m_i(t))\\psi(x_i, t) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-531593e4b2068649",
+      "text": "$$\\Phi(x^\\mu, y, z) = \\sum_{n,m} \\phi_{nm}(x^\\mu) \\chi_{nm}(y, z)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-5344ef8fcb2dc75a",
+      "text": "$$ \\frac{dm_i}{dt} = \\int_M K_m(x_i, y; t) \\cdot \\frac{\\partial}{\\partial t} \\Delta Z(y, t) \\, d^dy + \\int_M \\frac{\\partial}{\\partial t} K_m(x_i, y; t) \\cdot \\Delta Z(y, t) \\, d^dy $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-547c0a3fb74e454b",
+      "text": "GW231028\\_153006 ($\\mathcal{M}_c = 64.5\\ M_\\odot$, SNR = 22.4, O4a) is the most powerful independent test of the GW190521 result: the two events have essentially identical chirp masses ($\\Delta\\mathcal{M}_c = 0.3\\ M_\\odot$, 0.5%), are separated by four years (O3a vs. O4a), and their dominant channels differ (L1 vs. H1), eliminating any shared instrumental origin.",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-54b1a2fdb8efab55",
+      "text": "$$Z_i = \\frac{S_{15,\\,i} - \\mu_i}{\\sigma_i}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-574d16f01d9a83bb",
+      "text": "$$ \\frac{V_{\\text{local}}}{V_{\\text{shadow}}} = \\left( \\frac{L_{\\text{local}}}{L_{\\text{shadow}}} \\right)^3 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-57f49f030733fd39",
+      "text": "$$V_{\\text{shadow}} = (L_{\\text{shadow}})^3$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-5a62d915f9ed7080",
+      "text": "$$\\delta M_n(\\mathbf{E}, \\mathbf{B}, t) = n \\cdot \\omega_0 \\cdot \\left[ \\mathbf{\\Lambda}_{\\text{tensor}} \\cdot f(\\Xi(t)) \\cdot \\left(\\mathbf{E}^2 + c^2\\mathbf{B}^2\\right) \\right]$$",
+      "source_id": "src-00c433788dfa3e4e"
+    },
+    {
+      "id": "eq-5a81b1d24e21a715",
+      "text": "$$ \\mathbf{V}_{ij}(t) = \\mathbf{Z}_{ij}(\\Xi) \\cdot \\mathcal{I}_{\\text{overlap}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-5aa837dc8fe42f92",
+      "text": "$$L_{\\text{local}} > 2 d_H \\implies L_{\\text{local}} \\gtrsim 93 \\times 10^9 \\text{ light-years}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-5bb549d56b65a36a",
+      "text": "$$D_F(x - y) = \\langle 0 | T\\{\\phi(x) \\phi(y)\\} | 0 \\rangle = \\lim_{\\delta \\to 0} G_6(x, y; y, z)$$",
+      "source_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "eq-5bd06ed12e6f0441",
+      "text": "$$ S_{6D} = -\\frac{1}{2} \\int d^4x \\int_0^\\delta dy dz \\sqrt{-G} G^{AB} \\partial_A \\Phi \\partial_B \\Phi $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-5d4b99df20f6a6f3",
+      "text": "$$ t_0 \\approx 13.787 \\times 10^9 \\text{ years} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-5e6e7c96589362ab",
+      "text": "g_{\\mu\\nu}(x) = G_AB(X) (\\partial X^A / \\partial x^\\mu) (\\partial X^B / \\partial x^\\nu)",
+      "source_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "eq-5fa0eafc7fb3e477",
+      "text": "$$M(n) = n \\cdot \\omega_0 \\cdot \\Lambda_{\\text{geom}}$$",
+      "source_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "eq-613919d7383f8098",
+      "text": "$$p_i = 1 - \\Phi(Z_i) = \\frac{1}{\\sqrt{2\\pi}} \\int_{Z_i}^{\\infty} e^{-t^2/2}\\,dt$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-61a3e23976b4635b",
+      "text": "$$ \\delta = \\left| \\frac{M_{\\text{experimental}} - M_{\\text{derived}}}{\\text{SD}_{\\text{experimental}}} \\right| \\le \\epsilon $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-62340c9b330247fc",
+      "text": "$$P_{\\text{joint}} = P\\!\\left(\\chi^2_4 \\geq 42.41\\right) = 1.37 \\times 10^{-8}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-6243675e9398eab4",
+      "text": "$$ \\mathcal{T}_{int} = \\lambda \\int_{\\Sigma} \\sqrt{-g} \\left( \\nabla_i \\phi_1 \\cdot \\nabla^i \\phi_2 \\right) \\Phi_{bridge} d^3x $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-63f73964cf8b2ebc",
+      "text": "$$\\mathcal{M}[Z](x_i, t) = m_0 + \\int_M K_m(x_i, y; t) \\cdot \\Delta Z(y, t) \\, d^dy$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-658de244bd7d1608",
+      "text": "$$\\begin{aligned}",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-66a7ad96f435d9b6",
+      "text": "$$ D_H = 2 + \\frac{\\ln(\\text{Impedance Coupling})}{\\ln(L_{node}/\\delta)} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-6773d830e0782fe8",
+      "text": "$$\\phi_{\\text{bound}}(\\vec{x}) = \\mathcal{C} \\, e^{-\\lambda |\\vec{x} - \\vec{x}_1|}$$",
+      "source_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "eq-68bd0ad207a1a9e5",
+      "text": "$$R_6 = R_4 + K^2 - K_{\\mu\\nu}K^{\\mu\\nu} + \\nabla_\\mu(a^\\mu)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-6ff3eee03e36bd9c",
+      "text": "$$ \\Omega = \\sqrt{w_x^2 + w_y^2 + w_z^2} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-704b97453dbcef03",
+      "text": "$$M_n^2 = \\frac{1}{\\delta^2} \\sum_{i=1}^{3} w_i^2 Z_{i}^2$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-705b1c85f5e39d60",
+      "text": "$$ \\Psi_{\\text{photon}}(\\mathbf{x}, t) = \\mathbf{A}_{\\text{vac}} \\cdot e^{i(\\mathbf{k}\\cdot\\mathbf{x} - \\omega t)} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-711bfdee11ad9ec3",
+      "text": "$$ M_n = n \\times \\omega_0 \\cdot (1 + \\Delta\\psi_{\\text{harmonic}}) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-7120446fd162fdaf",
+      "text": "$$d_H = c \\int_0^{t_0} \\frac{dt}{a(t)} \\approx 46.5 \\text{ billion light-years}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-7227776fe0a04632",
+      "text": "$$t_0 \\approx 13.787 \\times 10^9 \\text{ years}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-75292281ba2730dc",
+      "text": "$$\\Omega = \\sqrt{w_x^2 + w_y^2 + w_z^2}$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-753fc329d6ca2d7a",
+      "text": "$$ W_1 + W_2 = \\text{constant} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-75d3ef6e0269f86a",
+      "text": "$$M(n) = n \\cdot \\omega_0 \\cdot \\Lambda_{\\text{geom}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-7646088e56311fd7",
+      "text": "$$ S_F = -2\\sum_{i=1}^{N} \\ln p_i \\;\\sim\\; \\chi^2_{2N} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-76dbc607ec814e2a",
+      "text": "$$ \\nabla_\\alpha (Z^{\\alpha\\beta}(x,t) F_{\\beta\\mu}) = J_\\mu[\\psi] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-77ada46c14080240",
+      "text": "$$",
+      "source_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "eq-7852f3444997e466",
+      "text": "$$\\Omega = \\sqrt{w_x^2 + w_y^2 + w_z^2}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-792d422ff31653d7",
+      "text": "$$M_{\\text{nucleon}}(n, \\sigma) = n \\cdot \\omega_0 \\cdot \\left(1 + \\sigma \\frac{\\gamma}{2\\pi}\\right)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-7991e92c3be23c4b",
+      "text": "Where $\\Theta_P$ represents the Planck Tension and $\\mathcal{K}$ is the geometric scaling factor of the $T^3$ manifold.",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-79bbd503a59bfc99",
+      "text": "$$(i\\gamma^\\mu \\partial_\\mu - m)\\psi = G[Z, \\psi]$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-7d83f9d4e7aed63e",
+      "text": "$$p_{\\text{emp}} = \\frac{|\\{i : x_i \\geq x_{\\text{event}}\\}|}{N}, \\quad \\text{floored at}\\ \\frac{0.5}{N}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-7df564ef3d0d173f",
+      "text": "$$M_n = n \\times \\omega_0 \\cdot (1 + \\Delta\\psi_{\\text{harmonic}})$$",
+      "source_id": "src-3faceb221161de35"
+    },
+    {
+      "id": "eq-7e2caff7e0fd699d",
+      "text": "$$\\delta M_n(\\mathbf{E}, \\mathbf{B}, t) = n \\cdot \\omega_0 \\cdot \\left[ \\mathbf{\\Lambda}_{\\text{tensor}} \\cdot f(\\Xi(t)) \\cdot \\left(\\mathbf{E}^2 + c^2\\mathbf{B}^2\\right) \\right]$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-7e65ce3dce87446d",
+      "text": "$$ H(a) = H_0 \\sqrt{\\Omega_{m,0} a^{-3} + \\Omega_{\\Lambda,0}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-7e75691a5e30311d",
+      "text": "To resolve the apparent scale disparity between hadronic nodes ($\\delta \\approx 10^{-15}$ m) and macroscopic gravitational events ($L \\approx 10^{6}$ m), we identify the **Interface Tension ($\\mathcal{T}_{int}$)** as a scale-invariant property of the Thick Brane Interface.",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-7f0304951b3f7cc0",
+      "text": "$$\\Delta f = \\mathcal{K} \\cdot \\left( \\frac{\\mathcal{T}_{int}}{\\Theta_P} \\right) \\cdot \\Omega_{node}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-7ffe2ee744d714b3",
+      "text": "$$\\psi_+(n, \\mathbf{P}_{\\text{geom}}) + \\psi_-(n, -\\mathbf{P}_{\\text{geom}}) \\longrightarrow \\sum \\Psi_{\\text{photon}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-80a33a78b97fba47",
+      "text": "$$ p_{\\text{emp}} = \\frac{|\\{i : x_i \\geq x_{\\text{event}}\\}|}{N}, \\quad \\text{floored at}\\ \\frac{0.5}{N} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-821253fcd3d42e75",
+      "text": "$$ \\phi_{\\text{bound}}(\\vec{x}) = \\mathcal{C} \\, e^{-\\lambda |\\vec{x} - \\vec{x}_1|} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-8270152773638268",
+      "text": "$$ \\tilde{\\Phi} = P^* [ \\Phi \\cdot (g_{(d)}, K_{(d)}) ] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-848ee502f32cd189",
+      "text": "$$g_{\\text{eff}}(R) = \\frac{1}{1 + e^{-\\alpha(R - R_{\\text{crit}})}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-851f7bd4f6f9cdd3",
+      "text": "* $\\mathcal{I}_{\\text{overlap}} = \\int_{V} \\psi_i \\otimes \\psi_j \\, dV$ represents the structural interaction of the nested tori.",
+      "source_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "eq-85bc91e5edad6e43",
+      "text": "$$ P_{\\text{joint}} = P\\!\\left(\\chi^2_4 \\geq 42.41\\right) = 1.37 \\times 10^{-8} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-86742915c9c488a0",
+      "text": "$$N_{total} = (2 |w_{max}| + 1)^3 = 7^3 = 343 \\text{ combinatorial permutations}$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-8704da1925b4a12c",
+      "text": "$$ N_{total} = (2 |w_{max}| + 1)^3 = 7^3 = 343 \\text{ combinatorial permutations} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-87609038fef6399d",
+      "text": "$$L_{\\text{shadow}} \\ll d_H$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-88bf48348302dfd7",
+      "text": "$$ L_{\\text{node}} \\approx \\frac{\\hbar}{\\Delta f \\cdot M_{\\text{Planck}}} \\approx 10^{-15} \\text{ m} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-8ce0acd4de23bcfe",
+      "text": "\\mathcal{L}_{\\text{particle}} &= \\bar{\\psi}(x_i, t)(i\\gamma^\\mu \\partial_\\mu - m_i(t))\\psi(x_i, t) \\\\",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-8ce0e46712d5bef4",
+      "text": "$$ K_m(x, y) = \\frac{C}{|x-y|^\\alpha} \\cdot W(x, y) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-8d968c350aafc7c9",
+      "text": "$$g_{\\mu\\nu}(t) = \\eta_{\\mu\\nu} + \\mathbf{\\Xi}_{\\mu\\nu}\\left(\\tau(t) + V_{gap}(t)\\right)$$",
+      "source_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "eq-90e06b1598c39b6d",
+      "text": "$$G_{\\mu\\nu} = 8\\pi G_N T_{\\mu\\nu}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-90ea1673eb15a56b",
+      "text": "$$K_m(x, y) = \\frac{C}{|x-y|^\\alpha} \\cdot W(x, y)$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-910a55bfd81f77e0",
+      "text": "$$\\oint_{T^n} \\mathbf{\\Xi}_{\\mu\\nu} \\cdot d\\mathbf{V}_n \\longrightarrow \\mathbf{B}_{\\text{compact}}(n)$$",
+      "source_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "eq-91aa3b0d53003ceb",
+      "text": "$$S_F = -2\\left[\\ln(2.558 \\times 10^{-6}) + \\ln(2.415 \\times 10^{-4})\\right] = 42.41$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-91bc13dfef0a696e",
+      "text": "$$ \\frac{dW_1}{dt} = -\\frac{dW_2}{dt} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-9235c3980dc92708",
+      "text": "$$ L_{\\text{node}} \\approx \\frac{\\hbar}{\\Delta f \\cdot M_{\\text{Planck}}} \\approx 10^{-15}\\ \\text{m} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-92ad156578d3778b",
+      "text": "$$L_{\\text{node}} \\approx \\frac{\\hbar}{\\Delta f \\cdot M_{\\text{Planck}}} \\approx 10^{-15} \\text{ m}$$",
+      "source_id": "src-58411f1d83de3659"
+    },
+    {
+      "id": "eq-930b86ff7a6585c0",
+      "text": "\\nabla_\\mu v_\\nu = [\\nabla^{(G)}_A $T_B$]|_{\\Sigma} (\\partial X^A / \\partial x^\\mu) (\\partial X^B / \\partial x^\\nu) + \\sum_I K_{\\mu\\nu}^I ($n_I$ \\cdot T)",
+      "source_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "eq-93377ac569eb760d",
+      "text": "$$V_{\\text{local}} = (L_{\\text{local}})^3$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-934fa7e1773308e0",
+      "text": "$$g_{\\mu\\nu}(t) = \\eta_{\\mu\\nu} + \\mathbf{\\Xi}_{\\mu\\nu}\\left(\\tau(t) + V_{gap}(t)\\right)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-94759d5f86073981",
+      "text": "$$\\frac{dm_i}{dt} = \\int_M K_m(x_i, y; t) \\cdot \\frac{\\partial}{\\partial t} \\Delta Z(y, t) \\, d^dy + \\int_M \\frac{\\partial}{\\partial t} K_m(x_i, y; t) \\cdot \\Delta Z(y, t) \\, d^dy$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-954bc843c459f23f",
+      "text": "- $\\mathcal{T}_{int}$ is the local brane interface tension at the merger site",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-95e8e881aa050a49",
+      "text": "$$ \\mathcal{L} = \\bar{\\psi}(i\\gamma^\\mu \\partial_\\mu - m)\\psi - \\frac{1}{2} Z_{\\mu\\nu}(x,t) F^{\\mu\\nu} F^{\\mu\\nu} + \\dots $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-96cd510433dedddb",
+      "text": "Where $\\Theta_P$ represents the Planck Tension and $\\mathcal{K}$ is the geometric scaling factor of the $T^3$ manifold.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-97b8a938ba72096b",
+      "text": "$$M_W^2 \\propto \\int_0^\\delta dy \\, dz \\, \\left( \\partial_y W \\cdot \\partial_y W + \\partial_z W \\cdot \\partial_z W \\right)$$",
+      "source_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "eq-97fd4ba707c7c8ae",
+      "text": "$$\\mathcal{L}_{meson} = \\sum_{a=1,2} \\left( -\\frac{1}{4}F_{\\mu\\nu}^a F^{\\mu\\nu}_a + \\bar{\\psi}_a(i\\gamma^\\mu D_\\mu - m_a)\\psi_a \\right) + \\mathcal{T}_{int}(\\phi_1, \\phi_2)$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-98d7e94a8ee5304e",
+      "text": "* **For $\\Omega \\to 3.5$:** The geometric tension at the bridge-crease reaches a critical point where the non-linear coupling terms in the Effective Field Theory Lagrangian ($\\mathcal{L}_{eff}$) begin to diverge.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-9933d48e6916fd9b",
+      "text": "$$\\frac{V_{\\text{local}}}{V_{\\text{shadow}}} = \\left( \\frac{L_{\\text{local}}}{L_{\\text{shadow}}} \\right)^3$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-9955aa86e125a6da",
+      "text": "$$\\Psi(\\theta + 2\\pi) = \\Psi(\\theta) \\cdot e^{i \\gamma} = -\\Psi(\\theta)$$",
+      "source_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "eq-9a25516118f57931",
+      "text": "$$S_{eff} = -\\frac{1}{2} \\sum_{n,m} \\int d^4x [ \\partial^\\mu \\phi_{nm} \\partial_\\mu \\phi_{nm} - M_{nm}^2 \\phi_{nm}^2 ]$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-9b045f337ab83d60",
+      "text": "$$ \\Phi(x^\\mu, y, z) = \\sum_{n,m} \\phi_{nm}(x^\\mu) \\chi_{nm}(y, z) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-9c41e6eb2313a987",
+      "text": "$$S_{eff} = -\\frac{1}{2} \\sum_{n,m} \\int d^4x [ \\partial^\\mu \\phi_{nm} \\partial_\\mu \\phi_{nm} - M_{nm}^2 \\phi_{nm}^2 ]$$",
+      "source_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "eq-9f4fb8e93b4dba62",
+      "text": "$$ W = \\frac{1}{2\\pi} \\oint_{\\gamma} d\\theta(x,t) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a11afa36be875cdd",
+      "text": "* $\\partial_t Z$ encodes the instantaneous global geometric variation,",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-a1ae89b5b1e9c986",
+      "text": "$$ D_H \\approx 1.738 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a26e994b910594f8",
+      "text": "$$ D_F(x - y) = \\langle 0 | T\\{\\phi(x) \\phi(y)\\} | 0 \\rangle = \\lim_{\\delta \\to 0} G_6(x, y; y, z) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a2c3d49f1cf400d6",
+      "text": "$$ L_{\\text{local}} > 2 d_H \\implies L_{\\text{local}} \\gtrsim 93 \\times 10^9 \\text{ light-years} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a2d053fbbf00e518",
+      "text": "$$L_{\\text{node}} \\approx \\frac{\\hbar}{\\Delta f \\cdot M_{\\text{Planck}}} \\approx 10^{-15}\\ \\text{m}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-a2e9324cb797d7ac",
+      "text": "$$ \\Delta f = \\mathcal{K} \\cdot \\left( \\frac{\\mathcal{T}_{int}}{\\Theta_P} \\right) \\cdot \\Omega_{node} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a439a0cd715f909e",
+      "text": "$$P_{\\text{joint}} = P\\!\\left(\\chi^2_{2N} \\geq S_F\\right), \\qquad \\sigma_{\\text{combined}} = \\Phi^{-1}\\!\\left(1 - P_{\\text{joint}}\\right)$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-a4c685a32e3400ac",
+      "text": "$$t_0 = \\int_0^1 \\frac{da}{a \\cdot H(a)}$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-a53248597a7c4451",
+      "text": "$$t_0 = \\frac{2}{3 H_0 \\sqrt{\\Omega_{\\Lambda,0}}} \\ln \\left( \\frac{\\sqrt{\\Omega_{\\Lambda,0}} + 1}{\\sqrt{\\Omega_{m,0}}} \\right)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-a596da76e4fab768",
+      "text": "- **Let the inertial mass $m_i$ of a particle at position $x_i$ and time $t$ be given by a functional $\\mathcal{M}$ mapping the global impedance field $Z$ to a scalar:**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a5caa22e65720176",
+      "text": "| Event | GPS | $m_1\\ (M_\\odot)$ | $m_2\\ (M_\\odot)$ | $\\mathcal{M}_c\\ (M_\\odot)$ | $d_L\\ (\\text{Mpc})$ | Network SNR |",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-a62e9adfc288fc2d",
+      "text": "$$ \\mathcal{M}[Z](x_i, t) = m_0 + \\int_M K_m(x_i, y; t) \\cdot \\Delta Z(y, t) \\, d^dy $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-a9771c9e772cd407",
+      "text": "$$D_\\mu \\Psi = (\\partial_\\mu + i q A_\\mu) \\Psi$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-a99d519324dfd917",
+      "text": "When separate nested torus systems occupy adjacent regions of the manifold, their internal phase rotations induce mutual drag. This is quantified as a localized **Manifold Impedance Matrix** ($\\mathbf{Z}_{ij}$). The interaction is governed by the geometric overlap integral ($\\mathcal{I}_{\\text{overlap}}$) of their wave topologies ($\\psi_i$ and $\\psi_j$):",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-ac0531364337adf9",
+      "text": "$$\\frac{d}{dt} W_i(t) = -\\int_M \\frac{\\delta W_j(t)}{\\delta Z(x,t)} \\cdot \\frac{\\partial Z(x,t)}{\\partial t} \\, d^dx \\quad \\text{with } i \\neq j$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-ac4a57753506f43c",
+      "text": "- $\\mathcal{K} = 0.13$ is the non-linear curvature coupling coefficient (BMI baseline)",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-afe4946ef306fb6b",
+      "text": "$$ S_{EH} = \\frac{1}{2\\kappa_6^2} \\int d^6x \\sqrt{-G} R_6 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-b022a34c28363c32",
+      "text": "$$D_F(x - y) = \\langle 0 | T\\{\\phi(x) \\phi(y)\\} | 0 \\rangle = \\lim_{\\delta \\to 0} G_6(x, y; y, z)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-b1332d50f7b9b5f9",
+      "text": "$$N_{total} = (2 |w_{max}| + 1)^3 = 7^3 = 343 \\text{ combinatorial permutations}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-b2ab016d92eadc2e",
+      "text": "$$W = \\frac{1}{2\\pi} \\oint_{\\gamma} d\\theta(x,t)$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-b3109ea0f8513a93",
+      "text": "Fermionic behavior (half-integer spin, $s = \\frac{1}{2}$) emerges naturally when a full spatial rotation ($2\\pi$ radians) of the outer manifold shell maps to exactly a half-rotation ($\\pi$ radians) of the nested inner core. This creates a topological configuration where the system accumulates a non-integrable **Geometric Berry Phase Shift** ($\\gamma$).",
+      "source_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "eq-b35072f1e83abf6a",
+      "text": "- $\\mathcal{K} = 0.13$ is the non-linear curvature coupling coefficient (BMI baseline)",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-b63dba0c89fa1b43",
+      "text": "$$Q = \\oint_{T^3} \\mathbf{P}_{\\text{geom}} \\cdot d\\mathbf{A} = \\pm e$$",
+      "source_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "eq-ba95c97dcbe19059",
+      "text": "$$ \\oint_{T^n} \\mathbf{\\Xi}_{\\mu\\nu} \\cdot d\\mathbf{V}_n \\longrightarrow \\mathbf{B}_{\\text{compact}}(n) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-bb3a6e82cc781e45",
+      "text": "$$ V_{\\text{local}} \\gtrsim (9.3 \\times 10^{10} \\text{ ly})^3 \\approx 8.04 \\times 10^{32} \\text{ ly}^3 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-bbb4821e4122c114",
+      "text": "$$S_{EH} = \\frac{1}{2\\kappa_6^2} \\int d^6x \\sqrt{-G} R_6$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-bc60aeb023b07919",
+      "text": "$$M_n^2 = \\frac{1}{\\delta^2} \\sum_{i=1}^{3} w_i^2 Z_{i}^2$$",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-bdc467ad5e83d8f7",
+      "text": "$$\\frac{V_{\\text{local}}}{V_{\\text{shadow}}} = \\left( \\frac{L_{\\text{local}}}{L_{\\text{shadow}}} \\right)^3$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-beca44dd91e85157",
+      "text": "$$L_{\\text{local}} > 2 d_H \\implies L_{\\text{local}} \\gtrsim 93 \\times 10^9 \\text{ light-years}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-bf2975c4dad5f1fa",
+      "text": "$$ d_H = c \\int_0^{t_0} \\frac{dt}{a(t)} \\approx 46.5 \\text{ billion light-years} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-bf38e6e40cb33cad",
+      "text": "- Terms: where $\\mathcal{F}$ is a functional mapping global geometric impedance configurations to local inertial parameters.",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-bfdf19ada555028e",
+      "text": "$$ (i\\gamma^\\mu \\partial_\\mu - m)\\psi = G[Z, \\psi] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c03a35bba2b93989",
+      "text": "$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c09df31f7a7ad015",
+      "text": "$$\\Phi(x^\\mu, y, z) = \\sum_{n,m} \\phi_{nm}(x^\\mu) \\chi_{nm}(y, z)$$",
+      "source_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "eq-c14b105511258af7",
+      "text": "$$ Z_2 = 3.49,\\quad p_2 = 2.415 \\times 10^{-4} \\qquad \\text{(GW231028, H1, O4a, N=50 trials)} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c153e90b4c181724",
+      "text": "$$ t_0 = \\frac{2}{3 H_0 \\sqrt{\\Omega_{\\Lambda,0}}} \\ln \\left( \\frac{\\sqrt{\\Omega_{\\Lambda,0}} + 1}{\\sqrt{\\Omega_{m,0}}} \\right) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c15b91e8b3c84935",
+      "text": "$$\\oint_{T^n} \\mathbf{\\Xi}_{\\mu\\nu} \\cdot d\\mathbf{V}_n \\longrightarrow \\mathbf{B}_{\\text{compact}}(n)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c1d539665ef03baf",
+      "text": "$$ t_0 = \\int_0^1 \\frac{da}{a \\cdot H(a)} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c1e7465cd257a57b",
+      "text": "\\frac{dm_i}{dt} &= \\int_M \\left[ K_m(x_i, y; t)\\frac{\\partial}{\\partial t} \\Delta Z(y, t) + \\frac{\\partial}{\\partial t} K_m(x_i, y; t)\\Delta Z(y, t) \\right] d^dy",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-c2e55b4dadb6ec19",
+      "text": "$$\\mathcal{L} = \\bar{\\psi}(i\\gamma^\\mu \\partial_\\mu - m)\\psi - \\frac{1}{2} Z_{\\mu\\nu}(x,t) F^{\\mu\\nu} F^{\\mu\\nu} + \\dots$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-c3d9d03ac774a273",
+      "text": "- Terms: Where $\\mathcal{T}_{int}$ is the Interaction Tension term, defined as:",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c502eb3c7cee46f8",
+      "text": "$$\\mathcal{E}[\\phi] = \\int d^3x \\left[ \\frac{1}{2} |\\nabla \\phi|^2 + V_{\\text{eff}}(\\phi) - \\kappa \\, \\delta^3(\\vec{x} - \\vec{x}_1) |\\phi|^2 \\right]$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c5c336aa48629652",
+      "text": "- **Fermionic behavior (half-integer spin, $s = \\frac{1}{2}$) emerges naturally when a full spatial rotation ($2\\pi$ radians) of the outer manifold shell maps to exactly a half-rotation ($\\pi$ radians) of the nested inner core. This creates a topological configuration where the system accumulates a non-integrable Geometric Berry Phase Shift ($\\gamma$).**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c6467d7ba5776c60",
+      "text": "$$Z_2 = 3.49,\\quad p_2 = 2.415 \\times 10^{-4} \\qquad \\text{(GW231028, H1, O4a, N=50 trials)}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-c68659ac7015c380",
+      "text": "$$\\mathcal{T}_{int} = \\lambda \\int_{\\Sigma} \\sqrt{-g} \\left( \\nabla_i \\phi_1 \\cdot \\nabla^i \\phi_2 \\right) \\Phi_{bridge} d^3x$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c7326f1ce57f61fd",
+      "text": "$$ \\frac{d}{dt} W_i(t) = -\\int_M \\frac{\\delta W_j(t)}{\\delta Z(x,t)} \\cdot \\frac{\\partial Z(x,t)}{\\partial t} \\, d^dx \\quad \\text{with } i \\neq j $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c77add0028f4be65",
+      "text": "$$ \\sum_{j} |V_{ij}|^2 = 1 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c8012bbee80eea92",
+      "text": "$$d_H = c \\int_0^{t_0} \\frac{dt}{a(t)} \\approx 46.5 \\text{ billion light-years}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c83a5ac91eb35564",
+      "text": "$$\\phi_{\\text{bound}}(\\vec{x}) = \\mathcal{C} \\, e^{-\\lambda |\\vec{x} - \\vec{x}_1|}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-c8c11dbb1ae22d13",
+      "text": "$$ X^A = \\Gamma^A(\\lambda) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-c9f46d2ea9259091",
+      "text": "- **From `Chapter_6_Advanced_Forces_v3.md`, the BMI Lagrangian density $\\mathcal{L}$ includes terms:**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-cb27a5b8fd7717d9",
+      "text": "* $\\mathcal{I}_{\\text{overlap}} = \\int_{V} \\psi_i \\otimes \\psi_j \\, dV$ represents the structural interaction of the nested tori.",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-cb4feba9f5500dd1",
+      "text": "$$\\Delta E_{\\text{matter}} = E_0 \\cdot (1 - \\tau_{\\text{global}}) < \\Delta E_{\\text{antimatter}} = E_0 \\cdot (1 + \\tau_{\\text{global}})$$",
+      "source_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "eq-cdd964bf3d38670d",
+      "text": "$$\\Delta E_{\\text{matter}} = E_0 \\cdot (1 - \\tau_{\\text{global}}) < \\Delta E_{\\text{antimatter}} = E_0 \\cdot (1 + \\tau_{\\text{global}})$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-cfc55b877764d9b2",
+      "text": "$$\\sigma_{\\text{emp}} = \\Phi^{-1}(1 - p_{\\text{emp}})$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-d0bed3273411c63f",
+      "text": "$$\\psi_+(n, \\mathbf{P}_{\\text{geom}}) + \\psi_-(n, -\\mathbf{P}_{\\text{geom}}) \\longrightarrow \\sum \\Psi_{\\text{photon}}$$",
+      "source_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "eq-d23228025bfacb87",
+      "text": "D_H = 2 + \\frac{\\ln(\\text{Impedance Coupling})}{\\ln(L_{node}/\\delta)}",
+      "source_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "eq-d27fd80e3323ab02",
+      "text": "$$ t_0 = \\frac{1}{H_0} \\int_0^1 \\frac{da}{\\sqrt{\\Omega_{m,0} a^{-1} + \\Omega_{\\Lambda,0} a^2}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-d335accc121eec42",
+      "text": "$$g_{\\text{eff}}(R) = \\frac{1}{1 + e^{-\\alpha(R - R_{\\text{crit}})}}$$",
+      "source_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "eq-d63d956ff35b8cb8",
+      "text": "$$ Z_{\\text{combined}} = \\frac{\\displaystyle\\sum_{i=1}^{N} Z_i}{\\sqrt{N}} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-d6d8bac974244a51",
+      "text": "* $\\frac{\\delta W_j}{\\delta Z}$ is the functional sensitivity of the winding number at site $j$ to changes in global impedance,",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-d6deda723db45842",
+      "text": "**Parity Violation:** The $(y, z)$ plane creates an inherent chiral bias, naturally filtering \"left-handed\" states via the projection operator $P_L = \\frac{1}{2}(1 - \\gamma^5)$.",
+      "source_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "eq-d8087720ddf4d91a",
+      "text": "**Parity Violation:** The $(y, z)$ plane creates an inherent chiral bias, naturally filtering \"left-handed\" states via the projection operator $P_L = \\frac{1}{2}(1 - \\gamma^5)$.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-d896938bd87ff7f6",
+      "text": "$$ \\mathcal{E}[\\phi] = \\int d^3x \\left[ \\frac{1}{2} |\\nabla \\phi|^2 + V_{\\text{eff}}(\\phi) - \\kappa \\, \\delta^3(\\vec{x} - \\vec{x}_1) |\\phi|^2 \\right] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-da124c128363f5b9",
+      "text": "$$W_1 + W_2 = \\text{constant}$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-db85a4cb6076c2b6",
+      "text": "$$\\mathcal{L}_{meson} = \\sum_{a=1,2} \\left( -\\frac{1}{4}F_{\\mu\\nu}^a F^{\\mu\\nu}_a + \\bar{\\psi}_a(i\\gamma^\\mu D_\\mu - m_a)\\psi_a \\right) + \\mathcal{T}_{int}(\\phi_1, \\phi_2)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-dc39d5417e780110",
+      "text": "$$M_{\\text{nucleon}}(n, \\sigma) = n \\cdot \\omega_0 \\cdot \\left(1 + \\sigma \\frac{\\gamma}{2\\pi}\\right)$$",
+      "source_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "eq-dc750a525c60b49c",
+      "text": "* $\\partial_t Z$ encodes the instantaneous global geometric variation,",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-de0040e138c8dab2",
+      "text": "$$\\mathbf{V}_{ij}(t) = \\mathbf{Z}_{ij}(\\Xi) \\cdot \\mathcal{I}_{\\text{overlap}}$$",
+      "source_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "eq-de0af689ede6dbb2",
+      "text": "v^\\mu = g^{\\mu\\nu} $G_{\\text{AB}}$ T^A (\\partial X^B / \\partial x^\\nu)",
+      "source_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "eq-de6e3ea9a5869fbf",
+      "text": "v^\\mu = g^{\\mu\\nu} $G_{\\text{AB}}$ T^A (\\partial X^B / \\partial x^\\nu)",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-de9e7f104f82cb4f",
+      "text": "The theory predicts the split is **not** a universal GW feature. It is specific to mergers where the total chirp mass exceeds the topological threshold for winding-mode excitation ($\\mathcal{M}_c \\gtrsim 50\\ M_\\odot$). For lighter systems (long chirps, $\\mathcal{M}_c < 50\\ M_\\odot$), the inspiral sweeps too slowly to pin the winding mode, and $\\Delta f$ should be absent. This is an explicit, falsifiable prediction — confirmed by the GW250114 negative result (Section J.5.3).",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-e0cba36e3dd15275",
+      "text": "$$R_6 = R_4 + K^2 - K_{\\mu\\nu}K^{\\mu\\nu} + \\nabla_\\mu(a^\\mu)$$",
+      "source_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "eq-e1366b33293da229",
+      "text": "$$ V_{\\text{shadow}} = (L_{\\text{shadow}})^3 $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-e149711e6fae1bf4",
+      "text": "$$ K_m(x, y) = \\frac{1}{N} e^{-\\frac{|x-y|}{\\lambda}} \\cdot W(x, y) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-e2158089e7242862",
+      "text": "$$ \\delta M_n(\\mathbf{E}, \\mathbf{B}, t) = n \\cdot \\omega_0 \\cdot \\left[ \\mathbf{\\Lambda}_{\\text{tensor}} \\cdot f(\\Xi(t)) \\cdot \\left(\\mathbf{E}^2 + c^2\\mathbf{B}^2\\right) \\right] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-e267f51d52060261",
+      "text": "$$Z_{\\text{combined}} = \\frac{\\displaystyle\\sum_{i=1}^{N} Z_i}{\\sqrt{N}}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-e54c99d29fc0bee2",
+      "text": "$$ g_{\\mu\\nu}(x) = G_AB(X) (\\partial X^A / \\partial x^\\mu) (\\partial X^B / \\partial x^\\nu) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-e65c699694f7f816",
+      "text": "* $\\mathcal{I}_{\\text{overlap}} = \\int_{V} \\psi_i \\otimes \\psi_j \\, dV$ represents the structural interaction of the nested tori.",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-e8abd133dc5b7cf3",
+      "text": "Where $\\mathcal{T}_{int}$ is the Interaction Tension term, defined as:",
+      "source_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "eq-e93e7e67a90bef95",
+      "text": "$$S_{6D} = -\\frac{1}{2} \\int d^4x \\int_0^\\delta dy dz \\sqrt{-G} G^{AB} \\partial_A \\Phi \\partial_B \\Phi$$",
+      "source_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "eq-e97b8e451c01bfe5",
+      "text": "To ensure that the inertial mass functional $\\mathcal{M}[Z](x_i, t)$ is well-defined and physically meaningful, the kernel $K_m(x_i, y; t)$ and the geometric weighting function $W(x, y)$ should be positive-definite and integrable over the manifold $M$. This guarantees that the integral converges and that variations in manifold impedance contribute constructively to local inertial mass, consistent with observed stability and locality of inertia.",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-ea88c408631ecf18",
+      "text": "$$ M_W^2 \\propto \\int_0^\\delta dy \\, dz \\, \\left( \\partial_y W \\cdot \\partial_y W + \\partial_z W \\cdot \\partial_z W \\right) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-eae48520d7896de6",
+      "text": "$$ X^A = X^A(x^\\mu) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-ebfce3a5ab900a45",
+      "text": "$$ g_{\\mu\\nu}(t) = \\eta_{\\mu\\nu} + \\mathbf{\\Xi}_{\\mu\\nu}\\left(\\tau(t) + V_{gap}(t)\\right) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-ecded27dfe4844b1",
+      "text": "$$ S_{eff} = -\\frac{1}{2} \\sum_{n,m} \\int d^4x [ \\partial^\\mu \\phi_{nm} \\partial_\\mu \\phi_{nm} - M_{nm}^2 \\phi_{nm}^2 ] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-effd113494dd939e",
+      "text": "$$t_0 = \\frac{1}{H_0} \\int_0^1 \\frac{da}{\\sqrt{\\Omega_{m,0} a^{-1} + \\Omega_{\\Lambda,0} a^2}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f053c3b67b709b1e",
+      "text": "$$ P_{\\text{joint}} = P\\!\\left(\\chi^2_{2N} \\geq S_F\\right), \\qquad \\sigma_{\\text{combined}} = \\Phi^{-1}\\!\\left(1 - P_{\\text{joint}}\\right) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-f17823224d13a1af",
+      "text": "\\end{aligned}$$",
+      "source_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "eq-f1db4446ad4ca831",
+      "text": "$$Z_1 = 4.56,\\quad p_1 = 2.558 \\times 10^{-6} \\qquad \\text{(GW190521, L1, O3a, N=100 trials)}$$",
+      "source_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "eq-f2097f0509ea02b2",
+      "text": "$$\\mathbf{V}_{ij}(t) = \\mathbf{Z}_{ij}(\\Xi) \\cdot \\mathcal{I}_{\\text{overlap}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f2fd8b21acfc2093",
+      "text": "$$H(a) = H_0 \\sqrt{\\Omega_{m,0} a^{-3} + \\Omega_{\\Lambda,0}}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f4b99f67187a1e69",
+      "text": "$$ \\delta = \\left| \\frac{M_{\\text{experimental}} - M_{\\text{derived}}}{\\text{SD}_{\\text{experimental}}} \\right| \\le \\epsilon $$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f592c01bff97bf27",
+      "text": "$$\\Psi(\\theta + 2\\pi) = \\Psi(\\theta) \\cdot e^{i \\gamma} = -\\Psi(\\theta)$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f6797f052cfcb3f1",
+      "text": "$$t_0 = \\int_0^1 \\frac{da}{a \\cdot H(a)}$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f7e350f7a8f82048",
+      "text": "$$V_{\\text{local}} \\gtrsim (9.3 \\times 10^{10} \\text{ ly})^3 \\approx 8.04 \\times 10^{32} \\text{ ly}^3$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-f837ab2c4c3755cc",
+      "text": "$$t_0 = \\frac{2}{3 H_0 \\sqrt{\\Omega_{\\Lambda,0}}} \\ln \\left( \\frac{\\sqrt{\\Omega_{\\Lambda,0}} + 1}{\\sqrt{\\Omega_{m,0}}} \\right)$$",
+      "source_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "eq-f90ca9c442ea4283",
+      "text": "$$ Z_1 = 4.56,\\quad p_1 = 2.558 \\times 10^{-6} \\qquad \\text{(GW190521, L1, O3a, N=100 trials)} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-f98cf0af644a4e15",
+      "text": "$$\\sum_{j} |V_{ij}|^2 = 1$$",
+      "source_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "eq-f9ecfb467df1e3be",
+      "text": "$$ S_{eff} = \\frac{1}{2\\kappa_4^2} \\int d^4x \\sqrt{-g} R_4 + S_{matter} $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-fd0e05feb2a978af",
+      "text": "$$ R_6 = R_4 + K^2 - K_{\\mu\\nu}K^{\\mu\\nu} + \\nabla_\\mu(a^\\mu) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "eq-ffa858c83330c48c",
+      "text": "$$K_m(x, y) = \\frac{1}{N} e^{-\\frac{|x-y|}{\\lambda}} \\cdot W(x, y)$$",
+      "source_id": "src-919c4b528320150c"
+    }
+  ],
+  "symbols": [
+    {
+      "id": "sym-1184b142bae041bf",
+      "notation": "\\Delta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-3faceb221161de35",
+        "src-4fd7ce3e7240448d",
+        "src-58411f1d83de3659",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-14ebbbf5e4f36a76",
+      "notation": "\\Gamma",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8"
+      ]
+    },
+    {
+      "id": "sym-7b2b30d52dc35c22",
+      "notation": "\\Lambda",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-00c433788dfa3e4e",
+        "src-4e8a803db61ef672",
+        "src-58f23682e59d2811",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-d235e78810fe31e5",
+      "notation": "\\Omega",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-d2321779e2f96f68",
+      "notation": "\\Phi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-0ee63193bafc7a28",
+      "notation": "\\Psi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979",
+        "src-ef5e12fce18957b9",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-9351c531162c0639",
+      "notation": "\\Sigma",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a6db6b98c0476af3",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-0808136f81e96f11",
+      "notation": "\\Theta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-fe032536bac8fcca",
+      "notation": "\\Xi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-00c433788dfa3e4e",
+        "src-4fd7ce3e7240448d",
+        "src-897d3ff7342b31a8",
+        "src-a08f8d77bf67f9a6",
+        "src-b287a419e4af3021",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-61d279dca407b4c8",
+      "notation": "\\alpha",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-24a62d2d9920b510",
+      "notation": "\\approx",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-58411f1d83de3659",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-a61a3579bacea5cc",
+      "notation": "\\bar",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-eb197f0bb078fb99",
+      "notation": "\\beta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c"
+      ]
+    },
+    {
+      "id": "sym-146f9bbcc3c3f007",
+      "notation": "\\boxed",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-aaa35129a3fd00db",
+      "notation": "\\cdot",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-00c433788dfa3e4e",
+        "src-3faceb221161de35",
+        "src-4e8a803db61ef672",
+        "src-4fd7ce3e7240448d",
+        "src-58411f1d83de3659",
+        "src-58f23682e59d2811",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a08f8d77bf67f9a6",
+        "src-a6db6b98c0476af3",
+        "src-b287a419e4af3021",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979",
+        "src-ef5e12fce18957b9",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-2490a8137a3c0773",
+      "notation": "\\chi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-8a4e50b899c6c31f",
+      "notation": "\\delta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-00c433788dfa3e4e",
+        "src-414d596de5348464",
+        "src-4814fee535b6f305",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1",
+        "src-ef546c515f2ab653",
+        "src-ef5e12fce18957b9"
+      ]
+    },
+    {
+      "id": "sym-a6ed18969db7cb16",
+      "notation": "\\displaystyle",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-554238c7183a336b",
+      "notation": "\\dots",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c"
+      ]
+    },
+    {
+      "id": "sym-2721e64faa95018a",
+      "notation": "\\epsilon",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-414d596de5348464",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-455aa9ddd87fa5b1",
+      "notation": "\\eta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a08f8d77bf67f9a6",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-44b2c89cc4e7e202",
+      "notation": "\\gamma",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-58f23682e59d2811",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979",
+        "src-ef5e12fce18957b9"
+      ]
+    },
+    {
+      "id": "sym-019662a6459485cc",
+      "notation": "\\geq",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-8e54e7b0cd5dbefc",
+      "notation": "\\gtrsim",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-2ddb843ca1ee2757",
+      "notation": "\\hbar",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-58411f1d83de3659",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-7c86d8693e5e16bd",
+      "notation": "\\implies",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-645a1fafd84f3f74",
+      "notation": "\\infty",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-902d9f359e7ebeb0",
+      "notation": "\\int",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-4e8a803db61ef672",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a0c8b72a27e5738a",
+        "src-b287a419e4af3021",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95",
+        "src-ef5e12fce18957b9"
+      ]
+    },
+    {
+      "id": "sym-7732deb2c5daef34",
+      "notation": "\\kappa",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95"
+      ]
+    },
+    {
+      "id": "sym-a0bd775171f45f81",
+      "notation": "\\lambda",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-c91d86f2adb63ac9",
+      "notation": "\\langle",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-8e81eaf5821a3d3e",
+      "notation": "\\le",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-414d596de5348464",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-25f339d7990ae07b",
+      "notation": "\\lim",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-706157e2a3939c7d",
+      "notation": "\\ll",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-38a91659222d347b",
+      "notation": "\\ln",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-ef546c515f2ab653"
+      ]
+    },
+    {
+      "id": "sym-03aa369517dde172",
+      "notation": "\\longrightarrow",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a08f8d77bf67f9a6",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-3e1c35f689e8a041",
+      "notation": "\\mathcal{A}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-f405f816084ffd7e",
+      "notation": "\\mathcal{C}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-856a2eeb10481e69",
+      "notation": "\\mathcal{E}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-7b292c9c09f627d7",
+      "notation": "\\mathcal{F}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c"
+      ]
+    },
+    {
+      "id": "sym-8e7d3f21b7076cdf",
+      "notation": "\\mathcal{I}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-b287a419e4af3021",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-170ef74dc9ab46cd",
+      "notation": "\\mathcal{K}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-d6d53bca339904bd",
+      "notation": "\\mathcal{L}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-a9e86811e3981e6e",
+      "notation": "\\mathcal{M}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-70c55118ad4f3e54",
+      "notation": "\\mathcal{T}",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-23260184ddf34dac",
+      "notation": "\\mu",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a08f8d77bf67f9a6",
+        "src-a0c8b72a27e5738a",
+        "src-a6db6b98c0476af3",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95",
+        "src-ef5e12fce18957b9"
+      ]
+    },
+    {
+      "id": "sym-2ed04aa02185afbf",
+      "notation": "\\nabla",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a6db6b98c0476af3",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95"
+      ]
+    },
+    {
+      "id": "sym-6548df6ad2c55165",
+      "notation": "\\neq",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c"
+      ]
+    },
+    {
+      "id": "sym-09245d30390a1fff",
+      "notation": "\\nu",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a08f8d77bf67f9a6",
+        "src-a6db6b98c0476af3",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95"
+      ]
+    },
+    {
+      "id": "sym-b4da786a064f6aae",
+      "notation": "\\odot",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-e5222399f607dcd0",
+      "notation": "\\oint",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-a08f8d77bf67f9a6",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979"
+      ]
+    },
+    {
+      "id": "sym-3719f669d41c6c00",
+      "notation": "\\omega",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-00c433788dfa3e4e",
+        "src-3faceb221161de35",
+        "src-4814fee535b6f305",
+        "src-4fd7ce3e7240448d",
+        "src-58f23682e59d2811",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-6fb6f006affc1e4a",
+      "notation": "\\otimes",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-b287a419e4af3021",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-565886aab8a36194",
+      "notation": "\\phi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-0d0d71f73854eb1b",
+      "notation": "\\pi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-58f23682e59d2811",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979",
+        "src-edd5f402ac95bd95"
+      ]
+    },
+    {
+      "id": "sym-8fea940f0310b0f2",
+      "notation": "\\pm",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979"
+      ]
+    },
+    {
+      "id": "sym-61e1073ead109c4e",
+      "notation": "\\propto",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1",
+        "src-ef5e12fce18957b9"
+      ]
+    },
+    {
+      "id": "sym-46a942491b7be4ca",
+      "notation": "\\psi",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-3faceb221161de35",
+        "src-4fd7ce3e7240448d",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-b287a419e4af3021",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-6669476aadd2d0fa",
+      "notation": "\\qquad",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-288b7d376c69dc73",
+      "notation": "\\quad",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-8ec6191a73afd453",
+      "notation": "\\rangle",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-68fdb12d525c4fb6",
+      "notation": "\\sigma",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-58f23682e59d2811",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-dc53c7cc069b5b55",
+      "notation": "\\sim",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d"
+      ]
+    },
+    {
+      "id": "sym-aa2a32ead0b47a24",
+      "notation": "\\sqrt",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4e8a803db61ef672",
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-edd5f402ac95bd95"
+      ]
+    },
+    {
+      "id": "sym-806d76c714e3f31a",
+      "notation": "\\sum",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-a6db6b98c0476af3",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-26c34acad68b8740",
+      "notation": "\\tau",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-a08f8d77bf67f9a6",
+        "src-cc3e863c8f1b10e1",
+        "src-ef831d1098f6d843"
+      ]
+    },
+    {
+      "id": "sym-fa2aa83d49c29769",
+      "notation": "\\theta",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8",
+        "src-919c4b528320150c",
+        "src-cc3e863c8f1b10e1",
+        "src-e2b4b3526193f979"
+      ]
+    },
+    {
+      "id": "sym-91bdc9dda8e536e0",
+      "notation": "\\tilde",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-897d3ff7342b31a8"
+      ]
+    },
+    {
+      "id": "sym-e2c16e531d322de6",
+      "notation": "\\times",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-3faceb221161de35",
+        "src-4e8a803db61ef672",
+        "src-897d3ff7342b31a8",
+        "src-c1cbf5bda561318d",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-d24ffba44e1ded40",
+      "notation": "\\to",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-6df1d476ffd0efdd",
+        "src-897d3ff7342b31a8",
+        "src-a0c8b72a27e5738a",
+        "src-cc3e863c8f1b10e1"
+      ]
+    },
+    {
+      "id": "sym-76c7d581745c7580",
+      "notation": "\\vec",
+      "symbol_type": null,
+      "units": null,
+      "domain": null,
+      "source_ids": [
+        "src-4814fee535b6f305",
+        "src-897d3ff7342b31a8",
+        "src-cc3e863c8f1b10e1"
+      ]
+    }
+  ],
+  "initial_conditions": [],
+  "boundary_conditions": [],
+  "observables": [
+    {
+      "id": "obs-8ab69dd214ff1f95",
+      "text": "$$ M_n(t) = n \\cdot \\omega_0 \\cdot \\left(1 + \\Delta\\psi(n)\\right) \\cdot f(\\Xi(t)) $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "obs-af8fbc766f3b054d",
+      "text": "- Terms: Where $f(\\Xi(t))$ represents the coupling of the particle's localized geometry to the total Metric Equilibrium ($\\Xi = \\tau + V_{gap}$) of the universe at time $t$. This links the mass of the particle directly to the evolution of the manifold coalescence.",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "obs-d90d26132cb19c20",
+      "text": "_Source: Chapter_2_Resonance_Spectrum_v3.md_",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "obs-e18e48f0892dd0ee",
+      "text": "- **Crucially, the mass of these states is not constant; it is subject to the Thermodynamic Scaling discovered in our macroscopic analysis. The effective rest mass $M_n$ at any cosmological epoch is a function of the harmonic mode, the base frequency, and the local metric equilibrium ($\\Xi$):**",
+      "source_id": "src-897d3ff7342b31a8"
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-093c0ce060a57490",
+      "text": "import numpy as np",
+      "source_id": "src-fee7976d3fe62f8a"
+    },
+    {
+      "id": "tool-1a72f5ff0acff252",
+      "text": "import numpy as np",
+      "source_id": "src-d888cfcb330a0936"
+    },
+    {
+      "id": "tool-3bb3d95b49f6a4fd",
+      "text": "\"\"\"",
+      "source_id": "src-006e9afc3ab0b9aa"
+    },
+    {
+      "id": "tool-3c17b57fa2d8452d",
+      "text": "\"\"\"",
+      "source_id": "src-e86b7f0a3bfb0db6"
+    },
+    {
+      "id": "tool-48fadaca212b7d88",
+      "text": "import numpy as np",
+      "source_id": "src-b43de9fa347cc8c6"
+    },
+    {
+      "id": "tool-5471afaf8719ec37",
+      "text": "import sys",
+      "source_id": "src-36c7c1cb6eddef4f"
+    },
+    {
+      "id": "tool-5af219a0eac183a8",
+      "text": "\"\"\"",
+      "source_id": "src-5ff5b4619b849d59"
+    },
+    {
+      "id": "tool-5efcbf032c637f9a",
+      "text": "\"\"\"",
+      "source_id": "src-b1e267e732d62559"
+    },
+    {
+      "id": "tool-702977411032831b",
+      "text": "import numpy as np",
+      "source_id": "src-406e01226310a8e7"
+    },
+    {
+      "id": "tool-76d78c72339e45fd",
+      "text": "import numpy as np",
+      "source_id": "src-643a165dab737304"
+    },
+    {
+      "id": "tool-a0c5b1369cee0cfb",
+      "text": "\"\"\"",
+      "source_id": "src-9f2480e267905ec1"
+    },
+    {
+      "id": "tool-a3e11233a69ba40b",
+      "text": "import os",
+      "source_id": "src-da7f9052d1dd831e"
+    },
+    {
+      "id": "tool-b214ff49561794f2",
+      "text": "\"\"\"",
+      "source_id": "src-4a3ceaed95811ad5"
+    },
+    {
+      "id": "tool-b4f5e94fc8a77191",
+      "text": "\"\"\"",
+      "source_id": "src-a6e1f1d32c02839b"
+    },
+    {
+      "id": "tool-cef089532c61ff65",
+      "text": "import itertools",
+      "source_id": "src-e16254fd498aa652"
+    },
+    {
+      "id": "tool-df6946d1b6cd4f0f",
+      "text": "import numpy as np",
+      "source_id": "src-c43f08e4902346ff"
+    },
+    {
+      "id": "tool-e41ec7d0882a9f4b",
+      "text": "import numpy as np",
+      "source_id": "src-27a72375ff2afc24"
+    },
+    {
+      "id": "tool-e999a48ccf8726e9",
+      "text": "import numpy as np",
+      "source_id": "src-4386655990c3d54a"
+    },
+    {
+      "id": "tool-f5b6767750cdd428",
+      "text": "import numpy as np",
+      "source_id": "src-6ed50c8e3e8a1b1e"
+    },
+    {
+      "id": "tool-fec10c662fb09e1a",
+      "text": "\"\"\"",
+      "source_id": "src-f116447fc53c391b"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-01156d8ed099d705",
+      "text": "$$ \\delta M_n(\\mathbf{E}, \\mathbf{B}, t) = n \\cdot \\omega_0 \\cdot \\left[ \\mathbf{\\Lambda}_{\\text{tensor}} \\cdot f(\\Xi(t)) \\cdot \\left(\\mathbf{E}^2 + c^2\\mathbf{B}^2\\right) \\right] $$",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-1cfff084aa2dbbee",
+      "text": "_Source: Chapter_8_Experimental_Predictions_v3.md_",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-682fac4f26b8676b",
+      "text": "* $\\mathbf{\\Lambda}_{\\text{tensor}}$ is the structural deformation coefficient matrix.",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-94131f5b82bce56e",
+      "text": "- Terms: Where:",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-b56ae3ea79bad7bc",
+      "text": "* $f(\\Xi(t))$ couples the shift to the prevailing **Bridge Stress ($\\tau$)** and **Inter-brane Potential ($V_{gap}$)**.",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-bc979d66af79ff50",
+      "text": "- **The BMI analysis lab code maps these deviations across high-energy environments, yielding precise, un-renormalized mass variations. The predicted mass shift for a mode $n$ is scaled by the current cosmological epoch:**",
+      "source_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "exp-c6b5dc8a5c6701a5",
+      "text": "* $\\delta M_n$ is the predicted, localized rest-mass shift.",
+      "source_id": "src-897d3ff7342b31a8"
+    }
+  ],
+  "predictions": [],
+  "falsification_criteria": [],
+  "open_questions": [],
+  "relations": [
+    {
+      "id": "rel-009c5c7b57d296d8",
+      "relation_type": "derived_from",
+      "from_id": "eq-39f3bf53ff8da230",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-00f0dcc44234641f",
+      "relation_type": "derived_from",
+      "from_id": "eq-9a25516118f57931",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-018a86ea64001694",
+      "relation_type": "derived_from",
+      "from_id": "eq-35a17225a8910a67",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-01ccf066d4913db9",
+      "relation_type": "derived_from",
+      "from_id": "sec-c7247f3ad26d14e1",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-0288b235c1f08506",
+      "relation_type": "derived_from",
+      "from_id": "tool-a3e11233a69ba40b",
+      "to_id": "src-da7f9052d1dd831e"
+    },
+    {
+      "id": "rel-0318644fb35ba44b",
+      "relation_type": "derived_from",
+      "from_id": "eq-0b48f5b24c100495",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-0356a5dbf4ea88a2",
+      "relation_type": "derived_from",
+      "from_id": "eq-2e8763130b2cbb4f",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-03f937f7ec9e3306",
+      "relation_type": "derived_from",
+      "from_id": "eq-beca44dd91e85157",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-055e67d59133bcc6",
+      "relation_type": "derived_from",
+      "from_id": "eq-8ce0acd4de23bcfe",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-059eb6207cdd5b2e",
+      "relation_type": "derived_from",
+      "from_id": "eq-b63dba0c89fa1b43",
+      "to_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "rel-0638be9127b5d004",
+      "relation_type": "derived_from",
+      "from_id": "eq-7e2caff7e0fd699d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-063e0ae042986fa9",
+      "relation_type": "derived_from",
+      "from_id": "eq-7df564ef3d0d173f",
+      "to_id": "src-3faceb221161de35"
+    },
+    {
+      "id": "rel-07587ca651fc02cc",
+      "relation_type": "derived_from",
+      "from_id": "eq-c5c336aa48629652",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-075986ed63587bbe",
+      "relation_type": "derived_from",
+      "from_id": "eq-95e8e881aa050a49",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-07644565f588970b",
+      "relation_type": "derived_from",
+      "from_id": "eq-cfc55b877764d9b2",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-09301af0ba2ec637",
+      "relation_type": "derived_from",
+      "from_id": "tool-76d78c72339e45fd",
+      "to_id": "src-643a165dab737304"
+    },
+    {
+      "id": "rel-0a3687d0ee1ee4f9",
+      "relation_type": "derived_from",
+      "from_id": "eq-32a5713a40f1345f",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-0ae6903a7d09cf06",
+      "relation_type": "derived_from",
+      "from_id": "eq-547c0a3fb74e454b",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-0b02bd89eb142a86",
+      "relation_type": "derived_from",
+      "from_id": "eq-ebfce3a5ab900a45",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-0b16968d3d68f794",
+      "relation_type": "derived_from",
+      "from_id": "eq-f9ecfb467df1e3be",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-0b1d7a634f30de07",
+      "relation_type": "derived_from",
+      "from_id": "eq-eae48520d7896de6",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-0d005dcc56c5850d",
+      "relation_type": "derived_from",
+      "from_id": "eq-4abb11f8e4b6f802",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-0dafa2bcea9a4c9d",
+      "relation_type": "derived_from",
+      "from_id": "eq-c7326f1ce57f61fd",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-0e3afb0638638ea7",
+      "relation_type": "derived_from",
+      "from_id": "eq-5aa837dc8fe42f92",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-10a2abe7007848d1",
+      "relation_type": "derived_from",
+      "from_id": "eq-45cfe0111f9db14f",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-10bbcf3bf8593c8c",
+      "relation_type": "derived_from",
+      "from_id": "eq-2036fce84fdd1a7f",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-1106c006dcbb9c8e",
+      "relation_type": "derived_from",
+      "from_id": "eq-c09df31f7a7ad015",
+      "to_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "rel-112b13b8e1bfead9",
+      "relation_type": "derived_from",
+      "from_id": "eq-7227776fe0a04632",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-13ceda38b9aa25c6",
+      "relation_type": "derived_from",
+      "from_id": "obs-e18e48f0892dd0ee",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-14e1749501956708",
+      "relation_type": "derived_from",
+      "from_id": "eq-97fd4ba707c7c8ae",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-151a710bfc59818d",
+      "relation_type": "derived_from",
+      "from_id": "eq-c03a35bba2b93989",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-15b75bf34c44ffdc",
+      "relation_type": "derived_from",
+      "from_id": "eq-de6e3ea9a5869fbf",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-17d8b500d82f01c4",
+      "relation_type": "derived_from",
+      "from_id": "eq-62340c9b330247fc",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-184b9315c2e886fc",
+      "relation_type": "derived_from",
+      "from_id": "eq-19fa22333bba5120",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-184d08dc01c1feed",
+      "relation_type": "derived_from",
+      "from_id": "eq-9955aa86e125a6da",
+      "to_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "rel-1941d5487fe8ee65",
+      "relation_type": "derived_from",
+      "from_id": "eq-0220438c3db67a45",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-195821c36138c304",
+      "relation_type": "derived_from",
+      "from_id": "eq-2808a01192cde3b9",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-196af75e43fad25f",
+      "relation_type": "derived_from",
+      "from_id": "eq-91aa3b0d53003ceb",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-197a4e73685737d1",
+      "relation_type": "derived_from",
+      "from_id": "eq-bbb4821e4122c114",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-1adb94be425b4d6d",
+      "relation_type": "derived_from",
+      "from_id": "eq-9f4fb8e93b4dba62",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-1cd6d893fe12335c",
+      "relation_type": "derived_from",
+      "from_id": "eq-1893d2b4120f3148",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-1e7f8575bd26f484",
+      "relation_type": "derived_from",
+      "from_id": "eq-b3109ea0f8513a93",
+      "to_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "rel-1fb9d212e35d9c77",
+      "relation_type": "derived_from",
+      "from_id": "eq-92ad156578d3778b",
+      "to_id": "src-58411f1d83de3659"
+    },
+    {
+      "id": "rel-2010b60118d79248",
+      "relation_type": "derived_from",
+      "from_id": "exp-b56ae3ea79bad7bc",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-204ab68340d75adb",
+      "relation_type": "derived_from",
+      "from_id": "eq-8d968c350aafc7c9",
+      "to_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "rel-209f53157659eff9",
+      "relation_type": "derived_from",
+      "from_id": "eq-439e17ec381f4bde",
+      "to_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "rel-20b1909518b73228",
+      "relation_type": "derived_from",
+      "from_id": "eq-442f91a324ad753b",
+      "to_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "rel-215d6794d5ae73b5",
+      "relation_type": "derived_from",
+      "from_id": "eq-4baf2bcda98083b3",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-2227999b2cb1b52d",
+      "relation_type": "derived_from",
+      "from_id": "eq-f1db4446ad4ca831",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-2315951cd15bffcf",
+      "relation_type": "derived_from",
+      "from_id": "ax-60ac0ee33ac89a3f",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-2356409bb362b8d4",
+      "relation_type": "derived_from",
+      "from_id": "eq-ac0531364337adf9",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-23816073ebd5db67",
+      "relation_type": "derived_from",
+      "from_id": "eq-a99d519324dfd917",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-23a7d80f36884fb8",
+      "relation_type": "derived_from",
+      "from_id": "eq-bc60aeb023b07919",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-2402f59c1f82fea7",
+      "relation_type": "derived_from",
+      "from_id": "eq-f17823224d13a1af",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-24333d79da406474",
+      "relation_type": "derived_from",
+      "from_id": "tool-5af219a0eac183a8",
+      "to_id": "src-5ff5b4619b849d59"
+    },
+    {
+      "id": "rel-258391731206ad73",
+      "relation_type": "derived_from",
+      "from_id": "eq-afe4946ef306fb6b",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-25ebecea8b49e1c9",
+      "relation_type": "derived_from",
+      "from_id": "sec-63b759c02e988696",
+      "to_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "rel-275bc20d75fd954c",
+      "relation_type": "derived_from",
+      "from_id": "eq-dc39d5417e780110",
+      "to_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "rel-299c4f9d43da81c5",
+      "relation_type": "derived_from",
+      "from_id": "eq-05c4cbbb38cfb6c2",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-2ba6ac05501347aa",
+      "relation_type": "derived_from",
+      "from_id": "eq-cdd964bf3d38670d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-2bf1a52ea5144fdb",
+      "relation_type": "derived_from",
+      "from_id": "exp-94131f5b82bce56e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-2d7672eacef6d9d6",
+      "relation_type": "derived_from",
+      "from_id": "eq-a4c685a32e3400ac",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-2de442800e6c00b9",
+      "relation_type": "derived_from",
+      "from_id": "ax-801305940d662bd6",
+      "to_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "rel-2f7e7701ce6fe0dc",
+      "relation_type": "derived_from",
+      "from_id": "sec-eb618094c053a2ff",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-30ba1a705d64b26d",
+      "relation_type": "derived_from",
+      "from_id": "eq-09ab5fe94ff85ba2",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-311334654ddd2997",
+      "relation_type": "derived_from",
+      "from_id": "eq-cb27a5b8fd7717d9",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-321a061205acbd97",
+      "relation_type": "derived_from",
+      "from_id": "eq-13625a5e6cce4a0b",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-3285770eb2a72490",
+      "relation_type": "derived_from",
+      "from_id": "eq-954bc843c459f23f",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-32e9984d0d47cbd1",
+      "relation_type": "derived_from",
+      "from_id": "eq-90ea1673eb15a56b",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-3437fa93a9c91235",
+      "relation_type": "derived_from",
+      "from_id": "ax-7b35fe3df571fe2e",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-3460e2206145c1e2",
+      "relation_type": "derived_from",
+      "from_id": "eq-934fa7e1773308e0",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-347bb049b71f21ce",
+      "relation_type": "derived_from",
+      "from_id": "eq-d8087720ddf4d91a",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-348a7a1da8858032",
+      "relation_type": "derived_from",
+      "from_id": "eq-77ada46c14080240",
+      "to_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "rel-34d8448de82ab0bd",
+      "relation_type": "derived_from",
+      "from_id": "eq-44e2aa77d12410dd",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-350247ee87a4c63e",
+      "relation_type": "derived_from",
+      "from_id": "eq-5a62d915f9ed7080",
+      "to_id": "src-00c433788dfa3e4e"
+    },
+    {
+      "id": "rel-36fa6e61478b368e",
+      "relation_type": "derived_from",
+      "from_id": "eq-21dd4bf4fbc7c17e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-37a9de764179058a",
+      "relation_type": "derived_from",
+      "from_id": "eq-bb3a6e82cc781e45",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-3802c495190e0db6",
+      "relation_type": "derived_from",
+      "from_id": "eq-01d1c0bfd2f1d73f",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-38676f88260c9fdd",
+      "relation_type": "derived_from",
+      "from_id": "eq-6773d830e0782fe8",
+      "to_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "rel-38760adcacf9e153",
+      "relation_type": "derived_from",
+      "from_id": "eq-5d4b99df20f6a6f3",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-38c265edd6b9ead0",
+      "relation_type": "derived_from",
+      "from_id": "eq-3f5574d701025aba",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-3a8670a8903a6e0b",
+      "relation_type": "derived_from",
+      "from_id": "tool-5471afaf8719ec37",
+      "to_id": "src-36c7c1cb6eddef4f"
+    },
+    {
+      "id": "rel-3a8fafb5cbe4c7bd",
+      "relation_type": "derived_from",
+      "from_id": "tool-cef089532c61ff65",
+      "to_id": "src-e16254fd498aa652"
+    },
+    {
+      "id": "rel-3aced13e53ed58f3",
+      "relation_type": "derived_from",
+      "from_id": "eq-08e19801f0abdeb4",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-3b30776c8e5dfe63",
+      "relation_type": "derived_from",
+      "from_id": "eq-7646088e56311fd7",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-3c261f015c503004",
+      "relation_type": "derived_from",
+      "from_id": "ax-5bb07d50a40ee9fa",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-3c3c1bf339aebd96",
+      "relation_type": "derived_from",
+      "from_id": "eq-011a5d37afccfe3d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-3cc8f8bbee664e42",
+      "relation_type": "derived_from",
+      "from_id": "eq-46a08ae94ec16357",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-3d0f7d53f53a178b",
+      "relation_type": "derived_from",
+      "from_id": "eq-9235c3980dc92708",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-3f66cce11c06d4a7",
+      "relation_type": "derived_from",
+      "from_id": "eq-613919d7383f8098",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-403b16151a494292",
+      "relation_type": "derived_from",
+      "from_id": "obs-8ab69dd214ff1f95",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-403ca50d8d1c54aa",
+      "relation_type": "derived_from",
+      "from_id": "eq-7120446fd162fdaf",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-40610f8e9a8c5504",
+      "relation_type": "derived_from",
+      "from_id": "eq-f4b99f67187a1e69",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-40d9b92f768a76f6",
+      "relation_type": "derived_from",
+      "from_id": "eq-88bf48348302dfd7",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-42004c534fde2b1e",
+      "relation_type": "derived_from",
+      "from_id": "eq-7991e92c3be23c4b",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-4225748d5e1a30e4",
+      "relation_type": "derived_from",
+      "from_id": "ax-4e8a76e5372eac87",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-4415a4f05565e167",
+      "relation_type": "derived_from",
+      "from_id": "eq-bfdf19ada555028e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-441fcf5057c91c93",
+      "relation_type": "derived_from",
+      "from_id": "eq-68bd0ad207a1a9e5",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-443af2f0fbcff34d",
+      "relation_type": "derived_from",
+      "from_id": "eq-75292281ba2730dc",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-4584f1728ba02163",
+      "relation_type": "derived_from",
+      "from_id": "eq-f90ca9c442ea4283",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4613d87b8791933a",
+      "relation_type": "derived_from",
+      "from_id": "eq-a62e9adfc288fc2d",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4662c123f2ecc502",
+      "relation_type": "derived_from",
+      "from_id": "eq-a5caa22e65720176",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-472432bc6640b695",
+      "relation_type": "derived_from",
+      "from_id": "eq-a596da76e4fab768",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-475915425f7fc344",
+      "relation_type": "derived_from",
+      "from_id": "sec-fdd4b00f1b3cbd46",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-47b7c86e77b41747",
+      "relation_type": "derived_from",
+      "from_id": "eq-6ff3eee03e36bd9c",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-48846fc244e74ff0",
+      "relation_type": "derived_from",
+      "from_id": "sec-91c9ec86d60d4e47",
+      "to_id": "src-4fd7ce3e7240448d"
+    },
+    {
+      "id": "rel-49200ee9f1dc8618",
+      "relation_type": "derived_from",
+      "from_id": "eq-574d16f01d9a83bb",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4970a511dbf812d7",
+      "relation_type": "derived_from",
+      "from_id": "eq-2a582913e3d32d6c",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-4aa03803ea70d387",
+      "relation_type": "derived_from",
+      "from_id": "eq-dc750a525c60b49c",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4aca6988be585f6d",
+      "relation_type": "derived_from",
+      "from_id": "eq-63f73964cf8b2ebc",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-4acefe8142ae8232",
+      "relation_type": "derived_from",
+      "from_id": "eq-ba95c97dcbe19059",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4baf990906532247",
+      "relation_type": "derived_from",
+      "from_id": "eq-1bf055ab19a537c9",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4f119e1f3747e3f6",
+      "relation_type": "derived_from",
+      "from_id": "eq-27bc526c3c73b17c",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-4fa9b39c405f3dd8",
+      "relation_type": "derived_from",
+      "from_id": "eq-04f2d464ee00db28",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5118794bd932588a",
+      "relation_type": "derived_from",
+      "from_id": "eq-25cfe3f7958b7559",
+      "to_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "rel-516270cc92a7a85d",
+      "relation_type": "derived_from",
+      "from_id": "eq-fd0e05feb2a978af",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-51c162443c7ca3e8",
+      "relation_type": "derived_from",
+      "from_id": "eq-e149711e6fae1bf4",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5230de4ee278d181",
+      "relation_type": "derived_from",
+      "from_id": "eq-711bfdee11ad9ec3",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-54b4aa4b7afd25f5",
+      "relation_type": "derived_from",
+      "from_id": "ax-6fa7d775bc0420d6",
+      "to_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "rel-55c8d1c7d9eed360",
+      "relation_type": "derived_from",
+      "from_id": "sec-0d6da7b47ca35b2c",
+      "to_id": "src-414d596de5348464"
+    },
+    {
+      "id": "rel-55d0cb8b80077315",
+      "relation_type": "derived_from",
+      "from_id": "eq-f98cf0af644a4e15",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-58523391a8581d88",
+      "relation_type": "derived_from",
+      "from_id": "eq-a439a0cd715f909e",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-596537e206f77201",
+      "relation_type": "derived_from",
+      "from_id": "eq-13966f851af54f49",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5ad9d6bec3d4372a",
+      "relation_type": "derived_from",
+      "from_id": "eq-238c09d4d8157efe",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5d2316a7c8fcecfe",
+      "relation_type": "derived_from",
+      "from_id": "eq-f053c3b67b709b1e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5eb5bf650bb85865",
+      "relation_type": "derived_from",
+      "from_id": "eq-66a7ad96f435d9b6",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-5f4c3dfcf971c434",
+      "relation_type": "derived_from",
+      "from_id": "tool-e999a48ccf8726e9",
+      "to_id": "src-4386655990c3d54a"
+    },
+    {
+      "id": "rel-608cef11056a8860",
+      "relation_type": "derived_from",
+      "from_id": "eq-a1ae89b5b1e9c986",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-60d8379f34012c6d",
+      "relation_type": "derived_from",
+      "from_id": "obs-af8fbc766f3b054d",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-610410f94e7c04dd",
+      "relation_type": "derived_from",
+      "from_id": "eq-042741887f08e5b1",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-61575a1a65392a8d",
+      "relation_type": "derived_from",
+      "from_id": "eq-2cbe78c9c6616963",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-6275c10d967d2cb2",
+      "relation_type": "derived_from",
+      "from_id": "sec-0af25b4682622fc8",
+      "to_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "rel-627766ec3d42c906",
+      "relation_type": "derived_from",
+      "from_id": "eq-3290bf6a604854c9",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-633b96a2f808af7e",
+      "relation_type": "derived_from",
+      "from_id": "sec-63cf3b8d94bc847b",
+      "to_id": "src-fc0c1c95a1800a0f"
+    },
+    {
+      "id": "rel-644036675d1e7b8a",
+      "relation_type": "derived_from",
+      "from_id": "tool-093c0ce060a57490",
+      "to_id": "src-fee7976d3fe62f8a"
+    },
+    {
+      "id": "rel-644275ea1e3cb51f",
+      "relation_type": "derived_from",
+      "from_id": "eq-17ca8f83ce0971bb",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-64c184504be9c2b5",
+      "relation_type": "derived_from",
+      "from_id": "eq-8270152773638268",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-64c265335db6816c",
+      "relation_type": "derived_from",
+      "from_id": "eq-f6797f052cfcb3f1",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-670d6f267cecfdb3",
+      "relation_type": "derived_from",
+      "from_id": "tool-3bb3d95b49f6a4fd",
+      "to_id": "src-006e9afc3ab0b9aa"
+    },
+    {
+      "id": "rel-67c877a57b72e17a",
+      "relation_type": "derived_from",
+      "from_id": "eq-705b1c85f5e39d60",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-691095ab412d4f33",
+      "relation_type": "derived_from",
+      "from_id": "eq-91bc13dfef0a696e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-6addc3a841317ffa",
+      "relation_type": "derived_from",
+      "from_id": "eq-cb4feba9f5500dd1",
+      "to_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "rel-6b2b4c25c8e21965",
+      "relation_type": "derived_from",
+      "from_id": "sec-4f8014d6ad9f1207",
+      "to_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "rel-6b463e62bdacc7ec",
+      "relation_type": "derived_from",
+      "from_id": "eq-7e75691a5e30311d",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-6c39409c260342bc",
+      "relation_type": "derived_from",
+      "from_id": "eq-ac4a57753506f43c",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-6cfafdc525aa97ea",
+      "relation_type": "derived_from",
+      "from_id": "eq-ffa858c83330c48c",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-6f365f92a5b07e3b",
+      "relation_type": "derived_from",
+      "from_id": "eq-1519b291958fe322",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-6f7a9fe5f78eaa5b",
+      "relation_type": "derived_from",
+      "from_id": "tool-df6946d1b6cd4f0f",
+      "to_id": "src-c43f08e4902346ff"
+    },
+    {
+      "id": "rel-705d0180e56ac216",
+      "relation_type": "derived_from",
+      "from_id": "eq-f2fd8b21acfc2093",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-7078212ccbb15303",
+      "relation_type": "derived_from",
+      "from_id": "tool-702977411032831b",
+      "to_id": "src-406e01226310a8e7"
+    },
+    {
+      "id": "rel-70ca51d4a32585c0",
+      "relation_type": "derived_from",
+      "from_id": "ax-0666e83b7848afa0",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-726f6d22cf7b4343",
+      "relation_type": "derived_from",
+      "from_id": "eq-0d34312ca1e66afc",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-739118b0a02ff413",
+      "relation_type": "derived_from",
+      "from_id": "eq-c1d539665ef03baf",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-73c71f973d389fc2",
+      "relation_type": "derived_from",
+      "from_id": "eq-93377ac569eb760d",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-74e5806cdd0b7fbc",
+      "relation_type": "derived_from",
+      "from_id": "eq-11b703b8c2279b41",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-758f818ae585d864",
+      "relation_type": "derived_from",
+      "from_id": "eq-e54c99d29fc0bee2",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-767a3bfb6e9834b0",
+      "relation_type": "derived_from",
+      "from_id": "sec-6e6ce181949048d7",
+      "to_id": "src-58411f1d83de3659"
+    },
+    {
+      "id": "rel-7686f3b952011d2c",
+      "relation_type": "derived_from",
+      "from_id": "eq-28c1cb7b4fc89695",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-76f593c2e0d1f965",
+      "relation_type": "derived_from",
+      "from_id": "eq-de9e7f104f82cb4f",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-772b3d943b18edf8",
+      "relation_type": "derived_from",
+      "from_id": "eq-7852f3444997e466",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-777e73fb791583f3",
+      "relation_type": "derived_from",
+      "from_id": "sec-4fef9af932063a0a",
+      "to_id": "src-00c433788dfa3e4e"
+    },
+    {
+      "id": "rel-780c817a275e77fa",
+      "relation_type": "derived_from",
+      "from_id": "eq-5bd06ed12e6f0441",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-7b9e47c5537fb5ab",
+      "relation_type": "derived_from",
+      "from_id": "eq-46654558770970b7",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-7bcd763a1a66c8ec",
+      "relation_type": "derived_from",
+      "from_id": "sec-f2a70a778eba2411",
+      "to_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "rel-7ccb91c8bd1492e6",
+      "relation_type": "derived_from",
+      "from_id": "eq-effd113494dd939e",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-7f057e062e31d603",
+      "relation_type": "derived_from",
+      "from_id": "eq-a2c3d49f1cf400d6",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-7fada224738e9110",
+      "relation_type": "derived_from",
+      "from_id": "eq-0e8d09bd802bba2d",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-80265116cbea5d16",
+      "relation_type": "derived_from",
+      "from_id": "sec-53586ea766d73d92",
+      "to_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "rel-802d8c6979db1bd9",
+      "relation_type": "derived_from",
+      "from_id": "eq-0aec8d4d663f6ea2",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-803f4364319293da",
+      "relation_type": "derived_from",
+      "from_id": "eq-b35072f1e83abf6a",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-8109dcc3689f21db",
+      "relation_type": "derived_from",
+      "from_id": "sec-0f359281130465cc",
+      "to_id": "src-ebd083759be84250"
+    },
+    {
+      "id": "rel-8161ce81515eeb9f",
+      "relation_type": "derived_from",
+      "from_id": "eq-da124c128363f5b9",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-846af042ca8c65e7",
+      "relation_type": "derived_from",
+      "from_id": "eq-658de244bd7d1608",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-868567941bd25d27",
+      "relation_type": "derived_from",
+      "from_id": "eq-c14b105511258af7",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-89231610da624a82",
+      "relation_type": "derived_from",
+      "from_id": "eq-0dfda873522809e7",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-8957f346e4971454",
+      "relation_type": "derived_from",
+      "from_id": "eq-3eb927c8ddfc9cc1",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-89cbfb6825d4ad4d",
+      "relation_type": "derived_from",
+      "from_id": "eq-15bf47a415b5d4a2",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-8b0851f3b24d4c2e",
+      "relation_type": "derived_from",
+      "from_id": "eq-14f0b74e8a2001fa",
+      "to_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "rel-8b170fee57e3654f",
+      "relation_type": "derived_from",
+      "from_id": "eq-57f49f030733fd39",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-8d4db7540ceefbd3",
+      "relation_type": "derived_from",
+      "from_id": "eq-c3d9d03ac774a273",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-8e7789e369e4311e",
+      "relation_type": "derived_from",
+      "from_id": "eq-b2ab016d92eadc2e",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-8e96fdcd76b1892c",
+      "relation_type": "derived_from",
+      "from_id": "eq-96cd510433dedddb",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-9002bed04ed37cc9",
+      "relation_type": "derived_from",
+      "from_id": "eq-8ce0e46712d5bef4",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-90ca06d6ca5fa438",
+      "relation_type": "derived_from",
+      "from_id": "eq-d6d8bac974244a51",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-91d7dca2c993e6d6",
+      "relation_type": "derived_from",
+      "from_id": "eq-e0cba36e3dd15275",
+      "to_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "rel-92dd9f4caeaaf767",
+      "relation_type": "derived_from",
+      "from_id": "eq-093a1c228548df13",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-937358ddd9cf247b",
+      "relation_type": "derived_from",
+      "from_id": "ax-dcdc369efa8e8880",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-945921328d64a400",
+      "relation_type": "derived_from",
+      "from_id": "eq-792d422ff31653d7",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-96888944f8ba7428",
+      "relation_type": "derived_from",
+      "from_id": "eq-043ca31ce6595292",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-981e9dce5cb60700",
+      "relation_type": "derived_from",
+      "from_id": "sec-9b711398e44cd5a3",
+      "to_id": "src-2110f1ea7ee047f5"
+    },
+    {
+      "id": "rel-987e741b7d5f15da",
+      "relation_type": "derived_from",
+      "from_id": "eq-753fc329d6ca2d7a",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-99758329fe5b7010",
+      "relation_type": "derived_from",
+      "from_id": "eq-a2e9324cb797d7ac",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-99958f3ff295b7c8",
+      "relation_type": "derived_from",
+      "from_id": "eq-c83a5ac91eb35564",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-99fb1d948deee4c4",
+      "relation_type": "derived_from",
+      "from_id": "eq-9933d48e6916fd9b",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-9a50387b7bc086c6",
+      "relation_type": "derived_from",
+      "from_id": "eq-4ec1128e1557b3fa",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-9b5d31817126413a",
+      "relation_type": "derived_from",
+      "from_id": "eq-bf38e6e40cb33cad",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-9b734b4b9a0e88af",
+      "relation_type": "derived_from",
+      "from_id": "tool-fec10c662fb09e1a",
+      "to_id": "src-f116447fc53c391b"
+    },
+    {
+      "id": "rel-9baf08d65d1b1a40",
+      "relation_type": "derived_from",
+      "from_id": "eq-4a370949a8cb0c4f",
+      "to_id": "src-4fd7ce3e7240448d"
+    },
+    {
+      "id": "rel-9be686176bd07691",
+      "relation_type": "derived_from",
+      "from_id": "eq-d27fd80e3323ab02",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-9d156a9a0412c096",
+      "relation_type": "derived_from",
+      "from_id": "eq-910a55bfd81f77e0",
+      "to_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "rel-9e8e99d9a398f7df",
+      "relation_type": "derived_from",
+      "from_id": "eq-b022a34c28363c32",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-9f8269ba74e174ec",
+      "relation_type": "derived_from",
+      "from_id": "sec-8d9fb91dc36897b7",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-9fce506e897899fe",
+      "relation_type": "derived_from",
+      "from_id": "eq-d6deda723db45842",
+      "to_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "rel-a02d17cbbb0587f0",
+      "relation_type": "derived_from",
+      "from_id": "eq-5fa0eafc7fb3e477",
+      "to_id": "src-58f23682e59d2811"
+    },
+    {
+      "id": "rel-a097f2b446b52a76",
+      "relation_type": "derived_from",
+      "from_id": "eq-07a481af6e805c15",
+      "to_id": "src-edd5f402ac95bd95"
+    },
+    {
+      "id": "rel-a099525f8fc5ba8c",
+      "relation_type": "derived_from",
+      "from_id": "ax-ccc4da69248e5254",
+      "to_id": "src-b746c3c4c08c0da5"
+    },
+    {
+      "id": "rel-a0d7d80c3861ac96",
+      "relation_type": "derived_from",
+      "from_id": "tool-5efcbf032c637f9a",
+      "to_id": "src-b1e267e732d62559"
+    },
+    {
+      "id": "rel-a11a82d4da62e29c",
+      "relation_type": "derived_from",
+      "from_id": "eq-377f122a92f5bfd9",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a1997f11462575a6",
+      "relation_type": "derived_from",
+      "from_id": "eq-704b97453dbcef03",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a27f8942e6e7f14f",
+      "relation_type": "derived_from",
+      "from_id": "eq-ecded27dfe4844b1",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-a3b06b419d7a098a",
+      "relation_type": "derived_from",
+      "from_id": "eq-c502eb3c7cee46f8",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a414b41289304fd0",
+      "relation_type": "derived_from",
+      "from_id": "eq-a9771c9e772cd407",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a60653422752daaf",
+      "relation_type": "derived_from",
+      "from_id": "eq-341ccabfabf2f5af",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a64155f759259454",
+      "relation_type": "derived_from",
+      "from_id": "eq-30b008286fc71736",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-a68eef139a4b857a",
+      "relation_type": "derived_from",
+      "from_id": "eq-86742915c9c488a0",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-a6d4283e8d5127a2",
+      "relation_type": "derived_from",
+      "from_id": "eq-75d3ef6e0269f86a",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-a7072913b21bdaa0",
+      "relation_type": "derived_from",
+      "from_id": "tool-f5b6767750cdd428",
+      "to_id": "src-6ed50c8e3e8a1b1e"
+    },
+    {
+      "id": "rel-a77811c891ed5048",
+      "relation_type": "derived_from",
+      "from_id": "exp-bc979d66af79ff50",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-a7f3542c0e8301c1",
+      "relation_type": "derived_from",
+      "from_id": "sec-3418e2886153e734",
+      "to_id": "src-a08f8d77bf67f9a6"
+    },
+    {
+      "id": "rel-a92e4f9814092df5",
+      "relation_type": "derived_from",
+      "from_id": "eq-0ccd0a85307b8beb",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-aac71577b52ddc6b",
+      "relation_type": "derived_from",
+      "from_id": "eq-46926016fc8157e1",
+      "to_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "rel-aad655a9fcab648f",
+      "relation_type": "derived_from",
+      "from_id": "sec-f33accfabd46f5ad",
+      "to_id": "src-3faceb221161de35"
+    },
+    {
+      "id": "rel-ab7c46034995ea1b",
+      "relation_type": "derived_from",
+      "from_id": "eq-e93e7e67a90bef95",
+      "to_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "rel-abb5ae5f32d853f6",
+      "relation_type": "derived_from",
+      "from_id": "eq-a11afa36be875cdd",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-abbe4a22f6601195",
+      "relation_type": "derived_from",
+      "from_id": "eq-3b28fa8b89fac3d1",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-abef1d3ce7d5e5e5",
+      "relation_type": "derived_from",
+      "from_id": "ax-5d740da33fd5cbc3",
+      "to_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "rel-ad23eaffdcb81537",
+      "relation_type": "derived_from",
+      "from_id": "eq-33cc05872b09af62",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ad9a1cd2cbaa0d43",
+      "relation_type": "derived_from",
+      "from_id": "eq-30fc65108d4a1234",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ae8602a54e6a1562",
+      "relation_type": "derived_from",
+      "from_id": "eq-e97b8e451c01bfe5",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-aeabfb4cd614ee9d",
+      "relation_type": "derived_from",
+      "from_id": "eq-85bc91e5edad6e43",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-af54d97596cb1284",
+      "relation_type": "derived_from",
+      "from_id": "eq-51322a5027d877ab",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-afc13906875819cc",
+      "relation_type": "derived_from",
+      "from_id": "eq-275d4f08f7d74a92",
+      "to_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "rel-b2a45460eee3f716",
+      "relation_type": "derived_from",
+      "from_id": "eq-c1e7465cd257a57b",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-b5627ae1cc1e1f9d",
+      "relation_type": "derived_from",
+      "from_id": "sec-3b875c78036b090e",
+      "to_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "rel-b58400bba2563dad",
+      "relation_type": "derived_from",
+      "from_id": "eq-7ffe2ee744d714b3",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-b5cb3a5869c9ab19",
+      "relation_type": "derived_from",
+      "from_id": "eq-821253fcd3d42e75",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-b7b2f2f8028f4808",
+      "relation_type": "derived_from",
+      "from_id": "eq-0c3ae4d415edfbcb",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-b81695d37b1022fe",
+      "relation_type": "derived_from",
+      "from_id": "tool-3c17b57fa2d8452d",
+      "to_id": "src-e86b7f0a3bfb0db6"
+    },
+    {
+      "id": "rel-b8250f2846c62a33",
+      "relation_type": "derived_from",
+      "from_id": "eq-80a33a78b97fba47",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-b83f64020c0244b3",
+      "relation_type": "derived_from",
+      "from_id": "eq-d0bed3273411c63f",
+      "to_id": "src-ef831d1098f6d843"
+    },
+    {
+      "id": "rel-b9978b30aa5d19f5",
+      "relation_type": "derived_from",
+      "from_id": "eq-6243675e9398eab4",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-b9a2b1459aa9052c",
+      "relation_type": "derived_from",
+      "from_id": "sec-80f4dc7f27e9193f",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-ba5c60096fc38c90",
+      "relation_type": "derived_from",
+      "from_id": "eq-c2e55b4dadb6ec19",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-bafa232207604b50",
+      "relation_type": "derived_from",
+      "from_id": "sec-8739e9e1c7618e93",
+      "to_id": "src-6fea055483f4cd60"
+    },
+    {
+      "id": "rel-bb4ef70b9c743537",
+      "relation_type": "derived_from",
+      "from_id": "eq-de0af689ede6dbb2",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-bb6c16a5ae79a475",
+      "relation_type": "derived_from",
+      "from_id": "ax-8c8f25f9e5026f04",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-bc358399ea61a53b",
+      "relation_type": "derived_from",
+      "from_id": "eq-e267f51d52060261",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-bcc67e84c0a259f4",
+      "relation_type": "derived_from",
+      "from_id": "eq-2b751044909b2609",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-bcca5866b21bcfdb",
+      "relation_type": "derived_from",
+      "from_id": "eq-05ef5466a834cac3",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-bd3b8f8897499498",
+      "relation_type": "derived_from",
+      "from_id": "eq-c153e90b4c181724",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-bd64b66c70621305",
+      "relation_type": "derived_from",
+      "from_id": "eq-2d0393a6468f02e7",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-be03f546f5d6945a",
+      "relation_type": "derived_from",
+      "from_id": "eq-7d83f9d4e7aed63e",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-be8a68c3e3ed1d62",
+      "relation_type": "derived_from",
+      "from_id": "eq-43b46e3a5291f1b8",
+      "to_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "rel-c18c9f6b6c142f08",
+      "relation_type": "derived_from",
+      "from_id": "eq-d335accc121eec42",
+      "to_id": "src-4814fee535b6f305"
+    },
+    {
+      "id": "rel-c1b1aebc6ab096e5",
+      "relation_type": "derived_from",
+      "from_id": "eq-d63d956ff35b8cb8",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-c36b22cf30f47242",
+      "relation_type": "derived_from",
+      "from_id": "eq-79bbd503a59bfc99",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-c3cd6e21c771e801",
+      "relation_type": "derived_from",
+      "from_id": "eq-43fab2ecf83eafc1",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-c430e5e0fae3bb98",
+      "relation_type": "derived_from",
+      "from_id": "eq-7e65ce3dce87446d",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-c43a53cdcf302402",
+      "relation_type": "derived_from",
+      "from_id": "eq-930b86ff7a6585c0",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-c7f7e7415dfbd959",
+      "relation_type": "derived_from",
+      "from_id": "eq-d896938bd87ff7f6",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-c853c19c92e28924",
+      "relation_type": "derived_from",
+      "from_id": "eq-87609038fef6399d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-c8c05ba0bb458e35",
+      "relation_type": "derived_from",
+      "from_id": "eq-f837ab2c4c3755cc",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-c9415291479097b2",
+      "relation_type": "derived_from",
+      "from_id": "sec-7554df7e96d901fd",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-c9608df06e460240",
+      "relation_type": "derived_from",
+      "from_id": "eq-402533d10ce56a50",
+      "to_id": "src-414d596de5348464"
+    },
+    {
+      "id": "rel-c96ef0f3f0569e97",
+      "relation_type": "derived_from",
+      "from_id": "eq-bf2975c4dad5f1fa",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-c991142ae4eef21e",
+      "relation_type": "derived_from",
+      "from_id": "eq-90e06b1598c39b6d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-cb972244cdca79a0",
+      "relation_type": "derived_from",
+      "from_id": "eq-7f0304951b3f7cc0",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-cbe42ccd4e40ed8e",
+      "relation_type": "derived_from",
+      "from_id": "sec-cba593c4b5cb3e76",
+      "to_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "rel-cd3328c0ddfe515b",
+      "relation_type": "derived_from",
+      "from_id": "eq-1fe668eff82c9ad3",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-cd499cb6413e9f9d",
+      "relation_type": "derived_from",
+      "from_id": "obs-d90d26132cb19c20",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-cdf7094b1d8d73b9",
+      "relation_type": "derived_from",
+      "from_id": "eq-e2158089e7242862",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ce0b3002500fe3e9",
+      "relation_type": "derived_from",
+      "from_id": "ax-751e2ce9e8fdb91e",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-cf51606f3d04bc8e",
+      "relation_type": "derived_from",
+      "from_id": "eq-e1366b33293da229",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-cf51a6e9fc17d8cc",
+      "relation_type": "derived_from",
+      "from_id": "eq-40df4060c0776f0d",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-cff8673804d08cba",
+      "relation_type": "derived_from",
+      "from_id": "sec-bbaba59c4447939d",
+      "to_id": "src-e2b4b3526193f979"
+    },
+    {
+      "id": "rel-d08045b87ca40e2f",
+      "relation_type": "derived_from",
+      "from_id": "exp-01156d8ed099d705",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-d1e20a275baa3155",
+      "relation_type": "derived_from",
+      "from_id": "eq-4e7e54b85f1d248e",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-d30ec34a4048c057",
+      "relation_type": "derived_from",
+      "from_id": "sec-ba9c9b2910169273",
+      "to_id": "src-5120312e5c2b304d"
+    },
+    {
+      "id": "rel-d493e0a14e88eee1",
+      "relation_type": "derived_from",
+      "from_id": "eq-a26e994b910594f8",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-d721d28a346e833c",
+      "relation_type": "derived_from",
+      "from_id": "sec-35709e561c100f57",
+      "to_id": "src-0c230971d9a55abb"
+    },
+    {
+      "id": "rel-d790c683c96f814d",
+      "relation_type": "derived_from",
+      "from_id": "eq-2941a7e4979779fe",
+      "to_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "rel-d7f526a89caeb396",
+      "relation_type": "derived_from",
+      "from_id": "eq-00b871a7a66fdfeb",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-d85b549c3222b966",
+      "relation_type": "derived_from",
+      "from_id": "eq-522379ec2c9acacc",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-d8b33a5969237a70",
+      "relation_type": "derived_from",
+      "from_id": "eq-8704da1925b4a12c",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-d8b65a2c19b64ed6",
+      "relation_type": "derived_from",
+      "from_id": "eq-23d9b275e11b6c7a",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-d8bb2943e1b25b4d",
+      "relation_type": "derived_from",
+      "from_id": "eq-c8012bbee80eea92",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-d9cdbd05a6c74b0b",
+      "relation_type": "derived_from",
+      "from_id": "eq-c9f46d2ea9259091",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-da22ce35b7162ad8",
+      "relation_type": "derived_from",
+      "from_id": "eq-94759d5f86073981",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-dc877d7cc8095197",
+      "relation_type": "derived_from",
+      "from_id": "tool-b214ff49561794f2",
+      "to_id": "src-4a3ceaed95811ad5"
+    },
+    {
+      "id": "rel-dc97a6e93141c0ed",
+      "relation_type": "derived_from",
+      "from_id": "eq-d23228025bfacb87",
+      "to_id": "src-ef546c515f2ab653"
+    },
+    {
+      "id": "rel-dd765b6b985bf2bc",
+      "relation_type": "derived_from",
+      "from_id": "tool-a0c5b1369cee0cfb",
+      "to_id": "src-9f2480e267905ec1"
+    },
+    {
+      "id": "rel-dd86413cce57ca1b",
+      "relation_type": "derived_from",
+      "from_id": "tool-48fadaca212b7d88",
+      "to_id": "src-b43de9fa347cc8c6"
+    },
+    {
+      "id": "rel-dd981ff753192fae",
+      "relation_type": "derived_from",
+      "from_id": "tool-1a72f5ff0acff252",
+      "to_id": "src-d888cfcb330a0936"
+    },
+    {
+      "id": "rel-de0d7a9086ca887c",
+      "relation_type": "derived_from",
+      "from_id": "eq-9b045f337ab83d60",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-de6a540fce6b0dde",
+      "relation_type": "derived_from",
+      "from_id": "eq-76dbc607ec814e2a",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-de80e067af865af8",
+      "relation_type": "derived_from",
+      "from_id": "eq-25ff91fd2caee8b1",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-df035683883e4f93",
+      "relation_type": "derived_from",
+      "from_id": "eq-61a3e23976b4635b",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-e0947e0a049e4c35",
+      "relation_type": "derived_from",
+      "from_id": "eq-5a81b1d24e21a715",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-e1c0daa9abba15ca",
+      "relation_type": "derived_from",
+      "from_id": "sec-b68406aa7159e29c",
+      "to_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "rel-e2a88e2acc03414c",
+      "relation_type": "derived_from",
+      "from_id": "eq-5bb549d56b65a36a",
+      "to_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "rel-e3fd17cb4927a451",
+      "relation_type": "derived_from",
+      "from_id": "eq-a2d053fbbf00e518",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-e42a8cf1c12fbbaf",
+      "relation_type": "derived_from",
+      "from_id": "eq-1efc745cf1d9aa60",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-e4511bfdcb94c72f",
+      "relation_type": "derived_from",
+      "from_id": "eq-2a1ed331197c51e3",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-e4e8ba4c37d7649a",
+      "relation_type": "derived_from",
+      "from_id": "eq-3e7b2279b85cc77f",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-e50ce1f13b49ef93",
+      "relation_type": "derived_from",
+      "from_id": "tool-b4f5e94fc8a77191",
+      "to_id": "src-a6e1f1d32c02839b"
+    },
+    {
+      "id": "rel-e5b4ae84d832857d",
+      "relation_type": "derived_from",
+      "from_id": "eq-5344ef8fcb2dc75a",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-e5ed452511e3d2e6",
+      "relation_type": "derived_from",
+      "from_id": "ax-8d8ba654d95942b9",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-e724d2e31daf734e",
+      "relation_type": "derived_from",
+      "from_id": "eq-5e6e7c96589362ab",
+      "to_id": "src-a6db6b98c0476af3"
+    },
+    {
+      "id": "rel-e72846eb23ce3632",
+      "relation_type": "derived_from",
+      "from_id": "tool-e41ec7d0882a9f4b",
+      "to_id": "src-27a72375ff2afc24"
+    },
+    {
+      "id": "rel-e7a67a70bfd29c21",
+      "relation_type": "derived_from",
+      "from_id": "eq-848ee502f32cd189",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-e84d633b93ed2994",
+      "relation_type": "derived_from",
+      "from_id": "sec-1e2137c2c4284fd5",
+      "to_id": "src-b746c3c4c08c0da5"
+    },
+    {
+      "id": "rel-e8605e2d670c4bdc",
+      "relation_type": "derived_from",
+      "from_id": "eq-bdc467ad5e83d8f7",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-e900e1e84301ac11",
+      "relation_type": "derived_from",
+      "from_id": "eq-c8c11dbb1ae22d13",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ea5a60468955671f",
+      "relation_type": "derived_from",
+      "from_id": "eq-ea88c408631ecf18",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ea5b7c9be5eb6401",
+      "relation_type": "derived_from",
+      "from_id": "eq-f2097f0509ea02b2",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ea5f01e175e662aa",
+      "relation_type": "derived_from",
+      "from_id": "eq-c68659ac7015c380",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ea79f2e94ac6e467",
+      "relation_type": "derived_from",
+      "from_id": "eq-de0040e138c8dab2",
+      "to_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "rel-eacfea91999bde1e",
+      "relation_type": "derived_from",
+      "from_id": "eq-f7e350f7a8f82048",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-eb984fce7aab830f",
+      "relation_type": "derived_from",
+      "from_id": "sec-f2be7989cff2b272",
+      "to_id": "src-87b66078b041cc6b"
+    },
+    {
+      "id": "rel-ebc7c07a9ff68f89",
+      "relation_type": "derived_from",
+      "from_id": "eq-b1332d50f7b9b5f9",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ed2a278ff4132789",
+      "relation_type": "derived_from",
+      "from_id": "exp-c6b5dc8a5c6701a5",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ed97ace622d85e07",
+      "relation_type": "derived_from",
+      "from_id": "eq-e65c699694f7f816",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ed97c1a266d5109a",
+      "relation_type": "derived_from",
+      "from_id": "eq-f592c01bff97bf27",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-ee26f1a952df87dd",
+      "relation_type": "derived_from",
+      "from_id": "eq-0b3b3c17c557e43d",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-eebf2e164f69bfba",
+      "relation_type": "derived_from",
+      "from_id": "sec-f1c347a64f28fc8a",
+      "to_id": "src-203e79f6378634a9"
+    },
+    {
+      "id": "rel-ef0c78beba0d6496",
+      "relation_type": "derived_from",
+      "from_id": "eq-9c41e6eb2313a987",
+      "to_id": "src-a0c8b72a27e5738a"
+    },
+    {
+      "id": "rel-ef2da1cd5155a7ba",
+      "relation_type": "derived_from",
+      "from_id": "eq-c77add0028f4be65",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-ef3b0e58b1cb8e30",
+      "relation_type": "derived_from",
+      "from_id": "eq-e8abd133dc5b7cf3",
+      "to_id": "src-6df1d476ffd0efdd"
+    },
+    {
+      "id": "rel-f037f525962ffb4c",
+      "relation_type": "derived_from",
+      "from_id": "eq-235506b79147c39b",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-f1005ed10a7f3007",
+      "relation_type": "derived_from",
+      "from_id": "eq-c15b91e8b3c84935",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-f19ec9a025dc7c46",
+      "relation_type": "derived_from",
+      "from_id": "exp-682fac4f26b8676b",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-f1dcdb79a055ce20",
+      "relation_type": "derived_from",
+      "from_id": "eq-db85a4cb6076c2b6",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-f2a570f339b899c6",
+      "relation_type": "derived_from",
+      "from_id": "eq-3689594b377c0d55",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-f50de0ea5296d125",
+      "relation_type": "derived_from",
+      "from_id": "eq-98d7e94a8ee5304e",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-f66c8100ef992c12",
+      "relation_type": "derived_from",
+      "from_id": "eq-531593e4b2068649",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-f6b86307613b727f",
+      "relation_type": "derived_from",
+      "from_id": "eq-54b1a2fdb8efab55",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-f6ec571b5e3f4e49",
+      "relation_type": "derived_from",
+      "from_id": "eq-97b8a938ba72096b",
+      "to_id": "src-ef5e12fce18957b9"
+    },
+    {
+      "id": "rel-f742f68bd9f68724",
+      "relation_type": "derived_from",
+      "from_id": "eq-277fb3aad3a3db89",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-f828ec5fb5207dfd",
+      "relation_type": "derived_from",
+      "from_id": "exp-1cfff084aa2dbbee",
+      "to_id": "src-897d3ff7342b31a8"
+    },
+    {
+      "id": "rel-f90b0c98d32578e3",
+      "relation_type": "derived_from",
+      "from_id": "eq-c6467d7ba5776c60",
+      "to_id": "src-c1cbf5bda561318d"
+    },
+    {
+      "id": "rel-f94f4ce6b94b976f",
+      "relation_type": "derived_from",
+      "from_id": "eq-851f7bd4f6f9cdd3",
+      "to_id": "src-b287a419e4af3021"
+    },
+    {
+      "id": "rel-fad4626e2864c8c5",
+      "relation_type": "derived_from",
+      "from_id": "eq-42e0a27f955a55cd",
+      "to_id": "src-4e8a803db61ef672"
+    },
+    {
+      "id": "rel-fbd792ae1187c03e",
+      "relation_type": "derived_from",
+      "from_id": "sec-5fbe7a5a89b21e0a",
+      "to_id": "src-919c4b528320150c"
+    },
+    {
+      "id": "rel-fd30d8bd976f20a7",
+      "relation_type": "derived_from",
+      "from_id": "eq-a53248597a7c4451",
+      "to_id": "src-cc3e863c8f1b10e1"
+    },
+    {
+      "id": "rel-fdc4724c33c7a3ed",
+      "relation_type": "derived_from",
+      "from_id": "eq-31d58c7f190cdad8",
+      "to_id": "src-cc3e863c8f1b10e1"
+    }
+  ]
+}
