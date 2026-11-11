@@ -82,6 +82,15 @@ The picture behind the axiom, recorded so that it is not confused with what v2 d
 4. Plasma, BBN and recombination happen in the crystallized state; that is why GR, QFT, the SM
    and ΛCDM hold there.
 
+**What survives of item 1 after contact.** One causal structure means one time, but not one clock
+rate: $\Sigma_2$ sits at warp $\Omega$, so its proper time runs at $\Omega \lesssim 0.032$ of ours
+(the same factor that sets mirror masses, `02_effective_4d.md` §5). This is derived, and it touches
+only $\Sigma_2$; galaxies on $\Sigma_1$ share our clock. **Rejected variant (2026-11-11):** a single bulk with two timelike
+directions (the 2T+5S sketch). Its field equations are ultrahyperbolic (no well-posed initial
+data, unbounded or negative-norm modes); Bars' 2T physics is consistent only because an Sp(2,R)
+gauge symmetry removes the second time, which leaves a 1T theory in 4+1 dimensions, no second
+clock, and no "timeline offset" for distant galaxies.
+
 **Where v2 starts.** Item 4. `01_action.md` is the action *of the crystallized state*: one
 bulk, one time, fixed field content, two branes. Everything in `02_*`–`04c_*` is downstream of
 coincidence and takes the state at coincidence as data ($f$, $\epsilon$, $h$ in `04c_approach.md`;
