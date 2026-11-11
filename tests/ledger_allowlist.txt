@@ -231,6 +231,19 @@ M_Z
 b_0
 y_4
 \alpha_s
+# 2026-11-11 alpha_Y correction (06 S2a): borrowed QCD/SM quantities, thresholds, sigma terms
+\Lambda_3
+\lambda_4
+b_3
+b_6
+b_n_f
+n_f
+m_b
+m_c
+m_q
+v
+\sigma_\piN
+\sigma_s
 \beta
 \mu_KK
 \rho_DE
