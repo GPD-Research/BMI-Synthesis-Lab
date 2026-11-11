@@ -9,10 +9,10 @@ today. Numbers: `tests/predictions.py`. Registered 2026-09-21, before the compar
 | result | status |
 |---|---|
 | canonical circle modulus from the 6D Einstein–Hilbert term: $\chi = \sqrt{3/2}\,M_{Pl}\ln(\ell_z/\bar\ell_z)$; `04d`/`05` used the coefficient 1 → $m_\chi$ and $\lambda^{-1}$ shrink by $\sqrt{2/3}$ | derived (§1) |
-| coupling to nucleons: $d\ln m_N/d\ln\ell_z = -\tfrac12 - 1 - 2\pi/(b_0\alpha_s(\ell_z^{-1})) \approx -14$; the QCD piece dominates | derived (§2; cutoff identification and thresholds [verify]) |
-| **P1 revised**: $\alpha_Y = 2\beta^2 \approx 2.5\times10^2$, not order one; the fifth force is $\sim\!250\times$ gravity, composition-independent to $10^{-3}$ | derived (§2) |
-| existing $\alpha$–$\lambda$ limits at $\alpha_Y \approx 250$ cut the range from the long side: $\lambda < 12\,\mu$m, i.e. $\ell_z^{-1} > 14$ TeV | compared (§4a; digitized bounds [verify]) |
-| P1 window now $14 < \ell_z^{-1}/\mathrm{TeV} < 29$ ⇔ $2.8 < \lambda/\mu\mathrm m < 12$ at $\alpha_Y = 270$–$300$ | one-parameter *curve* in the $(\alpha,\lambda)$ plane, half a decade long, both ends set by the action |
+| coupling to nucleons: $d\ln m_N/d\ln\ell_z = -\tfrac12 - (1-s)(7 + 2\pi/\alpha_s(\ell_z^{-1}))/9 \approx -9.3$ (two loops, thresholds down to $\Lambda_3$); the QCD piece dominates | derived (§2; corrected 2026-11-11, §2a; matching scale [verify]) |
+| **P1 revised**: $\alpha_Y = 2\beta^2 \approx 1.2\times10^2$, not order one; the fifth force is $\sim\!120\times$ gravity, composition-independent to $10^{-3}$ | derived (§2) |
+| existing $\alpha$–$\lambda$ limits at $\alpha_Y \approx 120$ cut the range from the long side: $\lambda < 13\,\mu$m, i.e. $\ell_z^{-1} > 13$ TeV | compared (§4a; digitized bounds [verify]) |
+| P1 window now $13 < \ell_z^{-1}/\mathrm{TeV} < 29$ ⇔ $2.8 < \lambda/\mu\mathrm m < 13$ at $\alpha_Y = 120$–$130$ (spread $110$–$150$) | one-parameter *curve* in the $(\alpha,\lambda)$ plane, half a decade long, both ends set by the action |
 | **P2**: dark energy is thawing with $w_a/(1+w_0) = -1.5$ ($-1.56$ at small $c$, $-1.15$ at $c=1.8$), $w>-1$ always | derived (`03_background.md`), registered here as a prediction |
 | DESI DR2 + CMB + SNe (Gaussian proxy of the $(w_0,w_a)$ posteriors): the curve's nearest point is $\Delta\chi^2 = 6.5$–$12.7$ from the best fit for the three SNe samples — outside $2\sigma$, always closer than ΛCDM by $2$–$10$ | compared (§4b; proxy, not chains [verify]) |
 | Cassini ↔ $N_{\text{eff}}$ ($\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)$): leaks — the CMB sees $\epsilon + f$ only | bound, not prediction (§3) |
@@ -63,20 +63,37 @@ $$
 \qquad \mu_{KK} = \ell_z^{-1},\quad \frac{1}{\alpha_s(\mu_{KK})} \propto \ell_z ,
 $$
 
-so $d\ln\Lambda_{QCD}/d\ln\ell_z = -1 - 2\pi/(b_0\alpha_s(\ell_z^{-1}))$ with $b_0 = 7$ above $m_t$
-($\alpha_s(10\ \mathrm{TeV}) = 0.073$ at one loop from $\alpha_s(M_Z) = 0.118$). The identification
-of the matching scale with $\ell_z^{-1}$ up to an order-one factor, and threshold corrections, are
-[verify]; they shift the QCD term by $\lesssim 10\%$. Quark-mass and Higgs-vev contributions to
-$m_N$ ($\lesssim 10\%$ of $m_N$, and their own $\ell_z$-dependence through $y_4 \propto \ell_z^{-1/2}$)
-are dropped at the same level [verify]. Altogether, at $\ell_z^{-1} = 10$ TeV,
+but the nucleon does not see $\mu_{KK}$ directly. Below $\mu_{KK}$ the coupling runs through the
+$t$, $b$, $c$ thresholds, and $m_N$ is set by the three-flavour scale $\Lambda_3$. At one loop, with
+$b_{n_f} = 11 - 2n_f/3$,
 
 $$
-\frac{d\ln m_N}{d\sigma} = -\tfrac12 - 1 - 12.4 = -13.9,
+\ln\Lambda_3 = \frac{1}{b_3}\Big[\,b_6\ln\mu_{KK} + \tfrac23\ln(m_t m_b m_c) - \frac{2\pi}{\alpha_s(\mu_{KK})}\Big],
 \qquad
-\beta \equiv M_{Pl}\frac{d\ln m_N}{d\chi} = \frac{-13.9}{\sqrt{3/2}} = -11.3,
-\qquad
-\alpha_Y = 2\beta^2 = 2.6\times10^2 .
+\frac{d\ln\Lambda_3}{d\ln\ell_z} = -\frac{b_6 + 2\pi/\alpha_s(\ell_z^{-1})}{b_3} = -\frac{7 + 2\pi/\alpha_s}{9},
 $$
+
+provided the quark masses do not move with $\ell_z$. At tree level they do not: zero-mode masses on
+the wrapped brane come from 5D mass parameters — $y_4 \propto \ell_z^{-1/2}$, while the quartic
+$\lambda_4 \propto \ell_z^{-1}$ gives $v \propto \ell_z^{1/2}$ — so $m_q = y_4 v$ is
+$\ell_z$-independent in the brane frame (assumption: the Higgs mass parameter is a brane constant;
+the action does not derive it). Feynman–Hellmann at fixed $m_q$ then gives
+$d\ln m_N = (1-s)\,d\ln\Lambda_3$, with $s = (\sigma_{\pi N}+\sigma_s)/m_N = 0.10 \pm 0.02$
+($\sigma_{\pi N} = 50\pm10$ MeV, $\sigma_s = 45\pm20$ MeV); heavy quarks enter only through
+$\Lambda_3$'s thresholds. Running at two loops from $\alpha_s(M_Z) = 0.118$
+($\alpha_s(10\ \mathrm{TeV}) = 0.0718$, `tests/predictions.py`), at $\ell_z^{-1} = 10$ TeV,
+
+$$
+\frac{d\ln m_N}{d\sigma} = -\tfrac12 + 0.90\times(-9.76) = -9.3,
+\qquad
+\beta \equiv M_{Pl}\frac{d\ln m_N}{d\chi} = \frac{-9.3}{\sqrt{3/2}} = -7.6,
+\qquad
+\alpha_Y = 2\beta^2 = 1.15\times10^2 ,
+$$
+
+with a spread of $103$–$129$ over the matching scale ($\mu_{KK}$ varied by a factor of 2 either way
+[verify]), loop order, the top threshold (pole vs MS-bar mass), $\alpha_s(M_Z) \pm 0.0009$
+and the $\sigma$-terms.
 
 The Yukawa potential between two bodies is $V = -\alpha_Y G m_1 m_2\,e^{-r/\lambda}/r$ with
 $\lambda = m_\chi^{-1}$ (reduced-Planck convention, $\alpha_Y = 2\beta^2$). The `04d` guess
@@ -87,6 +104,17 @@ independent* at the $10^{-3}$ level, not the composition-dependent force `04d` a
 statement is corrected here). Equivalence-principle tests at $\lambda \sim 10\,\mu$m do not
 reach a differential acceleration of $10^{-3}\alpha_Y\,e^{-r/\lambda}$ for laboratory separations; the handle is the
 inverse-square-law test.
+
+### 2a. Correction (2026-11-11)
+
+The version registered 2026-09-21 used $\Lambda_{QCD} = \mu_{KK}\exp(-2\pi/b_0\alpha_s(\mu_{KK}))$
+with $b_0 = 7$ all the way down and $s = 0$: $d\ln m_N/d\sigma = -\tfrac12 - 1 - 12.4 = -13.9$,
+$\alpha_Y = 2.6\times10^2$. That is the sensitivity of the six-flavour $\Lambda$, not of the scale
+that sets $m_N$. Factor by factor: $1/b_3$ instead of $1/b_6$ ($\times 7/9$ on both the cutoff and
+the coupling pieces), the $\sigma$-term dilution ($\times 0.90$), two loops ($\times 0.94$) —
+$\alpha_Y \times 0.45$ overall. No data were compared in between. The strength of P1 moved by a
+factor of two, inside the registered kill band $[10^2, 4\times10^2]$; its structure (a segment,
+both ends from the action) did not.
 
 ## 3. Relations that do not close
 
@@ -110,36 +138,37 @@ inverse-square-law test.
 
 ### 4a. P1 against the inverse-square-law limits
 
-$\alpha_Y(\ell_z)$ is nearly flat ($230$–$300$ over the window; the log running of $\alpha_s$), and
+$\alpha_Y(\ell_z)$ is nearly flat ($115$–$133$ for $\ell_z^{-1} = 10$–$29$ TeV; the log running of $\alpha_s$), and
 $\lambda = m_\chi^{-1} = 23.5\,\mu\mathrm m\,(10\ \mathrm{TeV}\,\ell_z)^2$. The published 95% limits
 on $|\alpha|$ at fixed $\lambda$ (Lee et al. 2020, Fig. 3, compiling Eöt-Wash 2007/2020, Stanford,
 IUPUI 2016; only the point $\alpha = 1$ at $\lambda = 38.6\,\mu$m is quoted numerically, the rest are
 read off the figure [verify]) are crossed at
 
 $$
-\alpha_Y = 2.7\times10^2 \;\;\Rightarrow\;\; \lambda < 11.7\,\mu\mathrm m \;\;\Leftrightarrow\;\; \ell_z^{-1} > 14.2\ \mathrm{TeV}.
+\alpha_Y = 1.2\times10^2 \;\;\Rightarrow\;\; \lambda < 13.4\,\mu\mathrm m \;\;\Leftrightarrow\;\; \ell_z^{-1} > 13.2\ \mathrm{TeV}.
 $$
 
 The upper edge $\ell_z^{-1} < 29$ TeV ($|\delta_1| < \sigma_1$) is unchanged, so
 
 $$
-14\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV},
+13\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV},
 \qquad
-2.8\,\mu\mathrm m < \lambda < 12\,\mu\mathrm m,
+2.8\,\mu\mathrm m < \lambda < 13\,\mu\mathrm m,
 \qquad
-\alpha_Y = 270\text{–}300 .
+\alpha_Y = 120\text{–}130\ (110\text{–}150) .
 $$
 
 What changed: `04d` had a 1.5-decade window in $\lambda$ at an unspecified strength. Now the
-theory occupies a *line segment* in the $(\alpha,\lambda)$ plane: strength fixed to $\sim\!30\%$
-by the action, range within half a decade. The current limits sit a factor $2$ (at $12\,\mu$m)
-to $10^3$ (at $3\,\mu$m) above the segment; the Eöt-Wash 2020 result already removed the
+theory occupies a *line segment* in the $(\alpha,\lambda)$ plane: strength fixed to $\sim\!15\%$
+by the action, range within half a decade. The current limits meet the segment at its long end ($13\,\mu$m) and sit a factor $6$ (at $10\,\mu$m)
+to $3\times10^3$ (at $3\,\mu$m) above it; the Eöt-Wash 2020 result already removed the
 lower half of `04d`'s $\ell_z$ range. A detection *on* the segment confirms P1 and moves the
 balance to $+1$; a detection *off* it (any $\alpha$ outside $\sim[10^2, 4\times10^2]$ at the
-detected range, or a range outside $2.8$–$12\,\mu$m) kills the fixed-circle geometry as surely
+detected range, or a range outside $2.8$–$13\,\mu$m) kills the fixed-circle geometry as surely
 as a null result down to $\alpha \sim 10^2$ at $3\,\mu$m does. The lower edge is also where
 the LHC KK bound ($\ell_z^{-1} \gtrsim 5$ TeV) is now irrelevant: the fifth-force limit is the
-stronger one by a factor of three.
+stronger one by a factor of 2.6. The corrected segment sits in the lower third of the registered
+kill band; the band is not moved.
 
 ### 4b. P2 against DESI DR2
 
@@ -183,7 +212,7 @@ is that the theory has two dated, falsifiable statements and eight numbers that 
 data. The rule of `ledger.md` says the branch closes. Proposal, for the decision that this
 file cannot make: freeze the budget at 9 (no #10 under any circumstance), keep the two
 predictions open, and stop deriving until one of them is tested — a next-generation
-inverse-square-law experiment at $3$–$12\,\mu$m or the DESI DR2 chain comparison.
+inverse-square-law experiment at $3$–$13\,\mu$m or the DESI DR2 chain comparison.
 
 ## 6. Generic vs BMI-specific
 

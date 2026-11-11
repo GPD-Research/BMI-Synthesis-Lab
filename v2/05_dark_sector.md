@@ -133,7 +133,7 @@ not a new one — but now with a second observable attached.
 - Astrophysics: CDM.
 
 The only laboratory handle on this dark matter is the *stabilizer* that makes it possible:
-P1, the fifth force at $2$–$66\,\mu$m (milestone 7: $\alpha_Y \approx 270$, $2.8$–$12\,\mu$m,
+P1, the fifth force at $2$–$66\,\mu$m (milestone 7: $\alpha_Y \approx 120$, $2.8$–$13\,\mu$m,
 composition-independent, `06_predictions.md`). That is the honest shape of the
 family: it is invisible as dark matter and visible as a fifth force, and the two stand or fall
 together.
@@ -141,7 +141,7 @@ together.
 ## 5. Kill criteria (pre-registered, 2026-09-20)
 
 - **K1.** No Yukawa force on the P1 segment (as registered: gravitational strength, $2$–$66\,\mu$m;
-  as computed in milestone 7: $\alpha_Y \approx 270$, $2.8$–$12\,\mu$m). Kills the stabilizer, hence
+  as computed in milestone 7, corrected 2026-11-11: $\alpha_Y \approx 120$, $2.8$–$13\,\mu$m). Kills the stabilizer, hence
   $\chi$, hence this family. Milestone 7 also shifts $m_\chi$, $T_o$, $\delta_z$ here by the
   canonical factor $\sqrt{2/3}$ in $m_\chi$ (O(1), no qualitative change).
 - **K2.** Evidence that $T_R > T_o \sim$ few TeV — e.g. a primordial gravitational-wave

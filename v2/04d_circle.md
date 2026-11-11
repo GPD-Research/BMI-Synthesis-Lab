@@ -103,9 +103,9 @@ $$
 $$
 
 **(c) The prediction.** *Superseded in milestone 7 (`06_predictions.md` §1–2, §4a): the canonical
-normalisation is $\chi = \sqrt{3/2}M_{Pl}\ln\ell_z$, the strength is $\alpha_Y \approx 270$ (QCD
-running of $1/g_s^2 \propto \ell_z$), composition-independent to $10^{-3}$, and Eöt-Wash 2020 at
-that strength moves the lower edge to $\ell_z^{-1} > 14$ TeV, $\lambda < 12\,\mu$m. The text below
+normalisation is $\chi = \sqrt{3/2}M_{Pl}\ln\ell_z$, the strength is $\alpha_Y \approx 120$ (QCD
+running of $1/g_s^2 \propto \ell_z$; corrected 2026-11-11, `06` §2a), composition-independent to $10^{-3}$, and Eöt-Wash 2020 at
+that strength moves the lower edge to $\ell_z^{-1} > 13$ TeV, $\lambda < 13\,\mu$m. The text below
 is kept as registered.* The modulus mediates a Yukawa force of gravitational strength
 ($\alpha_Y$ of order one, exact coefficient from the $\chi$ normalisation [verify]) with range
 in the window above, and it is composition-dependent because $\chi$ couples to $\alpha$ (a

@@ -11,7 +11,7 @@ below, or if the number of rows exceeds the budget.
 **FROZEN at 9 (2026-09-21, after milestone 7).** No row #10 is admitted under any circumstance:
 a result that needs a tenth number is a forced miss and goes to `RETRACTED.md`. No new derivation
 milestone opens until P1 or P2 below is tested — an inverse-square-law measurement at
-$3$–$12\,\mu$m, or the chain-level DESI DR2 comparison. Permitted meanwhile: closing `[verify]`
+$3$–$13\,\mu$m, or the chain-level DESI DR2 comparison. Permitted meanwhile: closing `[verify]`
 items, corrections that do not add symbols, and confronting P1/P2 with new data.
 
 Discrete choices (not parameters), all recorded with alternatives in `01_action.md`: Fork 1
@@ -35,7 +35,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
 | 7 | `T_2/T_1` | sector temperature ratio at reheating | **not derivable**: the action is $\mathbb Z_2$-symmetric at the collision, so its null value is 1, which gives $\Delta N_{\text{eff}} \approx 6$ (excluded); bounded $< 0.45$ by the CMB (`04_impact.md` §2) | bounded, null excluded |
-| 8 | `\delta_1` | detuning of $\sigma_1$ from its RS value, $\delta_1 < 0$; stabilizes the circle against the SM Casimir repulsion (`04d_circle.md` §3); taken milestone 5d | $\ell_z^5 = 4C_{\rm SM}/\pi\lvert\delta_1\rvert$; Eöt-Wash at the computed $\alpha_Y \approx 270$ (`06_predictions.md` §4a; supersedes 5d's $\alpha = 1$ edge) and $\lvert\delta_1\rvert < \sigma_1$ give $14\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV}$; the $-(3\ \mathrm{TeV})^4$ vacuum energy at the minimum is absorbed in the $\Lambda_6$ retuning of #2 | bounded two-sided |
+| 8 | `\delta_1` | detuning of $\sigma_1$ from its RS value, $\delta_1 < 0$; stabilizes the circle against the SM Casimir repulsion (`04d_circle.md` §3); taken milestone 5d | $\ell_z^5 = 4C_{\rm SM}/\pi\lvert\delta_1\rvert$; Eöt-Wash at the computed $\alpha_Y \approx 120$ (`06_predictions.md` §4a; supersedes 5d's $\alpha = 1$ edge) and $\lvert\delta_1\rvert < \sigma_1$ give $13\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV}$; the $-(3\ \mathrm{TeV})^4$ vacuum energy at the minimum is absorbed in the $\Lambda_6$ retuning of #2 | bounded two-sided |
 | 9 | `\delta_z` | fractional offset of the circle from its minimum left by the impact, $\ell_z^{\rm(impact)} = \bar\ell_z(1+\delta_z)$; the misalignment that makes the oscillating circle the dark matter (`05_dark_sector.md` §2); taken milestone 6 | $\Omega_\chi = \Omega_{DM}$: $\delta_z \approx 3\times10^{-6}(T_R/T_o)^{3/2}$; spatially uniform to $5\times10^{-6}$ (Planck $\beta_{\rm iso}$) | fitted to $\Omega_{DM}$; sign irrelevant |
 
 ## Pending integration constants (not parameters yet)
@@ -67,7 +67,7 @@ quantities, never for a new constant.
 
 | # | quantity | predicted value | data | status |
 |---|---|---|---|---|
-| P1 | Yukawa force from the circle modulus, strength and range both from the action (`04d_circle.md` §3c registered 2026-09-20 as a window; strength and normalisation computed in `06_predictions.md` §1–2, 2026-09-21) | $\alpha_Y = 2\beta^2 = 270$–$300$ (QCD running of $1/g_s^2 \propto \ell_z$; composition-independent to $10^{-3}$), $\lambda = m_\chi^{-1}$ with $2.8\,\mu\mathrm m < \lambda < 12\,\mu\mathrm m$ ⇔ $14 < \ell_z^{-1}/\mathrm{TeV} < 29$ | Eöt-Wash 2020 removed $\lambda > 12\,\mu$m at this strength (`06` §4a); current limits $2$–$10^3\times$ above the segment | open — a detection on the segment confirms; off it, or a null to $\alpha \sim 10^2$ at $3\,\mu$m, kills the fixed circle |
+| P1 | Yukawa force from the circle modulus, strength and range both from the action (`04d_circle.md` §3c registered 2026-09-20 as a window; strength and normalisation computed in `06_predictions.md` §1–2, 2026-09-21; strength corrected 2026-11-11, `06` §2a) | $\alpha_Y = 2\beta^2 = 120$–$130$, spread $110$–$150$ (QCD running of $1/g_s^2 \propto \ell_z$ through the thresholds to $\Lambda_3$; composition-independent to $10^{-3}$), $\lambda = m_\chi^{-1}$ with $2.8\,\mu\mathrm m < \lambda < 13\,\mu\mathrm m$ ⇔ $13 < \ell_z^{-1}/\mathrm{TeV} < 29$ | Eöt-Wash 2020 removed $\lambda > 13\,\mu$m at this strength (`06` §4a); current limits $1$–$3\times10^3\times$ above the segment | open — a detection on the segment confirms; off it, or a null to $\alpha \sim 10^2$ at $3\,\mu$m, kills the fixed circle |
 | P2 | thawing dark energy, $w_a = -1.5\,(1+w_0)$ at small $c$ ($-1.15$ at $c = 1.8$), $w > -1$ at all $z$ (`03_background.md` §2, registered as a prediction in `06_predictions.md` §4b, 2026-09-21) | one relation among $(w_0, w_a)$; $V_0, c$ fix three observables | DESI DR2 + CMB + SNe CPL posteriors: nearest point $\Delta\chi^2 = 6.5$–$12.7$ (Gaussian proxy [verify: chains]), ΛCDM $9$–$20$ | open — outside $2\sigma$ for every SNe sample, not killed (proxy, not the pre-registered chain test) |
 
 Constraints derived so far (not predictions; they use data to bound the ledger):
