@@ -132,6 +132,32 @@ Three consequences, none chosen:
    is slow enough for CDM. The price is that "ongoing collision" has exactly two observable
    handles left: a percent-level drift of the DM mass and $\dot G/G \sim 10^{-16}\,\mathrm{yr}^{-1}$.
 
+### 3.1a Correction (2026-11-11): the bound above is void
+
+§3.1 uses the *mirror*-DM mass, $m^{(2)} \propto \Omega$. Since milestone 6 the dark matter is the
+circle modulus $\chi$, whose minimum depends on neither $\phi$ nor $\Phi$ (`04d_circle.md` §3d), and
+$\Sigma_2$ matter is subdominant: the mass-drift bound no longer applies. What bounds the radion
+now is LLR directly, $\lvert\dot G/G\rvert < 1.5\times10^{-13}\,\mathrm{yr}^{-1}$, with Cassini
+($\Omega_0 < 0.032$) and the moduli approximation ($\Omega < 0.5$). `tests/radion_llr.py` integrates
+the canonical radion from rest at $z \sim 3000$ with $\Omega(t_0) = \Omega_0$ imposed. The terminal-velocity
+estimate of §3.1 does not hold here: at these values the potential is steep compared with $H^2$.
+
+| $\delta\sigma_2$ | bound at $\Omega_0 = 0.032$ | set by | $f_{\text{rad}}$ today at the bound |
+|---|---|---|---|
+| $< 0$ (attractive) | $\lvert\delta\sigma_2\rvert < 3.3\times10^{4}\,\rho_0$ | LLR | $-3.5\times10^{-2}$ |
+| $> 0$ (repulsive) | none from LLR ($\lvert\dot G/G\rvert \le 2.4\times10^{-14}\,\mathrm{yr}^{-1}$ wherever $\Omega_0$ is reachable) | — | $\lesssim 10^{-3}$ |
+
+(old: $4.7\,\rho_0$.) Consequences: (1) kill criterion 2 (LLR) still passes, but now by
+assumption-free saturation, not by three orders of magnitude; (2) **the merger need not be invisible
+in the expansion history**: an attractive radion can carry up to $\sim 3\%$ of the critical density
+today, *negative*. A sum of canonical fields obeys the null energy condition, so it cannot give $w < -1$, and
+it does not revive P2; its effect on $H(z)$ is an open item, bounded only by the LLR value here.
+(3) The "two handles" of consequence 3 become one: $\dot G/G$ up to the LLR limit. (4) The fate
+numbers of §3.4 and `04_impact.md` §5 (earliest turnaround $\gtrsim 200$ Gyr) used the void bound
+and are superseded-pending; with the LLR bound the attractive case can turn around sooner.
+(5) The GW/EM distance null of `06_predictions.md` §6 ($1 \pm 5\times10^{-6}$) loosens to
+$\sim 3\Omega^3\lvert\Delta\ln\Omega\rvert$, not recomputed.
+
 ### 3.2 Dark energy is the bulk scalar: thawing quintessence with slope $c$
 
 With the radion frozen, the only dynamical dark energy is $\Phi_4$. Hubble friction freezes it

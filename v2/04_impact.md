@@ -266,6 +266,8 @@ it fails):
 | 0.010 | 15 | not before $\Omega = 0.5$ | 240 Gyr |
 | 0.003 | 50 | 250 Gyr | — |
 
+*2026-11-11: the bound used here was the mirror-DM one and is void (`03_background.md` §3.1a); the table is superseded-pending.*
+
 So row 3 of the fate table (`03_background.md` §3.4) reads: *if* attractive, the second impact
 is not earlier than $\sim 200$ Gyr from now ($\approx 15$ Hubble times), and the moduli
 approximation fails before it, so the actual collision requires the full junction problem.
