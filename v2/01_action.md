@@ -229,7 +229,8 @@ $\Phi$-independent tensions.
    menu item (a) or (b) of §2.1 **once**, and record the failure in `RETRACTED.md`.
    *Status: fired* (2026-11-11, `06_predictions.md` §4c): outside the DESI DR2 + Planck 95%
    region for every $c$, with and without SNe. Recorded as `RETRACTED.md` N4; the menu switch is
-   not yet made.
+   not yet made. Confirmed by direct fit without the CPL projection (§4d): for BAO + CMB the best
+   thawing $c$ is $0$, $\Delta\chi^2 = 8.35$ from the CPL best fit.
 3. A single canonical radion cannot cross $w = -1$. If phantom crossing is confirmed at
    $>5\sigma$, the minimal radion is out and only $E_{\mu\nu}$ (milestone 3) can save the
    branch.

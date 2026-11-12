@@ -241,6 +241,42 @@ What the result is and is not:
   §2.1 are canonical scalars too, so the switch the rule allows will meet the same wall unless their
   thawing slope differs; that is a calculation, not done here.
 
+### 4d. P2 by direct fit, without the CPL projection (2026-11-11)
+
+§4c tested the registered CPL projection of the curve. This removes the projection: the thawing
+$w(z)$ of §2 (`03_background.md`), integrated exactly for each $(h, \omega_b, \omega_{bc}, c)$, is fitted
+directly to the data, and ΛCDM and CPL are fitted the same way for reference. Data: DESI DR2 BAO
+(all tracers, the public Gaussian mean and covariance); the Planck + ACT-lensing CMB compressed to a
+Gaussian in $(100\,\theta_{\text{MC}}, \omega_b, \omega_{bc})$ from the DESI-release `base_w` CMB-only
+chains; optionally Pantheon+ ($z>0.01$), Union3 and DESY5 with the absolute magnitude marginalized
+analytically. $r_d$ and $\theta_{\text{MC}}$ use the Eisenstein–Hu $z_d$ and Hu–Sugiyama $z_*$, each
+scaled by one constant fitted to CAMB's values in the DESI chains (scatter $3\times10^{-5}$ and
+$5\times10^{-6}$, far below the errors). Numbers: `tests/p2_direct.py` (BAO + CMB in CI; `--sn` adds the
+SNe from `CobayaSampler/sn_data`).
+
+| BAO + CMB + | $\chi^2$ ΛCDM | $\chi^2$ CPL ($w_0, w_a$) | $\chi^2$ thawing (best $c$) | thawing $-$ CPL (2D level) | ΛCDM $-$ thawing |
+|---|---|---|---|---|---|
+| no SNe | $15.39$ | $7.04$ ($-0.47, -1.56$) | $15.39$ ($c = 0$) | $8.35$ ($98.5\%$) | $0.00$ |
+| Pantheon+ | $1421.03$ | $1413.15$ ($-0.85, -0.52$) | $1418.85$ ($c = 0.59$) | $5.70$ ($94.2\%$) | $2.19$ |
+| Union3 | $43.68$ | $29.59$ ($-0.69, -0.98$) | $40.55$ ($c = 0.76$) | $10.96$ ($99.6\%$) | $3.13$ |
+| DESY5 | $1664.60$ | $1646.45$ ($-0.77, -0.77$) | $1656.41$ ($c = 0.81$) | $9.95$ ($99.3\%$) | $8.20$ |
+
+The CPL best fits reproduce the DESI chain means (to within the MAP/mean difference along the
+degeneracy). The compressed CMB and the
+Gaussian SNe likelihoods are approximations to the DESI pipeline, not replicas of it; the ΛCDM–CPL
+gaps they give ($8.3$, $7.9$, $14.1$, $18.2$) should be compared with the published ones before the
+SNe rows are quoted to better than about one unit of $\chi^2$.
+
+**The kill stands without the projection.** For the registered combination (BAO + CMB) the best
+thawing fit is $c = 0$: the thawing family does not improve on ΛCDM at all, because the data want
+$w_0 > -1$ *with* $w < -1$ in the past, and thawing can only give the first by giving up the second.
+The best curve sits $\Delta\chi^2 = 8.35$ from the CPL best fit, outside its 95% region. With SNe the
+thawing fit does improve on ΛCDM (by $2$–$8$), and the best curve is outside the 95% region with Union3 ($99.6\%$) and DESY5 ($99.3\%$)
+but **just inside it with Pantheon+** ($94.2\%$, against $98.1\%$ from the chains). Criterion 2 is decided by
+the BAO + CMB row, which does not move, so the kill stands; the Pantheon+ row is the one place where
+the projection overstated the miss, and the best $c$ there ($0.59$) is above the Planck constant-$w$
+bound $c \lesssim 0.5$ in any case.
+
 ## 5. The ledger after milestone 7
 
 Balance: **$0 - 9 = -9$**, unchanged. Milestone 7 was to move it or close the branch; it did

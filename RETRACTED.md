@@ -174,7 +174,9 @@ puts the thawing curve outside the 95% region of the DESI DR2 BAO + CMB (w₀, w
 every c, and outside it again with each of Pantheon+ (98.1%), Union3 and DESY5 (> 99.8%) added.
 That is `v2/01_action.md` kill criterion 2. ΛCDM fails the same test by as much or more; the
 data want w < −1 at z ≳ 0.5, which no canonical scalar gives. Phantom crossing at > 5σ (criterion
-3) is not established, so the minimal-radion statement is not killed by this. **Registered next
+3) is not established, so the minimal-radion statement is not killed by this. A direct fit of the
+thawing w(z) to BAO + CMB, without the CPL projection (`v2/06_predictions.md` §4d, `tests/p2_direct.py`),
+confirms it: the best c is 0, i.e. thawing does no better than ΛCDM, Δχ² = 8.35 from the CPL best fit. **Registered next
 step, not yet taken:** menu item (a) or (b) of `v2/01_action.md` §2.1, once.
 
 ---
