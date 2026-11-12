@@ -89,7 +89,7 @@ only $\Sigma_2$; galaxies on $\Sigma_1$ share our clock. **Rejected variant (202
 directions (the 2T+5S sketch). Its field equations are ultrahyperbolic (no well-posed initial
 data, unbounded or negative-norm modes); Bars' 2T physics is consistent only because an Sp(2,R)
 gauge symmetry removes the second time, which leaves a 1T theory in 4+1 dimensions, no second
-clock, and no "timeline offset" for distant galaxies.
+clock. A "timeline offset" for distant galaxies can enter only as a non-expansion redshift (ledger.md fork).
 
 **Where v2 starts.** Item 4. `01_action.md` is the action *of the crystallized state*: one
 bulk, one time, fixed field content, two branes. Everything in `02_*`–`04c_*` is downstream of
