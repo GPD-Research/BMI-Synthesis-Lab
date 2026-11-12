@@ -9,7 +9,8 @@ closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill
 
 **P2 tested 2026-11-11 (`06_predictions.md` §4c): killed.** Against the DESI DR2 chains the thawing
 curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
-criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Criterion 3 ($>5\sigma$ phantom
+criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Confirmed by direct fit without the CPL
+projection (§4d: BAO + CMB best thawing $c = 0$, $\Delta\chi^2 = 8.35$ from CPL). Criterion 3 ($>5\sigma$ phantom
 crossing) is not established. Owed: the decision on the registered next step (menu item (a) or
 (b) of `01_action.md` §2.1, once) versus closing the dark-energy branch; P1 stays open.
 

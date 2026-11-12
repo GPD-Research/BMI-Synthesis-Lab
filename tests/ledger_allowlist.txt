@@ -247,3 +247,9 @@ v
 \beta
 \mu_KK
 \rho_DE
+# observational / CMB-BAO compression symbols (06_predictions.md S4d)
+\omega_b
+\omega_{bc}
+\theta_{MC}
+r_d
+z_d
