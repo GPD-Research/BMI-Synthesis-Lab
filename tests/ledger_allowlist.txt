@@ -2,6 +2,13 @@
 # Coordinates, indices, fields, derived/observable quantities, borrowed constants.
 # Never add a new constant here; it belongs in v2/ledger.md.
 
+# observables of the z_t fork (08_zt_tcmb.md)
+T_0
+z_{exp}
+z_{obs}
+z_t
+z_{th}
+
 # coordinates and indices
 t
 x

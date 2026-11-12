@@ -34,3 +34,4 @@ jobs:
       - run: python3 tests/predictions.py
       - run: python3 tests/p2_chains.py
       - run: python3 tests/p2_direct.py
+      - run: python3 tests/zt_tcmb.py
