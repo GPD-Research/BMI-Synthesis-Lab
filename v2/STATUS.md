@@ -7,6 +7,11 @@ energy, $w_a = -1.5(1+w_0)$, $w>-1$) against the DESI DR2 chains. The branch is 
 closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill goes to
 `RETRACTED.md`.
 
+**Freeze lifted for one provisional tenth (2026-11-11, `ledger.md`).** Candidate: inter-brane
+energy exchange. Admitted only if it fixes or predicts at least one of the nine; paused (kept, not
+assumed, used by nothing) if it fits but connects to none; dead only by a failed kill test. The
+budget stays 9 until it is admitted.
+
 **P2 tested 2026-11-11 (`06_predictions.md` §4c): killed.** Against the DESI DR2 chains the thawing
 curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
 criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Criterion 3 ($>5\sigma$ phantom
