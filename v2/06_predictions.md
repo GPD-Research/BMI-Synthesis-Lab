@@ -14,7 +14,8 @@ today. Numbers: `tests/predictions.py`. Registered 2026-09-21, before the compar
 | existing $\alpha$–$\lambda$ limits at $\alpha_Y \approx 120$ cut the range from the long side: $\lambda < 13\,\mu$m, i.e. $\ell_z^{-1} > 13$ TeV | compared (§4a; digitized bounds [verify]) |
 | P1 window now $13 < \ell_z^{-1}/\mathrm{TeV} < 29$ ⇔ $2.8 < \lambda/\mu\mathrm m < 13$ at $\alpha_Y = 120$–$130$ (spread $110$–$150$) | one-parameter *curve* in the $(\alpha,\lambda)$ plane, half a decade long, both ends set by the action |
 | **P2**: dark energy is thawing with $w_a/(1+w_0) = -1.5$ ($-1.56$ at small $c$, $-1.15$ at $c=1.8$), $w>-1$ always | derived (`03_background.md`), registered here as a prediction |
-| DESI DR2 + CMB + SNe (Gaussian proxy of the $(w_0,w_a)$ posteriors): the curve's nearest point is $\Delta\chi^2 = 6.5$–$12.7$ from the best fit for the three SNe samples — outside $2\sigma$, always closer than ΛCDM by $2$–$10$ | compared (§4b; proxy, not chains [verify]) |
+| DESI DR2 + CMB + SNe (Gaussian proxy of the $(w_0,w_a)$ posteriors): the curve's nearest point is $\Delta\chi^2 = 6.5$–$12.7$ from the best fit for the three SNe samples — outside $2\sigma$, always closer than ΛCDM by $2$–$10$ | compared (§4b; proxy, superseded by §4c) |
+| **DESI DR2 chains** (BAO + CMB, alone and with each SNe sample): the curve is outside the 95% region for every $c$ in all four — $98.1\%$ (Pantheon+), $>99.8\%$ (Union3, DESY5, BAO + CMB alone); ΛCDM is outside by as much or more | **kill criterion 2 fired** (§4c, 2026-11-11); criterion 3 ($>5\sigma$ crossing) not established |
 | Cassini ↔ $N_{\text{eff}}$ ($\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)$): leaks — the CMB sees $\epsilon + f$ only | bound, not prediction (§3) |
 | $\dot G/G$ ↔ $w(z)$: different fields (radion vs $\Phi_4$) | no relation (§3) |
 | GW vs EM luminosity distance: $M_{Pl}$ constant to $10^{-5}$ since recombination ⇒ ratio $= 1 \pm 10^{-5}$ | trivial null (§3) |
@@ -193,6 +194,53 @@ SNe-sample dependence and the chain-level comparison, the exponential $V(\Phi)$ 
 ledger's $V(\Phi)$-feature fork is the only replacement inside the action — at +1 shape choice
 +1 scale, which the budget rule then has to weigh against closing the branch.
 
+### 4c. P2 against the DESI DR2 chains (2026-11-11)
+
+The test §4b deferred. Data: the public DESI DR2 cobaya chains, model `base_w_wa`, DESI BAO
+(all tracers) + Planck PR3 low-$\ell$ TT/EE + PR4 CamSpec TTTEEE + Planck/ACT DR6 lensing, with
+each of Pantheon+, Union3, DESY5 and with no SNe (data.desi.lbl.gov/public/papers/y3/bao-cosmo-params;
+four chains per combination, files checked against the release SHA256 list). 30% burn-in,
+weights kept, thinned to $\le 2\times10^4$ rows; the chain means reproduce the paper's central values.
+The credible level of a point is the posterior mass at higher density, from a weighted KDE in
+$(w_0, w_a)$; where fewer than 30 samples lie at lower density the KDE does not resolve the
+tail and only the resolution limit is quoted, as a lower bound. Numbers: `tests/p2_chains.py`.
+
+| BAO + CMB + | $\rho(w_0,w_a)$ | curve (best $c$) | ΛCDM | curve, Gaussian $\Delta\chi^2$ | ΛCDM, Gaussian |
+|---|---|---|---|---|---|
+| Pantheon+ | $-0.90$ | $98.1\%$ ($2.3\sigma$; $c = 0.55$) | $99.5\%$ ($2.8\sigma$) | $7.2$ | $9.2$ |
+| Union3 | $-0.93$ | $>99.9\%$ ($>3.3\sigma$; $c = 0.80$) | $>99.9\%$ | $11.1$ | $14.5$ |
+| DESY5 | $-0.91$ | $>99.85\%$ ($>3.2\sigma$; $c = 0.80$) | $>99.85\%$ | $10.9$ | $18.8$ |
+| no SNe | $-0.98$ | $>99.8\%$ ($>3.1\sigma$; $c = 0.40$) | $>99.8\%$ | $9.4$ | $9.4$ |
+
+(The $n\sigma$ are the two-sided 1D equivalents of the 2D level.) The proxy's $\rho \in [-0.95, -0.8]$ is
+confirmed ($-0.90$ to $-0.93$ with SNe; $-0.98$ without). The KDE levels are higher than the
+proxy for Union3/DESY5: the posterior is non-Gaussian along the degeneracy and has a thinner tail
+towards the curve than the Gaussian.
+
+**Kill criterion 2 (`01_action.md` §6) fires.** The registered region is DESI + Planck; the curve lies
+outside its 95% region for every $c \in [0.05, 1.8]$, and stays outside when any of the three SNe
+samples is added. The nearest $c$ ($0.4$–$0.8$) is also above the Planck constant-$w$ bound
+$c \lesssim 0.5$ except at the Pantheon+ end. By the registered rule the exponential $V(\Phi)$ is dead
+and the failure is recorded in `RETRACTED.md` (N4).
+
+**Kill criterion 3 does not fire.** The posterior mass with $w \ge -1$ on all of $0 < z < 2.5$ is
+$10^{-3}$ (Pantheon+), $2\times10^{-5}$ (Union3), 0 in the chains (DESY5, no SNe), but in every case
+fewer than 30 samples carry it, so the chains resolve a CPL crossing preference only to
+$\gtrsim 2.5\sigma$. They cannot establish $5\sigma$; the DESI paper's own preference for $w_0w_a$ over
+ΛCDM is $2.8$–$4.2\sigma$ [verify]. A crossing in CPL is also partly the parametrization: CPL has to cross
+$-1$ to bend a $w(z)$ that is above $-1$ today and flat at high $z$.
+
+What the result is and is not:
+- It is the pre-registered test, run as registered: the thawing curve projected to CPL over
+  $0<z<1$ (`03_background.md` §2) against the CPL posterior. A direct fit of the thawing $w(z)$ to the
+  BAO, CMB and SNe likelihoods was not part of the registration and is not done here. It would
+  remove the CPL projection error; the closest case to the 95% line is Pantheon+ at $98.1\%$.
+- ΛCDM fails the same criterion by the same amount or more (it is the curve's $c \to 0$ end).
+  The data do not prefer ΛCDM to P2; they prefer $w$ below $-1$ at $z \gtrsim 0.5$, which no
+  canonical scalar gives. Menu items (a) $V_0\cosh$ and (b) $\tfrac12 m^2\Phi^2$ of `01_action.md`
+  §2.1 are canonical scalars too, so the switch the rule allows will meet the same wall unless their
+  thawing slope differs; that is a calculation, not done here.
+
 ## 5. The ledger after milestone 7
 
 Balance: **$0 - 9 = -9$**, unchanged. Milestone 7 was to move it or close the branch; it did
@@ -203,7 +251,8 @@ neither in the strict sense. What it did:
   existing data removed half its range and left the rest two to three orders of magnitude
   below current sensitivity at the short end and a factor $2$ at the long end.
 - P2 is registered: $w_a = -1.5(1+w_0)$, $w > -1$. The current data disfavour it at the
-  $2$–$3\sigma$ level in the proxy, exactly as they disfavour ΛCDM.
+  $2$–$3\sigma$ level in the proxy, exactly as they disfavour ΛCDM. *2026-11-11:* the chain-level
+  test (§4c) puts it outside the DESI 95% region for every $c$ — kill criterion 2 fired.
 - Three relations that looked like predictions leak or are trivially null; the v1 low-$\ell$
   axis is not computable from this action.
 

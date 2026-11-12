@@ -164,6 +164,19 @@ are listed in `v2/04_impact.md` §3 — none is adopted here.
 inflation with r = 8c² ≥ 0.28 at n_s = 0.965 and no exit; the radion is not ekpyrotic
 (`v2/04_impact.md` §6). A_s and n_s stay borrowed; kill criterion 5 is re-labelled.
 
+### N4. Thawing dark energy from the exponential bulk potential, prediction P2 (DEAD, 2026-11-11)
+
+**Claimed in:** `v2/03_background.md` §2; registered as P2, w_a = −1.5(1 + w₀) with w > −1,
+in `v2/06_predictions.md` §4b (2026-09-21).
+
+**Why:** the pre-registered chain-level test (`v2/06_predictions.md` §4c, `tests/p2_chains.py`)
+puts the thawing curve outside the 95% region of the DESI DR2 BAO + CMB (w₀, w_a) posterior for
+every c, and outside it again with each of Pantheon+ (98.1%), Union3 and DESY5 (> 99.8%) added.
+That is `v2/01_action.md` kill criterion 2. ΛCDM fails the same test by as much or more; the
+data want w < −1 at z ≳ 0.5, which no canonical scalar gives. Phantom crossing at > 5σ (criterion
+3) is not established, so the minimal-radion statement is not killed by this. **Registered next
+step, not yet taken:** menu item (a) or (b) of `v2/01_action.md` §2.1, once.
+
 ---
 
 ## Kept from v1 (generic, correct, re-derived in v2)
