@@ -165,7 +165,8 @@ Forced structure of the prediction:
 - DESI DR2 + CMB + SNe (2025) prefer $w_0 \approx -0.75$, $w_a \approx -0.9$, i.e. $w < -1$
   for $z \gtrsim 0.4$. The thawing curve at $w_0 = -0.75$ has $w_a \approx -0.35$, not $-0.9$;
   the DESI *central value* is unreachable. Whether the thawing curve lies inside the DESI
-  $2\sigma$ contour is a chain-level question deferred to milestone 7. **Kill criterion 3 is
+  $2\sigma$ contour is a chain-level question deferred to milestone 7 (answered 2026-11-11: it
+  does not, for any $c$; `06_predictions.md` §4c). **Kill criterion 3 is
   therefore open, not passed**: if the phantom preference sharpens, the minimal action is out
   and the only remaining lever is $E_{\mu\nu}$ (dark radiation cannot mimic $w<-1$ either), so
   it would be a genuine death, not a patch.

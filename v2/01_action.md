@@ -227,9 +227,14 @@ $\Phi$-independent tensions.
 2. If the late-time attractor of $V_{\text{eff}}$ gives $w_0, w_a$ outside the DESI + Planck
    allowed region for every $c$ (milestone 4), the exponential potential is dead; move to
    menu item (a) or (b) of §2.1 **once**, and record the failure in `RETRACTED.md`.
+   *Status: fired* (2026-11-11, `06_predictions.md` §4c): outside the DESI DR2 + Planck 95%
+   region for every $c$, with and without SNe. Recorded as `RETRACTED.md` N4; the menu switch is
+   not yet made.
 3. A single canonical radion cannot cross $w = -1$. If phantom crossing is confirmed at
    $>5\sigma$, the minimal radion is out and only $E_{\mu\nu}$ (milestone 3) can save the
    branch.
+   *Status: not fired* (`06_predictions.md` §4c): the DR2 chains resolve a CPL crossing preference
+   only to $\gtrsim 2.5\sigma$.
 4. If impact kinematics give $T_2/T_1 \gtrsim 0.5$ (milestone 5), the mirror sector violates
    BBN/$N_{\text{eff}}$ and §2.2 is dead.
    *Status: fired, in a stronger form* (`04_impact.md` §2–3). The kinematics give no number

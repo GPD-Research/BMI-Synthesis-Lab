@@ -7,6 +7,12 @@ energy, $w_a = -1.5(1+w_0)$, $w>-1$) against the DESI DR2 chains. The branch is 
 closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill goes to
 `RETRACTED.md`.
 
+**P2 tested 2026-11-11 (`06_predictions.md` §4c): killed.** Against the DESI DR2 chains the thawing
+curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
+criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Criterion 3 ($>5\sigma$ phantom
+crossing) is not established. Owed: the decision on the registered next step (menu item (a) or
+(b) of `01_action.md` §2.1, once) versus closing the dark-energy branch; P1 stays open.
+
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
 
@@ -148,7 +154,8 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 | canonical circle modulus $\chi = \sqrt{3/2}\,M_{Pl}\ln\ell_z$ from the 5D Einstein–Hilbert term; 5d/6 numbers carry an implicit $\sqrt{2/3}$ in $m_\chi$ | derived |
 | $d\ln m_N/d\ln\ell_z \approx -9.3$, dominated by QCD running ($1/g_s^2 \propto \ell_z$, through the $t,b,c$ thresholds to $\Lambda_3$, two loops); $\alpha_Y = 2\beta^2 \approx 1.15\times10^2$, composition-independent to $10^{-3}$ | derived; corrected 2026-11-11 from $2.6\times10^2$ (`06` §2a: $b_0 = 7$ had been used down to $\Lambda_{QCD}$); matching scale [verify] |
 | **P1 computed**: a segment in the $(\alpha,\lambda)$ plane — $\alpha_Y = 120$–130 (spread 110–150), $2.8 < \lambda/\mu\mathrm m < 13$ ($13 < \ell_z^{-1}/\mathrm{TeV} < 29$); Eöt-Wash 2020 removed $\lambda > 13\,\mu$m; current limits $1$–$3\times10^3\times$ above the segment | open; detection on/off the segment confirms/kills |
-| **P2 registered**: $w_a = -1.5(1+w_0)$, $w > -1$; DESI DR2 proxy: $\Delta\chi^2 = 6.5$–12.7 (ΛCDM 9–20) | open; outside $2\sigma$, not killed |
+| **P2 registered**: $w_a = -1.5(1+w_0)$, $w > -1$; DESI DR2 proxy: $\Delta\chi^2 = 6.5$–12.7 (ΛCDM 9–20) | superseded by the chain test |
+| **P2 vs DESI DR2 chains** (`06` §4c): outside the 95% region for every $c$ — $98.1\%$ (Pantheon+), $>99.8\%$ (Union3, DESY5, no SNe); ΛCDM as far or farther | **killed** (criterion 2); `RETRACTED.md` N4 |
 | Cassini–$N_{\text{eff}}$ leaks ($\epsilon + f$ only observable); $\dot G/G$–$w$ different fields; GW/EM distance ratio $1 \pm 10^{-5}$; low-$\ell$ axis not computable without a primordial spectrum | not predictions |
 | balance $0 - 9$ unchanged | branch-closure decision owed |
 
@@ -179,7 +186,7 @@ admitted; the only clean option is a universal $c$ (would be parameter #8).
 |---|---|---|
 | 1 | GR + ΛCDM in frozen limit | **passed** (milestone 3) |
 | 2 | $\dot G/G$ vs LLR | **passed** (milestone 4): $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ |
-| 3 | $w(z)$ vs DESI | **open, not passed**: thawing curve (P2) sits at $\Delta\chi^2 = 6.5$–12.7 from the DESI DR2 + CMB + SNe best fits in a Gaussian proxy (ΛCDM: 9–20); outside $2\sigma$ for every SNe sample; chain-level test still owed (`06_predictions.md` §4b) |
+| 3 | $w(z)$ vs DESI | **fired as `01_action.md` §6.2** (2026-11-11, `06_predictions.md` §4c): against the DESI DR2 chains the thawing curve (P2) is outside the 95% region for every $c$, with and without SNe; exponential $V(\Phi)$ dead. Phantom crossing ($>5\sigma$, §6.3) not established |
 | 4 | $\Delta N_{\text{eff}}$, $T_2/T_1$ vs BBN/Planck | **fired** (milestone 5): not because the impact gives $T_2/T_1 > 0.5$ (it gives no number) but because no $T_2/T_1 < 0.45$ yields $\Omega_{DM}/\Omega_b = 5.3$ with $\eta_2 = \eta_1$; mirror SM as DM dead |
 | 5 | $r > 0.01$ kills the collision origin | **re-labelled** (milestone 5): the action produces no primordial spectrum, so it neither predicts nor is killed by $r$ |
 | 6 | $\Omega_{DM}/\Omega_b$, $\sigma/m$ | milestone 6 — only if an exit from §5 is chosen |
@@ -202,5 +209,7 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 - `tests/circle.py`: Casimir sign, option-0 exclusion, option-A window, modulus mass, moduli abundance, P1 range.
 - `tests/dark_sector.py`: thermal-shift overclosure, $T_R < T_o$, $\delta_z(T_R)$, $h$ bound, Jeans length, isocurvature, oscillation signatures.
 - `tests/predictions.py`: canonical $\chi$, $\alpha_Y(\ell_z)$, $(\alpha_Y,\lambda)$ segment vs inverse-square-law limits; thawing $(w_0,w_a)(c)$ vs DESI DR2 proxy.
+- `tests/p2_chains.py` (+ `tests/data/desi_dr2_w0wa.npz`): thawing curve vs the DESI DR2 $(w_0,w_a)$ chains.
 - PR #11 (predictions) merged; PR #12 records the freeze.
 - Milestone 7 done; balance −9; **budget frozen at 9**. Next action is a test, not a derivation: P1 (ISL at $3$–$13\,\mu$m) or P2 (DESI DR2 chains).
+- P2 tested against the DR2 chains (2026-11-11): killed, `RETRACTED.md` N4. P1 open.
