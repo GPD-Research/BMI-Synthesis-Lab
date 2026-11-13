@@ -18,8 +18,9 @@ The freeze is back at 9.
 curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
 criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Confirmed by direct fit without the CPL
 projection (§4d: BAO + CMB best thawing $c = 0$, $\Delta\chi^2 = 8.35$ from CPL). Criterion 3 ($>5\sigma$ phantom
-crossing) is not established. Owed: the decision on the registered next step (menu item (a) or
-(b) of `01_action.md` §2.1, once) versus closing the dark-energy branch; P1 stays open.
+crossing) is not established. **Dark-energy branch closed (2026-11-11):** the menu switch
+to (a)/(b) is declined (both canonical, `01_action.md` criterion 2). v2 makes no dark-energy
+prediction; $c$ is a bounded parameter ($c \lesssim 0.5$, best fit 0). P1 is the only registered prediction left.
 
 One page. What is fixed, what is derived, what is still open, what could kill it next.
 Details and derivations live in the numbered files; this only points.
