@@ -69,7 +69,7 @@ z_{th} = 3,\qquad A = \frac{\ln 2.2}{\ln(15/4)} = 0.597 ,
 $$
 i.e. no drift out to $z = 3$ ($\approx 11.5$ Gly lookback), and $1+z_t = 2.2$ at $z = 14$, the size
 that gives a $z_{\text{obs}} = 14$ galaxy about 1 Gyr. Range of the claim: $3 \le z \le 15$; no claim is
-made about recombination. Applies to the separation-dependent version only (§0).
+made about recombination. Applies to the separation-dependent version only (see the scope note at the top).
 
 | $z_{\text{obs}}$ | $z_t$ | CMB temperature at the source: ΛCDM → claim | time since the Big Bang: ΛCDM → claim |
 |---|---|---|---|
