@@ -47,7 +47,7 @@ Symbol column is the exact LaTeX macro as it appears in the manuscript, without 
 | 1 | `M_5` | effective 5D Planck mass, $M_5^3 = \pi\ell_z M_6^4$ | $G_N$ with #2, #3 | open |
 | 2 | `\ell` | bulk warp length; fixes $\Lambda_6$ and the RS-tuned $\sigma_1$ | $G_N$ with #1, #3 (the CC tuning is stated in `01_action.md` §3, not hidden) | open |
 | 3 | `\phi_0` | present brane separation | $M_{Pl}^2 = \tfrac13 M_5^3 \ell (1-e^{-3\phi_0/\ell})$: one relation among #1–#3; Cassini requires $\phi_0/\ell \gtrsim 3.4$ (`03_background.md` §1); equals the image of the post-impact kinetic ratio $r_b$ in the moduli approximation (`04_impact.md` §1); in the exact two-brane solution $r_b$ does not exist and $\Omega_0^3 = (\epsilon - f)/(1+\epsilon)$ from the collision data, with Cassini requiring $\epsilon - f \lesssim 3\times10^{-5}$ (`04c_approach.md` §2, §4; coincidence sharpened) | bounded |
-| 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | $\lvert\delta\sigma_2\rvert < 0.15\,\rho_0/\Omega_0$ (DM-mass drift); sign not fixed by the impact (`04_impact.md` §5) | bounded, sign open |
+| 4 | `\sigma_2` | tension of $\Sigma_2$; only the detuning $\delta\sigma_2 = \sigma_2 + \sigma_1$ is physical | ~~$\lvert\delta\sigma_2\rvert < 0.15\,\rho_0/\Omega_0$ (mirror-DM mass drift)~~ — void since the DM is $\chi$ (`03` §3.1a, 2026-11-11); now LLR: $\lvert\delta\sigma_2\rvert \lesssim 3\times10^{4}\,\rho_0$ if attractive (at $\Omega_0 = 0.032$), LLR not binding if repulsive; sign not fixed by the impact (`04_impact.md` §5) | bounded, sign open |
 | 5 | `V_0` | bulk potential scale | dark-energy density today | open |
 | 6 | `c` | bulk potential slope | $w_0, w_a$ **and** $\dot\phi$; one number, two observables | open |
 | 7 | `T_2/T_1` | sector temperature ratio at reheating | **not derivable**: the action is $\mathbb Z_2$-symmetric at the collision, so its null value is 1, which gives $\Delta N_{\text{eff}} \approx 6$ (excluded); bounded $< 0.45$ by the CMB (`04_impact.md` §2) | bounded, null excluded |
@@ -90,8 +90,7 @@ quantities, never for a new constant.
 | P2 | thawing dark energy, $w_a = -1.5\,(1+w_0)$ at small $c$ ($-1.15$ at $c = 1.8$), $w > -1$ at all $z$ (`03_background.md` §2, registered as a prediction in `06_predictions.md` §4b, 2026-09-21) | one relation among $(w_0, w_a)$; $V_0, c$ fix three observables | DESI DR2 chains (BAO + CMB, alone and + Pantheon+/Union3/DESY5): curve outside the 95% region for every $c$ — $98.1\%$ to $>99.8\%$ (`06` §4c, 2026-11-11); ΛCDM as far or farther; direct fit without the projection (`06` §4d): BAO + CMB best $c = 0$, $\Delta\chi^2 = 8.35$ from CPL | **killed** — `01_action.md` kill criterion 2 fired; `RETRACTED.md` N4 |
 
 Constraints derived so far (not predictions; they use data to bound the ledger):
-$\phi_0/\ell \gtrsim 3.4$ (Cassini); $|\dot G/G| \lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ forced by the DM-mass drift bound (`03_background.md` §3.1)
-(passes LLR); $\rho^2$ Friedmann corrections only above $T_t \approx 6$ TeV for $\ell = 10\,\mu$m
+$\phi_0/\ell \gtrsim 3.4$ (Cassini); ~~$|\dot G/G| \lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$~~ (mirror-DM bound, void; `03_background.md` §3.1a: $\dot G/G$ is now bounded only by LLR itself); $\rho^2$ Friedmann corrections only above $T_t \approx 6$ TeV for $\ell = 10\,\mu$m
 (table-top $\ell$ bound); $T_2/T_1 < 0.45$ (CMB $N_{\text{eff}}$).
 Forced consequence, tested and failed (`04_impact.md` §3): mirror-sector masses are $\Omega m$
 with $\Omega \lesssim 0.032$, so $\Omega_{DM}/\Omega_b = 5.3$ needs $\eta_2/\eta_1 \gtrsim 1600$;
