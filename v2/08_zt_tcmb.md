@@ -7,7 +7,12 @@ temperature measured *at* distant sources? Numbers: `tests/zt_tcmb.py`; data
 
 The fork, $1+z_{\text{obs}} = (1+z_{\text{exp}})(1+z_t)$, puts the CMB at the source at $T_0(1+z_{\text{exp}})$,
 so each measurement gives $1+z_t = T_0(1+z_{\text{obs}})/T$ directly, independent of any
-time–distance model.
+time–distance model — **provided the distortion depends on the source–observer separation**.
+If it instead acts on all photons during an epoch, the CMB photons reaching the source carry
+the same distortion and the measured temperature is $T_0(1+z_{\text{obs}})$ whatever $z_t$ is: the test
+is blind (scope corrected 2026-11-13). A clock version (matter clocks running ahead of the expansion
+clock, redshift and temperature standard) is also invisible here; its tests are time dilation of
+distant events and chemical clocks.
 
 | data | $z$ | role |
 |---|---|---|
@@ -63,9 +68,8 @@ $$
 z_{th} = 3,\qquad A = \frac{\ln 2.2}{\ln(15/4)} = 0.597 ,
 $$
 i.e. no drift out to $z = 3$ ($\approx 11.5$ Gly lookback), and $1+z_t = 2.2$ at $z = 14$, the size
-that gives a $z_{\text{obs}} = 14$ galaxy about 1 Gyr. Range of the claim: $3 \le z \le 15$. The curve
-cannot continue to $z \approx 1100$ unchanged (it would move recombination); its saturation above
-$z \approx 15$ is unspecified and owed, and the CMB acoustic scale will bound it.
+that gives a $z_{\text{obs}} = 14$ galaxy about 1 Gyr. Range of the claim: $3 \le z \le 15$; no claim is
+made about recombination. Applies to the separation-dependent version only (§0).
 
 | $z_{\text{obs}}$ | $z_t$ | CMB temperature at the source: ΛCDM → claim | time since the Big Bang: ΛCDM → claim |
 |---|---|---|---|
