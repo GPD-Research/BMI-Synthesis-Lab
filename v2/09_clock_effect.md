@@ -79,6 +79,12 @@ explain it with pair-instability supernovae/hypernovae (first-generation very ma
 with a 30–50 Myr delay. The discriminator between those channels is the iron-peak pattern
 (Mn, Ni, odd–even ratios) [verify: from memory], which integrated spectra at $z \approx 11$ do not yet resolve.
 
+$G$ also moves the thresholds, not only the timing (2026-11-13). The Chandrasekhar mass scales as
+$(\hbar c/G)^{3/2}/m_p^2 \propto G^{-3/2}$: a 10% excess lowers it by about 13%, so Type Ia explosions occur
+in lighter white dwarfs, whose iron-peak yields differ (lower-mass explosions are expected to make less
+Mn relative to Fe [verify: from memory]). One galaxy therefore gives two independent readings of $G$:
+*when* the iron appears relative to its age, and *what mix* of iron-peak elements comes with it.
+
 ## 4. Reading
 
 The clock version has the same shape of answer as the redshift version. A small effect is
