@@ -56,7 +56,7 @@ excluded) and stays a parameter, bounded $< 0.45$.
 | background metric $ds^2 = e^{-2y/\ell}(\eta_{\mu\nu}dx^\mu dx^\nu + dz^2) + dy^2$, $\ell^{-2} = -\Lambda_6/10M_6^4$ | verified symbolically (`tests/check_background.py`) |
 | brane tensions $\sigma_1 = 8M_6^4/\ell = -\sigma_2$ | verified |
 | $M_{Pl}^2(\phi) = \tfrac13 M_5^3 \ell\,(1 - e^{-3\phi/\ell})$ | verified |
-| $\dot G/G \approx -(3\dot\phi/\ell)\,e^{-3\phi/\ell}$ | derived; $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ once the DM-mass drift bound is imposed — **kill criterion 2 passed** |
+| $\dot G/G \approx -(3\dot\phi/\ell)\,e^{-3\phi/\ell}$ | derived; $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ once the DM-mass drift bound is imposed — **kill criterion 2 passed**. *2026-11-11: that bound was mirror-DM and is void (`03` §3.1a); LLR still passes, now saturable* |
 | brane field equation $G_{\mu\nu} = 8\pi G_N T_{\mu\nu} + (8\pi G_N/\sigma_1)\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}$ | structure derived; $D=6$ coefficients of $\hat\pi$ **[verify]** |
 | GR + ΛCDM recovered for $\dot\phi \to 0$, low energy | yes — **kill criterion 1 passed** |
 | Brans–Dicke $\omega = \tfrac43(e^{3\phi/\ell}-1)$; Cassini: $\phi_0/\ell \gtrsim 3.4$, $\Omega_0 \lesssim 0.032$ | derived in 6D (`03_background.md` §1, `tests/check_radion.py`) |

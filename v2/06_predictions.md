@@ -130,7 +130,7 @@ both ends from the action) did not.
   empty and is dropped, not filled.
 - **GW vs EM luminosity distance.** The GW luminosity distance differs from the EM one by
   the ratio of $M_{Pl}$ at emission to $M_{Pl}$ today; the DM-mass-drift bound already forces this to
-  $1 \pm 5\times10^{-6}$ (`03` §3.1). LISA/ET reach $10^{-2}$: a null that cannot be tested.
+  $1 \pm 5\times10^{-6}$ (`03` §3.1; *that bound is void since the DM is $\chi$, `03` §3.1a — loosens, not recomputed*). LISA/ET reach $10^{-2}$: a null that cannot be tested.
 - **Preferred axis in the low-$\ell$ CMB.** v1's signature. The action produces no primordial
   spectrum (`04_impact.md` §6, $r \ge 0.28$ if it did), so it cannot produce an anisotropic one.
   Not computed, and not computable until the collision matching exists.
