@@ -38,3 +38,4 @@ jobs:
       - run: python3 tests/radion_llr.py
       - run: python3 tests/zt_tcmb.py
       - run: python3 tests/clock_effect.py
+      - run: python3 tests/g_ringdown.py

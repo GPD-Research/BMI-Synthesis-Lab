@@ -37,7 +37,7 @@ for z, t_eff in ((7.27, 1.38), (14.0, 0.96)):          # the 2026-11-13 claim's 
           f"dG/G = +{need[z][0]:.2f} .. +{need[z][1]:.2f}")
 
 print("what a recombination-capped ring-down gives (dG/G at most the CMB bound, then decaying):")
-for cap in (0.015, 0.06):
+for cap in (0.002, 0.006, 0.03):
     for z in (7.27, 14.0):
         lo, hi = ((1 + cap) ** N_LO - 1) * age(z), ((1 + cap) ** N_HI - 1) * age(z)
         print(f"  cap {cap:.3f}, z = {z}: extra effective age < +{hi * 1e3:.0f} Myr (n = 7.5), +{lo * 1e3:.0f} (n = 4)")

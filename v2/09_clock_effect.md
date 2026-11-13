@@ -29,12 +29,14 @@ For the ages of the 2026-11-13 claim (`08_zt_tcmb.md` §3), with the excess held
 ## 3. What bounds it
 
 - **BBN:** $G$ at BBN over $G$ today $= 0.99^{+0.06}_{-0.05}$ (2σ; arXiv:1910.10730).
-- **Recombination:** $G$ at recombination exceeds $G$ today by $\lesssim 1.5$–$6\%$ (Planck + BAO, scalar–tensor; arXiv:1602.00809,
-  1702.00742; the range spans their models and confidence levels).
+- **Recombination:** $G$ at recombination exceeds $G$ today by $< 0.19\%$ (95%, Planck + BAO, scalar–tensor;
+  arXiv:1702.00742), $< 0.56\%$ (arXiv:1602.00809); $\pm 3\%$ (1σ) in an extended-quintessence model
+  (arXiv:2101.11875). These assume a monotone $G(t)$. *Corrected 2026-11-13: an earlier draft quoted
+  "1.5–6%" from a garbled abstract.*
 - **Ring-down from a recombination-capped state** (the picture of 2026-11-13: convergence mostly
   stabilized by recombination, minor ring-down to $\approx 11$ Gly): with $\Delta G/G$ never above the
-  recombination bound, the extra effective age is $< 0.4$ Gyr at $z = 7.27$ and $< 0.16$ Gyr at $z = 14$
-  (cap 6%, $n = 7.5$); $< 0.09$ and $< 0.04$ Gyr for a 1.5% cap.
+  recombination bound, the extra effective age at $z = 7.27$ is $< 11$ Myr (cap 0.2%), $< 33$ Myr
+  (0.6%), $< 0.18$ Gyr (3%), all $n = 7.5$.
 - **The CMB angular scale:** $H \propto \sqrt G$, so an excess $g$ at $3 < z < 15$ shortens the distance to
   last scattering: $-0.4\%$ for $g = 0.03$, $-1.3\%$ for $g = 0.1$, $-2.5\%$ for $g = 0.2$, against
   the CMB acoustic angle, known to $3\times10^{-4}$. Other parameters can absorb part of it; whether BAO at $z < 2.3$ lets
@@ -44,6 +46,26 @@ For the ages of the 2026-11-13 claim (`08_zt_tcmb.md` §3), with the excess held
   A physical clock effect needs a new gravitational scalar — e.g. a scalar–tensor theory relaxing toward GR
   over cosmic time (the Damour–Nordtvedt attractor, the established form of "imperfect convergence that
   stabilizes" [verify: reference from memory]).
+
+## 3a. A ring-down fitted (2026-11-13)
+
+`tests/g_ringdown.py`: $G$ over $G$ today $= 1 + A\,e^{-p x}$ times an oscillation of period $\lambda$, with $x$ the e-folds since
+recombination, $H \propto \sqrt G$, fitted to DESI DR2 BAO + the compressed CMB of `06` §4d (which does
+not see $G$ *at* recombination; the bounds above do). Stellar speed-up is the mean of $(G/G_0)^n$ over the
+time since recombination.
+
+| $A$ at recombination | period (e-folds) | decay $p$ | $\Delta\chi^2$ vs ΛCDM | speed-up at $z = 7.27$ ($n = 4$, $7.5$) | at $z = 14$ |
+|---|---|---|---|---|---|
+| 0.03 | 1.5 | 0.5 | $+0.25$ | 1.004, 1.007 | 0.997, 0.995 |
+| 0.1 | 1.5 | 0.5 | $+0.80$ | 1.012, 1.024 | 0.991, 0.985 |
+| 0.3 | 1.5 | 0.5 | $+1.94$ | 1.041, 1.089 | 0.979, 0.980 |
+| 0.3 | 0.5 | 1.0 | $-0.56$ | 0.999, 1.000 | 1.000, 1.003 |
+
+(full grid in the script with `--full`). Even an amplitude of 30% at recombination — 50–150×
+the published bound — buys at most 9% more stellar time by $z = 7.27$, because seven e-folds of
+decay separate recombination from the galaxies, and swings average out. The galaxies need a
+speed-up of ×1.9–3.3 (§2). A ring-down that starts at recombination cannot supply it, whatever
+its period; what would is a $G$ excess of 10–30% *present at* $z \approx 7$–14.
 
 ## 4. Reading
 
