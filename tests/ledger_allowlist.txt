@@ -253,3 +253,8 @@ v
 \theta_{MC}
 r_d
 z_d
+# derived couplings / fields (07_exchange.md)
+U
+\beta_{DM}
+\beta_b
+p

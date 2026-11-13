@@ -10,7 +10,9 @@ closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill
 **Freeze lifted for one provisional tenth (2026-11-11, `ledger.md`).** Candidate: inter-brane
 energy exchange. Admitted only if it fixes or predicts at least one of the nine; paused (kept, not
 assumed, used by nothing) if it fits but connects to none; dead only by a failed kill test. The
-budget stays 9 until it is admitted.
+budget stays 9 until it is admitted. *Computed 2026-11-11 (`07_exchange.md`): dead by data* — the
+circle locks any DM-mass drift to $\mu$ and $\alpha$, capping the exchange at $\lvert\Delta w\rvert < 10^{-8}$.
+The freeze is back at 9.
 
 **P2 tested 2026-11-11 (`06_predictions.md` §4c): killed.** Against the DESI DR2 chains the thawing
 curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
