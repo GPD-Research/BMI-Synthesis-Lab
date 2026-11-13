@@ -79,7 +79,7 @@ def main():
     om0 = 0.032
     b, r, why = bound(om0, -1)
     print(f"attractive (dsigma2 < 0), Omega_0 = {om0}: |dsigma2| < {b:.3g} rho0 (set by {why}); "
-          f"f_rad today {r[2]:+.2e}; old mirror-DM bound {0.15 / om0:.3g} rho0", flush=True)
+          f"radion potential today {r[2]:+.2e} (net energy: radion_hz.py); old mirror-DM bound {0.15 / om0:.3g} rho0", flush=True)
     assert why == "LLR" and b > 1e3 * 0.15 / om0
     # repulsive: the radion runs to small Omega and Gdot/G stays far below LLR wherever Omega_0 is reachable
     worst = max(abs(x[1]) for x in (solve(v, om0) for v in (1e1, 1e2, 3e2)) if x is not None)

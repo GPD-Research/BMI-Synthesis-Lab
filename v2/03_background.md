@@ -142,16 +142,19 @@ now is LLR directly, $\lvert\dot G/G\rvert < 1.5\times10^{-13}\,\mathrm{yr}^{-1}
 the canonical radion from rest at $z \sim 3000$ with $\Omega(t_0) = \Omega_0$ imposed. The terminal-velocity
 estimate of §3.1 does not hold here: at these values the potential is steep compared with $H^2$.
 
-| $\delta\sigma_2$ | bound at $\Omega_0 = 0.032$ | set by | $f_{\text{rad}}$ today at the bound |
+| $\delta\sigma_2$ | bound at $\Omega_0 = 0.032$ | set by | radion potential today at the bound (units of the critical density) |
 |---|---|---|---|
 | $< 0$ (attractive) | $\lvert\delta\sigma_2\rvert < 3.3\times10^{4}\,\rho_0$ | LLR | $-3.5\times10^{-2}$ |
 | $> 0$ (repulsive) | none from LLR ($\lvert\dot G/G\rvert \le 2.4\times10^{-14}\,\mathrm{yr}^{-1}$ wherever $\Omega_0$ is reachable) | — | $\lesssim 10^{-3}$ |
 
 (old: $4.7\,\rho_0$.) Consequences: (1) kill criterion 2 (LLR) still passes, but now by
 assumption-free saturation, not by three orders of magnitude; (2) **the merger need not be invisible
-in the expansion history**: an attractive radion can carry up to $\sim 3\%$ of the critical density
-today, *negative*. A sum of canonical fields obeys the null energy condition, so it cannot give $w < -1$, and
-it does not revive P2; its effect on $H(z)$ is an open item, bounded only by the LLR value here.
+in the expansion history** — but it nearly is. *Corrected 2026-11-13:* the table's $-3.5\times10^{-2}$ is the
+potential alone; the kinetic energy nearly cancels it, and the radion's net energy today at the LLR
+bound is $-2.5\times10^{-3}$ of critical (`tests/radion_hz.py`). Fitted to DESI DR2 BAO + the compressed
+CMB with the cosmological constant retuned, it changes $\chi^2$ by $< 0.01$ for every allowed
+$\lvert\delta\sigma_2\rvert$: the expansion history does not constrain the radion, and LLR stays the binding
+bound. A sum of canonical fields obeys the null energy condition, so it cannot give $w < -1$ either.
 (3) The "two handles" of consequence 3 become one: $\dot G/G$ up to the LLR limit. (4) The fate
 numbers of §3.4 and `04_impact.md` §5 (earliest turnaround $\gtrsim 200$ Gyr) used the void bound
 and are superseded-pending; with the LLR bound the attractive case can turn around sooner.
