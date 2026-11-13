@@ -67,6 +67,18 @@ decay separate recombination from the galaxies, and swings average out. The gala
 speed-up of ×1.9–3.3 (§2). A ring-down that starts at recombination cannot supply it, whatever
 its period; what would is a $G$ excess of 10–30% *present at* $z \approx 7$–14.
 
+## 3b. The per-galaxy probe (2026-11-13)
+
+Type Ia iron is a $G$-clock as well as an age clock: the delay is the progenitor's lifetime
+($\propto G^{-n}$) plus, for double white dwarfs, the gravitational-wave inspiral ($\propto G^{-3}$ at fixed
+separation and masses). Iron above the core-collapse O/Fe ratio in a galaxy whose age is fixed by
+its redshift therefore bounds $G$ — or the elapsed time — at that epoch. First data:
+arXiv:2503.11457 (deep NIRSpec, 7 galaxies at $z = 9$–12) finds Fe enhancement in GS-z11-0 at $z = 11.12$,
+$[\mathrm{O/Fe}] = -0.68^{+0.37}_{-0.55}$ ($\approx 2\sigma$ beyond solar), when the ΛCDM age is $\approx 0.4$ Gyr. The authors
+explain it with pair-instability supernovae/hypernovae (first-generation very massive stars) or Type Ia
+with a 30–50 Myr delay. The discriminator between those channels is the iron-peak pattern
+(Mn, Ni, odd–even ratios) [verify: from memory], which integrated spectra at $z \approx 11$ do not yet resolve.
+
 ## 4. Reading
 
 The clock version has the same shape of answer as the redshift version. A small effect is
