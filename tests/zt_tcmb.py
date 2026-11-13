@@ -22,6 +22,7 @@ DATA = os.path.join(os.path.dirname(__file__), "data", "tcmb_z.csv")
 T0 = 2.72548
 H0, OM, OR = 67.4, 0.315, 9.1e-5
 GYR = 977.8 / H0
+REG_ZTH, REG_1PZT14 = 3.0, 2.2
 
 
 def load():
@@ -83,6 +84,21 @@ def main():
     zt634 = T0 * (1 + 6.34) / (T[i][0] - 2 * lo[i][0]) - 1
     print(f"HFLS3 alone, 2 sigma: z_t(6.34) < {zt634:.2f} (T > {T[i][0] - 2 * lo[i][0]:.1f} K)")
     assert out[1.3][1][2] < 0.2 and out[3.0][1][2] > 0.5
+
+    # pre-registered claim (2026-11-13, 08_zt_tcmb.md S3): threshold at z = 3, amplitude fixed by
+    # 1 + z_t(14) = 2.2 (a z_obs = 14 galaxy gets ~1 Gyr), nothing fitted to the temperatures
+    A = np.log(REG_1PZT14) / np.log(15 / (1 + REG_ZTH))
+    print(f"registered: z_th = {REG_ZTH}, A = {A:.3f}")
+    print("  z_obs | z_t | T_CMB LCDM -> registered | age LCDM -> registered")
+    for zz in (3.19, 4.62, 6.34, 7.27, 10.0, 14.0):
+        zt = float(np.expm1(A * max(0.0, np.log((1 + zz) / (1 + REG_ZTH)))))
+        zexp = (1 + zz) / (1 + zt) - 1
+        print(f"  {zz:5} | {zt:.2f} | {T0 * (1 + zz):5.1f} -> {T0 * (1 + zexp):5.1f} K | "
+              f"{age(zz) * 1e3:4.0f} -> {age(zexp) * 1e3:4.0f} Myr")
+    reg = A * np.maximum(0, np.log((1 + z) / (1 + REG_ZTH)))
+    dchi = chi2(reg, z, T, lo, hi) - c_zero
+    print(f"  current data: chi2(registered) - chi2(LCDM) = {dchi:+.2f} (HFLS3 carries it)")
+    assert 0 < dchi < 4, "registered curve should be mildly disfavoured but allowed by today's data"
     print("ALL OK")
 
 

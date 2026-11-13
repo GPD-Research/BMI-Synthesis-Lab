@@ -52,3 +52,35 @@ still allows over a Gyr. That is where the test lives, and it is a data-starved 
 Caveats: the absorber temperatures depend on collisional and UV-pumping corrections
 (Klimenko's model); HFLS3 is a 1σ range entered as a Gaussian; Luzzi and Hurier are both SZ and
 partly overlap in clusters. None of this changes the order of magnitude.
+
+## 3. Pre-registered claim (2026-11-13)
+
+Registered before any new data, so the threshold cannot later move to wherever the data are
+thin. Nothing here is fitted to the temperatures; the amplitude is fixed by the galaxy-age motivation alone.
+
+$$
+\ln(1+z_t) = A\,\max\!\left(0,\ \ln\frac{1+z}{1+z_{th}}\right),\qquad
+z_{th} = 3,\qquad A = \frac{\ln 2.2}{\ln(15/4)} = 0.597 ,
+$$
+i.e. no drift out to $z = 3$ ($\approx 11.5$ Gly lookback), and $1+z_t = 2.2$ at $z = 14$, the size
+that gives a $z_{\text{obs}} = 14$ galaxy about 1 Gyr. Range of the claim: $3 \le z \le 15$. The curve
+cannot continue to $z \approx 1100$ unchanged (it would move recombination); its saturation above
+$z \approx 15$ is unspecified and owed, and the CMB acoustic scale will bound it.
+
+| $z_{\text{obs}}$ | $z_t$ | CMB temperature at the source: ΛCDM → claim | time since the Big Bang: ΛCDM → claim |
+|---|---|---|---|
+| 4.62 | 0.22 | 15.3 → 12.5 K | 1.29 → 1.74 Gyr |
+| 6.34 | 0.44 | 20.0 → 13.9 K | 0.86 → 1.49 Gyr |
+| 7.27 | 0.54 | 22.5 → 14.6 K | 0.72 → 1.38 Gyr |
+| 10 | 0.83 | 30.0 → 16.4 K | 0.47 → 1.16 Gyr |
+| 14 | 1.20 | 40.9 → 18.6 K | 0.30 → 0.96 Gyr |
+
+Today's data: $\Delta\chi^2 = +1.85$ against ΛCDM, carried entirely by HFLS3 (claim 13.9 K vs 16.4–30.2 K
+at 1σ): mildly disfavoured, allowed. **Kills:** (i) any source-frame temperature at $z > 4$ that
+excludes the claimed value at $3\sigma$; (ii) two or more such measurements each at $2\sigma$; (iii) a
+galaxy at $z > 4$ whose chemical clock (`ledger.md`: red-giant-branch light, Type Ia iron) is young
+while its temperature matches ΛCDM is neutral, but a ΛCDM-temperature galaxy with an old clock
+kills the claim and points to astrophysics. **Confirms** (not decides): a temperature deficit of
+the claimed size at $z > 4$ in two independent systems, with the same galaxy's clock agreeing.
+Natural first target: the quiescent galaxy RUBIES-UDS-QG-z7 at $z = 7.27$ (arXiv:2606.21361), where
+the claim gives 14.6 K and 1.38 Gyr instead of 22.5 K and 0.72 Gyr.
