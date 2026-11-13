@@ -51,7 +51,7 @@ For the ages of the 2026-11-13 claim (`08_zt_tcmb.md` §3), with the excess held
 
 `tests/g_ringdown.py`: $G$ over $G$ today $= 1 + A\,e^{-p x}$ times an oscillation of period $\lambda$, with $x$ the e-folds since
 recombination, $H \propto \sqrt G$, fitted to DESI DR2 BAO + the compressed CMB of `06` §4d (which does
-not see $G$ *at* recombination; the bounds above do). Stellar speed-up is the mean of $(G/G_0)^n$ over the
+not see $G$ *at* recombination; the bounds above do). Stellar speed-up is the mean of $G^n$ (in units of today's $G$) over the
 time since recombination.
 
 | $A$ at recombination | period (e-folds) | decay $p$ | $\Delta\chi^2$ vs ΛCDM | speed-up at $z = 7.27$ ($n = 4$, $7.5$) | at $z = 14$ |
