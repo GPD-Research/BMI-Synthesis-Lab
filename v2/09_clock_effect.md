@@ -12,7 +12,7 @@ Numbers: `tests/clock_effect.py`.
 A uniform speed-up of every matter clock (atoms, nuclei, stars) relative to the expansion is a
 change of units and is unobservable — the "pure perspective" case. It becomes physics only as a
 dimensionless mismatch between matter and gravity: $G$ measured in atomic units,
-$G m_p^2/\hbar c$. The stellar clock is steep in it. Homology ($P \sim GM^2/R^4$, $T \sim GM/R$,
+$G m_p^2/\hbar c$. The stellar clock is steep in it. Homology (pressure $\sim GM^2/R^4$, $T \sim GM/R$,
 $L \sim T^4R/\kappa\rho$) gives main-sequence lifetimes $t \propto G^{-n}$ with $n = 4$ (massive stars,
 electron scattering) to $n = 7.5$ (low-mass stars, Kramers opacity). A modest $G$ excess
 therefore buys a lot of stellar time.
@@ -28,8 +28,8 @@ For the ages of the 2026-11-13 claim (`08_zt_tcmb.md` §3), with the excess held
 
 ## 3. What bounds it
 
-- **BBN:** $G_{\rm BBN}/G_0 = 0.99^{+0.06}_{-0.05}$ (2σ; arXiv:1910.10730).
-- **Recombination:** $G_{\rm rec}/G_0 - 1 \lesssim 1.5$–$6\%$ (Planck + BAO, scalar–tensor; arXiv:1602.00809,
+- **BBN:** $G$ at BBN over $G$ today $= 0.99^{+0.06}_{-0.05}$ (2σ; arXiv:1910.10730).
+- **Recombination:** $G$ at recombination exceeds $G$ today by $\lesssim 1.5$–$6\%$ (Planck + BAO, scalar–tensor; arXiv:1602.00809,
   1702.00742; the range spans their models and confidence levels).
 - **Ring-down from a recombination-capped state** (the picture of 2026-11-13: convergence mostly
   stabilized by recombination, minor ring-down to $\approx 11$ Gly): with $\Delta G/G$ never above the
@@ -37,7 +37,7 @@ For the ages of the 2026-11-13 claim (`08_zt_tcmb.md` §3), with the excess held
   (cap 6%, $n = 7.5$); $< 0.09$ and $< 0.04$ Gyr for a 1.5% cap.
 - **The CMB angular scale:** $H \propto \sqrt G$, so an excess $g$ at $3 < z < 15$ shortens the distance to
   last scattering: $-0.4\%$ for $g = 0.03$, $-1.3\%$ for $g = 0.1$, $-2.5\%$ for $g = 0.2$, against
-  $\theta_*$ known to $3\times10^{-4}$. Other parameters can absorb part of it; whether BAO at $z < 2.3$ lets
+  the CMB acoustic angle, known to $3\times10^{-4}$. Other parameters can absorb part of it; whether BAO at $z < 2.3$ lets
   them is a fit, not done.
 - **v2 cannot supply it.** The circle sets $G$ together with $\alpha$ and $\mu$ (`07_exchange.md` §2),
   which quasar spectra fix far below 10%; the radion moves $G$ by $3\Omega^3\Delta\phi/\ell < 10^{-4}\Delta\phi/\ell$.
