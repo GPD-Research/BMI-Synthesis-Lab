@@ -85,6 +85,26 @@ in lighter white dwarfs, whose iron-peak yields differ (lower-mass explosions ar
 Mn relative to Fe [verify: from memory]). One galaxy therefore gives two independent readings of $G$:
 *when* the iron appears relative to its age, and *what mix* of iron-peak elements comes with it.
 
+**Data so far (2026-11-13, from abstracts):**
+
+| object | $z$ | ΛCDM age | iron | channel indicated |
+|---|---|---|---|---|
+| GS-z11-0 (arXiv:2503.11457; ALMA $z = 11.1221$, arXiv:2507.22888) | 11.12 | ≈ 0.4 Gyr | $[\mathrm{O/Fe}] = -0.68^{+0.37}_{-0.55}$ | open: two bursting low-mass clumps, O already 20–30% solar |
+| GN-z11 (arXiv:2407.14470) | 10.60 | ≈ 0.43 Gyr | $[\mathrm{O/Fe}] = -0.37^{+0.43}_{-0.22}$ | open; possible AGN |
+| two SPURS galaxies (arXiv:2606.08782) | ≈ 7 | ≈ 0.75 Gyr | $[\mathrm{Fe/Si}] \simeq -0.2$ | Type Ia: $[\mathrm{Al/Si}] \sim 0$, no pair-instability odd–even deficit |
+| JADES stacks, 564 galaxies (arXiv:2509.18055) | 4–7 | 0.75–1.5 Gyr | supersolar Fe/O only in the high-sSFR / bluest bins | prompt: iron excess in the *youngest* systems |
+
+Reading. (i) No measurement yet exceeds what ΛCDM allows: the Type Ia delay-time distribution
+starts at $\approx 40$ Myr and falls roughly as $1/t$, so about half of all Type Ia iron arrives within
+0.7 Gyr [verify: standard DTD, from memory], and the $z \approx 11$ cases need only a 30–50 Myr delay or
+pair-instability supernovae. Iron *timing* therefore reads $G$ weakly; only iron within $\lesssim 40$ Myr of
+the first stars, with Type Ia signatures, would be anomalous. (ii) The JADES pattern — iron excess
+tracking youth — points to a prompt channel, the opposite of what an extra-time clock predicts.
+(iii) The odd–even test is already in use at $z \approx 7$ (Al/Si); Mn and Ni (the Chandrasekhar-mass
+reading) have no high-$z$ measurement yet. Rest-UV Mn II and Ni II absorption lines are used in
+quasar absorbers [verify: from memory], so deep NIRSpec spectra of bright $z > 7$ galaxies could in
+principle reach them.
+
 ## 4. Reading
 
 The clock version has the same shape of answer as the redshift version. A small effect is
