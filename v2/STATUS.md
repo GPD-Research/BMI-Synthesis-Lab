@@ -222,3 +222,21 @@ alternative. Not yet computed: the low-$\ell$ CMB axis; the matching through the
 - PR #11 (predictions) merged; PR #12 records the freeze.
 - Milestone 7 done; balance −9; **budget frozen at 9**. Next action is a test, not a derivation: P1 (ISL at $3$–$13\,\mu$m) or P2 (DESI DR2 chains).
 - P2 tested against the DR2 chains (2026-11-11): killed, `RETRACTED.md` N4. P1 open.
+
+## 9. Refocus todo (2026-11-17)
+
+One observable that bears on both the dark sector and the Hubble tension. All of these test
+or sharpen the existing 9; none adds a parameter (freeze rules apply).
+
+- [ ] **$\Delta N_{\text{eff}}$ as a number.** The only observable dark-radiation combination is
+  $\epsilon + f$ (`04c_approach.md`; Cassini forces $\epsilon \approx f$). §6b lists it under "not
+  predictions". Compute the range the collision allows, with an error bar, and compare with
+  Planck ($\lesssim 0.3$) and CMB-S4 (target $\sim 0.03$–$0.06$), or show no range follows.
+- [ ] **Hubble tension.** Most surviving fixes add energy before recombination; extra radiation
+  needs $\Delta N_{\text{eff}} \sim 0.3$–$0.5$. Check whether $\epsilon + f$ or the radion can supply
+  it without breaking the CMB peaks. If the `04_impact.md` §4 bound ($\Delta N_{\text{eff}} \lesssim 0.03$)
+  holds, record that BMI cannot ease the tension this way.
+- [ ] **Dark matter, second handle.** Current candidate is the oscillating circle modulus
+  (`05_dark_sector.md`, $\delta_z$); its only lab handle is P1. Look for a cosmological one
+  (the $\Delta N_{\text{eff}}$ item above, or isocurvature).
+- Dark energy: branch closed (P2 killed, `RETRACTED.md` N4); re-opens only under the freeze rules.
