@@ -179,23 +179,28 @@
     let drag = null;
     svg.addEventListener("wheel", (ev) => {
       ev.preventDefault();
-      const r = svg.getBoundingClientRect();
       const k = Math.exp(ev.deltaY * 0.0015);
-      const px = vb.x + ((ev.clientX - r.left) / r.width) * vb.w, py = vb.y + ((ev.clientY - r.top) / r.height) * vb.h;
+      const pt = svg.createSVGPoint();
+      pt.x = ev.clientX; pt.y = ev.clientY;
+      const u = pt.matrixTransform(svg.getScreenCTM().inverse());
+      const px = u.x, py = u.y;
       vb = { x: px - (px - vb.x) * k, y: py - (py - vb.y) * k, w: vb.w * k, h: vb.h * k };
       setVB();
     }, { passive: false });
-    svg.addEventListener("pointerdown", (ev) => { drag = { x: ev.clientX, y: ev.clientY, vb: Object.assign({}, vb), moved: false }; });
-    window.addEventListener("pointermove", (ev) => {
+    svg.addEventListener("pointerdown", (ev) => {
+      drag = { x: ev.clientX, y: ev.clientY, vb: Object.assign({}, vb), moved: false, id: ev.pointerId };
+    });
+    svg.addEventListener("pointermove", (ev) => {
       if (!drag) return;
       const r = svg.getBoundingClientRect();
       const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
-      if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+      if (!drag.moved && Math.abs(dx) + Math.abs(dy) > 3) { drag.moved = true; svg.setPointerCapture(drag.id); }
       const s = Math.max(vb.w / r.width, vb.h / r.height);
       vb.x = drag.vb.x - dx * s; vb.y = drag.vb.y - dy * s;
       setVB();
     });
-    window.addEventListener("pointerup", () => { setTimeout(() => (drag = null), 0); });
+    svg.addEventListener("pointerup", () => { setTimeout(() => (drag = null), 0); });
+    svg.addEventListener("pointercancel", () => { drag = null; });
     svg.addEventListener("click", () => { if (!drag || !drag.moved) select(version, null, true); });
 
     function highlight(id) {
