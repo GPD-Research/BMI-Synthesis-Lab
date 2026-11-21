@@ -44,6 +44,32 @@ flowcharts. It is read-only and is rebuilt from the repository on every change. 
 its file and check, each causal link is marked ✓ (verified) or ? (not yet worked out), and v1's
 critical failures are highlighted. Details: [`v2/STATUS.md`](v2/STATUS.md),
 [`v2/ledger.md`](v2/ledger.md).
+## Meta-Analysis: AI as a collaborative tool
+
+BMI has been developed with three generations of AI tools:
+
+- **Gemini Pro** was the first collaborator for code and math. Its sycophancy, agreeing rather
+  than checking, makes it largely unsuitable for theoretical work.
+- **GitHub and high-end OpenAI models** were better and somewhat agentic, but still had no view of
+  the whole project.
+- **Devin**, connected to the repository, has been the most robust, provided the theory is
+  developed with the rigor and checks of software development. It drops sycophancy entirely and is
+  critical where it should be, as a coding and math agent should.
+
+Devin's results are cross-checked against independent models. The AI built into the Brave browser
+strikes a good balance: decent math and science and no connection to the repository. It is
+occasionally sycophantic but far more honest and critical about theory than Gemini, which makes it
+a useful independent check on individual concepts.
+
+**Ledgers keep the work honest.** Every parameter, prediction and retraction is recorded in a file
+that CI checks. Nobody, human or AI, can quietly add a free number, revive a killed branch or count
+a fit as a prediction: the ledger balance (now 0 − 9) shows the cost, and the build fails if the map
+and ledger disagree.
+
+**Benchmarking an app mirrors developing a theory.** Physics IDE is tested the way BMI is: claims
+are checked against fixed references, kill criteria are set before the data arrive, the way tests
+are written before a release, and a result counts only when an independent check reproduces it.
+BMI is the project where both are measured at once.
 <!-- site:end -->
 
 > **Notice.** The 15 Hz ringdown split and the 5.557σ result described below have been
