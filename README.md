@@ -1,6 +1,15 @@
 # Brane-Manifold Interface (BMI) Theory — Research Repository
 
 <!-- site:start -->
+## Why BMI exists
+
+BMI is a byproduct of a broader study: how well AI can help develop theoretical physics. It
+remains in use as a stress test, which is one of the few redeeming features of a flawed
+cosmological model. Version 1 was developed largely with non-agentic AI (Gemini, and GitHub
+Codespaces), tools that lacked comprehensive analysis and a view of the whole project. BMI is
+now the test case for [Physics IDE](https://gpd-research.com/physics-ide.html): a measure of how
+well the IDE detects flaws and "comprehends" an entire project.
+
 ## What BMI is
 
 The Brane-Manifold Interface (BMI) is a braneworld model of cosmology, developed in the open. It
