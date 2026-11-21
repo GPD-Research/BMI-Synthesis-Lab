@@ -78,8 +78,9 @@ $$
 with $M_{Pl}^2(\phi) = \tfrac13 M_5^3\ell(1-\Omega^3)$, $K = 12M_{Pl}^2\Omega^3/\ell^2$,
 $V_* = \pi\ell_z\ell V_0/5$, $\Omega = e^{-\phi/\ell}$. Two scalars, not one: the radion $\phi$
 (merger) and the bulk scalar $\Phi_4$ (dark energy). Outside it: $E_{\mu\nu} = \mathcal C/a^4$
-with $\mathcal C$ now fixed to $\rho_E/\rho_{\text{rad}} \lesssim 5\times10^{-3}$
-(`04_impact.md` §4) and the order-$\ell^2 R^2$ corrections.
+with $\mathcal C$ collision data — at least the emission fixed point $\rho_E/\rho_{\text{rad}} \approx 5\times10^{-3}$
+(`04_impact.md` §4) and at least the $\Sigma_2$ energy, $\epsilon \ge f$ (`04c_approach.md` §3) —
+and the order-$\ell^2 R^2$ corrections.
 
 **Background result.** The CMB bound on mirror-DM mass drift forces the radion's energy
 fraction today to $f_{\text{rad}} < 5\times10^{-6}$: the merger is a spectator, dark energy is
@@ -125,7 +126,7 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 
 | quantity | result |
 |---|---|
-| $\mathcal C$ | computed: fixed point $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ (Langlois–Sorbo–Rodríguez-Martínez), $\Delta N_{\text{eff}} \lesssim 0.03$; $\propto (T_{RH}/T_t)^2$ below $T_t \approx 6$ TeV ($\ell = 10\,\mu$m) |
+| $\mathcal C$ | **re-opened (milestone 5c), collision data**: bounded below by $f$ ($\epsilon \ge f$, `04c_approach.md` §3), so $\Delta N_{\text{eff}}$ from $\rho_E$ is at least the mirror sector's; above by $N_{\text{eff}}$. The emission fixed point $\rho_E/\rho_{\text{rad}} \to \alpha/4 \approx 5\times10^{-3}$ (Langlois–Sorbo–Rodríguez-Martínez; $\propto (T_{RH}/T_t)^2$ below $T_t \approx 6$ TeV, $\ell = 10\,\mu$m) is only a floor; the earlier "$\Delta N_{\text{eff}} \lesssim 0.03$" assumed emission alone |
 | $\phi_0$ | $\Omega_0 = [1 - \tfrac{3}{2\sqrt2}\mathrm{asinh}\sqrt{r_b}]^{2/3}$; Cassini needs $r_b$ within 1.5% of the overshoot value $r_c = 1.186$ (coincidence problem); overshoot $\Rightarrow$ RS2, no mirror sector, also allowed by data |
 | $T_2/T_1$ | not derivable ($\mathbb Z_2$-symmetric collision); null $x=1$ gives $\Delta N_{\text{eff}} \approx 6$, excluded; $x < 0.45$; possible floor $x \gtrsim 0.1$–0.26 from graviton transfer to $\Sigma_2$ [verify] |
 | $n_2/n_1$ | needs $\eta_2/\eta_1 \gtrsim 1600$: mirror-DM branch closed |
