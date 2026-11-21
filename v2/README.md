@@ -30,6 +30,16 @@ has not decreased.
 | 7 | Predictions | `06_predictions.md`: canonical $\chi$ normalisation; $(\alpha_Y, \lambda)$ from $\ell_z$; $(w_0,w_a)(c)$ vs DESI DR2; closure test of Cassini–$N_{\text{eff}}$, $\dot G/G$–$w$, GW distance, low-$\ell$ axis | pre-registered, dated, before comparison | done (`tests/predictions.py`); **P1 computed**: $\alpha_Y \approx 120$ (QCD running, not $O(1)$; corrected 2026-11-11 from 270), $2.8$–$13\,\mu$m, $13 < \ell_z^{-1}/\mathrm{TeV} < 29$ — half of 5d's range removed by Eöt-Wash 2020; **P2 registered**: $w_a = -1.5(1+w_0)$, outside DESI $2\sigma$ in a Gaussian proxy but not killed; the other three relations leak or are null; balance still $0-9$, branch-closure decision owed |
 | 8 | Unlike | `07_unlike.md`: reciprocal comparison with SM, GR, ΛCDM, MOND, string theory | every cell cites a v2 equation or says "not derived" | |
 
+## Theory map
+
+Open `viewer/index.html` in a browser (no server or build step). It draws v2 (`v2/map.yaml`) and
+the audited v1 manuscript (`v2/map_v1.yaml`) as flowcharts, and both side by side. Links carry a
+✓ (verified, with the file or test that shows it), a ? (not yet worked out) or a ✗ (claimed, shown
+not to hold); boxes below a ? or ✗ are conditional (dashed). An ! marks a box that needs a number the
+action does not supply; ≠ marks a contradiction; v1's critical failures have a red halo. After
+editing a map, run `python3 tests/build_map.py`; `tests/check_map.py` (in CI) checks the maps
+against the files, `ledger.md`, `RETRACTED.md` and the CI scripts.
+
 ## Rules
 
 1. No free functions. A function is allowed only if its form is derived in `v2/` or chosen
@@ -43,6 +53,8 @@ has not decreased.
 
 ```bash
 python3 tests/check_ledger.py
+pip install "pyyaml>=6,<7"
+python3 tests/check_map.py
 pip install "sympy>=1.12,<2"
 python3 tests/check_background.py
 python3 tests/check_zero_modes.py
