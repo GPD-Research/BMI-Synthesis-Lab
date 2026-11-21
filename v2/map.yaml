@@ -1,0 +1,832 @@
+# BMI v2 theory map. Curated by hand; checked by tests/check_map.py; drawn by viewer/index.html.
+# A box: id, tier, kind, status, title, and where it lives (file, section, test).
+# A link (in `from:`): link: verified needs `by:` (the file section or test that shows it);
+# link: open means the connection is not yet worked out ("?" on the line).
+# needs: a number this box needs that the action does not supply ("!" badge).
+meta:
+  version: v2
+  title: "BMI v2: from the axiom to the data"
+  summary: "Parameter budget frozen at 9; balance 0 − 9 = −9. P1 (fifth force) open, P2 (dark energy) killed. Next: ΔN_eff, the Hubble tension, a second dark-sector handle."
+  tiers:
+    - Axiom
+    - Action and choices
+    - Effective 4D theory
+    - Derived consequences
+    - Sectors
+    - Parameters (frozen at 9)
+    - Predictions, forks and open questions
+    - Data and kill tests
+
+nodes:
+  # ---------------- tier 0: axiom
+  - id: axiom
+    tier: 0
+    kind: axiom
+    status: axiom
+    title: "Two branes collided and are slowly merging"
+    file: v2/00_axiom.md
+    section: "What the axiom commits to"
+    notes: "The one v1 idea that survived the audit (RETRACTED.md, 'Kept as the v2 axiom')."
+  - id: pre_action
+    tier: 0
+    kind: leap
+    status: paused
+    title: "Pre-action layer: independent universes, crystallization"
+    file: v2/00_axiom.md
+    section: "Pre-action layer"
+    notes: "Hypothesis; not used by any derivation."
+    from:
+      - id: axiom
+        link: open
+        why: "No action yet describes the state before the branes exist."
+
+  # ---------------- tier 1: action and choices
+  - id: fork1
+    tier: 1
+    kind: choice
+    status: derived
+    title: "Fork 1: we live on the UV brane Σ₁"
+    file: v2/01_action.md
+    section: "1"
+    from:
+      - id: axiom
+        link: verified
+        by: "v2/01_action.md §1"
+  - id: action
+    tier: 1
+    kind: derived
+    status: derived
+    title: "6D action S (fixed)"
+    statement: 'S = S_{\rm bulk}[g_6,\Phi] + S_{\Sigma_1} + S_{\Sigma_2}'
+    file: v2/01_action.md
+    section: "2"
+    test: tests/check_ledger.py
+    from:
+      - id: axiom
+        link: verified
+        by: "v2/01_action.md §2"
+      - id: fork1
+        link: verified
+        by: "v2/01_action.md §1"
+  - id: exp_potential
+    tier: 1
+    kind: choice
+    status: derived
+    title: "Choice: exponential bulk potential V(Φ) = V₀e^{−cΦ}"
+    file: v2/01_action.md
+    section: "2.1"
+    from:
+      - id: action
+        link: verified
+        by: "v2/01_action.md §2.1"
+  - id: mirror_choice
+    tier: 1
+    kind: choice
+    status: derived
+    title: "Choice: mirror Standard Model on Σ₂"
+    file: v2/01_action.md
+    section: "2.2"
+    from:
+      - id: action
+        link: verified
+        by: "v2/01_action.md §2.2"
+  - id: rs_tuning
+    tier: 1
+    kind: derived
+    status: derived
+    title: "Warped background, RS tension tuning σ₁ = 8M₆⁴/ℓ"
+    file: v2/01_action.md
+    section: "3"
+    test: tests/check_background.py
+    tags: [warped-bulk, two-branes]
+    generic: true
+    from:
+      - id: action
+        link: verified
+        by: "v2/01_action.md §3; tests/check_background.py"
+
+  # ---------------- tier 2: effective 4D theory
+  - id: background_metric
+    tier: 2
+    kind: derived
+    status: derived
+    title: "AdS₆ background verified"
+    file: v2/02_effective_4d.md
+    section: "1"
+    test: tests/check_background.py
+    generic: true
+    from:
+      - id: rs_tuning
+        link: verified
+        by: "v2/02_effective_4d.md §1; tests/check_background.py"
+  - id: mpl
+    tier: 2
+    kind: derived
+    status: derived
+    title: "Newton's constant M_Pl²(φ)"
+    statement: 'M_{Pl}^2 = \tfrac13 M_5^3\ell\,(1-\Omega^3)'
+    file: v2/02_effective_4d.md
+    section: "2"
+    test: tests/check_background.py
+    from:
+      - id: background_metric
+        link: verified
+        by: "v2/02_effective_4d.md §2"
+  - id: brane_eq
+    tier: 2
+    kind: derived
+    status: verify
+    title: "Field equation on Σ₁ (π̂, E_μν terms)"
+    file: v2/02_effective_4d.md
+    section: "3"
+    notes: "Carries [verify] flags (02_effective_4d.md §8)."
+    from:
+      - id: background_metric
+        link: verified
+        by: "v2/02_effective_4d.md §3"
+  - id: radion_bd
+    tier: 2
+    kind: derived
+    status: derived
+    title: "Radion is Brans–Dicke"
+    statement: '\omega = \tfrac43\left(e^{3\phi/\ell}-1\right)'
+    file: v2/02_effective_4d.md
+    section: "4"
+    test: tests/check_radion.py
+    tags: [light-modulus]
+    from:
+      - id: brane_eq
+        link: verified
+        by: "v2/02_effective_4d.md §4; tests/check_radion.py"
+  - id: warped_mirror
+    tier: 2
+    kind: derived
+    status: derived
+    title: "Forced: the mirror sector is a warped copy (masses ×Ω)"
+    file: v2/02_effective_4d.md
+    section: "5"
+    from:
+      - id: background_metric
+        link: verified
+        by: "v2/02_effective_4d.md §5"
+      - id: mirror_choice
+        link: verified
+        by: "v2/02_effective_4d.md §5"
+  - id: gr_limit
+    tier: 2
+    kind: derived
+    status: derived
+    title: "GR + ΛCDM recovered as φ̇ → 0"
+    file: v2/02_effective_4d.md
+    section: "6"
+    generic: true
+    from:
+      - id: radion_bd
+        link: verified
+        by: "v2/02_effective_4d.md §6"
+  - id: localization
+    tier: 2
+    kind: derived
+    status: derived
+    title: "Field content from geometry: z ∈ S¹/Z₂, SM on Σ₁"
+    file: v2/02b_localization.md
+    section: "5"
+    test: tests/check_zero_modes.py
+    tags: [compact-flat-dim]
+    from:
+      - id: background_metric
+        link: verified
+        by: "v2/02b_localization.md §5; tests/check_zero_modes.py"
+  - id: eff4d
+    tier: 2
+    kind: derived
+    status: derived
+    title: "Effective 4D Lagrangian closed"
+    file: v2/03_background.md
+    section: "2"
+    test: tests/check_radion.py
+    from:
+      - id: radion_bd
+        link: verified
+        by: "v2/03_background.md §1"
+      - id: exp_potential
+        link: verified
+        by: "v2/03_background.md §2"
+
+  # ---------------- tier 3: derived consequences
+  - id: de_inter_brane
+    tier: 3
+    kind: dead
+    status: retracted
+    retracted: N1
+    title: "Dark energy as the inter-brane potential"
+    file: v2/03_background.md
+    section: "4"
+    failure: "The CMB bound on mirror-DM mass drift forces the radion energy today below 5×10⁻⁶; dark energy must be the bulk scalar."
+    v1: v1_de_potential
+    from:
+      - id: radion_spectator
+        link: verified
+        by: "v2/03_background.md §3.1, §4"
+  - id: bulk_scalar_de
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Dark energy = rolling bulk-scalar zero mode (thawing)"
+    file: v2/03_background.md
+    section: "3.2"
+    test: tests/background_frw.py
+    tags: [bulk-scalar]
+    from:
+      - id: eff4d
+        link: verified
+        by: "v2/03_background.md §3.2; tests/background_frw.py"
+  - id: radion_spectator
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Radion is a spectator today (bound redone in §3.1a)"
+    file: v2/03_background.md
+    section: "3.1a"
+    test: tests/radion_llr.py
+    from:
+      - id: eff4d
+        link: verified
+        by: "v2/03_background.md §3.1; tests/radion_llr.py"
+  - id: impact_c
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Dark radiation 𝒞 computed, not a parameter"
+    statement: '\rho_{\mathcal E}/\rho_{\rm rad}\to\alpha/4'
+    file: v2/04_impact.md
+    section: "4"
+    test: tests/impact.py
+    from:
+      - id: eff4d
+        link: verified
+        by: "v2/04_impact.md §4; tests/impact.py"
+  - id: t2t1_null
+    tier: 3
+    kind: derived
+    status: derived
+    title: "T₂/T₁ not derivable; null value 1 excluded (ΔN_eff ≈ 6)"
+    file: v2/04_impact.md
+    section: "2"
+    test: tests/impact.py
+    needs: "T₂/T₁ (ledger #7)"
+    from:
+      - id: warped_mirror
+        link: verified
+        by: "v2/04_impact.md §2; tests/impact.py"
+  - id: no_spectrum
+    tier: 3
+    kind: dead
+    status: retracted
+    retracted: N3
+    title: "Primordial spectrum (n_s, r) from the action"
+    file: v2/04_impact.md
+    section: "6"
+    failure: "The only inflaton candidate gives r = 8c² ≥ 0.28 with no exit; the radion is not ekpyrotic."
+    from:
+      - id: eff4d
+        link: verified
+        by: "v2/04_impact.md §6"
+  - id: ic_scan
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Initial-condition scan: the null configuration is dead"
+    file: v2/04b_initial_conditions.md
+    section: "3"
+    test: tests/scan_initial_conditions.py
+    from:
+      - id: impact_c
+        link: verified
+        by: "v2/04b_initial_conditions.md §3"
+  - id: approach
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Exact approach to Ω = 1 (Schwarzschild–AdS)"
+    statement: '\Omega_\infty^3 = (\epsilon-f)/(1+\epsilon)'
+    file: v2/04c_approach.md
+    section: "2"
+    test: tests/approach.py
+    tags: [brane-collision]
+    from:
+      - id: ic_scan
+        link: verified
+        by: "v2/04c_approach.md §0"
+      - id: background_metric
+        link: verified
+        by: "v2/04c_approach.md §1; tests/approach.py"
+  - id: eps_ge_f
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Existence needs ε ≥ f (Σ₂ carries bulk mass)"
+    file: v2/04c_approach.md
+    section: "3"
+    test: tests/approach.py
+    from:
+      - id: approach
+        link: verified
+        by: "v2/04c_approach.md §3"
+  - id: cassini_window
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Cassini window ε − f ≲ 3×10⁻⁵"
+    file: v2/04c_approach.md
+    section: "4"
+    test: tests/approach.py
+    needs: "collision data (ε, f): a coincidence, not derived"
+    from:
+      - id: approach
+        link: verified
+        by: "v2/04c_approach.md §4"
+  - id: circle_unstab
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Gap exposed: the circle ℓ_z is an unstabilized modulus"
+    file: v2/04c_approach.md
+    section: "6"
+    tags: [light-modulus, compact-flat-dim]
+    from:
+      - id: approach
+        link: verified
+        by: "v2/04c_approach.md §6"
+      - id: localization
+        link: verified
+        by: "v2/04c_approach.md §6"
+
+  # ---------------- tier 4: sectors
+  - id: casimir_sign
+    tier: 4
+    kind: derived
+    status: derived
+    title: "SM Casimir is repulsive; the action's own minimum is at 7 meV (dead)"
+    file: v2/04d_circle.md
+    section: "2"
+    test: tests/circle.py
+    from:
+      - id: circle_unstab
+        link: verified
+        by: "v2/04d_circle.md §1–2; tests/circle.py"
+  - id: circle_stab
+    tier: 4
+    kind: derived
+    status: derived
+    title: "Circle stabilized: Casimir vs tension detuning δ₁"
+    statement: '\ell_z^5 = 4C_{\rm SM}/\pi|\delta_1|'
+    file: v2/04d_circle.md
+    section: "3"
+    test: tests/circle.py
+    needs: "δ₁ (ledger #8)"
+    from:
+      - id: casimir_sign
+        link: verified
+        by: "v2/04d_circle.md §3; tests/circle.py"
+  - id: moduli_problem
+    tier: 4
+    kind: derived
+    status: derived
+    title: "The circle oscillates after the impact: moduli problem or dark matter"
+    file: v2/04d_circle.md
+    section: "4"
+    from:
+      - id: circle_stab
+        link: verified
+        by: "v2/04d_circle.md §4"
+  - id: mirror_dm
+    tier: 4
+    kind: dead
+    status: retracted
+    retracted: N2
+    title: "Mirror SM on Σ₂ as the dark matter"
+    file: v2/04_impact.md
+    section: "3"
+    failure: "Mirror masses are Ωm with Ω₀ < 0.032; Ω_DM/Ω_b = 5.3 needs a mirror baryon asymmetry η₂/η₁ ≳ 1600 that nothing in the action produces."
+    tags: [hidden-sector]
+    from:
+      - id: warped_mirror
+        link: verified
+        by: "v2/04_impact.md §3"
+      - id: t2t1_null
+        link: verified
+        by: "v2/04_impact.md §3"
+  - id: thermal_closed
+    tier: 4
+    kind: derived
+    status: derived
+    title: "Thermal dark-matter route closed: T_R < T_o ≈ 2.7 TeV"
+    file: v2/05_dark_sector.md
+    section: "1"
+    test: tests/dark_sector.py
+    from:
+      - id: moduli_problem
+        link: verified
+        by: "v2/05_dark_sector.md §1"
+  - id: dm_circle
+    tier: 4
+    kind: derived
+    status: derived
+    title: "Dark matter = the oscillating circle (collision misalignment)"
+    file: v2/05_dark_sector.md
+    section: "2"
+    test: tests/dark_sector.py
+    needs: "δ_z (ledger #9), fitted to Ω_DM"
+    from:
+      - id: moduli_problem
+        link: verified
+        by: "v2/05_dark_sector.md §2; tests/dark_sector.py"
+      - id: thermal_closed
+        link: verified
+        by: "v2/05_dark_sector.md §1"
+  - id: structure
+    tier: 4
+    kind: derived
+    status: derived
+    title: "Structure formation: CDM on all observed scales"
+    file: v2/05_dark_sector.md
+    section: "3"
+    test: tests/dark_sector.py
+    from:
+      - id: dm_circle
+        link: verified
+        by: "v2/05_dark_sector.md §3"
+  - id: chi_canonical
+    tier: 4
+    kind: derived
+    status: verify
+    title: "Canonical modulus χ couples to matter; α_Y from QCD running"
+    statement: '\alpha_Y \approx 120'
+    file: v2/06_predictions.md
+    section: "2"
+    test: tests/predictions.py
+    notes: "§2a correction; matching scale carried as [verify]."
+    from:
+      - id: circle_stab
+        link: verified
+        by: "v2/06_predictions.md §1–2; tests/predictions.py"
+  - id: relations_leak
+    tier: 4
+    kind: derived
+    status: derived
+    title: "Cassini–N_eff, Ġ/G–w, GW distance: relations that do not close"
+    file: v2/06_predictions.md
+    section: "3"
+    from:
+      - id: radion_spectator
+        link: verified
+        by: "v2/06_predictions.md §3"
+      - id: bulk_scalar_de
+        link: verified
+        by: "v2/06_predictions.md §3"
+
+  # ---------------- tier 5: the nine parameters (symbols exactly as in v2/ledger.md)
+  - id: par_m5
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#1 M₅"
+    ledger: ['M_5']
+    file: v2/ledger.md
+    from:
+      - id: mpl
+        link: verified
+        by: "v2/ledger.md row 1"
+  - id: par_ell
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#2 ℓ"
+    ledger: ['\ell']
+    file: v2/ledger.md
+    from:
+      - id: rs_tuning
+        link: verified
+        by: "v2/ledger.md row 2"
+  - id: par_phi0
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#3 φ₀ (bounded)"
+    ledger: ['\phi_0']
+    file: v2/ledger.md
+    from:
+      - id: cassini_window
+        link: verified
+        by: "v2/ledger.md row 3; v2/04c_approach.md §4"
+  - id: par_sigma2
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#4 σ₂ (bounded, sign open)"
+    ledger: ['\sigma_2']
+    file: v2/ledger.md
+    from:
+      - id: radion_spectator
+        link: verified
+        by: "v2/ledger.md row 4; tests/radion_llr.py"
+  - id: par_v0
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#5 V₀"
+    ledger: ['V_0']
+    file: v2/ledger.md
+    from:
+      - id: bulk_scalar_de
+        link: verified
+        by: "v2/ledger.md row 5"
+  - id: par_c
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#6 c"
+    ledger: ['c']
+    file: v2/ledger.md
+    from:
+      - id: bulk_scalar_de
+        link: verified
+        by: "v2/ledger.md row 6"
+  - id: par_t2t1
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#7 T₂/T₁ (null excluded)"
+    ledger: ['T_2/T_1']
+    file: v2/ledger.md
+    from:
+      - id: t2t1_null
+        link: verified
+        by: "v2/ledger.md row 7; v2/04_impact.md §2"
+  - id: par_delta1
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#8 δ₁ (taken at 5d)"
+    ledger: ['\delta_1']
+    file: v2/ledger.md
+    from:
+      - id: circle_stab
+        link: verified
+        by: "v2/ledger.md row 8; v2/04d_circle.md §3"
+  - id: par_deltaz
+    tier: 5
+    kind: parameter
+    status: borrowed
+    title: "#9 δ_z (taken at 6)"
+    ledger: ['\delta_z']
+    file: v2/ledger.md
+    from:
+      - id: dm_circle
+        link: verified
+        by: "v2/ledger.md row 9; v2/05_dark_sector.md §2"
+
+  # ---------------- tier 6: predictions, forks, open questions
+  - id: p1
+    tier: 6
+    kind: prediction
+    status: open
+    title: "P1: circle-modulus fifth force, α_Y ≈ 120, λ ≈ 2.8–13 μm"
+    file: v2/06_predictions.md
+    section: "4a"
+    test: tests/predictions.py
+    from:
+      - id: chi_canonical
+        link: verified
+        by: "v2/06_predictions.md §4a; tests/predictions.py"
+      - id: par_delta1
+        link: verified
+        by: "v2/ledger.md row 8"
+  - id: p2
+    tier: 6
+    kind: dead
+    status: retracted
+    retracted: N4
+    title: "P2: thawing w(z) from V₀e^{−cΦ}"
+    file: v2/06_predictions.md
+    section: "4c"
+    test: [tests/p2_chains.py, tests/p2_direct.py]
+    failure: "Outside the 95% DESI DR2 BAO + CMB region for every c, with every SN set; direct fit gives best c = 0."
+    from:
+      - id: par_c
+        link: verified
+        by: "v2/06_predictions.md §4b"
+      - id: par_v0
+        link: verified
+        by: "v2/06_predictions.md §4b"
+  - id: q_neff
+    tier: 6
+    kind: question
+    status: open
+    title: "? ΔN_eff as a number (from ε + f)"
+    file: v2/STATUS.md
+    section: "9"
+    from:
+      - id: impact_c
+        link: open
+        why: "𝒞 is computed, but ε + f is not fixed by anything derived yet."
+      - id: cassini_window
+        link: open
+        why: "Cassini bounds ε − f only."
+  - id: q_hubble
+    tier: 6
+    kind: question
+    status: open
+    title: "? Can BMI address the Hubble tension (ε + f or the radion)?"
+    file: v2/STATUS.md
+    section: "9"
+    test: tests/radion_hz.py
+    from:
+      - id: q_neff
+        link: open
+        why: "Needs ΔN_eff ~ 0.3 to be reachable."
+      - id: par_sigma2
+        link: open
+        why: "Attractive radion in H(z): radion_hz.py bounds it, no positive result."
+  - id: q_dm2
+    tier: 6
+    kind: question
+    status: open
+    title: "? A second cosmological handle on the dark sector"
+    file: v2/STATUS.md
+    section: "9"
+    from:
+      - id: structure
+        link: open
+        why: "CDM everywhere: no structure signature to test."
+  - id: q_collision
+    tier: 6
+    kind: question
+    status: open
+    title: "? Matching through the collision itself (ε, f from the action)"
+    file: v2/04c_approach.md
+    section: "8"
+    from:
+      - id: approach
+        link: open
+        why: "ε, f are inputs; the collision is not resolved by the action."
+  - id: q_unlike
+    tier: 6
+    kind: question
+    status: open
+    title: "? Milestone 8: what BMI predicts that RS/mirror models do not"
+    file: v2/README.md
+    from:
+      - id: relations_leak
+        link: open
+        why: "Not started."
+  - id: fork_exchange
+    tier: 6
+    kind: leap
+    status: killed
+    title: "Provisional tenth: inter-brane energy exchange"
+    file: v2/07_exchange.md
+    section: "4"
+    test: tests/exchange.py
+    failure: "Dead by data. The coupling is locked: any dark-matter mass drift is a drift of μ and α; the DESI pattern stays unexplained."
+    from:
+      - id: p2
+        link: verified
+        by: "v2/07_exchange.md (motivated by the P2 kill)"
+      - id: dm_circle
+        link: verified
+        by: "v2/07_exchange.md §1; tests/exchange.py"
+  - id: fork_zt
+    tier: 6
+    kind: leap
+    status: open
+    title: "Leap: non-expansion redshift z_t (pre-registered, not taken)"
+    file: v2/08_zt_tcmb.md
+    section: "3"
+    test: tests/zt_tcmb.py
+    from:
+      - id: axiom
+        link: open
+        why: "No derivation from the action; held as a pre-registered claim."
+  - id: fork_timeslip
+    tier: 6
+    kind: leap
+    status: paused
+    title: "Leap: time slip as a clock effect on G"
+    file: v2/09_clock_effect.md
+    section: "4"
+    test: [tests/clock_effect.py, tests/g_ringdown.py]
+    from:
+      - id: radion_spectator
+        link: open
+        why: "Size needed vs LLR bound (09 §2–3)."
+  - id: fork_unified
+    tier: 6
+    kind: leap
+    status: paused
+    title: "Leap: unified sector at coincidence"
+    file: v2/00_axiom.md
+    section: "Pre-action layer"
+    from:
+      - id: pre_action
+        link: open
+        why: "Depends on the pre-action layer."
+
+  # ---------------- tier 7: data and kill tests
+  - id: kill_gr
+    tier: 7
+    kind: kill
+    status: passed
+    title: "Kill 1: GR + ΛCDM limit"
+    file: v2/01_action.md
+    section: "6"
+    from:
+      - id: gr_limit
+        link: verified
+        by: "v2/02_effective_4d.md §6"
+  - id: kill_cassini
+    tier: 7
+    kind: kill
+    status: passed
+    title: "Kill 2: Ġ/G vs LLR (and Cassini γ)"
+    file: v2/03_background.md
+    section: "3.1a"
+    test: tests/radion_llr.py
+    from:
+      - id: par_phi0
+        link: verified
+        by: "v2/04c_approach.md §4"
+      - id: par_sigma2
+        link: verified
+        by: "tests/radion_llr.py"
+  - id: kill_desi
+    tier: 7
+    kind: kill
+    status: fired
+    title: "Kill 3: w(z) vs DESI DR2, fired on P2"
+    file: v2/06_predictions.md
+    section: "4d"
+    test: tests/p2_direct.py
+    from:
+      - id: p2
+        link: verified
+        by: "tests/p2_chains.py; tests/p2_direct.py"
+  - id: kill_neff
+    tier: 7
+    kind: kill
+    status: fired
+    title: "Kill 4: ΔN_eff, T₂/T₁ vs Planck, fired on mirror-SM DM"
+    file: v2/04_impact.md
+    section: "3"
+    from:
+      - id: mirror_dm
+        link: verified
+        by: "v2/04_impact.md §3"
+  - id: kill_r
+    tier: 7
+    kind: kill
+    status: relabelled
+    title: "Kill 5: r > 0.01, re-labelled (no spectrum to test)"
+    file: v2/STATUS.md
+    section: "6"
+    from:
+      - id: no_spectrum
+        link: verified
+        by: "v2/04_impact.md §6"
+  - id: kill_dm
+    tier: 7
+    kind: kill
+    status: open
+    title: "Dark-sector kill tests K1–K4 (pre-registered)"
+    file: v2/05_dark_sector.md
+    section: "5"
+    from:
+      - id: dm_circle
+        link: verified
+        by: "v2/05_dark_sector.md §5"
+  - id: data_isl
+    tier: 7
+    kind: kill
+    status: open
+    title: "Inverse-square law at 3–13 μm (Eöt-Wash next round)"
+    file: v2/06_predictions.md
+    section: "4a"
+    test: tests/predictions.py
+    from:
+      - id: p1
+        link: verified
+        by: "v2/06_predictions.md §4a"
+  - id: data_cmbs4
+    tier: 7
+    kind: kill
+    status: open
+    title: "CMB-S4 σ(N_eff) ≈ 0.03"
+    file: v2/STATUS.md
+    section: "9"
+    from:
+      - id: q_neff
+        link: open
+        why: "Needs the number first."
+
+contradictions: []

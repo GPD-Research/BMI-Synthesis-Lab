@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BMI theory map</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; color: #1d2733; background: #f6f7f9; height: 100vh; display: flex; flex-direction: column; }
+  header { display: flex; align-items: center; gap: 14px; padding: 8px 14px; background: #1f3a5f; color: #fff; flex-wrap: wrap; }
+  header h1 { font-size: 15px; margin: 0 8px 0 0; font-weight: 600; }
+  #tabs button { background: transparent; color: #cfe0f5; border: 1px solid #4b6a92; padding: 4px 12px; cursor: pointer; font: inherit; }
+  #tabs button:first-child { border-radius: 4px 0 0 4px; } #tabs button:last-child { border-radius: 0 4px 4px 0; }
+  #tabs button.on { background: #fff; color: #1f3a5f; font-weight: 600; }
+  header label { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; color: #dfe8f3; }
+  header input[type=search] { padding: 3px 8px; border-radius: 4px; border: 0; width: 170px; }
+  header .btn { background: #31527d; color: #fff; border: 0; padding: 4px 10px; border-radius: 4px; cursor: pointer; font: inherit; }
+  .wrap { flex: 1; display: flex; min-height: 0; }
+  #main { flex: 1; min-width: 0; display: flex; }
+  #main.single .pane { flex: 1; }
+  #main.compare { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; gap: 0; }
+  #main.compare .col { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid #d5dbe3; }
+  .coltitle { padding: 5px 10px; font-weight: 600; background: #e9edf2; border-bottom: 1px solid #d5dbe3; }
+  .pane { flex: 1; min-height: 0; position: relative; }
+  svg.map { width: 100%; height: 100%; display: block; cursor: grab; user-select: none; }
+  svg.map:active { cursor: grabbing; }
+  .band { fill: #ffffff; } .band.odd { fill: #f0f3f7; }
+  .bandlabel { font-size: 12px; font-weight: 600; fill: #7b8794; text-transform: uppercase; letter-spacing: .04em; }
+  .edge { fill: none; stroke-width: 1.5; opacity: .75; }
+  .edge.open { stroke-dasharray: 6 4; } .edge.broken { stroke-dasharray: 2 3; stroke-width: 2; }
+  .contra { fill: none; stroke: #c62828; stroke-width: 2.2; stroke-dasharray: 8 4; opacity: .9; }
+  .mark { cursor: pointer; } .marksym { font-size: 12px; font-weight: 700; pointer-events: none; }
+  .node { cursor: pointer; transition: opacity .15s; }
+  .node .kind { font-size: 8.5px; font-weight: 700; letter-spacing: .05em; opacity: .7; }
+  .node .title { font-size: 11.5px; font-weight: 500; }
+  .node .badge { font-size: 9.5px; font-weight: 700; fill: #fff; }
+  .critical-halo { fill: none; stroke: #e53935; stroke-width: 4; opacity: .45; }
+  .node.dim, .dim { opacity: .18; }
+  .node.sel .box { stroke: #111 !important; stroke-width: 3 !important; }
+  .node.up .box { filter: drop-shadow(0 0 4px #1565c0); }
+  .node.down .box { filter: drop-shadow(0 0 4px #ef6c00); }
+  .node.hit .box { stroke: #ffb300 !important; stroke-width: 4 !important; }
+  aside { width: 380px; border-left: 1px solid #d5dbe3; background: #fff; overflow: auto; padding: 14px 16px; }
+  aside h2 { font-size: 16px; margin: 4px 0 8px; } aside h3 { font-size: 13px; margin: 14px 0 6px; }
+  .dkind { font-size: 10px; font-weight: 700; letter-spacing: .06em; color: #7b8794; }
+  .status { display: inline-block; padding: 2px 8px; border: 1px solid; border-radius: 10px; font-size: 11px; font-weight: 600; margin-bottom: 8px; }
+  .warn { background: #e3f2fd; border-left: 3px solid #1565c0; padding: 6px 8px; margin: 6px 0; font-size: 12px; }
+  .row { display: grid; grid-template-columns: 96px 1fr; gap: 6px; padding: 6px 0; border-top: 1px solid #eef1f4; }
+  .label { font-size: 11px; font-weight: 600; color: #5a6672; }
+  .value { word-break: break-word; }
+  .file { display: inline-flex; gap: 6px; margin-right: 8px; font-family: ui-monospace, monospace; font-size: 11.5px; }
+  .file .local { color: #7b8794; font-family: system-ui; font-size: 10px; }
+  .chip { display: inline-block; border: 1px solid; border-radius: 4px; padding: 2px 6px; margin: 2px 4px 2px 0; cursor: pointer; font: 11.5px system-ui; text-align: left; }
+  .linkrow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
+  .lsym { font-weight: 700; width: 16px; text-align: center; } .lsym.verified { color: #2e7d32; } .lsym.open { color: #1565c0; } .lsym.broken { color: #c62828; }
+  .lwhy { width: 100%; font-size: 11.5px; color: #5a6672; padding-left: 20px; }
+  .traps .lwhy { padding-left: 0; }
+  .arrow { margin: 2px 0 2px 8px; color: #5a6672; }
+  .math { overflow-x: auto; margin: 4px 0 8px; }
+  table.stats { border-collapse: collapse; width: 100%; margin: 6px 0; } table.stats td { padding: 3px 4px; border-bottom: 1px solid #eef1f4; } table.stats .num { text-align: right; font-weight: 600; }
+  .summary { color: #3c4752; } .hint { color: #7b8794; font-size: 12px; margin-top: 14px; }
+  .traps { grid-column: 1 / span 2; max-height: 34vh; overflow: auto; background: #fff; border-top: 2px solid #c62828; padding: 6px 12px 10px; }
+  .traps table { border-collapse: collapse; width: 100%; } .traps th, .traps td { text-align: left; vertical-align: top; padding: 5px 8px; border-bottom: 1px solid #eef1f4; }
+  .traps th { font-size: 11px; color: #5a6672; } .guard { font-size: 12px; margin-bottom: 3px; }
+  #legend { position: absolute; right: 396px; top: 52px; background: #fff; border: 1px solid #d5dbe3; border-radius: 6px; padding: 8px 12px; display: none; z-index: 5; box-shadow: 0 4px 14px rgba(0,0,0,.12); max-height: 80vh; overflow: auto; width: 300px; }
+  #legend.open { display: block; } #legend h4 { margin: 8px 0 4px; font-size: 11px; color: #5a6672; text-transform: uppercase; }
+  .lrow { display: flex; align-items: center; gap: 8px; margin: 2px 0; font-size: 12px; }
+  .sw { width: 18px; height: 12px; border: 1.5px solid; border-radius: 2px; flex: none; } .msym { width: 18px; text-align: center; font-weight: 700; flex: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>BMI theory map</h1>
+  <div id="tabs"><button data-view="v1">v1</button><button data-view="v2">v2</button><button data-view="compare">v1 vs v2</button></div>
+  <label><input type="checkbox" id="contra" checked> contradictions</label>
+  <label><input type="checkbox" id="failuresOnly"> focus critical failures</label>
+  <label><input type="checkbox" id="hideDead"> hide dead branches</label>
+  <input type="search" id="search" placeholder="find box or file…">
+  <button class="btn" id="fit">fit</button>
+  <button class="btn" id="legendBtn">legend</button>
+</header>
+<div id="legend"><div id="legendBody"></div></div>
+<div class="wrap">
+  <div id="main"></div>
+  <aside id="detail"></aside>
+</div>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="map_data.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

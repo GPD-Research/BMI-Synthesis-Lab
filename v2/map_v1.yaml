@@ -1,0 +1,416 @@
+# BMI v1 theory map: the frozen manuscript as audited in v2/v1_chapter_audit.md,
+# v2/ledger_v1_audit.md and RETRACTED.md. Same schema as v2/map.yaml.
+# Extra fields used here:
+#   critical: true   one of the failures that sank v1 (drawn in red)
+#   trap:            the failure mode, from the trap list in meta.traps
+#   guard:           what v2 does so the same failure cannot pass silently
+#   v2:              the v2 box this idea became, if it survived
+#   link: broken     a link that was claimed but shown not to hold (red ✗)
+meta:
+  version: v1
+  title: "BMI v1 (frozen manuscript): where it failed"
+  summary: "21 constants, 14 free functions, per-state integers; 0 derived numbers. Hard stop at the first equation (Ch 1 §1.2); every quantitative claim retracted or suspended."
+  tiers:
+    - Premise
+    - First equation (hard stop)
+    - Names added without definitions
+    - Claimed derivations
+    - Claimed validations
+    - Net result
+  traps:
+    null-content: "An equation whose every symbol is free: it can fit anything and predict nothing."
+    free-function: "A new named function or tensor with no form derived; infinite freedom."
+    symbol-clash: "One symbol used with incompatible values or meanings."
+    dimensional: "Quantities with different units added or equated."
+    self-validation: "A claim described as validated by a check that never ran or compared nothing with data."
+    circular: "A constant inferred from the data it is then said to predict."
+    artifact: "A signal produced by the analysis pipeline, not the data."
+    contradiction: "Two parts of the theory that cannot both hold."
+    identity-as-evidence: "A tautology or standard identity presented as evidence."
+    no-fit: "An explanation with no profile to fit, or one that does not beat the null."
+
+nodes:
+  # ---------------- tier 0
+  - id: v1_premise
+    tier: 0
+    kind: axiom
+    status: kept
+    title: "Two overlapping branes, one bulk (prose)"
+    file: manuscript/md/Chapter_1_Foundations_v3.md
+    section: "1.1"
+    v2: axiom
+    notes: "Nothing here is wrong. It is the v2 axiom, minus the tori."
+
+  # ---------------- tier 1
+  - id: v1_mass_eq
+    tier: 1
+    kind: derived
+    status: hard-stop
+    critical: true
+    trap: null-content
+    title: "M(n) = n · ω₀ · Λ_geom (first equation)"
+    statement: 'M(n) = n\,\omega_0\,\Lambda_{\rm geom}'
+    file: manuscript/md/Chapter_1_Foundations_v3.md
+    section: "1.2"
+    needs: "ω₀ (never given), n per particle (never assigned), Λ_geom (undefined function)"
+    failure: "With ω₀, n and Λ_geom all free the equation is M = M. Every later chapter in 1–4 is built on it."
+    guard: "v2/README.md rule 2: no symbol enters v2 without a ledger row; tests/check_ledger.py enforces it in CI. The action and its budget were fixed before solving."
+    from:
+      - id: v1_premise
+        link: open
+        why: "No action is written; the equation does not follow from the premise."
+  - id: v1_nucleon_split
+    tier: 1
+    kind: derived
+    status: dropped
+    trap: symbol-clash
+    title: "Nucleon split from the Berry phase γ"
+    file: manuscript/md/Chapter_1_Foundations_v3.md
+    section: "1.3"
+    needs: "γ (free here)"
+    failure: "γ is free in Ch 1; Ch 3 sets γ = π, which gives a 50% n–p split."
+    from:
+      - id: v1_mass_eq
+        link: open
+        why: "Adds γ to an equation with no content."
+
+  # ---------------- tier 2
+  - id: v1_delta_psi
+    tier: 2
+    kind: parameter
+    status: suspended
+    retracted: R4
+    trap: free-function
+    title: "Integer-harmonic mass formula M = n·ω₀·(1 + Δψ(n))"
+    file: manuscript/md/Chapter_2_Resonance_Spectrum_v3.md
+    section: "2.3"
+    needs: "Δψ(n) (free function); the n table was never supplied"
+    failure: "Δψ(n) is free per particle, so the 'linear resonance spectrum' was never fitted, let alone predicted."
+    guard: "v2/README.md rule 1: no free functions; a form must be derived or chosen from a finite menu declared in v2/ledger.md."
+    from:
+      - id: v1_mass_eq
+        link: open
+        why: "Ch 2 adds Δψ(n), f(Ξ(t)) and stops at 'n = n_base, n_μ, …'."
+  - id: v1_xi
+    tier: 2
+    kind: parameter
+    status: suspended
+    retracted: R6
+    trap: free-function
+    critical: true
+    title: "Metric equilibrium Ξ_μν(τ + V_gap), τ(t), V_gap(t), Z_ij(Ξ)"
+    statement: 'g_{\mu\nu} = \eta_{\mu\nu} + \Xi_{\mu\nu}\big(\tau(t)+V_{\rm gap}(t)\big)'
+    file: manuscript/md/Chapter_7_Cosmological_Boundaries_v3.md
+    section: "7.2"
+    needs: "Ξ_μν (free tensor), τ(t), V_gap(t), Z_ij (free functions)"
+    failure: "Undefined free functions and tensors; Chapters 8–14 build on them."
+    guard: "Rule 1 (no free functions); v2 gravity is derived from the 6D action (02_effective_4d.md)."
+    from:
+      - id: v1_premise
+        link: open
+        why: "τ and V_gap are names for tension and gap potential; no dynamics given."
+  - id: v1_lnode
+    tier: 2
+    kind: parameter
+    status: retracted
+    retracted: R2
+    trap: dimensional
+    critical: true
+    title: "Node scale L_node ≈ 10⁻¹⁵ m and brane thickness δ"
+    statement: 'L_{\rm node} = \hbar/(\Delta f\,M_{Pl})'
+    file: manuscript/md/Chapter_12_Empirical_Validation_of_BMI_Resonance.md
+    failure: "Taken from the killed 15 Hz result; the formula has the dimensions of an area, not a length."
+    guard: "v2 relations are re-derived in code that runs in CI (tests/check_background.py, tests/check_radion.py), not stated in prose."
+    from:
+      - id: v1_gw15
+        link: broken
+        why: "Inherits from R1, which is an artifact."
+  - id: v1_ricci_gate
+    tier: 2
+    kind: parameter
+    status: suspended
+    retracted: R7
+    trap: null-content
+    title: "Ricci-scalar screening gate g_eff(R)"
+    file: manuscript/md/Chapter_9_Mott_Resolution_v3.md
+    section: "9.3"
+    needs: "α, R_crit (undefined)"
+    failure: "R = 0 in vacuum outside any source, so the gate is zero exactly where it is needed."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Coupling defined via the undefined Ξ sector."
+
+  # ---------------- tier 3
+  - id: v1_catalogue
+    tier: 3
+    kind: derived
+    status: dropped
+    trap: free-function
+    title: "Harmonic particle catalogue, impedance, mass gaps"
+    file: manuscript/md/Chapter_2_Resonance_Spectrum_v3.md
+    section: "2.4"
+    failure: "Prose; no n assignments exist anywhere. M_n(t) ∝ f(Ξ(t)) also implies drifting masses."
+    from:
+      - id: v1_delta_psi
+        link: open
+        why: "Needs the n table that was never written."
+  - id: v1_spin
+    tier: 3
+    kind: derived
+    status: kept
+    generic: true
+    title: "Spin as winding: Ψ(θ + 2π) = −Ψ"
+    file: manuscript/md/Chapter_3_Topological_Properties_v3.md
+    section: "3.2"
+    notes: "The SU(2)→SO(3) double cover. Correct, generic, earns nothing."
+    from:
+      - id: v1_premise
+        link: verified
+        by: "Textbook result (RETRACTED.md, 'Kept from v1')"
+  - id: v1_charge
+    tier: 3
+    kind: derived
+    status: dropped
+    trap: null-content
+    title: "Charge Q = ∮ P_geom · dA = ±e"
+    file: manuscript/md/Chapter_3_Topological_Properties_v3.md
+    section: "3.3"
+    needs: "P_geom (undefined)"
+    failure: "P_geom is undefined, so the equation defines P_geom, not Q. Quantization is asserted."
+    from:
+      - id: v1_spin
+        link: open
+        why: "Asserted by analogy."
+  - id: v1_baryon
+    tier: 3
+    kind: derived
+    status: hypothesis
+    title: "Collision chirality → baryon asymmetry"
+    file: manuscript/md/Chapter_4_Vacuum_Dynamics_v3.md
+    section: "4.3"
+    needs: "τ_global, E₀ (undefined); η_B never computed"
+    notes: "Kept as a real, computable target. v2 has not produced η_B yet."
+    from:
+      - id: v1_premise
+        link: open
+        why: "No mechanism written down."
+  - id: v1_gravity_xi
+    tier: 3
+    kind: derived
+    status: dropped
+    trap: contradiction
+    critical: true
+    title: "Gravity as metric equilibrium (Ch 7.2)"
+    file: manuscript/md/Chapter_7_Cosmological_Boundaries_v3.md
+    section: "7.2"
+    failure: "A different gravity theory from Appendix F, which derives exact GR from the same setup. Both cannot hold."
+    guard: "v2 has one action; every result is derived from it (01_action.md §2)."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Ξ_μν undefined."
+  - id: v1_app_f
+    tier: 3
+    kind: derived
+    status: kept
+    generic: true
+    title: "Gauss–Codazzi → G_μν = 8πG T_μν (Appendix F)"
+    file: manuscript/md/Appendix_F_Classical_Relativity_as_Macro_Geometry.md
+    section: "F.2"
+    v2: brane_eq
+    notes: "Standard braneworld result; v2 replaces it with the Israel junction conditions and keeps E_μν."
+    from:
+      - id: v1_premise
+        link: verified
+        by: "Standard result (RETRACTED.md, 'Kept from v1')"
+  - id: v1_app_e
+    tier: 3
+    kind: derived
+    status: kept
+    generic: true
+    title: "Kaluza–Klein tower from a compact fibre (Appendix E)"
+    file: manuscript/md/Appendix_E_Theoretical_Formalization.md
+    section: "E.1"
+    v2: localization
+    from:
+      - id: v1_premise
+        link: verified
+        by: "Standard result (RETRACTED.md, 'Kept from v1')"
+  - id: v1_de_potential
+    tier: 3
+    kind: derived
+    status: hypothesis
+    title: "Dark energy = residual inter-brane potential V_gap"
+    file: manuscript/md/Chapter_7_Cosmological_Boundaries_v3.md
+    section: "7.4"
+    v2: de_inter_brane
+    notes: "Kept as a hypothesis; became V(Φ) in the v2 action and then died there (N1)."
+    from:
+      - id: v1_xi
+        link: open
+        why: "V_gap(t) has no form."
+  - id: v1_mott
+    tier: 3
+    kind: derived
+    status: suspended
+    title: "Mott problem resolved by topological pinning"
+    file: manuscript/md/Chapter_9_Mott_Resolution_v3.md
+    section: "9.4"
+    notes: "A standard delta-potential bound state; not BMI-specific (ledger_v1_audit.md #17)."
+    from:
+      - id: v1_ricci_gate
+        link: broken
+        why: "The gate is zero in vacuum (R7)."
+  - id: v1_sm_343
+    tier: 3
+    kind: derived
+    status: dropped
+    trap: circular
+    critical: true
+    title: "Standard Model from 7³ = 343 winding states"
+    file: manuscript/md/Chapter_13_Topological_Derivation_of_the_Standard_Model.md
+    section: "13.3"
+    needs: "w_max = 3 (no reason), Ω_max = 3.5 (fitted)"
+    failure: "The harmonic trap again: Ω_max was chosen so the surviving states match the SM count."
+    guard: "Rule 2: a fitted cutoff is a ledger row and counts against the balance; rule 3: predictions are dated before the comparison."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Impedance Z_ij(Ξ) undefined."
+      - id: v1_delta_psi
+        link: open
+        why: "Same integer-harmonic logic."
+
+  # ---------------- tier 4
+  - id: v1_cradle
+    tier: 4
+    kind: kill
+    status: hard-stop
+    trap: self-validation
+    critical: true
+    title: "'Cradle Test': the only empirical anchor for Ch 1–4"
+    statement: '\tau(n) = 2.72548\,\tfrac{41.4}{1+n}\,e^{-0.05n}\sin n'
+    file: v2/v1_chapter_audit.md
+    section: "What the \"Cradle Test\" actually is"
+    failure: "An arbitrary damped sine. n is a time here, not the harmonic index. Kelvin is added to a dimensionless number. Nothing is compared with data."
+    guard: "Every v2 result names a check that runs in CI (.github/workflows/ledger.yml; tests/check_map.py fails if a CI script is on no box). Rule 3 dates predictions before the comparison."
+    from:
+      - id: v1_mass_eq
+        link: broken
+        why: "Uses the letter n with a different meaning (symbol clash)."
+      - id: v1_xi
+        link: broken
+        why: "Adds τ (K) to V_gap (dimensionless)."
+  - id: v1_audit_tier
+    tier: 4
+    kind: kill
+    status: dropped
+    trap: self-validation
+    title: "'Multi-stage verification pipeline' (symbolic audit tier)"
+    file: manuscript/md/Chapter_5_Methodology_v3.md
+    section: "5.2"
+    failure: "Claims a dimensional audit ran; the Cradle sum and L_node show it did not."
+    guard: "v2 checks are code in CI, not prose descriptions of checks."
+    from:
+      - id: v1_cradle
+        link: broken
+        why: "The audit would have caught the kelvin + dimensionless sum."
+  - id: v1_gw15
+    tier: 4
+    kind: kill
+    status: retracted
+    retracted: R1
+    trap: artifact
+    critical: true
+    title: "15 Hz GW ring-down split (5.557σ)"
+    file: manuscript/md/Appendix_J_GW_Empirical_Validation_and_FAR_Analysis.md
+    section: "J.2"
+    failure: "An artifact of the spectrum limits and template subtraction; pipeline-dependent; the curvature coupling 𝒦 = 0.13 was inferred from the same data it 'predicted'."
+    guard: "Rule 3: predictions are dated before the data comparison (e.g. 05_dark_sector.md §5, 08_zt_tcmb.md §3). Rule 4: a miss goes in RETRACTED.md."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Interface tension Θ_P never defined."
+  - id: v1_seams
+    tier: 4
+    kind: kill
+    status: suspended
+    retracted: R5
+    trap: no-fit
+    title: "Macro-seams: preferred axes, 'Flatlander's Lens', GRB ring"
+    file: manuscript/md/Appendix_I_MacroStructrual_Interface_Seams.md
+    section: "5"
+    test: tests/grb_ring
+    failure: "No predicted density profile; on the Giant GRB Ring a circle does not beat the null shape fit."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Seam dynamics not derived."
+  - id: v1_dh
+    tier: 4
+    kind: kill
+    status: retracted
+    retracted: R3
+    trap: null-content
+    title: "Cosmic-web Hausdorff dimension D_H ≈ 1.738"
+    file: manuscript/md/Chapter_14_The_Architecture_of_Expansion.md
+    section: "14.2"
+    failure: "The formula has a zero denominator (ln 1) and an undefined impedance coupling."
+    from:
+      - id: v1_xi
+        link: open
+        why: "Impedance coupling undefined."
+
+  # ---------------- tier 5
+  - id: v1_bh_universe
+    tier: 5
+    kind: kill
+    status: retracted
+    retracted: R8
+    trap: identity-as-evidence
+    title: "'The universe is a black hole of its own size'"
+    file: RETRACTED.md
+    section: "R8"
+    failure: "R_s = c/H is the flat-FRW identity; it holds for any flat universe and is no evidence for a collision."
+    from:
+      - id: v1_premise
+        link: broken
+        why: "An identity, not a consequence of the premise."
+  - id: v1_ledger
+    tier: 5
+    kind: kill
+    status: hard-stop
+    critical: true
+    trap: free-function
+    title: "Net ledger: 21 constants + 14 free functions, 0 derived numbers"
+    file: v2/ledger_v1_audit.md
+    failure: "No quantitative output survives: the 15 Hz result is killed, the other two are unsupported or degenerate."
+    guard: "v2/ledger.md: budget frozen at 9, balance shown on every change (now 0 − 9 = −9)."
+    from:
+      - id: v1_catalogue
+        link: open
+        why: "Counts its free names."
+      - id: v1_sm_343
+        link: open
+        why: "Counts w_max, Ω_max."
+      - id: v1_gw15
+        link: broken
+        why: "Its only number was an artifact."
+      - id: v1_dh
+        link: broken
+        why: "Undefined formula."
+
+contradictions:
+  - a: v1_nucleon_split
+    b: v1_spin
+    why: "γ is free in Ch 1 §1.3 but γ = π in Ch 3, which gives a 50% n–p mass split."
+    source: v2/v1_chapter_audit.md
+  - a: v1_gravity_xi
+    b: v1_app_f
+    why: "Ch 7.2 gravity g = η + Ξ(τ + V_gap) vs exact GR from Gauss–Codazzi in Appendix F."
+    source: v2/v1_chapter_audit.md
+  - a: v1_cradle
+    b: v1_mass_eq
+    why: "n is a time coordinate (380 kyr → 1.40) in the Cradle Test but the harmonic index in §1.2."
+    source: v2/v1_chapter_audit.md
