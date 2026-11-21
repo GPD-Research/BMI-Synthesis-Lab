@@ -1,6 +1,50 @@
 # Brane-Manifold Interface (BMI) Theory — Research Repository
 
-**Status: v1 frozen — v2 rebuilt through milestone 7; parameter budget frozen at 9 pending two registered tests (P1 fifth force at 3–13 µm, open; P2 thawing dark energy vs DESI DR2, killed by the chain-level test 2026-11-11).** See [`RETRACTED.md`](RETRACTED.md) and [`v2/README.md`](v2/README.md).
+<!-- site:start -->
+## Why BMI exists
+
+BMI is a byproduct of a broader study: how well AI can help develop theoretical physics. It
+remains in use as a stress test, which is one of the few redeeming features of a flawed
+cosmological model. Version 1 was developed largely with non-agentic AI (Gemini, and GitHub
+Codespaces), tools that lacked comprehensive analysis and a view of the whole project. BMI is
+now the test case for [Physics IDE](https://gpd-research.com/physics-ide.html): a measure of how
+well the IDE detects flaws and "comprehends" an entire project.
+
+## What BMI is
+
+The Brane-Manifold Interface (BMI) is a braneworld model of cosmology, developed in the open. It
+starts from one axiom: two 4-dimensional branes, $\Sigma_1$ (ours) and $\Sigma_2$, sit in a
+6-dimensional bulk. They collided at $t = 0$ and are now slowly merging. Matter on the two branes
+couples only through bulk gravity and at most one bulk scalar field.
+
+**BMI is not an established theory.** Version 1, the original manuscript, failed. An audit found
+21 undefined constants, 14 free functions and no number derived from the theory. Every
+quantitative claim has been retracted or suspended, including a 5.557σ gravitational-wave result
+([`RETRACTED.md`](RETRACTED.md)). Version 2 rebuilds the theory from the axiom, with one fixed
+action and a parameter budget that CI enforces ([`v2/`](v2/README.md)).
+
+## Where v2 stands
+
+- **Built:** milestones 1–7, from the 6D action to its effective 4D theory, the background
+  cosmology, the collision, the stabilised extra circle and a dark-matter candidate (the
+  oscillating circle). Much of this is standard two-brane Randall–Sundrum physics, and the map
+  marks which results are generic.
+- **Budget:** 9 parameters, frozen. The balance is 0 − 9 = −9: no number the theory was not fitted
+  to has been confirmed yet.
+- **Open prediction:** P1, a fifth force of strength $\alpha \approx 120$ at a range of 2.8–13 µm,
+  testable in torsion-balance experiments.
+- **Dead:** P2, thawing dark energy (killed by DESI DR2, 2026-11-11); dark energy as the inter-brane
+  potential; the mirror Standard Model as dark matter. The action does not produce a primordial
+  spectrum.
+- **Next:** $\Delta N_{\text{eff}}$ as a number, whether BMI can ease the Hubble tension, and a
+  second, cosmological test of the dark-matter candidate.
+
+The [theory map](https://gpd-research.com/BMI-Synthesis-Lab/viewer/) draws v2 and the audited v1 as
+flowcharts. It is read-only and is rebuilt from the repository on every change. Each box links to
+its file and check, each causal link is marked ✓ (verified) or ? (not yet worked out), and v1's
+critical failures are highlighted. Details: [`v2/STATUS.md`](v2/STATUS.md),
+[`v2/ledger.md`](v2/ledger.md).
+<!-- site:end -->
 
 > **Notice.** The 15 Hz ringdown split and the 5.557σ result described below have been
 > **retracted**: follow-up testing showed the split is an artifact of the analysed spectrum

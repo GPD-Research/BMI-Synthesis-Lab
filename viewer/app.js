@@ -243,10 +243,12 @@
     a.target = "_blank";
     a.title = "Open on GitHub";
     span.appendChild(a);
-    const loc = h("a", "local", "local");
-    loc.href = "../" + file;
-    loc.target = "_blank";
-    span.appendChild(loc);
+    if (location.protocol === "file:") {
+      const loc = h("a", "local", "local");
+      loc.href = "../" + file;
+      loc.target = "_blank";
+      span.appendChild(loc);
+    }
     return span;
   }
   function math(tex) {
