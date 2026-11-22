@@ -168,6 +168,17 @@ it is not a check either. P1 is killable by a detection off the segment's streng
 short end becomes a kill test only when $\ell$ is bounded from below or measured. The earlier statement
 that both ends are set by the action held only with $M_6$ frozen at one value of $\ell_z$.
 
+**No lower bound on $\ell$ exists in v2 (searched 2026-11-21).** Every effect that depends on $\ell$ alone
+weakens as $\ell \to 0$: the $\rho^2$ term and $T_t \propto \ell^{-1/2}$ move to higher energy, bulk graviton
+modes get heavier, bulk emission into $\mathcal C$ shrinks, and the $|\delta_1| < \sigma_1$ edge moves to shorter range.
+Cassini, $\omega$ and the radion depend only on $\phi/\ell$; the dark sector ($m_\chi$, $T_o$, $\delta_z$) and
+the impact variables $(f, \epsilon, h)$ do not involve $\ell$, and $h < 0.07$ only gets easier. $\ell \to 0$ is the
+decoupling limit of the warp, so data can bound $\ell$ only from above. The consistency conditions of the
+effective theory ($\ell \gg \ell_z$, $\ell \gg 1/M_6$) allow $\ell$ down to $\sim 10^{-20}$ m, where the short end
+of P1 would sit near $10^{-21}$ m: no constraint. P1's short end is therefore not a prediction of v2 as it
+stands. It becomes one only through a new connection that fixes or bounds $\ell$, which under the
+tenth-parameter rule (`ledger.md`) must also predict one of the existing nine.
+
 What changed: `04d` had a 1.5-decade window in $\lambda$ at an unspecified strength. Now the
 theory occupies a *line segment* in the $(\alpha,\lambda)$ plane: strength fixed to $\sim\!15\%$
 by the action, range within a decade at $\ell = 10\,\mu$m. The current limits meet the segment at its long end ($13\,\mu$m) and sit a factor $6$ (at $10\,\mu$m)
