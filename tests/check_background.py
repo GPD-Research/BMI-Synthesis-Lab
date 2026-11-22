@@ -6,8 +6,9 @@ Verifies, for a codimension-one warped metric in D dimensions
 
 that the bulk Einstein equation  G_AB = -(Lambda/M^{D-2}) G_AB  holds with
     Lambda = -(D-1)(D-2)/2 * M^{D-2} / l^2,
-that the boundary condition  2 M^{D-2} (K_ab - gamma_ab K) = -S_ab  with  S_ab = -sigma gamma_ab
-gives  sigma = 2 (D-2) M^{D-2} / l,
+that the one-sided boundary condition  M^{D-2} (K_ab - gamma_ab K) = -S_ab  with  S_ab = -sigma gamma_ab
+(y is an interval: each brane bounds the bulk on one side) gives  sigma = (D-2) M^{D-2} / l
+(half the two-sided RS value 2 (D-2) M^{D-2} / l; see tests/check_brane_eq.py),
 and that the 4D Planck mass from integrating the warp over an interval 0..phi is
     M_Pl^2 = M^{D-2} * Vol(extra compact dims) * l/(D-2) * (1 - e^{-(D-2) phi / l}).
 
@@ -59,10 +60,10 @@ def check_full_warp(D):
     gam = g[:D - 1, :D - 1]
     K = -gam / l
     trK = sp.simplify(sum(gam.inv()[a, b] * K[a, b] for a in range(D - 1) for b in range(D - 1)))
-    lhs = sp.simplify(2 * M ** (D - 2) * (K - gam * trK))
+    lhs = sp.simplify(M ** (D - 2) * (K - gam * trK))
     sigma = sp.symbols("sigma")
     sol = sp.solve(sp.Eq(lhs[1, 1], sigma * gam[1, 1]), sigma)  # -S_ab = +sigma gamma_ab
-    ok_sigma = sp.simplify(sol[0] - 2 * (D - 2) * M ** (D - 2) / l) == 0
+    ok_sigma = sp.simplify(sol[0] - (D - 2) * M ** (D - 2) / l) == 0
 
     # 4D Planck mass: sqrt(-G) R_D contains e^{-(D-1)y/l} * e^{2y/l} R_4 = e^{-(D-3)y/l} R_4
     phi = sp.symbols("phi", positive=True)

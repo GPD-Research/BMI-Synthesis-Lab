@@ -37,14 +37,15 @@ $\mu$ is the bulk mass; on a brane it appears as $\rho_E = $ `\mathcal C`$/a^{n+
 dark radiation as `02_effective_4d.md` §3, now with a definite bulk meaning. A $\mathbb Z_2$
 brane at $r = R(\tau)$ with tension $\pm\sigma_1$ and radiation $\rho = A/R^{n+1}$ obeys
 (Kraus 1999; Ida 2000; Binétruy, Deffayet & Langlois 2000; the $n=4$ case is the 6D action
-with the circle expanding with the brane, **[verify]** the $n=4$ coefficient against a
-direct Israel computation)
+with the circle expanding with the brane; the $n=4$ coefficient is checked by a direct Israel computation
+in the 6D bulk, `tests/check_brane_eq.py`)
 $$
 \sqrt{\frac{f}{R^2} + H^2} = \frac{\sigma_1 + s\,\rho}{2n},
 \qquad s = +1\ (\Sigma_1),\quad s = -1\ (\Sigma_2),
 \qquad \sigma_1 = \frac{2n}{\kappa^2\ell} ,
 $$
-which for $n = 4$ is the tension $8M_6^4/\ell$ of `01_action.md` §3 — the tuning is
+which for $n = 4$, with $\kappa^2 = 2/M_6^4$ (the one-sided normalisation of `01_action.md` §2), is the tension
+$4M_6^4/\ell$ of `01_action.md` §3 — the tuning is
 recovered, not assumed. Squaring:
 $$
 H_1^2 = \frac{\rho_1}{n}\Big(1 + \frac{\rho_1}{2\sigma_1}\Big) + \frac{\mu}{R_1^{\,n+1}},

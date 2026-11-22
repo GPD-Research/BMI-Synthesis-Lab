@@ -2,7 +2,7 @@
 
 **Decision 2026-09-21.** The parameter budget is frozen at 9 (`ledger.md`). No tenth number,
 no new derivation milestone, until one of the two registered predictions is tested: P1 (a
-fifth force of strength $\alpha_Y \approx 120$ at range $2.8$–$13\,\mu$m; strength corrected 2026-11-11) or P2 (thawing dark
+fifth force of strength $\alpha_Y \approx 120$ at range below $13\,\mu$m; strength corrected 2026-11-11) or P2 (thawing dark
 energy, $w_a = -1.5(1+w_0)$, $w>-1$) against the DESI DR2 chains. The branch is suspended, not
 closed: a confirmation moves the balance to $-8$ and re-opens derivation; a kill goes to
 `RETRACTED.md`.
@@ -30,7 +30,7 @@ Details and derivations live in the numbered files; this only points.
 $$
 S = \int d^6X \sqrt{-G}\left[\tfrac{M_6^4}{2} R_6 - \Lambda_6 - \tfrac12 (\partial\Phi)^2 - V(\Phi)\right]
 + \sum_{i=1,2} \int_{\Sigma_i} d^5\xi \sqrt{-\gamma_i}\left[-\sigma_i + \mathcal L_{\text{matter},i}\right]
-+ M_6^4 \sum_i \int_{\Sigma_i} [K_i],
++ M_6^4 \sum_i \int_{\Sigma_i} K_i,
 \qquad
 V(\Phi) = V_0\, e^{-c\,\Phi/M_6^2}.
 $$
@@ -55,10 +55,10 @@ excluded) and stays a parameter, bounded $< 0.45$.
 | item | status |
 |---|---|
 | background metric $ds^2 = e^{-2y/\ell}(\eta_{\mu\nu}dx^\mu dx^\nu + dz^2) + dy^2$, $\ell^{-2} = -\Lambda_6/10M_6^4$ | verified symbolically (`tests/check_background.py`) |
-| brane tensions $\sigma_1 = 8M_6^4/\ell = -\sigma_2$ | verified |
+| brane tensions $\sigma_1 = 4M_6^4/\ell = -\sigma_2$ (one-sided; corrected 2026-11-21 from the two-sided $8M_6^4/\ell$, `02_effective_4d.md` §1) | verified |
 | $M_{Pl}^2(\phi) = \tfrac13 M_5^3 \ell\,(1 - e^{-3\phi/\ell})$ | verified |
 | $\dot G/G \approx -(3\dot\phi/\ell)\,e^{-3\phi/\ell}$ | derived; $\lesssim 3\times10^{-16}\,\mathrm{yr}^{-1}$ once the DM-mass drift bound is imposed — **kill criterion 2 passed**. *2026-11-11: that bound was mirror-DM and is void (`03` §3.1a); LLR still passes, now saturable* |
-| brane field equation $G_{\mu\nu} = 8\pi G_N T_{\mu\nu} + (8\pi G_N/\sigma_1)\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}$ | structure derived; $D=6$ coefficients of $\hat\pi$ **[verify]** |
+| brane field equation $G_{\mu\nu} = 8\pi G_N T_{\mu\nu} + (8\pi G_N/\sigma_1)\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}$ | derived; $D=6$ coefficients of $\hat\pi$ and $G_5$ computed 2026-11-21 (`tests/check_brane_eq.py`); $\sigma_1^{(5)} = 12M_{Pl}^2/\ell^2$ |
 | GR + ΛCDM recovered for $\dot\phi \to 0$, low energy | yes — **kill criterion 1 passed** |
 | Brans–Dicke $\omega = \tfrac43(e^{3\phi/\ell}-1)$; Cassini: $\phi_0/\ell \gtrsim 3.4$, $\Omega_0 \lesssim 0.032$ | derived in 6D (`03_background.md` §1, `tests/check_radion.py`) |
 | radion $K(\phi) = 12M_{Pl}^2\Omega^3/\ell^2$, canonical $\chi \propto \Omega^{3/2}$, $\epsilon_\chi = 2/3\Omega^3$ | derived: the radion never slow-rolls |
@@ -152,8 +152,8 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 |---|---|
 | SM Casimir energy on the wrapped brane is repulsive (62 more fermionic than bosonic degrees of freedom); the action's own terms give a minimum at $\ell_z^{-1} \approx 7$ meV that tracks dark energy — dead | derived (O(1) coefficient [verify]) |
 | stabilizer taken: Casimir + negative detuning $\delta_1$ of $\sigma_1$ (**parameter #8**); flux and Goldberger–Wise not taken (more content, same physics) | derived |
-| $m_\chi = 10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash and $\lvert\delta_1\rvert < \sigma_1$ give $5.4 < \ell_z^{-1}/\mathrm{TeV} < 29$ | derived, two-sided |
-| **P1, pre-registered**: Yukawa force from the modulus; 5d's "gravitational strength, 2–66 μm, composition-dependent" is superseded by milestone 7's computed $\alpha_Y \approx 120$, $2.8$–$13\,\mu$m, composition-independent (§6b) | falsifiable; open |
+| $m_\chi = 10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash and $\lvert\delta_1\rvert < \sigma_1$ give $5.4 < \ell_z^{-1}/\mathrm{TeV} < 39\,(10\,\mu\mathrm m/\ell)^{1/2}$ (upper edge corrected 2026-11-21 from a fixed 29) | derived; upper edge depends on $\ell$ (#2) |
+| **P1, pre-registered**: Yukawa force from the modulus; 5d's "gravitational strength, 2–66 μm, composition-dependent" is superseded by milestone 7's computed $\alpha_Y \approx 120$, $\lambda < 13\,\mu$m with a short end $1.6\,\mu\mathrm m\,(\ell/10\,\mu\mathrm m)$, composition-independent (§6b) | falsifiable; open |
 | $\alpha$ does not drift (minimum independent of $\phi$, $\Phi$): clock/quasar bounds passed | derived |
 | moduli problem: overclosure unless $T_R < T_o$; the oscillating circle is a fourth DM family, BMI-specific | derived; adopted in milestone 6 |
 
@@ -163,7 +163,7 @@ costs one number the action does not produce (+1 parameter if taken). None adopt
 |---|---|
 | canonical circle modulus $\chi = \sqrt{3/2}\,M_{Pl}\ln\ell_z$ from the 5D Einstein–Hilbert term; 5d/6 numbers carry an implicit $\sqrt{2/3}$ in $m_\chi$ | derived |
 | $d\ln m_N/d\ln\ell_z \approx -9.3$, dominated by QCD running ($1/g_s^2 \propto \ell_z$, through the $t,b,c$ thresholds to $\Lambda_3$, two loops); $\alpha_Y = 2\beta^2 \approx 1.15\times10^2$, composition-independent to $10^{-3}$ | derived; corrected 2026-11-11 from $2.6\times10^2$ (`06` §2a: $b_0 = 7$ had been used down to $\Lambda_{QCD}$); matching scale [verify] |
-| **P1 computed**: a segment in the $(\alpha,\lambda)$ plane — $\alpha_Y = 120$–130 (spread 110–150), $2.8 < \lambda/\mu\mathrm m < 13$ ($13 < \ell_z^{-1}/\mathrm{TeV} < 29$); Eöt-Wash 2020 removed $\lambda > 13\,\mu$m; current limits $1$–$3\times10^3\times$ above the segment | open; detection on/off the segment confirms/kills |
+| **P1 computed**: a segment in the $(\alpha,\lambda)$ plane — $\alpha_Y = 120$–140 (spread 110–155), $1.6\,(\ell/10\,\mu\mathrm m) < \lambda/\mu\mathrm m < 13$ ($13 < \ell_z^{-1}/\mathrm{TeV} < 39\,(10\,\mu\mathrm m/\ell)^{1/2}$; short end corrected 2026-11-21); Eöt-Wash 2020 removed $\lambda > 13\,\mu$m; current limits $1$–$3\times10^3\times$ above the segment | open; a detection on/off the segment confirms/kills; a null result at short range only bounds $\ell$ until $\ell$ is bounded below |
 | **P2 registered**: $w_a = -1.5(1+w_0)$, $w > -1$; DESI DR2 proxy: $\Delta\chi^2 = 6.5$–12.7 (ΛCDM 9–20) | superseded by the chain test |
 | **P2 vs DESI DR2 chains** (`06` §4c): outside the 95% region for every $c$ — $98.1\%$ (Pantheon+), $>99.8\%$ (Union3, DESY5, no SNe); ΛCDM as far or farther | **killed** (criterion 2); `RETRACTED.md` N4 |
 | Cassini–$N_{\text{eff}}$ leaks ($\epsilon + f$ only observable); $\dot G/G$–$w$ different fields; GW/EM distance ratio $1 \pm 10^{-5}$; low-$\ell$ axis not computable without a primordial spectrum | not predictions |

@@ -111,8 +111,8 @@ if __name__ == "__main__":
     assert inv0 < 1e0
 
     print("=== 3. Option A: Casimir + negative detuning delta_1 of sigma_1 ===")
-    M6 = 2.7e16   # eV, from M_Pl^2 = pi l_z l M_6^4/3 with l = 10 um, 1/l_z ~ 5 TeV  [verify]
-    sigma1 = 8 * M6 ** 4 / (10e-4 / HBAR_C_EV_CM)  # 8 M_6^4 / ell, ell = 10 um in eV^-1
+    ell = 10e-4 / HBAR_C_EV_CM                     # warp length 10 um in eV^-1 (table-top upper bound)
+    sigma1_5 = 12 * M_PL ** 2 / ell ** 2           # pi l_z sigma_1 = 12 M_Pl^2/l^2 (02 S3), independent of l_z
     print(f"{'1/l_z [TeV]':>12} {'delta_1/sigma_1':>16} {'m_chi [eV]':>12} {'1/m [um]':>10} {'T_osc [TeV]':>12} {'dchi/M_Pl for DM':>18} {'Eot-Wash':>9}")
     rows = {}
     for inv_tev in [1, 2, 5, 10, 30]:
@@ -122,14 +122,15 @@ if __name__ == "__main__":
         dchi = required_displacement(m)
         ok = "pass" if m > EOT_WASH_M_MIN else "FAIL"
         rows[inv_tev] = (d1, m, Tosc, dchi)
-        print(f"{inv_tev:>12} {d1/sigma1:>16.2e} {m:>12.3e} {HBAR_C_EV_CM*1e4/m:>10.1f} {Tosc/1e12:>12.2f} {dchi:>18.2e} {ok:>9}")
+        print(f"{inv_tev:>12} {d1/(sigma1_5*inv/np.pi):>16.2e} {m:>12.3e} {HBAR_C_EV_CM*1e4/m:>10.1f} {Tosc/1e12:>12.2f} {dchi:>18.2e} {ok:>9}")
     d1, m, Tosc, dchi = rows[10]
     print(f"\nV_min = -3 C/l^4: a negative vacuum energy of -(3 C)^(1/4)/l_z = {(3*C_SM)**0.25*1e13:.2e} eV scale,"
           " to be cancelled by Lambda_6 retuning (the CC problem, not new).")
     print(f"m_chi scales as (1/l_z)^2: m = {m:.3e} eV x (1/l_z / 10 TeV)^2.")
     # window: lower edge from Eot-Wash (m > 3e-3 eV), upper edge from |delta_1| < sigma_1
     inv_lo = 1e13 * (EOT_WASH_M_MIN / m) ** 0.5
-    inv_hi = 1e13 * (sigma1 / abs(d1)) ** 0.2
+    # |delta_1| = 4 C/(pi l_z^5) < sigma_1 = sigma1_5/(pi l_z)  ->  1/l_z < (sigma1_5/4C)^(1/4), scaling as ell^(-1/2)
+    inv_hi = (sigma1_5 / (4 * C_SM)) ** 0.25
     print(f"window from the two conditions: {inv_lo/1e12:.1f} TeV < 1/l_z < {inv_hi/1e12:.1f} TeV;"
           f" modulus range {HBAR_C_EV_CM*1e4/(m*(inv_hi/1e13)**2):.0f}-{HBAR_C_EV_CM*1e4/EOT_WASH_M_MIN:.0f} um")
     assert m > EOT_WASH_M_MIN

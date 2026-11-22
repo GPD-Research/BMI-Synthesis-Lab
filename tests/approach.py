@@ -6,7 +6,7 @@ Gregory 2000). Each Z_2 brane with n isotropic spatial dimensions moves in
 and its induced FRW scale factor R(tau) obeys the junction condition (units l = kappa^2 = 1)
     sqrt(f/R^2 + H^2) = (sigma_1 + s rho) / (2n),   s = +1 (Sigma_1, tension +sigma_1),
                                                      s = -1 (Sigma_2, tension -sigma_1),
-with sigma_1 = 2n (the RS tuning; n = 4 gives 8 M_6^4/l) and rho = A / R^(n+1) (radiation).
+with sigma_1 = 2n (the RS tuning; n = 4 with kappa^2 = 2/M_6^4, the one-sided normalisation, gives 4 M_6^4/l) and rho = A / R^(n+1) (radiation).
 There is no independent radion: the separation Omega = R_2/R_1 at equal bulk time follows from
 (A_1, A_2, mu).  Dimensionless collision data:
     f   = A_2/A_1        radiation on Sigma_2 / radiation on Sigma_1 at coincidence,

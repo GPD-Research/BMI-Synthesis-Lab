@@ -10,7 +10,7 @@ die. This file works through the finite menu declared in `ledger.md`. Numbers: `
 | the SM on the brane fixes the sign of the Casimir energy: 62 more fermionic than bosonic degrees of freedom, repulsive, $V_z = C_z/\ell_z^4$, $C_z \approx 3\times10^{-3}$ | derived (O(1) coefficient [verify]) |
 | **option 0** (terms already in the action: Casimir + $V_* \propto \ell_z$): a minimum exists at $\ell_z^{-1} \approx 7$ meV and tracks the dark-energy roll — excluded by LHC and by $\Delta\alpha/\alpha$ | dead |
 | **option A** (Casimir + negative detuning $\delta_1$ of $\sigma_1$): minimum at $\ell_z^5 = 4C_z/\pi\lvert\delta_1\rvert$, one new number → **parameter #8, taken** | derived |
-| modulus mass $m_\chi = 1.0\times10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash needs $m_\chi > 3$ meV; $\lvert\delta_1\rvert < \sigma_1$ caps it: $5.4\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV}$ | derived (window from two conditions) |
+| modulus mass $m_\chi = 1.0\times10^{-2}\,\mathrm{eV}\,(\ell_z^{-1}/10\,\mathrm{TeV})^2$; Eöt-Wash needs $m_\chi > 3$ meV; $\lvert\delta_1\rvert < \sigma_1$ caps it: $5.4\ \mathrm{TeV} < \ell_z^{-1} < 39\ \mathrm{TeV}\,(10\,\mu\mathrm m/\ell)^{1/2}$ | derived (window from two conditions; upper edge depends on $\ell$, corrected 2026-11-21) |
 | **prediction (pre-registered, dated 2026-09-20)**: a gravitational-strength Yukawa force, range $2$–$66\ \mu$m, composition-dependent (couples to $\alpha$) | falsifiable by next-generation Eöt-Wash / Casimir-force experiments |
 | $\alpha$ drift at the minimum: zero (the minimum depends on neither $\phi$ nor $\Phi$) | derived; clock bounds satisfied |
 | cosmological moduli problem: an O(1) early displacement overcloses by $10^{12}$; the modulus does not decay ($\tau \sim 10^{38}$ yr) | derived; kill risk unless $T_R \lesssim \ell_z^{-1}/14$ |
@@ -66,7 +66,7 @@ twice. Recorded because it is the *only* stabilizer that costs nothing, and it f
 
 ## 3. Option A: Casimir against a negative tension detuning — taken
 
-The RS tuning $\sigma_1 = 8M_6^4/\ell$ was imposed in `01_action.md` §3 for a flat brane. Let
+The RS tuning $\sigma_1 = 4M_6^4/\ell$ was imposed in `01_action.md` §3 for a flat brane. Let
 $\sigma_1 \to \sigma_1 + \delta_1$. The brane wraps the circle, so its 4D vacuum energy is
 $\pi\ell_z\delta_1$: linear in $\ell_z$, and negative if $\delta_1 < 0$. Then
 $$
@@ -94,12 +94,14 @@ $$
 Eöt-Wash excludes a gravitational-strength Yukawa with range above $\sim 60\,\mu$m, i.e.
 $m_\chi \gtrsim 3$ meV: $\ell_z^{-1} \gtrsim 5.4$ TeV (the LHC bound on SM KK modes,
 $\gtrsim 5$ TeV, lands in the same place independently). From above, the detuning must be a
-detuning: $\lvert\delta_1\rvert < \sigma_1$ gives $\ell_z^{-1} \lesssim 29$ TeV (using
-$M_6 \approx 27$ PeV for $\ell = 10\,\mu$m [verify]). So
+detuning: $\lvert\delta_1\rvert < \sigma_1$, with $\lvert\delta_1\rvert \propto \ell_z^{-5}$ and
+$\pi\ell_z\sigma_1 = 12M_{Pl}^2/\ell^2$ fixed, gives $\ell_z^{-1} \lesssim 39\ \mathrm{TeV}\,(10\,\mu\mathrm m/\ell)^{1/2}$
+(corrected 2026-11-21 from 29 TeV, which held $M_6$ at its $\ell_z^{-1} = 5$ TeV value and used the two-sided tension,
+`02_effective_4d.md` §1). So, for $\ell = 10\,\mu$m,
 $$
-5.4\ \mathrm{TeV} \;\lesssim\; \ell_z^{-1} \;\lesssim\; 29\ \mathrm{TeV},
+5.4\ \mathrm{TeV} \;\lesssim\; \ell_z^{-1} \;\lesssim\; 39\ \mathrm{TeV},
 \qquad
-2\,\mu\mathrm{m} \;\lesssim\; m_\chi^{-1} \;\lesssim\; 66\,\mu\mathrm{m}.
+1.3\,\mu\mathrm{m} \;\lesssim\; m_\chi^{-1} \;\lesssim\; 66\,\mu\mathrm{m}.
 $$
 
 **(c) The prediction.** *Superseded in milestone 7 (`06_predictions.md` §1–2, §4a): the canonical
@@ -182,6 +184,6 @@ menu is closed.
 
 O(1) Casimir coefficient and orbifold factor; canonical normalisation of $\chi$ (Brans–Dicke
 mixing with $M_{Pl}^2 \propto \ell_z$ may shift $m_\chi$ by O(1) and sets $\alpha_Y$
-exactly); $M_6$ for the upper edge of the window; whether $\delta_1 \ne 0$ back-reacts on the
+exactly); $\ell$ (#2) for the upper edge of the window, which v2 bounds only from above; whether $\delta_1 \ne 0$ back-reacts on the
 AdS$_6$ slice beyond a constant shift (it should appear as a de Sitter/anti-de Sitter brane
 curvature absorbed in the $\Lambda_6$ retuning of §3a).
