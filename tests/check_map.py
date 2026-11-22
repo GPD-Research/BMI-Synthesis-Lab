@@ -13,7 +13,7 @@ import build_map as B
 
 ROOT = B.ROOT
 STATUSES = {
-    "v2": {"axiom", "derived", "verify", "open", "paused", "killed", "retracted", "borrowed",
+    "v2": {"axiom", "derived", "verify", "fitted", "open", "paused", "killed", "retracted", "borrowed",
            "passed", "fired", "relabelled"},
     "v1": {"axiom", "kept", "hypothesis", "hard-stop", "dropped", "suspended", "retracted"},
 }
