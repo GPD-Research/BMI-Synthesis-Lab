@@ -28,7 +28,7 @@ condition. Nothing else is available to it.
 
 ## 1. Setup
 
-Bulk (units $\ell = 1$, $\kappa^2 = 1/M_6^4 = 1$), $n$ isotropic spatial directions on the brane:
+Bulk (units $\ell = 1$, $\kappa^2 = 2/M_6^4 = 1$, the one-sided normalisation of §1), $n$ isotropic spatial directions on the brane:
 $$
 ds^2 = -f\,dt^2 + \frac{dr^2}{f} + \frac{r^2}{\ell^2}\,d\vec x^{\,2},
 \qquad f(r) = \frac{r^2}{\ell^2} - \frac{\mu}{r^{\,n-1}} .

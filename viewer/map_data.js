@@ -1627,7 +1627,7 @@ window.BMI_MAP = {
      ],
      "id": "p2",
      "kind": "dead",
-     "line": 206,
+     "line": 217,
      "retracted": "N4",
      "section": "4c",
      "status": "retracted",
@@ -1877,7 +1877,7 @@ window.BMI_MAP = {
      ],
      "id": "kill_desi",
      "kind": "kill",
-     "line": 253,
+     "line": 264,
      "section": "4d",
      "status": "fired",
      "test": [
