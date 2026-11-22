@@ -31,7 +31,7 @@ action and a parameter budget that CI enforces ([`v2/`](v2/README.md)).
   marks which results are generic.
 - **Budget:** 9 parameters, frozen. The balance is 0 − 9 = −9: no number the theory was not fitted
   to has been confirmed yet.
-- **Open prediction:** P1, a fifth force of strength $\alpha \approx 120$ at a range of 2.8–13 µm,
+- **Open prediction:** P1, a fifth force of strength $\alpha \approx 120$ at a range below 13 µm (short end set by the warp length, not yet bounded),
   testable in torsion-balance experiments.
 - **Dead:** P2, thawing dark energy (killed by DESI DR2, 2026-11-11); dark energy as the inter-brane
   potential; the mirror Standard Model as dark matter. The action does not produce a primordial

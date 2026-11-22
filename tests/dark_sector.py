@@ -30,10 +30,9 @@ GSTAR = 106.75
 G_SM = 118                     # on-shell SM dof (90 fermionic + 28 bosonic), all in the KK tower
 C_Z = 62 * 3 * zeta(5) / (64 * np.pi ** 6)
 H0 = 1.44e-33                  # eV
-LZ_INV = 1e13                  # eV, KK scale used throughout (window 5.4-29 TeV, 04d S3b)
+LZ_INV = 1e13                  # eV, KK scale used throughout (window 5.4-39 TeV for ell = 10 um, 04d S3b)
 ELL = 10e-4 / HBAR_C_EV_CM     # eV^-1, warp length 10 um
-M6 = 2.7e16                    # eV [verify]  (04d)
-T_T = 6e12                     # eV, rho^2 transition scale of 03_background (ell = 10 um)
+T_T = 5.3e12                   # eV, rho^2 transition scale T_t of 04_impact S5 (ell = 10 um)
 
 
 def m_chi(inv_lz):
@@ -104,7 +103,7 @@ def main():
     print("04d S4 said 'T_R tuned to 0.4%' via the thermal shift: RETRACTED (item 1: that shift is adiabatic when T_R < T_o).")
 
     print("\n=== 3. T_R from the impact ===")
-    sigma1_4d = np.pi / inv * 8 * M6 ** 4 / ELL
+    sigma1_4d = 12 * M_PL ** 2 / ELL ** 2      # pi l_z sigma_1 = 12 M_Pl^2/l^2 (02 S3)
     rho = lambda T: np.pi ** 2 / 30 * GSTAR * T ** 4
     h_o = rho(To) / sigma1_4d
     print(f"sigma_1 (4D) = ({sigma1_4d**0.25/1e12:.0f} TeV)^4;  h = rho_1/sigma_1 at T_R = T_o: {h_o:.3f}")

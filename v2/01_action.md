@@ -76,11 +76,12 @@ S_{\Sigma_i} = \int_{\Sigma_i} d^5\xi \sqrt{-\gamma_i}\,
 $$
 
 $$
-S_{\text{GHY}} = M_6^4 \sum_{i} \int_{\Sigma_i} d^5\xi \sqrt{-\gamma_i}\; [K_i]
+S_{\text{GHY}} = M_6^4 \sum_{i} \int_{\Sigma_i} d^5\xi \sqrt{-\gamma_i}\; K_i
 $$
 
 with $\gamma_i$ the induced metric on $\Sigma_i$, $K_i$ the trace of its extrinsic curvature,
-and $[K_i]$ the jump across the brane. The GHY terms are required for the variational
+computed on the bulk side with the outward normal: $y$ is an interval, so each brane bounds the bulk on one side
+only (a jump $[K_i] = 2K_i$, the two-sided form, double-counted it; corrected 2026-11-21, `02_effective_4d.md` §1). The GHY terms are required for the variational
 problem to yield the Israel junction conditions (Israel 1966; Chamblin & Reall 1999).
 
 **Field content.**
@@ -134,11 +135,12 @@ ds^2 = e^{-2y/\ell}\left( \eta_{\mu\nu} dx^\mu dx^\nu + dz^2 \right) + dy^2,
 $$
 provided the tensions satisfy the RS tuning
 $$
-\sigma_1 = -\sigma_2 = \frac{8\, M_6^4}{\ell} .
+\sigma_1 = -\sigma_2 = \frac{4\, M_6^4}{\ell} .
 $$
 These are the $D=6$ cases of the general codimension-1 RS relations
-$\Lambda_D = -\tfrac12 (D-1)(D-2)\,M_D^{D-2}/\ell^2$ and $\sigma = 2(D-2)\,M_D^{D-2}/\ell$, which
-reduce to the familiar $\Lambda_5 = -6M_5^3/\ell^2$, $\sigma = 6M_5^3/\ell$ at $D=5$.
+$\Lambda_D = -\tfrac12 (D-1)(D-2)\,M_D^{D-2}/\ell^2$ and $\sigma = (D-2)\,M_D^{D-2}/\ell$ for a brane bounding the bulk on one side, which
+reduce to $\Lambda_5 = -6M_5^3/\ell^2$, $\sigma = 3M_5^3/\ell$ at $D=5$ (the familiar $6M_5^3/\ell$ is the two-sided RS value,
+bulk on both sides of the brane; corrected 2026-11-21 from $8M_6^4/\ell$, `02_effective_4d.md` §1).
 All five brane directions, including the circle, are warped: the metric with $dz^2$ unwarped
 that an earlier draft of this file wrote is *not* a vacuum solution (`02_effective_4d.md` §0;
 `tests/check_background.py`). Both branes wrap the circle, whose proper radius shrinks toward

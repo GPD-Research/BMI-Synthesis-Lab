@@ -12,7 +12,7 @@ today. Numbers: `tests/predictions.py`. Registered 2026-09-21, before the compar
 | coupling to nucleons: $d\ln m_N/d\ln\ell_z = -\tfrac12 - (1-s)(7 + 2\pi/\alpha_s(\ell_z^{-1}))/9 \approx -9.3$ (two loops, thresholds down to $\Lambda_3$); the QCD piece dominates | derived (§2; corrected 2026-11-11, §2a; matching scale [verify]) |
 | **P1 revised**: $\alpha_Y = 2\beta^2 \approx 1.2\times10^2$, not order one; the fifth force is $\sim\!120\times$ gravity, composition-independent to $10^{-3}$ | derived (§2) |
 | existing $\alpha$–$\lambda$ limits at $\alpha_Y \approx 120$ cut the range from the long side: $\lambda < 13\,\mu$m, i.e. $\ell_z^{-1} > 13$ TeV | compared (§4a; digitized bounds [verify]) |
-| P1 window now $13 < \ell_z^{-1}/\mathrm{TeV} < 29$ ⇔ $2.8 < \lambda/\mu\mathrm m < 13$ at $\alpha_Y = 120$–$130$ (spread $110$–$150$) | one-parameter *curve* in the $(\alpha,\lambda)$ plane, half a decade long, both ends set by the action |
+| P1 window now $13 < \ell_z^{-1}/\mathrm{TeV} < 39\,(10\,\mu\mathrm m/\ell)^{1/2}$ ⇔ $1.6\,(\ell/10\,\mu\mathrm m) < \lambda/\mu\mathrm m < 13$ at $\alpha_Y = 120$–$140$ (spread $110$–$155$); short end corrected 2026-11-21 from $2.8\,\mu$m (§4a) | one-parameter *curve* in the $(\alpha,\lambda)$ plane; the long end is set by data, the short end by the action *given* $\ell$ (#2), which v2 bounds only from above |
 | **P2**: dark energy is thawing with $w_a/(1+w_0) = -1.5$ ($-1.56$ at small $c$, $-1.15$ at $c=1.8$), $w>-1$ always | derived (`03_background.md`), registered here as a prediction |
 | DESI DR2 + CMB + SNe (Gaussian proxy of the $(w_0,w_a)$ posteriors): the curve's nearest point is $\Delta\chi^2 = 6.5$–$12.7$ from the best fit for the three SNe samples — outside $2\sigma$, always closer than ΛCDM by $2$–$10$ | compared (§4b; proxy, superseded by §4c) |
 | **DESI DR2 chains** (BAO + CMB, alone and with each SNe sample): the curve is outside the 95% region for every $c$ in all four — $98.1\%$ (Pantheon+), $>99.8\%$ (Union3, DESY5, BAO + CMB alone); ΛCDM is outside by as much or more | **kill criterion 2 fired** (§4c, 2026-11-11); criterion 3 ($>5\sigma$ crossing) not established |
@@ -139,7 +139,7 @@ both ends from the action) did not.
 
 ### 4a. P1 against the inverse-square-law limits
 
-$\alpha_Y(\ell_z)$ is nearly flat ($115$–$133$ for $\ell_z^{-1} = 10$–$29$ TeV; the log running of $\alpha_s$), and
+$\alpha_Y(\ell_z)$ is nearly flat ($115$–$139$ for $\ell_z^{-1} = 10$–$39$ TeV; the log running of $\alpha_s$), and
 $\lambda = m_\chi^{-1} = 23.5\,\mu\mathrm m\,(10\ \mathrm{TeV}\,\ell_z)^2$. The published 95% limits
 on $|\alpha|$ at fixed $\lambda$ (Lee et al. 2020, Fig. 3, compiling Eöt-Wash 2007/2020, Stanford,
 IUPUI 2016; only the point $\alpha = 1$ at $\lambda = 38.6\,\mu$m is quoted numerically, the rest are
@@ -149,24 +149,33 @@ $$
 \alpha_Y = 1.2\times10^2 \;\;\Rightarrow\;\; \lambda < 13.4\,\mu\mathrm m \;\;\Leftrightarrow\;\; \ell_z^{-1} > 13.2\ \mathrm{TeV}.
 $$
 
-The upper edge $\ell_z^{-1} < 29$ TeV ($|\delta_1| < \sigma_1$) is unchanged, so
+The upper edge from $|\delta_1| < \sigma_1$ is $\ell_z^{-1} < 39\ \mathrm{TeV}\,(10\,\mu\mathrm m/\ell)^{1/2}$ (`04d_circle.md` §3b;
+corrected 2026-11-21 from a fixed 29 TeV), so
 
 $$
-13\ \mathrm{TeV} < \ell_z^{-1} < 29\ \mathrm{TeV},
+13\ \mathrm{TeV} < \ell_z^{-1} < 39\ \mathrm{TeV}\,(10\,\mu\mathrm m/\ell)^{1/2},
 \qquad
-2.8\,\mu\mathrm m < \lambda < 13\,\mu\mathrm m,
+1.6\,\mu\mathrm m\,(\ell/10\,\mu\mathrm m) < \lambda < 13\,\mu\mathrm m,
 \qquad
-\alpha_Y = 120\text{–}130\ (110\text{–}150) .
+\alpha_Y = 120\text{–}140\ (110\text{–}155) .
 $$
+
+**The short end depends on $\ell$ (2026-11-21).** Its range scales as $\ell$, and v2 bounds the warp
+length only from above ($\ell \lesssim 10\,\mu$m, §3 of `02_effective_4d.md`). A null result down to a range
+$\lambda$ therefore does not kill P1: it only bounds $\ell \lesssim 10\,\mu\mathrm m \times \lambda/1.6\,\mu\mathrm m$. A
+detection at $\lambda$ implies the same bound, which for $\lambda > 1.6\,\mu$m is weaker than the table-top one, so
+it is not a check either. P1 is killable by a detection off the segment's strength and at its long end; its
+short end becomes a kill test only when $\ell$ is bounded from below or measured. The earlier statement
+that both ends are set by the action held only with $M_6$ frozen at one value of $\ell_z$.
 
 What changed: `04d` had a 1.5-decade window in $\lambda$ at an unspecified strength. Now the
 theory occupies a *line segment* in the $(\alpha,\lambda)$ plane: strength fixed to $\sim\!15\%$
-by the action, range within half a decade. The current limits meet the segment at its long end ($13\,\mu$m) and sit a factor $6$ (at $10\,\mu$m)
+by the action, range within a decade at $\ell = 10\,\mu$m. The current limits meet the segment at its long end ($13\,\mu$m) and sit a factor $6$ (at $10\,\mu$m)
 to $3\times10^3$ (at $3\,\mu$m) above it; the Eöt-Wash 2020 result already removed the
 lower half of `04d`'s $\ell_z$ range. A detection *on* the segment confirms P1 and moves the
 balance to $+1$; a detection *off* it (any $\alpha$ outside $\sim[10^2, 4\times10^2]$ at the
-detected range, or a range outside $2.8$–$13\,\mu$m) kills the fixed-circle geometry as surely
-as a null result down to $\alpha \sim 10^2$ at $3\,\mu$m does. The lower edge is also where
+detected range, or a range above $13\,\mu$m) kills the fixed-circle geometry; a null result down to
+$\alpha \sim 10^2$ at short range only bounds $\ell$ (above). The lower edge is also where
 the LHC KK bound ($\ell_z^{-1} \gtrsim 5$ TeV) is now irrelevant: the fifth-force limit is the
 stronger one by a factor of 2.6. The corrected segment sits in the lower third of the registered
 kill band; the band is not moved.
@@ -305,6 +314,6 @@ $\alpha_Y \approx 2\beta^2$ with $\beta$ dominated by QCD running is generic for
 modulus that sets $1/g^2$ (Damour–Polyakov dilaton, string moduli). BMI-specific: the range is
 tied to the SM Casimir coefficient and $\delta_1$ (not to a string scale), the modulus is the
 dark matter, and the same $\ell_z$ is bounded from above by $|\delta_1| < \sigma_1$ — giving
-both ends of the segment from the action. The thawing relation $w_a \approx -1.5(1+w_0)$ is
+the short end of the segment for a given warp length $\ell$ (#2). The thawing relation $w_a \approx -1.5(1+w_0)$ is
 generic exponential quintessence; the BMI-specific content of P2 is only that the slope is the
 6D parameter $c$ with no geometric factor and that $\Phi$ cannot be the inter-brane potential.

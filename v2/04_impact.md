@@ -220,9 +220,10 @@ low-energy regime gives (this file)
 $$
 \epsilon_W = \frac{\alpha}{2\sqrt2}\left(\frac{T_{RH}}{T_t}\right)^2 ,\qquad
 T_t = \left(\frac{30\,\lambda}{\pi^2 g_*}\right)^{1/4},\quad
-\lambda = \sigma_1^{(5)} = \frac{8M_5^3}{\ell} = \frac{24M_{Pl}^2}{\ell^2} ,
+\lambda = \sigma_1^{(5)} = \frac{4M_5^3}{\ell} = \frac{12M_{Pl}^2}{\ell^2} ,
 $$
-so $T_t \approx 6$ TeV for $\ell = 10\,\mu$m, $20$ TeV for $1\,\mu$m (the "15 TeV" of
+so $T_t \approx 5.3$ TeV for $\ell = 10\,\mu$m, $17$ TeV for $1\,\mu$m (corrected 2026-11-21 from 6 and 20, which used the
+two-sided tension, `02_effective_4d.md` §1; the "15 TeV" of
 `STATUS.md` was $\lambda^{1/4}$ without the $g_*$ factor; corrected there).
 
 **Result.** $\Delta N_{\text{eff}}^{\mathrm{Weyl}} = \epsilon_W\cdot 10.75/1.75 \le 0.03$ at BBN

@@ -40,7 +40,7 @@ B0 = 7.0                             # one-loop QCD beta coefficient above m_t
 ALPHA_S_MZ = 0.1180
 M_Z = 91.19e9
 M_T = 172.6e9
-LZ_INV_MAX = 29e12                   # |delta_1| < sigma_1  (04d S3b)
+LZ_INV_MAX = 38.6e12                 # |delta_1| < sigma_1 at ell = 10 um; scales as ell^(-1/2) (04d S3b, tests/circle.py)
 LZ_INV_LHC = 5e12                    # SM KK modes at LHC
 
 # 95% upper limits on |alpha| at range lambda [um], digitized from the compilation in
@@ -149,14 +149,14 @@ def part_a():
     print(f"canonical normalisation K = {K_KIN}: m_chi and 1/lambda x {1/np.sqrt(K_KIN):.3f} relative to 04d/05")
     print()
     print(f"{'1/ell_z [TeV]':>14} {'m_chi [meV]':>12} {'lambda [um]':>12} {'alpha_Y':>8} {'bound':>9} {'status':>9}")
-    for x in [5, 7, 10, 13, 15, 20, 25, 29]:
+    for x in [5, 7, 10, 13, 15, 20, 29, 39]:
         inv = x * 1e12
         lam = range_um(inv)
         aY = alpha_yukawa(inv)
         b = alpha_bound(lam)
         print(f"{x:>14} {m_chi(inv)*1e3:>12.2f} {lam:>12.1f} {aY:>8.0f} {b:>9.2g} {'EXCLUDED' if aY > b else 'open':>9}")
     f = lambda x: np.log(alpha_yukawa(x)) - np.log(alpha_bound(range_um(x)))
-    inv_min = brentq(f, 5e12, 29e12)
+    inv_min = brentq(f, 5e12, LZ_INV_MAX)
     lam_max = range_um(inv_min)
     lam_min = range_um(LZ_INV_MAX)
     print()
@@ -165,6 +165,7 @@ def part_a():
     print(f"window:  {inv_min/1e12:.1f} TeV < 1/ell_z < {LZ_INV_MAX/1e12:.0f} TeV   "
           f"<=>   {lam_min:.1f} um < lambda < {lam_max:.1f} um   at alpha_Y = {alpha_yukawa(inv_min):.0f}-{alpha_yukawa(LZ_INV_MAX):.0f}"
           f"  (spread {lo_min:.0f}-{hi_max:.0f})")
+    print(f"short end at ell = 10 um; lambda_min scales as ell: {lam_min:.1f} um x (ell / 10 um). v2 has no lower bound on ell.")
     print("(milestone 7 had 14.2-29 TeV / 2.8-11.7 um at alpha_Y = 270-300; 04d had 5.4-29 TeV / 2-66 um at alpha_Y ~ 1)")
     print("P1: alpha_Y ~ 1.2-1.4e2, composition-independent at the 1e-3 level, range in the band above.")
     print("A detection with alpha_Y outside ~[100, 400] at that range kills the fixed-circle geometry as much as no detection.")

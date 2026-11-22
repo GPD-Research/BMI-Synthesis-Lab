@@ -21,8 +21,8 @@ not yet re-derived.
    ds^2 = e^{-2y/\ell}\left(\eta_{\mu\nu}dx^\mu dx^\nu + dz^2\right) + dy^2 ,
    $$
    i.e. a slice of $\mathrm{AdS}_6$ with the circle shrinking toward $\Sigma_2$. The factors
-   $\Lambda_6 = -10M_6^4/\ell^2$ and $\sigma_1 = 8M_6^4/\ell$ quoted in §3 were already those
-   of this metric and are confirmed. `01_action.md` §3 has been corrected.
+   $\Lambda_6 = -10M_6^4/\ell^2$ quoted in §3 was already that of this metric and is confirmed
+   (the tension, then $8M_6^4/\ell$, is corrected in §1). `01_action.md` §3 has been corrected.
 2. **The Planck-mass formula in §4 had the 5D exponent.** With all five directions warped the
    integrand of the 4D curvature term is $e^{-3y/\ell}$, not $e^{-2y/\ell}$ (§2 below). The
    corrected relation changes the $\dot G/G$ estimate by a factor $\tfrac32$ and the exponent
@@ -47,17 +47,26 @@ $$
 Boundary condition at a brane (one-sided, interval geometry, GHY normalisation of
 `01_action.md` §2):
 $$
-2M_6^4\left(K_{ab} - \gamma_{ab}K\right) = -S_{ab},
+M_6^4\left(K_{ab} - \gamma_{ab}K\right) = -S_{ab},
 \qquad S_{ab} = -\sigma_i\gamma_{ab} + T^{(i)}_{ab},
 $$
 with $K_{ab}$ the extrinsic curvature of the brane with outward normal, $a,b$ running over the
 five brane directions. For the vacuum background $K_{ab} = -\gamma_{ab}/\ell$ at $y=0$, which
 gives
 $$
-\sigma_1 = \frac{8M_6^4}{\ell}, \qquad \sigma_2 = -\sigma_1 .
+\sigma_1 = \frac{4M_6^4}{\ell}, \qquad \sigma_2 = -\sigma_1 .
 $$
-Both checked for $D=5$ (recovering $-6M^3/\ell^2$, $6M^3/\ell$) and $D=6$ by
+Both checked for $D=5$ (recovering $-6M^3/\ell^2$ and $3M^3/\ell$, half the two-sided RS tension) and $D=6$ by
 `check_background.py`.
+
+**Corrected 2026-11-21.** This section had $2M_6^4(K_{ab} - \gamma_{ab}K) = -S_{ab}$ and $\sigma_1 = 8M_6^4/\ell$: the
+junction condition of a brane with bulk on *both* sides, combined with the one-sided Planck integral of
+§2. `tests/check_brane_eq.py` shows that $8M_6^4/\ell$ is the tension that sources the warp on both sides
+of the brane. With $y$ an interval the consistent pair is $\sigma_1 = 4M_6^4/\ell$ with
+$M_{\text{Pl}}^2 = M_5^3\ell/3$; the convention-free statement is $\sigma_1^{(5)} = 12M_{\text{Pl}}^2/\ell^2$ (§3), not
+$24M_{\text{Pl}}^2/\ell^2$. Only results that convert the tension into $M_{\text{Pl}}$ move: the $\rho^2$ scale (§3),
+$T_t$ (`04_impact.md` §5) and the upper edge of the circle window (`04d_circle.md` §3b). $\omega(\phi)$, Cassini,
+the radion and the dimensionless two-brane results of `04c_approach.md` do not change.
 
 **Consequence for kill criterion 1.** With these tensions and no brane matter the induced
 metric on $\Sigma_1$ is exactly $\eta_{\mu\nu}$, i.e. the effective 4D cosmological constant
@@ -99,16 +108,19 @@ condition of §1 (Shiromizu, Maeda & Sasaki 2000, generalised to $D=6$; the stru
 dimension-independent and only the coefficients change). On the five-dimensional worldvolume
 of $\Sigma_1$:
 $$
-{}^{(5)}G_{ab} = -\Lambda_{\text{brane}}\,\gamma_{ab} + 8\pi G_5\,T_{ab} + \frac{1}{M_6^8}\,\pi_{ab} - E_{ab},
+{}^{(5)}G_{ab} = -\Lambda_{\text{brane}}\,\gamma_{ab} + 8\pi G_5\,T_{ab} + \frac{4}{M_6^8}\,\pi_{ab} - E_{ab},
 $$
 where
 
 - $\Lambda_{\text{brane}} = 0$ by §1 (it is the combination of $\Lambda_6$ and $\sigma_1^2$ that
   the RS tuning kills);
-- $8\pi G_5 \propto \sigma_1/M_6^8$ is the brane Newton constant, which after reduction on the
-  circle becomes $G_N$ of §2 **[verify: coefficient]**;
-- $\pi_{ab}$ is quadratic in $T_{ab}$: $\pi_{ab} = -\tfrac14 T_{ac}T^c{}_b + \tfrac{1}{12}TT_{ab}
-  + \tfrac18\gamma_{ab}(T_{cd}T^{cd} - \tfrac13 T^2)$ in $D=5$ **[verify: $D=6$ coefficients]**;
+- $8\pi G_5 = \tfrac34\,\sigma_1/M_6^8$ is the brane Newton constant; with $\sigma_1 = 4M_6^4/\ell$ and the reduction
+  on the circle it is $G_N = 3/(8\pi M_5^3\ell)$ of §2 (`tests/check_brane_eq.py`, which derives it for general
+  dimension and recovers the $D=5$ value);
+- $\pi_{ab}$ is quadratic in $T_{ab}$: $\pi_{ab} = -\tfrac14 T_{ac}T^c{}_b + \tfrac{1}{16}TT_{ab}
+  + \tfrac18\gamma_{ab}(T_{cd}T^{cd} - \tfrac14 T^2)$ in $D=6$ ($\tfrac1{12}$ and $\tfrac13$ in $D=5$; both from
+  `tests/check_brane_eq.py`, which also checks that this $\pi_{ab}$ gives the $\rho^2$ term of the exact two-brane
+  solution, `04c_approach.md` §1);
 - $E_{ab} = C_{AaBb}\,n^A n^B$ is the projection of the bulk Weyl tensor: the influence of the
   bulk and of $\Sigma_2$ on our gravity, not determined by brane data alone.
 
@@ -116,7 +128,7 @@ Reducing on the circle at energies below $1/\ell_z$ (zero mode only) gives the 4
 $$
 \boxed{\;G_{\mu\nu} = 8\pi G_N(\phi)\,T_{\mu\nu} + \frac{8\pi G_N}{\sigma_1^{(5)}}\,\hat\pi_{\mu\nu} - E_{\mu\nu} + \Theta_{\mu\nu}[\phi]\;}
 $$
-with $\sigma_1^{(5)} = \pi\ell_z\sigma_1 = 8M_5^3/\ell$ the tension per unit 4-volume,
+with $\sigma_1^{(5)} = \pi\ell_z\sigma_1 = 4M_5^3/\ell$ the tension per unit 4-volume,
 $\hat\pi_{\mu\nu}$ the 4D quadratic tensor, and $\Theta_{\mu\nu}[\phi]$ the radion stress
 (derivative terms in $\phi$ plus $V_{\text{eff}}(\phi)\,g_{\mu\nu}$, §4). This is the equation
 v1's Chapter 7 was reaching for: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ is its weak-field
@@ -126,16 +138,16 @@ each with a definition and a size.
 **Size of each correction.**
 
 *Quadratic term.* Relative to the GR term it is $\rho/\sigma_1^{(5)}$. Using §2,
-$\sigma_1^{(5)} = 24M_{\text{Pl}}^2/\ell^2$ up to the $e^{-3\phi/\ell}$ correction. Table-top
+$\sigma_1^{(5)} = 12M_{\text{Pl}}^2/\ell^2$ up to the $e^{-3\phi/\ell}$ correction. Table-top
 tests of the inverse-square law bound the warp length $\ell \lesssim 10\,\mu\mathrm m$ (Eöt-Wash;
 Adelberger et al. 2007, treat as approximate). Then
 $$
-\sigma_1^{(5)} \gtrsim 24\,(2.4\times10^{18}\,\mathrm{GeV})^2\,(5\times10^{10}\,\mathrm{GeV}^{-1})^{-2}
-\approx 5\times10^{16}\,\mathrm{GeV}^4 \approx (1.5\times10^{4}\,\mathrm{GeV})^4 .
+\sigma_1^{(5)} \gtrsim 12\,(2.4\times10^{18}\,\mathrm{GeV})^2\,(5\times10^{10}\,\mathrm{GeV}^{-1})^{-2}
+\approx 2.8\times10^{16}\,\mathrm{GeV}^4 \approx (1.3\times10^{4}\,\mathrm{GeV})^4 .
 $$
-The quadratic correction is $(T/15\,\mathrm{TeV})^4$ during radiation domination: below
+The quadratic correction is $(T/T_t)^4$ with $T_t \approx 5$ TeV (`04_impact.md` §5) during radiation domination: below
 $10^{-16}$ at BBN and irrelevant for the CMB. It is a genuine prediction of the action (a
-$\rho^2$ term in the Friedmann equation at $T \gtrsim 10\,\mathrm{TeV}$), and it is
+$\rho^2$ term in the Friedmann equation at $T \gtrsim 5\,\mathrm{TeV}$), and it is
 generic to every codimension-one braneworld — **not** BMI-specific.
 
 *Weyl term.* In a homogeneous background $E_{\mu\nu}$ is a radiation-like fluid,
@@ -260,7 +272,7 @@ not solved here.
 
 Where v2 can differ from ΛCDM, and only there: $w(z) \ne -1$ from $\dot\phi \ne 0$;
 $\Delta N_{\text{eff}}$ from $\mathcal C$; dissipative, light, time-varying-mass dark matter
-from §5; the $\rho^2$ term above 10 TeV; $\dot G/G$ at the $10^{-16}\,\mathrm{yr}^{-1}$
+from §5; the $\rho^2$ term above 5 TeV; $\dot G/G$ at the $10^{-16}\,\mathrm{yr}^{-1}$
 level. Each is computable from the seven ledger entries. Milestone 4 computes the first two.
 
 ## 7. What is generic and what is BMI
@@ -269,7 +281,7 @@ level. Each is computable from the seven ledger entries. Milestone 4 computes th
 |---|---|---|
 | RS tuning, $\Lambda_4 = 0$ | yes | — |
 | $M_{\text{Pl}}^2(\phi)$, Fork-1 $G$-stability | yes (RS-I) | — |
-| $\rho^2$ Friedmann term at $T \gtrsim 10$ TeV | yes | — |
+| $\rho^2$ Friedmann term at $T \gtrsim 5$ TeV | yes | — |
 | dark radiation $\mathcal C/a^4$ | yes | value of $\mathcal C$ from impact (m5) |
 | scalar–tensor radion, $\phi_0/\ell \gtrsim 3.4$ | yes (GT 2000) | 6D prefactor $\tfrac43$ |
 | warped mirror sector: $m^{(2)} = \Omega\, m$ | RS mechanism | applied to a *full* mirror SM as DM: $n_2/n_1 \gtrsim 165$ and time-varying DM mass are BMI's |
@@ -284,4 +296,5 @@ says something a generic model does not, and it is falsifiable.
 2. Solve $\Phi(y)$ on the AdS background for the exponential $V$; obtain $V_{\text{eff}}(\phi)$.
 3. Cosmological solution: $w(z)$, $\dot\phi(t)$, $m_{\text{eff}}$ of the radion.
 4. Confront §5.2: DM-mass variation since recombination vs $\dot\phi$ needed for observable $w(z)$.
-5. $D=6$ coefficients of $\pi_{ab}$ and $G_5$ (cosmetic; the sizes above do not depend on them).
+5. ~~$D=6$ coefficients of $\pi_{ab}$ and $G_5$~~ done 2026-11-21 (§3, `tests/check_brane_eq.py`). Not cosmetic after all:
+   the check found the factor 2 in the tension (§1).

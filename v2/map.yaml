@@ -135,11 +135,12 @@ nodes:
   - id: brane_eq
     tier: 2
     kind: derived
-    status: verify
+    status: derived
     title: "Field equation on Σ₁ (π̂, E_μν terms)"
     file: v2/02_effective_4d.md
     section: "3"
-    notes: "Carries [verify] flags (02_effective_4d.md §8)."
+    test: tests/check_brane_eq.py
+    notes: "D=6 coefficients of π̂ and G₅ computed (2026-11-21); the check also corrected σ₁ to the one-sided 4M₆⁴/ℓ (σ₁⁽⁵⁾ = 12 M_Pl²/ℓ²)."
     from:
       - id: background_metric
         link: verified
@@ -605,7 +606,8 @@ nodes:
     tier: 6
     kind: prediction
     status: open
-    title: "P1: circle-modulus fifth force, α_Y ≈ 120, λ ≈ 2.8–13 μm"
+    title: "P1: circle-modulus fifth force, α_Y ≈ 120, λ ≈ 1.6(ℓ/10 μm)–13 μm"
+    notes: "Short end scales with the warp length ℓ (#2), bounded only from above: a null result at short range bounds ℓ, it does not kill P1."
     file: v2/06_predictions.md
     section: "4a"
     test: tests/predictions.py

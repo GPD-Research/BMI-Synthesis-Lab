@@ -165,9 +165,9 @@ def epsilon_weyl(T_RH_over_Tt, alpha=ALPHA_LSR):
 
 
 def transition_temperature_TeV(l_micron, g_star=106.75):
-    """T_t from rho = lambda with the 5D-reduced tension lambda = sigma_1^{(5)} = 8 M_5^3/l = 24 M_Pl^2/l^2."""
+    """T_t from rho = lambda with the 5D-reduced tension lambda = sigma_1^{(5)} = 4 M_5^3/l = 12 M_Pl^2/l^2 (02_effective_4d S1, S3)."""
     inv_l_GeV = 0.19733e-15 / (l_micron * 1e-6)    # hbar c = 0.19733 GeV fm
-    lam = 24 * M_PL_GEV ** 2 * inv_l_GeV ** 2
+    lam = 12 * M_PL_GEV ** 2 * inv_l_GeV ** 2
     return (30 * lam / (np.pi ** 2 * g_star)) ** 0.25 / 1e3
 
 

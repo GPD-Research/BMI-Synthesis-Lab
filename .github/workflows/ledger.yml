@@ -30,6 +30,7 @@ jobs:
       - run: python3 tests/check_map.py
       - run: pip install "sympy>=1.12,<2"
       - run: python3 tests/check_background.py
+      - run: python3 tests/check_brane_eq.py
       - run: python3 tests/check_zero_modes.py
       - run: python3 tests/check_radion.py
       - run: pip install numpy scipy

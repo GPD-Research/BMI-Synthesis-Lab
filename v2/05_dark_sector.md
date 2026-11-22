@@ -63,9 +63,9 @@ T_R < T_o = \left(\frac{90}{\pi^2 g_*}\right)^{1/4}\sqrt{m_\chi M_{Pl}}
 \approx 2.7\ \mathrm{TeV}\left(\frac{\ell_z^{-1}}{10\ \mathrm{TeV}}\right).
 $$
 In the impact variables of `04c_approach.md`, $\rho_1 = (\pi^2/30)g_*T_R^4$ and the 4D
-tension is $\pi\ell_z\sigma_1 \approx (13\ \mathrm{TeV})^4$ (for $\ell = 10\,\mu$m, $M_6$ [verify]):
+tension is $\pi\ell_z\sigma_1 = 12M_{Pl}^2/\ell^2 \approx (13\ \mathrm{TeV})^4$ (for $\ell = 10\,\mu$m, `02_effective_4d.md` §3):
 $h < 0.07$. The exact two-brane solution of 5c was valid for $h \lesssim 1$; the dark matter
-now demands the low-energy end of that range. And $T_o/T_t \approx 0.45$: reheating sits
+now demands the low-energy end of that range. And $T_o/T_t \approx 0.5$: reheating sits
 below the $\rho^2$-correction scale, so the FRW background of `03_background.md` is standard
 from reheating on — a consistency the earlier milestones assumed and can now claim.
 
@@ -133,15 +133,15 @@ not a new one — but now with a second observable attached.
 - Astrophysics: CDM.
 
 The only laboratory handle on this dark matter is the *stabilizer* that makes it possible:
-P1, the fifth force at $2$–$66\,\mu$m (milestone 7: $\alpha_Y \approx 120$, $2.8$–$13\,\mu$m,
-composition-independent, `06_predictions.md`). That is the honest shape of the
+P1, the fifth force at $2$–$66\,\mu$m (milestone 7: $\alpha_Y \approx 120$, $\lambda < 13\,\mu$m with a short end
+$1.6\,\mu\mathrm m\,(\ell/10\,\mu\mathrm m)$, composition-independent, `06_predictions.md`). That is the honest shape of the
 family: it is invisible as dark matter and visible as a fifth force, and the two stand or fall
 together.
 
 ## 5. Kill criteria (pre-registered, 2026-09-20)
 
 - **K1.** No Yukawa force on the P1 segment (as registered: gravitational strength, $2$–$66\,\mu$m;
-  as computed in milestone 7, corrected 2026-11-11: $\alpha_Y \approx 120$, $2.8$–$13\,\mu$m). Kills the stabilizer, hence
+  as computed in milestone 7, corrected 2026-11-11 and 2026-11-21: $\alpha_Y \approx 120$, $1.6\,(\ell/10\,\mu\mathrm m)$–$13\,\mu$m). Kills the stabilizer, hence
   $\chi$, hence this family. Milestone 7 also shifts $m_\chi$, $T_o$, $\delta_z$ here by the
   canonical factor $\sqrt{2/3}$ in $m_\chi$ (O(1), no qualitative change).
 - **K2.** Evidence that $T_R > T_o \sim$ few TeV — e.g. a primordial gravitational-wave
