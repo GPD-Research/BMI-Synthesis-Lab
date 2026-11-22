@@ -8,6 +8,7 @@
     axiom: ["#1f3a5f", "#1f3a5f", "#fff", "axiom"],
     derived: ["#e8f5e9", "#2e7d32", "#1b3d1d", "derived"],
     verify: ["#fff8e1", "#f9a825", "#5d4300", "derived, [verify] open"],
+    fitted: ["#fff59d", "#f9a825", "#5d4300", "fitted: set by a parameter (caution)"],
     open: ["#e3f2fd", "#1565c0", "#0d2f57", "open"],
     paused: ["#f3e5f5", "#7b1fa2", "#3d1050", "paused"],
     killed: ["#eceff1", "#546e7a", "#37474f", "killed by data"],
@@ -476,13 +477,13 @@
         r.appendChild(h("span", null, v[3] || k)); lg.appendChild(r);
       }
     };
-    sec("v2 status", ["axiom", "derived", "verify", "open", "paused", "borrowed", "killed", "retracted", "passed", "fired", "relabelled"].map((k) => [k, STATUS[k]]));
+    sec("v2 status", ["axiom", "derived", "verify", "fitted", "open", "paused", "borrowed", "killed", "retracted", "passed", "fired", "relabelled"].map((k) => [k, STATUS[k]]));
     sec("v1 status", ["kept", "hypothesis", "hard-stop", "suspended", "dropped", "retracted"].map((k) => [k, STATUS[k]]));
     lg.appendChild(h("h4", null, "Marks"));
     [["✓", "#2e7d32", "verified link (click for the file/test that shows it)"], ["?", "#1565c0", "unresolved link: not yet worked out"],
       ["✗", "#c62828", "broken link: claimed, shown not to hold"], ["≠", "#c62828", "contradiction between two boxes"],
       ["!", "#f57c00", "needs a number the theory does not supply"], ["- -", "#555", "dashed border: conditional (rests on ? or ✗), or a leap"],
-      ["▢", "#7f0000", "red halo: critical failure of v1"]].forEach(([s, c, t]) => {
+      ["▢", "#7f0000", "red halo: critical failure of v1"], ["ms", "#555", "ms N = milestone N of the v2 build-up (ledger.md)"]].forEach(([s, c, t]) => {
       const r = h("div", "lrow"); const m = h("span", "msym", s); m.style.color = c; r.appendChild(m); r.appendChild(h("span", null, t)); lg.appendChild(r);
     });
     const v = new URLSearchParams(location.search).get("view");

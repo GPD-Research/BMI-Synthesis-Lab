@@ -433,11 +433,11 @@ nodes:
     tier: 4
     kind: derived
     status: derived
-    title: "Dark matter = the oscillating circle (collision misalignment)"
+    title: "Dark matter = the oscillating circle (mechanism)"
     file: v2/05_dark_sector.md
     section: "2"
     test: tests/dark_sector.py
-    needs: "δ_z (ledger #9), fitted to Ω_DM"
+    notes: "Derived: the circle modulus behaves as cold dark matter (mass, frequency, no exchange, α link). Its abundance is a separate, fitted box."
     from:
       - id: moduli_problem
         link: verified
@@ -445,6 +445,19 @@ nodes:
       - id: thermal_closed
         link: verified
         by: "v2/05_dark_sector.md §1"
+  - id: dm_abundance
+    tier: 4
+    kind: derived
+    status: fitted
+    title: "Dark-matter abundance Ω_DM (fitted through #9)"
+    file: v2/05_dark_sector.md
+    section: "2"
+    needs: "δ_z (ledger #9), fitted to Ω_DM"
+    notes: "Caution until δ_z is fixed by the collision or by another branch. Fitting it is what ΛCDM does too; it is not a prediction."
+    from:
+      - id: dm_circle
+        link: verified
+        by: "v2/05_dark_sector.md §2"
   - id: structure
     tier: 4
     kind: derived
@@ -568,7 +581,7 @@ nodes:
     tier: 5
     kind: parameter
     status: borrowed
-    title: "#8 δ₁ (taken at 5d)"
+    title: "#8 δ₁ (taken at ms 5d)"
     ledger: ['\delta_1']
     file: v2/ledger.md
     from:
@@ -579,11 +592,11 @@ nodes:
     tier: 5
     kind: parameter
     status: borrowed
-    title: "#9 δ_z (taken at 6)"
+    title: "#9 δ_z (taken at ms 6)"
     ledger: ['\delta_z']
     file: v2/ledger.md
     from:
-      - id: dm_circle
+      - id: dm_abundance
         link: verified
         by: "v2/ledger.md row 9; v2/05_dark_sector.md §2"
 
@@ -675,7 +688,7 @@ nodes:
     tier: 6
     kind: question
     status: open
-    title: "? Milestone 8: what BMI predicts that RS/mirror models do not"
+    title: "? ms 8: what BMI predicts that RS/mirror models do not"
     file: v2/README.md
     from:
       - id: relations_leak

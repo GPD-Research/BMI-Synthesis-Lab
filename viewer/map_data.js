@@ -1317,14 +1317,34 @@ window.BMI_MAP = {
      "id": "dm_circle",
      "kind": "derived",
      "line": 72,
-     "needs": "δ_z (ledger #9), fitted to Ω_DM",
+     "notes": "Derived: the circle modulus behaves as cold dark matter (mass, frequency, no exchange, α link). Its abundance is a separate, fitted box.",
      "section": "2",
      "status": "derived",
      "test": [
       "tests/dark_sector.py"
      ],
      "tier": 4,
-     "title": "Dark matter = the oscillating circle (collision misalignment)"
+     "title": "Dark matter = the oscillating circle (mechanism)"
+    },
+    {
+     "file": "v2/05_dark_sector.md",
+     "from": [
+      {
+       "by": "v2/05_dark_sector.md §2",
+       "id": "dm_circle",
+       "link": "verified"
+      }
+     ],
+     "id": "dm_abundance",
+     "kind": "derived",
+     "line": 72,
+     "needs": "δ_z (ledger #9), fitted to Ω_DM",
+     "notes": "Caution until δ_z is fixed by the collision or by another branch. Fitting it is what ΛCDM does too; it is not a prediction.",
+     "section": "2",
+     "status": "fitted",
+     "test": [],
+     "tier": 4,
+     "title": "Dark-matter abundance Ω_DM (fitted through #9)"
     },
     {
      "file": "v2/05_dark_sector.md",
@@ -1541,14 +1561,14 @@ window.BMI_MAP = {
      "status": "borrowed",
      "test": [],
      "tier": 5,
-     "title": "#8 δ₁ (taken at 5d)"
+     "title": "#8 δ₁ (taken at ms 5d)"
     },
     {
      "file": "v2/ledger.md",
      "from": [
       {
        "by": "v2/ledger.md row 9; v2/05_dark_sector.md §2",
-       "id": "dm_circle",
+       "id": "dm_abundance",
        "link": "verified"
       }
      ],
@@ -1560,7 +1580,7 @@ window.BMI_MAP = {
      "status": "borrowed",
      "test": [],
      "tier": 5,
-     "title": "#9 δ_z (taken at 6)"
+     "title": "#9 δ_z (taken at ms 6)"
     },
     {
      "file": "v2/06_predictions.md",
@@ -1713,7 +1733,7 @@ window.BMI_MAP = {
      "status": "open",
      "test": [],
      "tier": 6,
-     "title": "? Milestone 8: what BMI predicts that RS/mirror models do not"
+     "title": "? ms 8: what BMI predicts that RS/mirror models do not"
     },
     {
      "failure": "Dead by data. The coupling is locked: any dark-matter mass drift is a drift of μ and α; the DESI pattern stays unexplained.",
