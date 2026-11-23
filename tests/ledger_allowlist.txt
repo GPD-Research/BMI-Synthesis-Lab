@@ -265,3 +265,6 @@ U
 \beta_{DM}
 \beta_b
 p
+
+# thick-brane fork (10_thick_brane.md): the wall field (its width is a candidate number, not allowlisted)
+W

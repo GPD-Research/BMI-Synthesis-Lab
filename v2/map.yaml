@@ -305,6 +305,19 @@ nodes:
       - id: impact_c
         link: verified
         by: "v2/04b_initial_conditions.md §3"
+  - id: thick_nec
+    tier: 3
+    kind: derived
+    status: derived
+    title: "Canonical walls have positive tension: Σ₁ can be thick, Σ₂ cannot"
+    file: v2/10_thick_brane.md
+    section: "2c"
+    test: tests/thick_brane.py
+    notes: "A'' = −W'²/4M₆⁴ ≤ 0. A smooth Σ₁ moves the RS tuning into the wall potential; the negative-tension Σ₂ has no smooth canonical wall."
+    from:
+      - id: action
+        link: verified
+        by: "tests/thick_brane.py; v2/10_thick_brane.md §2"
   - id: approach
     tier: 3
     kind: derived
@@ -736,6 +749,26 @@ nodes:
       - id: radion_spectator
         link: open
         why: "Size needed vs LLR bound (09 §2–3)."
+  - id: fork_thick
+    tier: 6
+    kind: leap
+    status: open
+    title: "Leap: thick branes, so the collision can be computed"
+    file: v2/10_thick_brane.md
+    section: "3"
+    test: tests/thick_brane.py
+    needs: "wall width (candidate tenth) and the wall-potential shape"
+    notes: "Registered 2026-11-23 with kills TK1–TK6 before any derivation. Must fix T₂/T₁, φ₀ or δ_z through the collision to be admitted. P1 unchanged; tuning not removed."
+    from:
+      - id: axiom
+        link: open
+        why: "Intuition: universes interact over a finite width. No thick-wall action yet."
+      - id: q_collision
+        link: open
+        why: "Whether colliding walls fix the energy split (T₂/T₁, ε, f) is D3, not computed."
+      - id: thick_nec
+        link: verified
+        by: "v2/10_thick_brane.md §2c: Σ₂ stays thin or the geometry changes"
   - id: fork_unified
     tier: 6
     kind: leap

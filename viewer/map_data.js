@@ -610,6 +610,7 @@ window.BMI_MAP = {
   "v2": {
    "conditional": [
     "data_cmbs4",
+    "fork_thick",
     "fork_timeslip",
     "fork_unified",
     "fork_zt",
@@ -1096,6 +1097,27 @@ window.BMI_MAP = {
      ],
      "tier": 3,
      "title": "Initial-condition scan: the null configuration is dead"
+    },
+    {
+     "file": "v2/10_thick_brane.md",
+     "from": [
+      {
+       "by": "tests/thick_brane.py; v2/10_thick_brane.md §2",
+       "id": "action",
+       "link": "verified"
+      }
+     ],
+     "id": "thick_nec",
+     "kind": "derived",
+     "line": 86,
+     "notes": "A'' = −W'²/4M₆⁴ ≤ 0. A smooth Σ₁ moves the RS tuning into the wall potential; the negative-tension Σ₂ has no smooth canonical wall.",
+     "section": "2c",
+     "status": "derived",
+     "test": [
+      "tests/thick_brane.py"
+     ],
+     "tier": 3,
+     "title": "Canonical walls have positive tension: Σ₁ can be thick, Σ₂ cannot"
     },
     {
      "file": "v2/04c_approach.md",
@@ -1804,6 +1826,38 @@ window.BMI_MAP = {
      ],
      "tier": 6,
      "title": "Leap: time slip as a clock effect on G"
+    },
+    {
+     "file": "v2/10_thick_brane.md",
+     "from": [
+      {
+       "id": "axiom",
+       "link": "open",
+       "why": "Intuition: universes interact over a finite width. No thick-wall action yet."
+      },
+      {
+       "id": "q_collision",
+       "link": "open",
+       "why": "Whether colliding walls fix the energy split (T₂/T₁, ε, f) is D3, not computed."
+      },
+      {
+       "by": "v2/10_thick_brane.md §2c: Σ₂ stays thin or the geometry changes",
+       "id": "thick_nec",
+       "link": "verified"
+      }
+     ],
+     "id": "fork_thick",
+     "kind": "leap",
+     "line": 118,
+     "needs": "wall width (candidate tenth) and the wall-potential shape",
+     "notes": "Registered 2026-11-23 with kills TK1–TK6 before any derivation. Must fix T₂/T₁, φ₀ or δ_z through the collision to be admitted. P1 unchanged; tuning not removed.",
+     "section": "3",
+     "status": "open",
+     "test": [
+      "tests/thick_brane.py"
+     ],
+     "tier": 6,
+     "title": "Leap: thick branes, so the collision can be computed"
     },
     {
      "file": "v2/00_axiom.md",
