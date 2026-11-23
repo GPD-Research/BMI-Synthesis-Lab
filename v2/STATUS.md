@@ -14,6 +14,12 @@ budget stays 9 until it is admitted. *Computed 2026-11-11 (`07_exchange.md`): de
 circle locks any DM-mass drift to $\mu$ and $\alpha$, capping the exchange at $\lvert\Delta w\rvert < 10^{-8}$.
 The freeze is back at 9.
 
+**Thick-brane fork registered 2026-11-23 (`10_thick_brane.md`), not taken.** A saved leap: branes as
+walls of a canonical bulk scalar, so the collision can be computed. Forced already: $\Sigma_1$ can be
+smooth (the RS tuning moves into the wall potential) but the negative-tension $\Sigma_2$ cannot, so either
+$\Sigma_2$ stays thin or the geometry becomes two positive-tension walls. Price at least +1 (the wall
+width); computed only if the provisional-tenth slot is reopened for it. P1 is unchanged.
+
 **P2 tested 2026-11-11 (`06_predictions.md` §4c): killed.** Against the DESI DR2 chains the thawing
 curve is outside the 95% region for every $c$, for BAO + CMB alone and with each SNe sample (kill
 criterion 2; ΛCDM fails it as badly). Recorded as `RETRACTED.md` N4. Confirmed by direct fit without the CPL
