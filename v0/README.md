@@ -37,6 +37,11 @@ Only the author edits this section, or someone with the author's explicit approv
   diagram", its own version of a KK tower. It is a lower-dimensional cross-section of the
   convergence dynamics, not a whole cosmology.
 
+- **C8. Universes are normally cyclic; ours is the last cycle.** A universe normally ends in a big
+  crunch, and the crunch singularity is innately unstable, so it erupts into a new big bang. The
+  continuing collision with the other universe broke that cycle for ours. It is the source of the
+  dark-energy expansion, which makes this iteration the final one, ending in heat death.
+
 **Hoped-for outputs, once the foundations are set:** neutrino masses, gravitational-wave
 anomalies, and the early-galaxy maturity seen by JWST.
 
@@ -53,6 +58,7 @@ A constraint can reject a derivation. It cannot rewrite a concept above. Anythin
 | C5 | To be a prediction it must give the *timing* of late acceleration (onset near z ≈ 0.6), which is the cosmic-coincidence problem. Entropy injection must stay within the distortion limits for whatever epoch it happens in. | DESI w(z); CMB spectral distortions; ΔN_eff |
 | C6 | Hawking evaporation follows from standard QFT on curved spacetime. Holes lighter than ~5×10¹⁴ g have evaporated by now; heavier ones would survive unless the mass spectrum is cut off. Evaporation products are bounded (Carr et al. [verify]). The LHC has seen no micro black holes; those required TeV-scale gravity and are excluded to ~9–10 TeV [verify]. The direction of energy flow must be stated. | BBN, CMB, gamma-ray background |
 | C7 | A lower-dimensional picture must be shown to be a consistent slice of the full dynamics | follows from C1–C3 |
+| C8 | Cyclic models have to deal with entropy building up from cycle to cycle (Tolman's problem) and with getting through the bounce without a singularity. Steinhardt–Turok cyclic cosmology and Penrose's conformal cyclic cosmology (CCC) are precedents to read first. For "final cycle", the dark energy must not decay back into recollapse, or the cycle would resume. Bounce models usually predict a tiny tensor ratio r [verify]. | DESI w(z) (does dark energy weaken?); CMB-S4 r |
 | outputs | Each must be registered before the data are looked at; v1's 15 Hz split (R1) is the warning. JWST tension has eased as mass estimates were revised [verify]. | oscillation data; LVK; JWST |
 
 ## What v0 asks of the next version
@@ -65,8 +71,8 @@ A constraint can reject a derivation. It cannot rewrite a concept above. Anythin
      constraints [verify].
 
    For each candidate: what it forces, what it costs in parameters, what data could kill it, and
-   which of C1–C7 it can't hold.
+   which of C1–C8 it can't hold.
 2. **Write the action only after that**, keeping v2's rules: the ledger, kill criteria written
    first, and `RETRACTED.md`.
-3. **Check the draft action against C1–C7, one by one.** A concept the action drops is recorded
+3. **Check the draft action against C1–C8, one by one.** A concept the action drops is recorded
    as dropped, with the reason, never silently.
