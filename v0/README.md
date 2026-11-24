@@ -163,8 +163,8 @@ A falling dark energy today must still not fall back below the recollapse thresh
      constraints [verify].
 
    For each candidate: what it forces, what it costs in parameters, what data could kill it, and
-   which of C1–C12 it can't hold.
+   which of C1–C13 it can't hold.
 2. **Write the action only after that**, keeping v2's rules: the ledger, kill criteria written
    first, and `RETRACTED.md`.
-3. **Check the draft action against C1–C12, one by one.** A concept the action drops is recorded
+3. **Check the draft action against C1–C13, one by one.** A concept the action drops is recorded
    as dropped, with the reason, never silently.
