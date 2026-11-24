@@ -54,12 +54,25 @@ Only the author edits this section, or someone with the author's explicit approv
   first overlap.
 - **C12. Short-circuit events near supermassive black holes.** At extreme energy density the
   bridge can locally short-circuit.
-- **C13. The merger can't predate the acceleration, and leaves a bump.** Some dark energy may be
-  inherent to every cycle, with the merger adding an excess on top, like potential energy turned
-  into kinetic energy on a hyperdimensional scale. If the merger came after the inherent dark
-  energy had started pushing outward, the acceleration history would show a bump where the excess
-  arrived. The author doesn't see how the merger could have happened before dark energy began
-  driving acceleration.
+- **C13. Dark energy comes from the merger, by one or more branches.** The merger converts
+  something like potential energy into kinetic energy, on a hyperdimensional scale. How it does so
+  is a tree of branches. They are not mutually exclusive and are to be killed one at a time. The
+  author's ranking is in brackets.
+  - **B0, the first version.** Every cycle has some inherent dark energy, and the merger adds an
+    excess with no delay. If that came after the inherent dark energy had started pushing outward,
+    the acceleration history would show a bump. The merger can't predate the acceleration.
+  - **B1, a delay.** Dark-energy injection lags the onset of the merger.
+  - **B2, no inherent dark energy.** Universes normally have none; dark energy appears only during
+    a merger with another manifold. [feels the most Occam]
+  - **B3, dark matter first.** Dark matter is the precursor, in the earliest stage of the merger.
+    Dark energy can't appear until the overlap is large enough. [least probable, or at least the
+    hardest to demonstrate]
+  - **B4, a thick double brane that dissolves, with an echo.** The outer branes of two
+    hyperspheres first meet as a thickened double brane. It gradually dissolves into one ordinary
+    wall, releasing a "sonic echo" that rings around both hyperspheres while the thickness energy
+    is redistributed. Two soap bubbles behave the same way: the extra area of their contact
+    planes is spread over both surfaces until they share a single circular wall. [most
+    interesting]
 
 **Hoped-for outputs, once the foundations are set:** neutrino masses, gravitational-wave
 anomalies, and the early-galaxy maturity seen by JWST.
@@ -89,7 +102,13 @@ A constraint can reject a derivation. It cannot rewrite a concept above. Anythin
 | C10 | Dark matter must act as pressureless matter by recombination (CMB acoustic peaks), with the right abundance, and separate from gas as in the Bullet Cluster. v2's mirror-matter dark matter died on abundance (`RETRACTED.md` N2), which is the warning. Dark-energy pressure is as for C5. | CMB peaks; Bullet Cluster; rotation curves; DESI w(z) |
 | C11 | Measured Higgs couplings agree with the Standard Model to roughly 10% [verify], so a second Higgs mixing in must stay within that. Masses must follow from a few overlap parameters, not one per particle, or this is R4 again. | LHC Higgs couplings; fermion mass ratios |
 | C12 | Needs a stated signature (spectrum, energy, rate) registered before any data are looked at, and it must differ from ordinary accretion and jet physics. | EHT; AGN gamma rays and neutrinos; LVK |
-| C13 | In a closed universe, inherent dark energy small enough to let the cycle recollapse (C8) can never accelerate it alone: acceleration starts where matter density equals twice the dark-energy density, and that is the Einstein-static point, past any turnaround. So all observed acceleration is already the excess (S1). The bump then can't be "inherent first, merger later"; it must come from the excess itself rising and partly falling back (C4's two-way bleed, C9's saturation). "Before" also needs care: first contact can precede any noticeable energy release (O1). | DESI w(z) and ρ_DE(z); SNe |
+| C13 | Each branch needs its own registered prediction and kill; a tree that can fit anything is unfalsifiable. | per branch, below |
+| B0 | In a closed universe, inherent dark energy small enough to let the cycle recollapse (C8) can never accelerate it alone: acceleration starts where matter density equals twice the dark-energy density, and that is the Einstein-static point, past any turnaround. So all observed acceleration is already the excess (S1). The bump then can't be "inherent first, merger later"; it must come from the excess itself rising and partly falling back (C4's two-way bleed, C9's saturation). | DESI w(z) and ρ_DE(z); SNe |
+| B1 | The delay is a new parameter. It is testable only if the merger onset has its own signature (B3, B4, C11's mass drift); otherwise it can absorb any timing. | as for the onset signature |
+| B2 | The recollapse in C8 becomes automatic, because a closed universe with no Λ recollapses. All dark energy is $\Omega_X$, so it must track the merger: $w
+eq-1$ while the excess grows. After saturation (C9), vacuum-like X is indistinguishable from Λ, so B2 needs a pre-saturation signature. | DESI w(z); BP1 |
+| B3 | Dark matter must be in place before matter–radiation equality (z ≈ 3400), so the merger began before then, at least from our side (O1). Dark matter must then dilute as $a^{-3}$; later growth or conversion into dark energy is bounded by CMB lensing and structure growth (interacting dark-sector limits) [verify]. | Planck lensing; S8; BAO |
+| B4 | The echo is a wave on the brane: a stochastic gravitational-wave background, or a scalar "breathing" mode, and its period is set by the hypersphere's size, bounded through $\Omega_k$. A circular contact wall picks out an axis, bounded by CMB isotropy; bubble-collision disc searches in the CMB found nothing significant [verify]. A time-varying thickness is exactly what Mounaix–Langlois leave to future work, and it ties to option 2 of `v2/10_thick_brane.md`. | PTA nHz background; CMB discs and anisotropy; LVK |
 | outputs | Each must be registered before the data are looked at; v1's 15 Hz split (R1) is the warning. JWST tension has eased as mass estimates were revised [verify]. | oscillation data; LVK; JWST |
 
 ## Figures
@@ -125,12 +144,12 @@ an action. V(d), σ and the bump shape are new parameters, and nothing here is i
 - **Overlap (E3, corrected).** Integrate over the extra coordinate y, with the centre moving as
   the universes merge: $\Phi_{\rm BMI}(x,t)=\int dy\,\mathcal{L}_{\rm int}(x,y)\,\frac{1}{\sqrt{2\pi\sigma^2}}\,e^{-(y-\mu(t))^2/2\sigma^2}$.
   Two universes of width σ, a distance d(t) apart, overlap by $S(t)\propto e^{-d(t)^2/4\sigma^2}$.
-- **Potential → kinetic (C13).** An interaction energy V(d) is released through the bridge into a
+- **Potential → kinetic (C13, B0–B2).** An interaction energy V(d) is released through the bridge into a
   dark component X: $\dot\rho_X+3H(1+w_X)\rho_X=Q_{\rm in}$, with $Q_{\rm in}\sim-dV/dt$, and $Q_{\rm in}<0$ allowed
   (C4).
 - **Expansion (E4, corrected).** $H^2=H_0^2\big[\Omega_r(1+z)^4+\Omega_m(1+z)^3+\Omega_k(1+z)^2+\Omega_{\Lambda,\rm res}+\Omega_X(z)\big]$.
-  Here $\Omega_k<0$ is the closed cycle (C8), $\Omega_{\Lambda,\rm res}$ the inherent dark energy, which stays
-  below the recollapse threshold, and $\Omega_X$ the merger excess that pushes it over. Planck allows
+  Here $\Omega_k<0$ is the closed cycle (C8), $\Omega_{\Lambda,\rm res}$ the inherent dark energy (zero on B2),
+  which stays below the recollapse threshold, and $\Omega_X$ the merger excess that pushes it over. Planck allows
   only a small $|\Omega_k|$ [verify].
 - **Masses (E6, corrected).** $m_i=y_i\,v(S)$, with the Standard Model Yukawas and no dial per
   particle. As S grows, the Higgs vacuum value drifts. That moves $m_e$ but barely moves $m_p$,
@@ -139,7 +158,7 @@ an action. V(d), σ and the bump shape are new parameters, and nothing here is i
 - **Timing.** The release becomes large when d(t) falls to about σ. That would give a calculable
   acceleration onset (z ≈ 0.6) in place of the coincidence problem.
 
-**BP1, the bump (registered 2026-11-23, before any fit).** While the excess is still growing, the
+**BP1, the bump (branch B0; registered 2026-11-23, before any fit).** While the excess is still growing, the
 total dark-energy density $\rho_{\rm DE}(z)$ rises toward the present ($w<-1$). Once the merger
 saturates (C9) or energy bleeds back (C4), it levels off or falls ($w\ge-1$). The density
 therefore peaks inside the accelerating era. The test is the redshift and height of that peak.
@@ -152,6 +171,9 @@ sample. Three cautions apply:
 - the preference over ΛCDM is 2.8–4.2σ [verify].
 
 A falling dark energy today must still not fall back below the recollapse threshold (C8).
+
+BP1 is specific to B0. B2 and B3 do not require a bump, B1 shifts its redshift, and B4 could add
+an oscillation on top of it from the echo.
 
 ## What v0 asks of the next version
 
