@@ -54,6 +54,12 @@ Only the author edits this section, or someone with the author's explicit approv
   first overlap.
 - **C12. Short-circuit events near supermassive black holes.** At extreme energy density the
   bridge can locally short-circuit.
+- **C13. The merger can't predate the acceleration, and leaves a bump.** Some dark energy may be
+  inherent to every cycle, with the merger adding an excess on top, like potential energy turned
+  into kinetic energy on a hyperdimensional scale. If the merger came after the inherent dark
+  energy had started pushing outward, the acceleration history would show a bump where the excess
+  arrived. The author doesn't see how the merger could have happened before dark energy began
+  driving acceleration.
 
 **Hoped-for outputs, once the foundations are set:** neutrino masses, gravitational-wave
 anomalies, and the early-galaxy maturity seen by JWST.
@@ -83,6 +89,7 @@ A constraint can reject a derivation. It cannot rewrite a concept above. Anythin
 | C10 | Dark matter must act as pressureless matter by recombination (CMB acoustic peaks), with the right abundance, and separate from gas as in the Bullet Cluster. v2's mirror-matter dark matter died on abundance (`RETRACTED.md` N2), which is the warning. Dark-energy pressure is as for C5. | CMB peaks; Bullet Cluster; rotation curves; DESI w(z) |
 | C11 | Measured Higgs couplings agree with the Standard Model to roughly 10% [verify], so a second Higgs mixing in must stay within that. Masses must follow from a few overlap parameters, not one per particle, or this is R4 again. | LHC Higgs couplings; fermion mass ratios |
 | C12 | Needs a stated signature (spectrum, energy, rate) registered before any data are looked at, and it must differ from ordinary accretion and jet physics. | EHT; AGN gamma rays and neutrinos; LVK |
+| C13 | In a closed universe, inherent dark energy small enough to let the cycle recollapse (C8) can never accelerate it alone: acceleration starts where matter density equals twice the dark-energy density, and that is the Einstein-static point, past any turnaround. So all observed acceleration is already the excess (S1). The bump then can't be "inherent first, merger later"; it must come from the excess itself rising and partly falling back (C4's two-way bleed, C9's saturation). "Before" also needs care: first contact can precede any noticeable energy release (O1). | DESI w(z) and ρ_DE(z); SNe |
 | outputs | Each must be registered before the data are looked at; v1's 15 Hz split (R1) is the warning. JWST tension has eased as mass estimates were revised [verify]. | oscillation data; LVK; JWST |
 
 ## Figures
@@ -109,6 +116,42 @@ is part of v0's concepts. Each note says what the expression would need before i
 | E4 | cover | $H^2(z) = H_0^2 \left( \Omega_{m,0}(1+z)^3 + \Omega_{\Lambda,0} + \Omega_{\rm BMI,0}(z) \right)$ | Flat ΛCDM plus an extra term $\Omega_{\rm BMI,0}(z)$ that is never given; a subscript 0 normally means today's value, so it shouldn't depend on $z$. Keeping $\Omega_{\Lambda,0}$ means BMI adds to a cosmological constant rather than being the dark energy, against C5/C8/C10. Radiation is omitted. Needs $\Omega_{m,0} + \Omega_{\Lambda,0} + \Omega_{\rm BMI,0}(0) = 1$. |
 | E5 | topology | $\Sigma_A + \Sigma_B \dashrightarrow [\,\Sigma_A \mid \text{Bridge} \mid \Sigma_B\,]$ | Notation: two regions plus a third, the bridge (C10). Also labels a coupling constant $\alpha_{\rm BMI}$ born at first overlap (C11), never defined. |
 | E6 | topology | $m_\nu \approx 0.12\ \text{eV}/c^2 \to \kappa_\nu = 0.003$; $m_e \approx 0.511\ \text{MeV}/c^2 \to \kappa_e = 0.012$; $m_p \approx 938.272\ \text{MeV}/c^2 \to \kappa_p = 22.456$; $m_n \approx 939.565\ \text{MeV}/c^2 \to \kappa_n = 22.487$ | No formula links $\kappa$ to $m$. For $e$, $p$, $n$, $\kappa/m \approx 0.024\ \text{MeV}^{-1}$ to within 2%, so $\kappa$ is the mass rescaled, not a derivation; $\kappa_\nu$ breaks that pattern by about $10^6$. The $\nu$ "mass" 0.12 eV is roughly the cosmological upper bound on the summed neutrino masses [verify], not a measured mass. This is the drift in the v1 row. |
+
+## Sketch S1: the merger as dark energy (assistant's voice, not derived)
+
+A possible shape for E3, E4 and E6 if BMI is where the dark energy comes from. It is a sketch, not
+an action. V(d), σ and the bump shape are new parameters, and nothing here is in the ledger.
+
+- **Overlap (E3, corrected).** Integrate over the extra coordinate y, with the centre moving as
+  the universes merge: $\Phi_{\rm BMI}(x,t)=\int dy\,\mathcal{L}_{\rm int}(x,y)\,\frac{1}{\sqrt{2\pi\sigma^2}}\,e^{-(y-\mu(t))^2/2\sigma^2}$.
+  Two universes of width σ, a distance d(t) apart, overlap by $S(t)\propto e^{-d(t)^2/4\sigma^2}$.
+- **Potential → kinetic (C13).** An interaction energy V(d) is released through the bridge into a
+  dark component X: $\dot\rho_X+3H(1+w_X)\rho_X=Q_{\rm in}$, with $Q_{\rm in}\sim-dV/dt$, and $Q_{\rm in}<0$ allowed
+  (C4).
+- **Expansion (E4, corrected).** $H^2=H_0^2\big[\Omega_r(1+z)^4+\Omega_m(1+z)^3+\Omega_k(1+z)^2+\Omega_{\Lambda,\rm res}+\Omega_X(z)\big]$.
+  Here $\Omega_k<0$ is the closed cycle (C8), $\Omega_{\Lambda,\rm res}$ the inherent dark energy, which stays
+  below the recollapse threshold, and $\Omega_X$ the merger excess that pushes it over. Planck allows
+  only a small $|\Omega_k|$ [verify].
+- **Masses (E6, corrected).** $m_i=y_i\,v(S)$, with the Standard Model Yukawas and no dial per
+  particle. As S grows, the Higgs vacuum value drifts. That moves $m_e$ but barely moves $m_p$,
+  which is mostly QCD, so $m_p/m_e$ drifts since the onset. Quasar and atomic-clock bounds of
+  about $10^{-7}$ [verify] make this a kill test tied to the same S(t) as the dark energy.
+- **Timing.** The release becomes large when d(t) falls to about σ. That would give a calculable
+  acceleration onset (z ≈ 0.6) in place of the coincidence problem.
+
+**BP1, the bump (registered 2026-11-23, before any fit).** While the excess is still growing, the
+total dark-energy density $\rho_{\rm DE}(z)$ rises toward the present ($w<-1$). Once the merger
+saturates (C9) or energy bleeds back (C4), it levels off or falls ($w\ge-1$). The density
+therefore peaks inside the accelerating era. The test is the redshift and height of that peak.
+
+*Context, not confirmation:* DESI DR2's CPL fits (`v2/06_predictions.md` §4c) already imply such a
+peak, at $z\approx0.35$–$0.44$, about 7–19% above today's density, depending on the supernova
+sample. Three cautions apply:
+- the data predate BP1, so it is a retrodiction until S1 predicts the peak from V(d) and σ;
+- part of any CPL crossing comes from the parametrization;
+- the preference over ΛCDM is 2.8–4.2σ [verify].
+
+A falling dark energy today must still not fall back below the recollapse threshold (C8).
 
 ## What v0 asks of the next version
 
